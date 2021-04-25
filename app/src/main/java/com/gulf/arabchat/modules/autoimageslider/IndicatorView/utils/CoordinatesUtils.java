@@ -1,11 +1,11 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.util.Pair;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Orientation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Orientation;
 
 public class CoordinatesUtils {
 

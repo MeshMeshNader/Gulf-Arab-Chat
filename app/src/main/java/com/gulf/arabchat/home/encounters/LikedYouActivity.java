@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.encounters;
+package com.gulf.arabchat.home.encounters;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,13 +12,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.datoo.LikedYouAdapter;
-import com.angopapo.datooapp.auth.WelcomeActivity;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.EncountersModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.arabchat.LikedYouAdapter;
+import com.gulf.arabchat.auth.WelcomeActivity;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.EncountersModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.Tools;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 

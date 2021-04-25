@@ -12,7 +12,7 @@
     app:cardElevation="2dp"
     app:cardCornerRadius="@dimen/encounters_card_rounded_corner_margin">
 
-    <com.angopapo.datooapp.modules.shimmer.ShimmerFrameLayout
+    <com.gulf.arabchat.modules.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_view_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -72,7 +72,7 @@
                 app:layout_constraintGuide_percent="0.868673" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.angopapo.datooapp.modules.shimmer.ShimmerFrameLayout>
+    </com.gulf.arabchat.modules.shimmer.ShimmerFrameLayout>
 
 </androidx.cardview.widget.CardView>
 

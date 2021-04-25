@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -6,21 +6,21 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 
-import com.angopapo.datooapp.modules.charting.animation.ChartAnimator;
-import com.angopapo.datooapp.modules.charting.buffer.BarBuffer;
-import com.angopapo.datooapp.modules.charting.data.BarData;
-import com.angopapo.datooapp.modules.charting.data.BarEntry;
-import com.angopapo.datooapp.modules.charting.formatter.ValueFormatter;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.highlight.Range;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.BarDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarDataSet;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Transformer;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.animation.ChartAnimator;
+import com.gulf.arabchat.modules.charting.buffer.BarBuffer;
+import com.gulf.arabchat.modules.charting.data.BarData;
+import com.gulf.arabchat.modules.charting.data.BarEntry;
+import com.gulf.arabchat.modules.charting.formatter.ValueFormatter;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.highlight.Range;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.BarDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarDataSet;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Transformer;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 import android.graphics.LinearGradient;
-import com.angopapo.datooapp.modules.charting.model.GradientColor;
+import com.gulf.arabchat.modules.charting.model.GradientColor;
 
 import java.util.List;
 

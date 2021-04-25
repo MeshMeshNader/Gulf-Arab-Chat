@@ -1,8 +1,9 @@
-package com.angopapo.datooapp.home.profile;
+package com.gulf.arabchat.home.profile;
 
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,17 +16,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.helpers.QuickActions;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.HomeActivity;
-import com.angopapo.datooapp.home.payments.PaymentsActivity;
-import com.angopapo.datooapp.home.popularity.PopularityActivity;
-import com.angopapo.datooapp.home.settings.SettingsActivity;
-import com.angopapo.datooapp.home.uploads.UploadsActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.circularimageview.CircleImageView;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.helpers.QuickActions;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.HomeActivity;
+import com.gulf.arabchat.home.payments.PaymentsActivity;
+import com.gulf.arabchat.home.popularity.PopularityActivity;
+import com.gulf.arabchat.home.settings.SettingsActivity;
+import com.gulf.arabchat.home.uploads.UploadsActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.circularimageview.CircleImageView;
 import com.greysonparrelli.permiso.Permiso;
 
 import java.util.Objects;
@@ -101,6 +102,8 @@ public class MyProfileFragment extends Fragment {
 
 
         mCurrentUser = User.getUser();
+
+
 
         if (mCurrentUser.getPrivacyAlmostInvisible()){
             mInvisibleMode.setVisibility(View.VISIBLE);

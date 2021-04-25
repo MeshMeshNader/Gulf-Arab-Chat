@@ -1,22 +1,22 @@
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 
-import com.angopapo.datooapp.modules.charting.animation.ChartAnimator;
-import com.angopapo.datooapp.modules.charting.data.CandleData;
-import com.angopapo.datooapp.modules.charting.data.CandleEntry;
-import com.angopapo.datooapp.modules.charting.formatter.ValueFormatter;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.CandleDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ICandleDataSet;
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
-import com.angopapo.datooapp.modules.charting.utils.MPPointD;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Transformer;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.animation.ChartAnimator;
+import com.gulf.arabchat.modules.charting.data.CandleData;
+import com.gulf.arabchat.modules.charting.data.CandleEntry;
+import com.gulf.arabchat.modules.charting.formatter.ValueFormatter;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.CandleDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ICandleDataSet;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.utils.MPPointD;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Transformer;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 import java.util.List;
 

@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.angopapo.datooapp.modules.shimmer.ShimmerFrameLayout
+            <com.gulf.arabchat.modules.shimmer.ShimmerFrameLayout
                 android:id="@+id/shimmer_view_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -86,7 +86,7 @@
                         app:layout_constraintGuide_percent="0.868673" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </com.angopapo.datooapp.modules.shimmer.ShimmerFrameLayout>
+            </com.gulf.arabchat.modules.shimmer.ShimmerFrameLayout>
 
             <include layout="@layout/include_profile_view"/>
 

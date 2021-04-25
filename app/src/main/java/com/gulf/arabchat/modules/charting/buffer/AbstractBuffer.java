@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.buffer;
+package com.gulf.arabchat.modules.charting.buffer;
 
 /**
  * Buffer class to boost performance while drawing. Concept: Replace instead of

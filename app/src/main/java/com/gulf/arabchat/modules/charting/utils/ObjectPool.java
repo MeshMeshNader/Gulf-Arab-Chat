@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.utils;
+package com.gulf.arabchat.modules.charting.utils;
 
 import java.util.List;
 

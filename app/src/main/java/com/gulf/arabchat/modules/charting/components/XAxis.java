@@ -1,7 +1,7 @@
 
-package com.angopapo.datooapp.modules.charting.components;
+package com.gulf.arabchat.modules.charting.components;
 
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * Class representing the x-axis labels settings. Only use the setter methods to

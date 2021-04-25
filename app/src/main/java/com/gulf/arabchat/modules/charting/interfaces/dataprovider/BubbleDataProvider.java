@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.modules.charting.interfaces.dataprovider;
+package com.gulf.arabchat.modules.charting.interfaces.dataprovider;
 
-import com.angopapo.datooapp.modules.charting.data.BubbleData;
+import com.gulf.arabchat.modules.charting.data.BubbleData;
 
 public interface BubbleDataProvider extends BarLineScatterCandleBubbleDataProvider {
 

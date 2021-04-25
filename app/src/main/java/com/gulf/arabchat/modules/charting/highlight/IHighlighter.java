@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.highlight;
+package com.gulf.arabchat.modules.charting.highlight;
 
 /**
  * Created by philipp on 10/06/16.

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.instagram;
+package com.gulf.arabchat.modules.instagram;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,10 +16,10 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.models.others.InstagramUser;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.models.others.InstagramUser;
+import com.gulf.arabchat.utils.Tools;
 
 import org.json.JSONException;
 import org.json.JSONObject;

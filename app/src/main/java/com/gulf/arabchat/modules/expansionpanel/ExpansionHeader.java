@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.expansionpanel;
+package com.gulf.arabchat.modules.expansionpanel;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -17,7 +17,7 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 public class ExpansionHeader extends FrameLayout {
 

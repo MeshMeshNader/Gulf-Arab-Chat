@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.discretescrollview;
+package com.gulf.arabchat.modules.discretescrollview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,9 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.modules.discretescrollview.transform.DiscreteScrollItemTransformer;
-import com.angopapo.datooapp.modules.discretescrollview.util.ScrollListenerAdapter;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.modules.discretescrollview.transform.DiscreteScrollItemTransformer;
+import com.gulf.arabchat.modules.discretescrollview.util.ScrollListenerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

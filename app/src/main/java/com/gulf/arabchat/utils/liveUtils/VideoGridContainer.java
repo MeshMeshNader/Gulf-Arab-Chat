@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.utils.liveUtils;
+package com.gulf.arabchat.utils.liveUtils;
 
 import android.content.Context;
 import android.graphics.Color;

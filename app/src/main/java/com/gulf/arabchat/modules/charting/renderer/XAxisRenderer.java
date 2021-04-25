@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -7,15 +7,15 @@ import android.graphics.Paint.Align;
 import android.graphics.Path;
 import android.graphics.RectF;
 
-import com.angopapo.datooapp.modules.charting.components.LimitLine;
-import com.angopapo.datooapp.modules.charting.components.XAxis;
-import com.angopapo.datooapp.modules.charting.components.XAxis.XAxisPosition;
-import com.angopapo.datooapp.modules.charting.utils.FSize;
-import com.angopapo.datooapp.modules.charting.utils.MPPointD;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Transformer;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.components.LimitLine;
+import com.gulf.arabchat.modules.charting.components.XAxis;
+import com.gulf.arabchat.modules.charting.components.XAxis.XAxisPosition;
+import com.gulf.arabchat.modules.charting.utils.FSize;
+import com.gulf.arabchat.modules.charting.utils.MPPointD;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Transformer;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 import java.util.List;
 

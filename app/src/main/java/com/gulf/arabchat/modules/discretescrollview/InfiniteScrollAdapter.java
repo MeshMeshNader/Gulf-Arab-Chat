@@ -1,11 +1,11 @@
-package com.angopapo.datooapp.modules.discretescrollview;
+package com.gulf.arabchat.modules.discretescrollview;
 
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.util.Locale;
 

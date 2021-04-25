@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,14 +8,14 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
-import com.angopapo.datooapp.modules.charting.components.XAxis;
-import com.angopapo.datooapp.modules.charting.data.PieData;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.highlight.PieHighlighter;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IPieDataSet;
-import com.angopapo.datooapp.modules.charting.renderer.PieChartRenderer;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.components.XAxis;
+import com.gulf.arabchat.modules.charting.data.PieData;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.highlight.PieHighlighter;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IPieDataSet;
+import com.gulf.arabchat.modules.charting.renderer.PieChartRenderer;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 import java.util.List;
 

@@ -1,12 +1,12 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.angopapo.datooapp.modules.charting.data.LineData;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.LineDataProvider;
-import com.angopapo.datooapp.modules.charting.renderer.LineChartRenderer;
+import com.gulf.arabchat.modules.charting.data.LineData;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.LineDataProvider;
+import com.gulf.arabchat.modules.charting.renderer.LineChartRenderer;
 
 /**
  * Chart that draws lines, surfaces, circles, ...

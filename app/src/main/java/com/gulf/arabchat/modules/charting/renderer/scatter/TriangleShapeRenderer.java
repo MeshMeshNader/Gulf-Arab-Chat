@@ -1,13 +1,13 @@
-package com.angopapo.datooapp.modules.charting.renderer.scatter;
+package com.gulf.arabchat.modules.charting.renderer.scatter;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IScatterDataSet;
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IScatterDataSet;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * Created by wajdic on 15/06/2016.

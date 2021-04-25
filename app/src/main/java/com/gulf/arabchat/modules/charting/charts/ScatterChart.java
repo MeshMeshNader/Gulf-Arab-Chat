@@ -1,12 +1,12 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.angopapo.datooapp.modules.charting.data.ScatterData;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.ScatterDataProvider;
-import com.angopapo.datooapp.modules.charting.renderer.ScatterChartRenderer;
+import com.gulf.arabchat.modules.charting.data.ScatterData;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.ScatterDataProvider;
+import com.gulf.arabchat.modules.charting.renderer.ScatterChartRenderer;
 
 /**
  * The ScatterChart. Draws dots, triangles, squares and custom shapes into the

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.settings;
+package com.gulf.arabchat.home.settings;
 
 
 import android.os.Bundle;
@@ -13,10 +13,10 @@ import android.widget.ProgressBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.modules.Internet.CheckServer;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.modules.Internet.CheckServer;
+import com.gulf.arabchat.utils.Tools;
 
 import java.util.Objects;
 

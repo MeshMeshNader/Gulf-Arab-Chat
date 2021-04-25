@@ -1,8 +1,7 @@
-package com.angopapo.datooapp.adapters.others;
+package com.gulf.arabchat.adapters.others;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,14 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.app.DispatchActivity;
-import com.angopapo.datooapp.app.SplashScreen;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.profile.EditProfileActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.models.others.LanguageModel;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.app.SplashScreen;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.models.others.LanguageModel;
 
 import java.util.List;
 import java.util.Locale;

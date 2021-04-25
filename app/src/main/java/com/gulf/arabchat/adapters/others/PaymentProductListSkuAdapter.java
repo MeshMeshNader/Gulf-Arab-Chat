@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.adapters.others;
+package com.gulf.arabchat.adapters.others;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,11 +18,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.SkuDetails;
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.settings.WebUrlsActivity;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.settings.WebUrlsActivity;
 
 import java.util.List;
 

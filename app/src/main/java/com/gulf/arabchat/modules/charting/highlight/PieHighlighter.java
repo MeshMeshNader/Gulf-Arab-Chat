@@ -1,8 +1,8 @@
-package com.angopapo.datooapp.modules.charting.highlight;
+package com.gulf.arabchat.modules.charting.highlight;
 
-import com.angopapo.datooapp.modules.charting.charts.PieChart;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IPieDataSet;
+import com.gulf.arabchat.modules.charting.charts.PieChart;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IPieDataSet;
 
 /**
  * Created by philipp on 12/06/16.

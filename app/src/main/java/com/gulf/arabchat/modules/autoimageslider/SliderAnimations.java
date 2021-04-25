@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.autoimageslider;
+package com.gulf.arabchat.modules.autoimageslider;
 
 public enum SliderAnimations {
     ANTICLOCKSPINTRANSFORMATION,

@@ -1,12 +1,12 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.controller;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.controller;
 
 import androidx.annotation.NonNull;
 
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.BaseAnimation;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Orientation;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils.CoordinatesUtils;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.BaseAnimation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Orientation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils.CoordinatesUtils;
 
 public class AnimationController {
 

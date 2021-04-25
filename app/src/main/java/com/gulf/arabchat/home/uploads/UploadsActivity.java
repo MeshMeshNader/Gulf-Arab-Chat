@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.uploads;
+package com.gulf.arabchat.home.uploads;
 
 
 import android.graphics.Bitmap;
@@ -20,14 +20,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.others.PhotosListAdapter;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.others.PhotosListAdapter;
 
-import com.angopapo.datooapp.adapters.others.TabUploadsAdapter;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.ItemOffsetDecoration;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.adapters.others.TabUploadsAdapter;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.ItemOffsetDecoration;
+import com.gulf.arabchat.utils.Tools;
 import com.google.android.material.tabs.TabLayout;
 import com.parse.ParseFile;
 import com.parse.ParseUser;

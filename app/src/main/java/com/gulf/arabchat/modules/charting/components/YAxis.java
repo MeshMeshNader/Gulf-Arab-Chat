@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.charting.components;
+package com.gulf.arabchat.modules.charting.components;
 
 import android.graphics.Color;
 import android.graphics.Paint;
 
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * Class representing the y-axis labels settings and its entries. Only use the setter methods to

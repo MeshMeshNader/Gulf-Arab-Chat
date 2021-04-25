@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.cardstackview.internal;
+package com.gulf.arabchat.modules.cardstackview.internal;
 
 import android.view.View;
 
@@ -6,9 +6,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.modules.cardstackview.CardStackLayoutManager;
-import com.angopapo.datooapp.modules.cardstackview.CardStackListener;
-import com.angopapo.datooapp.modules.cardstackview.RewindAnimationSetting;
+import com.gulf.arabchat.modules.cardstackview.CardStackLayoutManager;
+import com.gulf.arabchat.modules.cardstackview.CardStackListener;
+import com.gulf.arabchat.modules.cardstackview.RewindAnimationSetting;
 
 public class CardStackSmoothScroller extends RecyclerView.SmoothScroller {
 

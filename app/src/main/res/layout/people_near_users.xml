@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.angopapo.datooapp.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat.modules.circularimageview.CircleImageView
         android:id="@+id/ivPhoto"
         android:layout_width="180dp"
         android:layout_height="180dp"
@@ -52,7 +52,7 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <com.angopapo.datooapp.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat.modules.circularimageview.CircleImageView
         android:id="@+id/onlie"
         android:layout_width="20dp"
         android:layout_height="20dp"

@@ -1,12 +1,12 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView;
 
 import androidx.annotation.Nullable;
 
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.AnimationManager;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.Value;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.DrawManager;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.AnimationManager;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.Value;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.DrawManager;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
 
 
 public class IndicatorManager implements ValueController.UpdateListener {

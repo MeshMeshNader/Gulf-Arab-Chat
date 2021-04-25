@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.graphics.drawable.Drawable;
 

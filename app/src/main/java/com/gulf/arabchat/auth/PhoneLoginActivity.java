@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.auth;
+package com.gulf.arabchat.auth;
 
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
@@ -26,18 +26,18 @@ import androidx.core.widget.NestedScrollView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.others.CountriesFetcher;
-import com.angopapo.datooapp.adapters.others.TextWatcherAdapter;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.app.Constants;
-import com.angopapo.datooapp.app.DispatchActivity;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.models.others.CountriesModel;
-import com.angopapo.datooapp.utils.CustomProgressView;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.others.CountriesFetcher;
+import com.gulf.arabchat.adapters.others.TextWatcherAdapter;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.app.Constants;
+import com.gulf.arabchat.app.DispatchActivity;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.models.others.CountriesModel;
+import com.gulf.arabchat.utils.CustomProgressView;
+import com.gulf.arabchat.utils.Tools;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.FirebaseTooManyRequestsException;

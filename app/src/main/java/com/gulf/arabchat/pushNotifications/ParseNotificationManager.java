@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.pushNotifications;
+package com.gulf.arabchat.pushNotifications;
 
 import android.app.Notification;
 import android.app.NotificationManager;

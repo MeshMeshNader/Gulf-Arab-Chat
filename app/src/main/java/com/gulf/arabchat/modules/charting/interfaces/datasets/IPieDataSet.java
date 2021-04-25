@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.charting.interfaces.datasets;
+package com.gulf.arabchat.modules.charting.interfaces.datasets;
 
-import com.angopapo.datooapp.modules.charting.data.PieDataSet;
-import com.angopapo.datooapp.modules.charting.data.PieEntry;
+import com.gulf.arabchat.modules.charting.data.PieDataSet;
+import com.gulf.arabchat.modules.charting.data.PieEntry;
 
 /**
  * Created by Philipp Jahoda on 03/11/15.

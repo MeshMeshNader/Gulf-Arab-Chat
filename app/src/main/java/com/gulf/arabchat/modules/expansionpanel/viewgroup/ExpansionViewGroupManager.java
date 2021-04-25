@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.expansionpanel.viewgroup;
+package com.gulf.arabchat.modules.expansionpanel.viewgroup;
 
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.angopapo.datooapp.modules.expansionpanel.ExpansionLayout;
+import com.gulf.arabchat.modules.expansionpanel.ExpansionLayout;
 
 
 class ExpansionViewGroupManager {

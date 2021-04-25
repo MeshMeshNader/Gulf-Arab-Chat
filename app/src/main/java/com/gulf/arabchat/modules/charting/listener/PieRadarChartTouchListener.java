@@ -1,15 +1,15 @@
 
-package com.angopapo.datooapp.modules.charting.listener;
+package com.gulf.arabchat.modules.charting.listener;
 
 import android.annotation.SuppressLint;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 
-import com.angopapo.datooapp.modules.charting.charts.PieRadarChartBase;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.charts.PieRadarChartBase;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 import java.util.ArrayList;
 

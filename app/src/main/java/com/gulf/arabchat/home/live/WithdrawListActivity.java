@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.live;
+package com.gulf.arabchat.home.live;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,13 +13,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.datoo.WithdrawAdapter;
-import com.angopapo.datooapp.auth.WelcomeActivity;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.models.datoo.WithdrawModel;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.arabchat.WithdrawAdapter;
+import com.gulf.arabchat.auth.WelcomeActivity;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.models.arabchat.WithdrawModel;
+import com.gulf.arabchat.utils.Tools;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;

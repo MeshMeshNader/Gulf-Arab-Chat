@@ -1,10 +1,10 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type;
 
 import android.animation.ValueAnimator;
 import androidx.annotation.NonNull;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.type.ThinWormAnimationValue;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.type.ThinWormAnimationValue;
 
 public class ThinWormAnimation extends WormAnimation {
 

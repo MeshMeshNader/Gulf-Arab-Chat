@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.helpers;
+package com.gulf.arabchat.helpers;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,19 +16,19 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.core.widget.NestedScrollView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.home.calls.VoiceCallActivity;
-import com.angopapo.datooapp.utils.rtcUtils.ConstantApp;
-import com.angopapo.datooapp.home.calls.CallActivity;
-import com.angopapo.datooapp.models.datoo.ConnectionListModel;
-import com.angopapo.datooapp.models.datoo.EncountersModel;
-import com.angopapo.datooapp.models.datoo.MessageModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.centersheet.CenterSheetBehavior;
-import com.angopapo.datooapp.modules.centersheet.CenterSheetDialog;
-import com.angopapo.datooapp.modules.flowlayout.FlowLayout;
-import com.angopapo.datooapp.modules.shimmer.ShimmerFrameLayout;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.home.calls.VoiceCallActivity;
+import com.gulf.arabchat.utils.rtcUtils.ConstantApp;
+import com.gulf.arabchat.home.calls.CallActivity;
+import com.gulf.arabchat.models.arabchat.ConnectionListModel;
+import com.gulf.arabchat.models.arabchat.EncountersModel;
+import com.gulf.arabchat.models.arabchat.MessageModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.centersheet.CenterSheetBehavior;
+import com.gulf.arabchat.modules.centersheet.CenterSheetDialog;
+import com.gulf.arabchat.modules.flowlayout.FlowLayout;
+import com.gulf.arabchat.modules.shimmer.ShimmerFrameLayout;
 import com.parse.ParseConfig;
 import com.parse.ParseException;
 import com.parse.ParseQuery;

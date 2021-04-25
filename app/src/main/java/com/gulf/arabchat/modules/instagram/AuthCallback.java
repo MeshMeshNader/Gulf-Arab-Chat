@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.modules.instagram;
+package com.gulf.arabchat.modules.instagram;
 
-import com.angopapo.datooapp.models.others.InstagramUser;
+import com.gulf.arabchat.models.others.InstagramUser;
 
 public interface AuthCallback {
   void onSuccess(InstagramUser socialUser);

@@ -1,7 +1,7 @@
 
-package com.angopapo.datooapp.modules.charting.highlight;
+package com.gulf.arabchat.modules.charting.highlight;
 
-import com.angopapo.datooapp.modules.charting.components.YAxis;
+import com.gulf.arabchat.modules.charting.components.YAxis;
 
 /**
  * Contains information needed to determine the highlighted value.

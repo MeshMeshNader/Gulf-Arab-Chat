@@ -1,12 +1,12 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.drawer.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.drawer.type;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import androidx.annotation.NonNull;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.Value;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.type.SwapAnimationValue;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Orientation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.Value;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.type.SwapAnimationValue;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Orientation;
 
 public class SwapDrawer extends BaseDrawer {
 

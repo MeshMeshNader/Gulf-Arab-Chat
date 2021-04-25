@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -11,15 +11,15 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 
-import com.angopapo.datooapp.modules.charting.animation.Easing.EasingFunction;
-import com.angopapo.datooapp.modules.charting.components.Legend;
-import com.angopapo.datooapp.modules.charting.components.XAxis;
-import com.angopapo.datooapp.modules.charting.data.ChartData;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
-import com.angopapo.datooapp.modules.charting.listener.PieRadarChartTouchListener;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.animation.Easing.EasingFunction;
+import com.gulf.arabchat.modules.charting.components.Legend;
+import com.gulf.arabchat.modules.charting.components.XAxis;
+import com.gulf.arabchat.modules.charting.data.ChartData;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.listener.PieRadarChartTouchListener;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * Baseclass of PieChart and RadarChart.

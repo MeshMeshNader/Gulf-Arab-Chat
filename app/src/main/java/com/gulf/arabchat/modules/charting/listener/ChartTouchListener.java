@@ -1,11 +1,11 @@
-package com.angopapo.datooapp.modules.charting.listener;
+package com.gulf.arabchat.modules.charting.listener;
 
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.angopapo.datooapp.modules.charting.charts.Chart;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.charts.Chart;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
 
 /**
  * Created by philipp on 12/06/15.

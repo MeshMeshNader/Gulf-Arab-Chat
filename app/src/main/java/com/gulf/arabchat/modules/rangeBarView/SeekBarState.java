@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.rangeBarView;
+package com.gulf.arabchat.modules.rangeBarView;
 
 class SeekBarState {
     public String indicatorText;

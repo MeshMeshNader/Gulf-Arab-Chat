@@ -1,16 +1,16 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.util.Log;
 
-import com.angopapo.datooapp.modules.charting.formatter.DefaultFillFormatter;
-import com.angopapo.datooapp.modules.charting.formatter.IFillFormatter;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ILineDataSet;
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.formatter.DefaultFillFormatter;
+import com.gulf.arabchat.modules.charting.formatter.IFillFormatter;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ILineDataSet;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

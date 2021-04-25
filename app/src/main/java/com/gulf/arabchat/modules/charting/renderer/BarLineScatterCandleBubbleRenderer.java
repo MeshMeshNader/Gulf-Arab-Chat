@@ -1,12 +1,12 @@
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
-import com.angopapo.datooapp.modules.charting.animation.ChartAnimator;
-import com.angopapo.datooapp.modules.charting.data.DataSet;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.BarLineScatterCandleBubbleDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.animation.ChartAnimator;
+import com.gulf.arabchat.modules.charting.data.DataSet;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.BarLineScatterCandleBubbleDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * Created by Philipp Jahoda on 09/06/16.

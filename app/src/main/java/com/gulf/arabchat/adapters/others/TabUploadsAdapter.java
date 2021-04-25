@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.adapters.others;
+package com.gulf.arabchat.adapters.others;
 
 
 import android.graphics.Typeface;
@@ -14,8 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
 
 import java.util.ArrayList;
 import java.util.List;

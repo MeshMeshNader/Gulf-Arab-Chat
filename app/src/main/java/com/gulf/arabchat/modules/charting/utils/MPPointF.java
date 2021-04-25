@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.utils;
+package com.gulf.arabchat.modules.charting.utils;
 
 import android.os.Parcel;
 import android.os.Parcelable;

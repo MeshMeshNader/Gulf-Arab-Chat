@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.dotsindicator;
+package com.gulf.arabchat.modules.dotsindicator;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -17,7 +17,7 @@ import android.widget.RelativeLayout;
 import androidx.viewpager.widget.ViewPager;
 
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.util.ArrayList;
 import java.util.List;

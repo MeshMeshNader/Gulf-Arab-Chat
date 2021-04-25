@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.utils;
+package com.gulf.arabchat.modules.charting.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -18,8 +18,8 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.angopapo.datooapp.modules.charting.formatter.DefaultValueFormatter;
-import com.angopapo.datooapp.modules.charting.formatter.ValueFormatter;
+import com.gulf.arabchat.modules.charting.formatter.DefaultValueFormatter;
+import com.gulf.arabchat.modules.charting.formatter.ValueFormatter;
 
 import java.util.List;
 

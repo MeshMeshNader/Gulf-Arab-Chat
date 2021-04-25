@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.highlight;
+package com.gulf.arabchat.modules.charting.highlight;
 
 /**
  * Created by Philipp Jahoda on 24/07/15. Class that represents the range of one value in a stacked bar entry. e.g.

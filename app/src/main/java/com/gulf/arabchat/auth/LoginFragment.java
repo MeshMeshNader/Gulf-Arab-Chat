@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.auth;
+package com.gulf.arabchat.auth;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,12 +20,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.DispatchActivity;
-import com.angopapo.datooapp.authUtils.AngopapoLoginActivity;
-import com.angopapo.datooapp.authUtils.AngopapoLoginConfig;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.DispatchActivity;
+import com.gulf.arabchat.authUtils.ArabChatLoginActivity;
+import com.gulf.arabchat.authUtils.ArabChatLoginConfig;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.User;
 import com.google.android.material.snackbar.Snackbar;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
@@ -57,7 +57,7 @@ public class LoginFragment extends ParseLoginFragmentBase {
     private Button parseLoginButton;
     private ParseLoginFragmentListener loginFragmentListener;
 
-    private AngopapoLoginConfig config;
+    private ArabChatLoginConfig config;
 
     public static LoginFragment newInstance(Bundle configOptions) {
         LoginFragment loginFragment = new LoginFragment();
@@ -74,7 +74,7 @@ public class LoginFragment extends ParseLoginFragmentBase {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup parent,
                              Bundle savedInstanceState) {
         if (getArguments() != null) {
-            config = AngopapoLoginConfig.fromBundle(getArguments(), getActivity());
+            config = ArabChatLoginConfig.fromBundle(getArguments(), getActivity());
         }
 
         View v = inflater.inflate(R.layout.fragment_login, parent, false);
@@ -88,10 +88,10 @@ public class LoginFragment extends ParseLoginFragmentBase {
 
         setHasOptionsMenu(true);
 
-        ((AngopapoLoginActivity) Objects.requireNonNull(getActivity())).setSupportActionBar(mToolbar);
-        Objects.requireNonNull(((AngopapoLoginActivity) getActivity()).getSupportActionBar()).setTitle("");
-        Objects.requireNonNull(((AngopapoLoginActivity) getActivity()).getSupportActionBar()).setElevation(3.0f);
-        Objects.requireNonNull(((AngopapoLoginActivity) getActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        ((ArabChatLoginActivity) Objects.requireNonNull(getActivity())).setSupportActionBar(mToolbar);
+        Objects.requireNonNull(((ArabChatLoginActivity) getActivity()).getSupportActionBar()).setTitle("");
+        Objects.requireNonNull(((ArabChatLoginActivity) getActivity()).getSupportActionBar()).setElevation(3.0f);
+        Objects.requireNonNull(((ArabChatLoginActivity) getActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         mToolbar.setBackgroundResource(R.color.transparent);
 

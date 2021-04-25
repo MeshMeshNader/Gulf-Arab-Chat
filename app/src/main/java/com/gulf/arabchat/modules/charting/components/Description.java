@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.charting.components;
+package com.gulf.arabchat.modules.charting.components;
 
 import android.graphics.Paint;
 
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * Created by Philipp Jahoda on 17/09/16.

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.badgeview;
+package com.gulf.arabchat.modules.badgeview;
 
 import android.content.Context;
 import android.graphics.Bitmap;

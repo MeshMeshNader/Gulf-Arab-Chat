@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.data.filter;
+package com.gulf.arabchat.modules.charting.data.filter;
 
 import android.annotation.TargetApi;
 import android.os.Build;

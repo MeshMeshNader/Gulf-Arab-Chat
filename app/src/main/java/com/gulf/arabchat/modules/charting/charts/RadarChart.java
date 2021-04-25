@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,14 +7,14 @@ import android.graphics.Color;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
-import com.angopapo.datooapp.modules.charting.components.YAxis;
-import com.angopapo.datooapp.modules.charting.components.YAxis.AxisDependency;
-import com.angopapo.datooapp.modules.charting.data.RadarData;
-import com.angopapo.datooapp.modules.charting.highlight.RadarHighlighter;
-import com.angopapo.datooapp.modules.charting.renderer.RadarChartRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.XAxisRendererRadarChart;
-import com.angopapo.datooapp.modules.charting.renderer.YAxisRendererRadarChart;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.components.YAxis;
+import com.gulf.arabchat.modules.charting.components.YAxis.AxisDependency;
+import com.gulf.arabchat.modules.charting.data.RadarData;
+import com.gulf.arabchat.modules.charting.highlight.RadarHighlighter;
+import com.gulf.arabchat.modules.charting.renderer.RadarChartRenderer;
+import com.gulf.arabchat.modules.charting.renderer.XAxisRendererRadarChart;
+import com.gulf.arabchat.modules.charting.renderer.YAxisRendererRadarChart;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * Implementation of the RadarChart, a "spidernet"-like chart. It works best

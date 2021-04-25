@@ -1,10 +1,10 @@
-package com.angopapo.datooapp.modules.charting.animation;
+package com.gulf.arabchat.modules.charting.animation;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import androidx.annotation.RequiresApi;
 
-import com.angopapo.datooapp.modules.charting.animation.Easing.EasingFunction;
+import com.gulf.arabchat.modules.charting.animation.Easing.EasingFunction;
 
 /**
  * Object responsible for all animations in the Chart. Animations require API level 11.

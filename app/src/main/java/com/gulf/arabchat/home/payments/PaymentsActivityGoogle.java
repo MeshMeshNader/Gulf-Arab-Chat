@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.payments;
+package com.gulf.arabchat.home.payments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -27,16 +27,15 @@ import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.others.PaymentProductListSkuAdapter;
-import com.angopapo.datooapp.adapters.others.SliderPagerAdapter;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.models.others.PaymentSliderModel;
-import com.angopapo.datooapp.modules.dotsindicator.SpringDotsIndicator;
-import com.angopapo.datooapp.utils.Tools;
-import com.google.android.material.tabs.TabLayout;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.others.PaymentProductListSkuAdapter;
+import com.gulf.arabchat.adapters.others.SliderPagerAdapter;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.models.others.PaymentSliderModel;
+import com.gulf.arabchat.modules.dotsindicator.SpringDotsIndicator;
+import com.gulf.arabchat.utils.Tools;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;

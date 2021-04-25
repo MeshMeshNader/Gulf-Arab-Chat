@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.discretescrollview;
+package com.gulf.arabchat.modules.discretescrollview;
 
 import android.content.Context;
 import android.graphics.Point;
@@ -17,7 +17,7 @@ import androidx.core.view.accessibility.AccessibilityRecordCompat;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.modules.discretescrollview.transform.DiscreteScrollItemTransformer;
+import com.gulf.arabchat.modules.discretescrollview.transform.DiscreteScrollItemTransformer;
 
 import java.util.Locale;
 

@@ -1,13 +1,13 @@
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.drawable.Drawable;
 
-import com.angopapo.datooapp.modules.charting.animation.ChartAnimator;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.animation.ChartAnimator;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * Created by Philipp Jahoda on 25/01/16.

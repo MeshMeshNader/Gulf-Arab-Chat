@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "158984163667",
+    "project_id": "arabchat-0",
+    "storage_bucket": "arabchat-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158984163667:android:73048a9650521a454591a6",
+        "android_client_info": {
+          "package_name": "com.gulf.arabchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158984163667-ostcvhidc8n3kl03rofaqiq63gm0t54h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gulf.arabchat",
+            "certificate_hash": "107f6b140f5f4d5f4f48a087131a351c3304370b"
+          }
+        },
+        {
+          "client_id": "158984163667-2ghg4hd368mu62gr4j6t3opu47k3io2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6XtJxgGcudJ0g3-JGsr_u1dfsvmFQ-d8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158984163667-2ghg4hd368mu62gr4j6t3opu47k3io2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

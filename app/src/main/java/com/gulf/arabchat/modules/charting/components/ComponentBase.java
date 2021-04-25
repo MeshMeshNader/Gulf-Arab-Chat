@@ -1,10 +1,10 @@
 
-package com.angopapo.datooapp.modules.charting.components;
+package com.gulf.arabchat.modules.charting.components;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
 
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * This class encapsulates everything both Axis, Legend and LimitLines have in common.

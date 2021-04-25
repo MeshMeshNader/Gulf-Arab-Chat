@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.models.others;
+package com.gulf.arabchat.models.others;
 
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.models.arabchat.User;
 
 public class PaymentSliderModel {
 

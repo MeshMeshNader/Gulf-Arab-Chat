@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.angopapo.datooapp.modules.shimmer;
+package com.gulf.arabchat.modules.shimmer;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -19,7 +19,7 @@ import androidx.annotation.FloatRange;
 import androidx.annotation.IntDef;
 import androidx.annotation.Px;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

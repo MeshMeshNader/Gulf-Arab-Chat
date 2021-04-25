@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.circularimageview;
+package com.gulf.arabchat.modules.circularimageview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -16,7 +16,7 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatImageView;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.io.IOException;
 

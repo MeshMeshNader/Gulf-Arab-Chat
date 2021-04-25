@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.merlin;
+package com.gulf.arabchat.modules.merlin;
 
 import android.app.Service;
 import android.content.Intent;

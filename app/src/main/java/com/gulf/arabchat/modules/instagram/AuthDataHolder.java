@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.instagram;
+package com.gulf.arabchat.modules.instagram;
 
 public class AuthDataHolder {
   private static final AuthDataHolder instance = new AuthDataHolder();

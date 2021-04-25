@@ -1,8 +1,8 @@
-package com.angopapo.datooapp.modules.cardstackview.internal;
+package com.gulf.arabchat.modules.cardstackview.internal;
 
 import android.view.animation.Interpolator;
 
-import com.angopapo.datooapp.modules.cardstackview.Direction;
+import com.gulf.arabchat.modules.cardstackview.Direction;
 
 
 public interface AnimationSetting {

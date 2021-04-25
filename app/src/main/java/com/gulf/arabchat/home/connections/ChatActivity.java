@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.connections;
+package com.gulf.arabchat.home.connections;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -32,27 +32,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.angopapo.datooapp.home.payments.PaymentsActivity;
-import com.angopapo.datooapp.models.datoo.AutoMessagesModel;
+import com.gulf.arabchat.home.payments.PaymentsActivity;
+import com.gulf.arabchat.models.arabchat.AutoMessagesModel;
 import com.greysonparrelli.permiso.Permiso;
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.datoo.ChatAdapter;
-import com.angopapo.datooapp.adapters.others.PhotosChatUploadAdapter;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.app.Constants;
-import com.angopapo.datooapp.helpers.QuickActions;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.helpers.SendNotifications;
-import com.angopapo.datooapp.models.datoo.ConnectionListModel;
-import com.angopapo.datooapp.models.datoo.MessageModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.models.others.UploadModel;
-import com.angopapo.datooapp.modules.camera.ImagePro;
-import com.angopapo.datooapp.modules.circularimageview.CircleImageView;
-import com.angopapo.datooapp.utils.DateUtils;
-import com.angopapo.datooapp.utils.ItemOffsetDecoration;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.arabchat.ChatAdapter;
+import com.gulf.arabchat.adapters.others.PhotosChatUploadAdapter;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.app.Constants;
+import com.gulf.arabchat.helpers.QuickActions;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.helpers.SendNotifications;
+import com.gulf.arabchat.models.arabchat.ConnectionListModel;
+import com.gulf.arabchat.models.arabchat.MessageModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.models.others.UploadModel;
+import com.gulf.arabchat.modules.camera.ImagePro;
+import com.gulf.arabchat.modules.circularimageview.CircleImageView;
+import com.gulf.arabchat.utils.DateUtils;
+import com.gulf.arabchat.utils.ItemOffsetDecoration;
+import com.gulf.arabchat.utils.Tools;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseQuery;
@@ -72,7 +72,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Objects;
 
-import static com.angopapo.datooapp.modules.camera.ImagePro.CAMERA_CODE;
+import static com.gulf.arabchat.modules.camera.ImagePro.CAMERA_CODE;
 
 
 public class ChatActivity extends AppCompatActivity {

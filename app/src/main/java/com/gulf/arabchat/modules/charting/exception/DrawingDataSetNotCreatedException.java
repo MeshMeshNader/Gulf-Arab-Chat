@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.exception;
+package com.gulf.arabchat.modules.charting.exception;
 
 public class DrawingDataSetNotCreatedException extends RuntimeException {
 

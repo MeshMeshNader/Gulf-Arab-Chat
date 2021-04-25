@@ -1,12 +1,12 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type;
 
 import android.animation.IntEvaluator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import androidx.annotation.NonNull;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.type.ScaleAnimationValue;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.type.ScaleAnimationValue;
 
 public class ScaleAnimation extends ColorAnimation {
 

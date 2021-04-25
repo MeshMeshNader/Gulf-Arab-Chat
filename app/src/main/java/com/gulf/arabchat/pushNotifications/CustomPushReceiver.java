@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.pushNotifications;
+package com.gulf.arabchat.pushNotifications;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -9,14 +9,14 @@ import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.helpers.SendNotifications;
-import com.angopapo.datooapp.home.HomeActivity;
-import com.angopapo.datooapp.home.encounters.LikedYouActivity;
-import com.angopapo.datooapp.home.payments.PaymentsActivity;
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.helpers.SendNotifications;
+import com.gulf.arabchat.home.HomeActivity;
+import com.gulf.arabchat.home.encounters.LikedYouActivity;
+import com.gulf.arabchat.home.payments.PaymentsActivity;
+import com.gulf.arabchat.models.arabchat.User;
 import com.parse.ParseAnalytics;
 import com.parse.ParsePushBroadcastReceiver;
 

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.Internet;
+package com.gulf.arabchat.modules.Internet;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -10,8 +10,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Config;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Config;
 
 import java.net.URL;
 import java.net.URLConnection;

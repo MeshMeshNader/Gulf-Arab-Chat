@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.nearby;
+package com.gulf.arabchat.home.nearby;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -19,12 +19,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.others.PlacesListAdapter;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.others.PlacesModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.others.PlacesListAdapter;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.others.PlacesModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.Tools;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;

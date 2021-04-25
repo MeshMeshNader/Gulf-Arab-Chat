@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.inAppNotification;
+package com.gulf.arabchat.modules.inAppNotification;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 
 public class AppNotification {

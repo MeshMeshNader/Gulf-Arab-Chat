@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.uploads;
+package com.gulf.arabchat.home.uploads;
 
 
 import android.graphics.Color;
@@ -20,22 +20,22 @@ import com.android.volley.Cache;
 import com.android.volley.Request;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.others.PhotosUploadAdapter;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.others.PhotosUploadAdapter;
 
-import com.angopapo.datooapp.app.Application;
+import com.gulf.arabchat.app.Application;
 
-import com.angopapo.datooapp.app.Constants;
-import com.angopapo.datooapp.helpers.QuickHelp;
+import com.gulf.arabchat.app.Constants;
+import com.gulf.arabchat.helpers.QuickHelp;
 
 
-import com.angopapo.datooapp.models.others.InstagramUser;
-import com.angopapo.datooapp.models.others.UploadModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.instagram.AuthCallback;
-import com.angopapo.datooapp.modules.instagram.AuthInstagram;
+import com.gulf.arabchat.models.others.InstagramUser;
+import com.gulf.arabchat.models.others.UploadModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.instagram.AuthCallback;
+import com.gulf.arabchat.modules.instagram.AuthInstagram;
 
-import com.angopapo.datooapp.utils.ItemOffsetDecoration;
+import com.gulf.arabchat.utils.ItemOffsetDecoration;
 
 import com.parse.ParseUser;
 

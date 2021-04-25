@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.settings.about;
+package com.gulf.arabchat.home.settings.about;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -6,9 +6,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.angopapo.datooapp.BuildConfig;
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.BuildConfig;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.utils.Tools;
 
 import java.util.Objects;
 

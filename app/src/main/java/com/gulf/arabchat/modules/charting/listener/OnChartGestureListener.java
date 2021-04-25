@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.listener;
+package com.gulf.arabchat.modules.charting.listener;
 
 import android.view.MotionEvent;
 

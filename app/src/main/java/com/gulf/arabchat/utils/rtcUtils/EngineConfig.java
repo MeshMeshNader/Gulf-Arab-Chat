@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.utils.rtcUtils;
+package com.gulf.arabchat.utils.rtcUtils;
 
 import io.agora.rtc.video.VideoEncoderConfiguration;
 import io.agora.rtm.LocalInvitation;

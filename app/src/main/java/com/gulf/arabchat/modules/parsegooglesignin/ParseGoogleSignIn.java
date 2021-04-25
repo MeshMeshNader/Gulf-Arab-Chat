@@ -1,12 +1,12 @@
-package com.angopapo.datooapp.modules.parsegooglesignin;
+package com.gulf.arabchat.modules.parsegooglesignin;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;

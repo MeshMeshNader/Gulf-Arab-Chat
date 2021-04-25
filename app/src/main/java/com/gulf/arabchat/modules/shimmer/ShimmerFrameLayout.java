@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.shimmer;
+package com.gulf.arabchat.modules.shimmer;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 /**
  * Shimmer is an Android library that provides an easy way to add a shimmer effect to any {@link

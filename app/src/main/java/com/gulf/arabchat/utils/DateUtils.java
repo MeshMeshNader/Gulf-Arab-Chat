@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.utils;
+package com.gulf.arabchat.utils;
 
 import android.util.Log;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;

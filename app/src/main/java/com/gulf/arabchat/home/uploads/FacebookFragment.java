@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.uploads;
+package com.gulf.arabchat.home.uploads;
 
 
 import android.content.Intent;
@@ -21,17 +21,16 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
-import com.angopapo.datooapp.adapters.others.PhotosUploadAdapter;
-import com.angopapo.datooapp.adapters.others.fbAlbumsAdapter;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.others.FbAlbumModel;
-import com.angopapo.datooapp.models.others.UploadModel;
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.adapters.others.PhotosUploadAdapter;
+import com.gulf.arabchat.adapters.others.fbAlbumsAdapter;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.others.FbAlbumModel;
+import com.gulf.arabchat.models.others.UploadModel;
+import com.gulf.arabchat.models.arabchat.User;
 
-import com.angopapo.datooapp.utils.ItemOffsetDecoration;
+import com.gulf.arabchat.utils.ItemOffsetDecoration;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 

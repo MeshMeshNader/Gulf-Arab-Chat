@@ -1,8 +1,8 @@
-package com.angopapo.datooapp.app;
+package com.gulf.arabchat.app;
 
 
-import com.angopapo.datooapp.BuildConfig;
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.BuildConfig;
 
 import io.agora.rtc.video.VideoEncoderConfiguration;
 

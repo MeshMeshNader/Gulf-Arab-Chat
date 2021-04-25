@@ -1,10 +1,10 @@
-package com.angopapo.datooapp.modules.charting.interfaces.datasets;
+package com.gulf.arabchat.modules.charting.interfaces.datasets;
 
 import android.graphics.DashPathEffect;
 
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.data.LineDataSet;
-import com.angopapo.datooapp.modules.charting.formatter.IFillFormatter;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.data.LineDataSet;
+import com.gulf.arabchat.modules.charting.formatter.IFillFormatter;
 
 /**
  * Created by Philpp Jahoda on 21/10/15.

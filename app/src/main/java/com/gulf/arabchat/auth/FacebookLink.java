@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.auth;
+package com.gulf.arabchat.auth;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,15 +14,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatButton;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.BaseActivity;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.app.DispatchActivity;
-import com.angopapo.datooapp.helpers.QuickActions;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.BaseActivity;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.app.DispatchActivity;
+import com.gulf.arabchat.helpers.QuickActions;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.User;
 
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.utils.Tools;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 
@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.angopapo.datooapp.auth.WelcomeActivity.DownloadImageBitmap;
+import static com.gulf.arabchat.auth.WelcomeActivity.DownloadImageBitmap;
 
 public class FacebookLink extends BaseActivity {
 

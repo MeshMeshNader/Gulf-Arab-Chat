@@ -1,12 +1,12 @@
-package com.angopapo.datooapp.modules.charting.highlight;
+package com.gulf.arabchat.modules.charting.highlight;
 
-import com.angopapo.datooapp.modules.charting.data.BarData;
-import com.angopapo.datooapp.modules.charting.data.BarLineScatterCandleBubbleData;
-import com.angopapo.datooapp.modules.charting.data.ChartData;
-import com.angopapo.datooapp.modules.charting.data.DataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.BarDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.CombinedDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.data.BarData;
+import com.gulf.arabchat.modules.charting.data.BarLineScatterCandleBubbleData;
+import com.gulf.arabchat.modules.charting.data.ChartData;
+import com.gulf.arabchat.modules.charting.data.DataSet;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.BarDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.CombinedDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
 
 import java.util.List;
 

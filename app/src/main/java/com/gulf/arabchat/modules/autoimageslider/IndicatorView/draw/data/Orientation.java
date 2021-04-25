@@ -1,3 +1,3 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data;
 
 public enum Orientation {HORIZONTAL, VERTICAL}

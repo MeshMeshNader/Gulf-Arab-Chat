@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.charting.interfaces.datasets;
+package com.gulf.arabchat.modules.charting.interfaces.datasets;
 
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.IShapeRenderer;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.renderer.scatter.IShapeRenderer;
 
 /**
  * Created by philipp on 21/10/15.

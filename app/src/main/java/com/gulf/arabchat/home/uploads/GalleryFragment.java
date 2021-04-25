@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.uploads;
+package com.gulf.arabchat.home.uploads;
 
 
 import android.Manifest;
@@ -27,12 +27,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.greysonparrelli.permiso.Permiso;
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.others.PhotosUploadAdapter;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.others.UploadModel;
-import com.angopapo.datooapp.utils.ItemOffsetDecoration;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.others.PhotosUploadAdapter;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.others.UploadModel;
+import com.gulf.arabchat.utils.ItemOffsetDecoration;
 
 import java.io.File;
 import java.util.ArrayList;

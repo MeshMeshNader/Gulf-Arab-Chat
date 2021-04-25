@@ -1,8 +1,8 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IPieDataSet;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IPieDataSet;
 
 /**
  * A PieData object can only represent one DataSet. Unlike all other charts, the

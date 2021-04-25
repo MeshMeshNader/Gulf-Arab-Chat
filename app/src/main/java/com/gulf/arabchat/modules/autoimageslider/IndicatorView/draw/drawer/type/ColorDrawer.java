@@ -1,11 +1,11 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.drawer.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.drawer.type;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import androidx.annotation.NonNull;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.Value;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.type.ColorAnimationValue;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.Value;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.type.ColorAnimationValue;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
 
 public class ColorDrawer extends BaseDrawer {
 

@@ -1,3 +1,3 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data;
 
 public interface Value {/*empty*/}

@@ -1,7 +1,7 @@
 
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * Abstract baseclass of all Renderers.

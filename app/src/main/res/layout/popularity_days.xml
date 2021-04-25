@@ -11,7 +11,7 @@
         android:layout_height="@dimen/size_6"
         android:layout_weight="0.5" />
 
-    <com.angopapo.datooapp.utils.ToggleableRadioButton
+    <com.gulf.arabchat.utils.ToggleableRadioButton
         android:id="@+id/popularity_days_1"
         android:visibility="visible"
         android:layout_width="0.0dip"
@@ -20,7 +20,7 @@
         style="@style/PopularityDay"
         tools:text="1" />
 
-    <com.angopapo.datooapp.utils.ToggleableRadioButton
+    <com.gulf.arabchat.utils.ToggleableRadioButton
         android:id="@+id/popularity_days_2"
         android:visibility="visible"
         android:layout_width="0.0dip"
@@ -29,7 +29,7 @@
         style="@style/PopularityDay"
         tools:text="2" />
 
-    <com.angopapo.datooapp.utils.ToggleableRadioButton
+    <com.gulf.arabchat.utils.ToggleableRadioButton
         android:id="@+id/popularity_days_3"
         android:visibility="visible"
         android:layout_width="0.0dip"
@@ -38,7 +38,7 @@
         style="@style/PopularityDay"
         tools:text="3" />
 
-    <com.angopapo.datooapp.utils.ToggleableRadioButton
+    <com.gulf.arabchat.utils.ToggleableRadioButton
         android:id="@+id/popularity_days_4"
         android:visibility="visible"
         android:layout_width="0.0dip"
@@ -47,7 +47,7 @@
         style="@style/PopularityDay"
         tools:text="4" />
 
-    <com.angopapo.datooapp.utils.ToggleableRadioButton
+    <com.gulf.arabchat.utils.ToggleableRadioButton
         android:id="@+id/popularity_days_5"
         android:visibility="visible"
         android:layout_width="0.0dip"
@@ -56,7 +56,7 @@
         style="@style/PopularityDay"
         tools:text="5" />
 
-    <com.angopapo.datooapp.utils.ToggleableRadioButton
+    <com.gulf.arabchat.utils.ToggleableRadioButton
         android:id="@+id/popularity_days_6"
         android:visibility="visible"
         android:layout_width="0.0dip"
@@ -65,7 +65,7 @@
         style="@style/PopularityDay"
         tools:text="6" />
 
-    <com.angopapo.datooapp.utils.ToggleableRadioButton
+    <com.gulf.arabchat.utils.ToggleableRadioButton
         android:id="@+id/popularity_today"
         android:visibility="visible"
         android:layout_width="wrap_content"

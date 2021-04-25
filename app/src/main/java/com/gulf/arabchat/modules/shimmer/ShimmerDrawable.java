@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.shimmer;
+package com.gulf.arabchat.modules.shimmer;
 
 import android.animation.ValueAnimator;
 import android.graphics.Canvas;

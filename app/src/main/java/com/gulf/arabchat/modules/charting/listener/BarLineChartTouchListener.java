@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.listener;
+package com.gulf.arabchat.modules.charting.listener;
 
 import android.annotation.SuppressLint;
 import android.graphics.Matrix;
@@ -8,16 +8,16 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 
-import com.angopapo.datooapp.modules.charting.charts.BarLineChartBase;
-import com.angopapo.datooapp.modules.charting.charts.HorizontalBarChart;
-import com.angopapo.datooapp.modules.charting.data.BarLineScatterCandleBubbleData;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.charts.BarLineChartBase;
+import com.gulf.arabchat.modules.charting.charts.HorizontalBarChart;
+import com.gulf.arabchat.modules.charting.data.BarLineScatterCandleBubbleData;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * TouchListener for Bar-, Line-, Scatter- and CandleStickChart with handles all

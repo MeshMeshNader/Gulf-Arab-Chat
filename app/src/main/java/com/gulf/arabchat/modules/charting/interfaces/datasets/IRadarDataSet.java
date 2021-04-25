@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.modules.charting.interfaces.datasets;
+package com.gulf.arabchat.modules.charting.interfaces.datasets;
 
-import com.angopapo.datooapp.modules.charting.data.RadarEntry;
+import com.gulf.arabchat.modules.charting.data.RadarEntry;
 
 /**
  * Created by Philipp Jahoda on 03/11/15.

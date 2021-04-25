@@ -1,23 +1,23 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
 
-import com.angopapo.datooapp.modules.charting.data.BarData;
-import com.angopapo.datooapp.modules.charting.data.BubbleData;
-import com.angopapo.datooapp.modules.charting.data.CandleData;
-import com.angopapo.datooapp.modules.charting.data.CombinedData;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.data.LineData;
-import com.angopapo.datooapp.modules.charting.data.ScatterData;
-import com.angopapo.datooapp.modules.charting.highlight.CombinedHighlighter;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.CombinedDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
-import com.angopapo.datooapp.modules.charting.renderer.CombinedChartRenderer;
+import com.gulf.arabchat.modules.charting.data.BarData;
+import com.gulf.arabchat.modules.charting.data.BubbleData;
+import com.gulf.arabchat.modules.charting.data.CandleData;
+import com.gulf.arabchat.modules.charting.data.CombinedData;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.data.LineData;
+import com.gulf.arabchat.modules.charting.data.ScatterData;
+import com.gulf.arabchat.modules.charting.highlight.CombinedHighlighter;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.CombinedDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.renderer.CombinedChartRenderer;
 
 /**
  * This chart class allows the combination of lines, bars, scatter and candle

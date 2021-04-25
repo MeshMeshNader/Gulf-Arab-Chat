@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.type;
 
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.Value;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.Value;
 
 public class SwapAnimationValue implements Value {
 

@@ -1,10 +1,10 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.graphics.Color;
 
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IRadarDataSet;
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IRadarDataSet;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.List;

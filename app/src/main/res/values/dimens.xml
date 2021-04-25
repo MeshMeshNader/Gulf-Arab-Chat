@@ -21,7 +21,7 @@
 
     <dimen name="my_profile_top_avatar_space">12dp</dimen>
     <dimen name="my_profile_element_height">72dp</dimen>
-    <dimen name="my_profile_max_avatar_size">140dp</dimen>
+    <dimen name="my_profile_max_avatar_size">240dp</dimen>
     <dimen name="my_profile_min_add_photos_icon_size">46dp</dimen>
     <dimen name="my_profile_name_text_size">20sp</dimen>
     <dimen name="my_profile_banner_radius">16dp</dimen>

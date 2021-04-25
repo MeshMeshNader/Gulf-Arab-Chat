@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data;
 
 import androidx.annotation.NonNull;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.type.*;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.type.*;
 
 public class AnimationValue {
 

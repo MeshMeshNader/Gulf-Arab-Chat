@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.formatter;
+package com.gulf.arabchat.modules.charting.formatter;
 
 import java.text.DecimalFormat;
 

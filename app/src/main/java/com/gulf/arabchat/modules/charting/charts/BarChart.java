@@ -1,18 +1,18 @@
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
 
-import com.angopapo.datooapp.modules.charting.components.YAxis;
-import com.angopapo.datooapp.modules.charting.data.BarData;
-import com.angopapo.datooapp.modules.charting.data.BarEntry;
-import com.angopapo.datooapp.modules.charting.highlight.BarHighlighter;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.BarDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarDataSet;
-import com.angopapo.datooapp.modules.charting.renderer.BarChartRenderer;
+import com.gulf.arabchat.modules.charting.components.YAxis;
+import com.gulf.arabchat.modules.charting.data.BarData;
+import com.gulf.arabchat.modules.charting.data.BarEntry;
+import com.gulf.arabchat.modules.charting.highlight.BarHighlighter;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.BarDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarDataSet;
+import com.gulf.arabchat.modules.charting.renderer.BarChartRenderer;
 
 /**
  * Chart that draws bars.

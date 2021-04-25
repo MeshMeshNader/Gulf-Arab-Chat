@@ -1,20 +1,20 @@
 <resources>
-    <string name="app_name" translatable="false">Datoo</string>
-    <string name="top_sheet_behavior" translatable="false">com.angopapo.datooapp.modules.topsheet.TopSheetBehavior</string>
-    <string name="center_sheet_behavior" translatable="false">com.angopapo.datooapp.modules.centersheet.CenterSheetBehavior</string>
+    <string name="app_name" translatable="false">Arab Chat</string>
+    <string name="top_sheet_behavior" translatable="false">com.gulf.arabchat.modules.topsheet.TopSheetBehavior</string>
+    <string name="center_sheet_behavior" translatable="false">com.gulf.arabchat.modules.centersheet.CenterSheetBehavior</string>
 
     <!--Warnings-->
     <string name="dsv_ex_msg_dont_set_lm" translatable="false">You should not set LayoutManager on DiscreteScrollView.class instance. Library uses a special one. Just don\'t call the method.</string>
     <string name="dsv_ex_msg_adapter_wrong_recycler" translatable="false">InfiniteScrollAdapter is supposed to work only with DiscreteScrollView</string>
 
     <!-- Facebook -->
-    <string name="facebook_app_id" translatable="false">10914455359048</string> <!-- example: 1234567890 -->
-    <string name="fb_login_protocol_scheme" translatable="false">fb10914455359048</string> <!-- example: fb1234567890 -->
+    <string name="facebook_app_id" translatable="false">190997555954200</string> <!-- example: 1234567890 -->
+    <string name="fb_login_protocol_scheme" translatable="false">fb190997555954200</string> <!-- example: fb1234567890 -->
 
     <!-- Google  -->
-    <string name="google_api_key_geo" translatable="false">AIzaSyAh-c7pldi7fefefeCyS9XSrvGCUBeHjg</string>
-    <string name="gcm_sender_id" translatable="false">72083345267</string>
-    <string name="admob_app_id" translatable="false">ca-app-pub-8614234010137830~4378020409</string>
+    <string name="google_api_key_geo" translatable="false">AIzaSyCBW3ZhxlngRCpIlUucaowuBCXLLmLu_8E</string>
+    <string name="gcm_sender_id" translatable="false">158984163667</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-5718962829212392~8963682618</string>
 
     <!--QuickHelp-->
     <string name="not_internet_connection">No internet connection!</string>
@@ -404,7 +404,7 @@
     <string name="click_to_see">click to see!</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_use">Terms of Use</string>
-    <string name="about_copyright">Copyright 2015–2019 Angopapo, Lda, all rights reserved</string>
+    <string name="about_copyright">Copyright 2015–2019 ArabChat, Lda, all rights reserved</string>
     <string name="about_more">For more information, visit https://datoo.angopapo.com/"</string>
     <string name="report_user_block">Block this user</string>
     <string name="report_user_dont">Don\'t report abuse</string>

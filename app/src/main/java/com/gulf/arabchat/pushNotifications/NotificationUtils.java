@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.pushNotifications;
+package com.gulf.arabchat.pushNotifications;
 
 import android.annotation.TargetApi;
 import android.app.Notification;

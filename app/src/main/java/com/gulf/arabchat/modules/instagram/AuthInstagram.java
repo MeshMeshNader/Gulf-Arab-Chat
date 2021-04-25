@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.instagram;
+package com.gulf.arabchat.modules.instagram;
 
 
-import com.angopapo.datooapp.app.Application;
+import com.gulf.arabchat.app.Application;
 
 import java.util.List;
 

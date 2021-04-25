@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.charting.formatter;
+package com.gulf.arabchat.modules.charting.formatter;
 
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
 
 /**
  * Interface that can be used to return a customized color instead of setting

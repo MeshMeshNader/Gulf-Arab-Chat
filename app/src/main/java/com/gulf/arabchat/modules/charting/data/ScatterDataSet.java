@@ -1,17 +1,17 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
-import com.angopapo.datooapp.modules.charting.charts.ScatterChart;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IScatterDataSet;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.ChevronDownShapeRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.ChevronUpShapeRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.CircleShapeRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.CrossShapeRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.IShapeRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.SquareShapeRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.TriangleShapeRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.scatter.XShapeRenderer;
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.charts.ScatterChart;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IScatterDataSet;
+import com.gulf.arabchat.modules.charting.renderer.scatter.ChevronDownShapeRenderer;
+import com.gulf.arabchat.modules.charting.renderer.scatter.ChevronUpShapeRenderer;
+import com.gulf.arabchat.modules.charting.renderer.scatter.CircleShapeRenderer;
+import com.gulf.arabchat.modules.charting.renderer.scatter.CrossShapeRenderer;
+import com.gulf.arabchat.modules.charting.renderer.scatter.IShapeRenderer;
+import com.gulf.arabchat.modules.charting.renderer.scatter.SquareShapeRenderer;
+import com.gulf.arabchat.modules.charting.renderer.scatter.TriangleShapeRenderer;
+import com.gulf.arabchat.modules.charting.renderer.scatter.XShapeRenderer;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.List;

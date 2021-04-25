@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils;
 
 import android.content.res.Resources;
 import android.util.TypedValue;

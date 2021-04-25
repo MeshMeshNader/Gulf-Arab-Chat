@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.settings;
+package com.gulf.arabchat.home.settings;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.datoo.BlockedUsersAdapter;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.arabchat.BlockedUsersAdapter;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.Tools;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 

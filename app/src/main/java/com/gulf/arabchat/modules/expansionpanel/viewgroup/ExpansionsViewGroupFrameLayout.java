@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.expansionpanel.viewgroup;
+package com.gulf.arabchat.modules.expansionpanel.viewgroup;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 
 public class ExpansionsViewGroupFrameLayout extends LinearLayout {

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.rangeBarView;
+package com.gulf.arabchat.modules.rangeBarView;
 
 import android.os.Parcel;
 import android.os.Parcelable;

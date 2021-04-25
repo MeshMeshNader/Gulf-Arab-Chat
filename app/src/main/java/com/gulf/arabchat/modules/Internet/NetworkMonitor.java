@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.Internet;
+package com.gulf.arabchat.modules.Internet;
 
 import java.net.InetAddress;
 

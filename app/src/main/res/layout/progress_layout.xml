@@ -9,7 +9,7 @@
     android:layout_centerInParent="true"
     android:orientation="vertical">
 
-  <!--<com.angopapo.hotelar.helper.tools.ViewLoadingDotsFade
+  <!--<com.gulf.hotelar.helper.tools.ViewLoadingDotsFade
       android:layout_width="50dp"
       android:layout_height="25dp"
       android:background="@color/colorAccent" />-->

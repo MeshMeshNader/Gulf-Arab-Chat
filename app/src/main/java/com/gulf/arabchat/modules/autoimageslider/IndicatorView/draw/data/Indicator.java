@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data;
 
 import androidx.annotation.NonNull;
 import android.view.View;
 
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
 
 
 public class Indicator {

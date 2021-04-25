@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.adapters.others;
+package com.gulf.arabchat.adapters.others;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -14,10 +14,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.others.PaymentSliderModel;
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.others.PaymentSliderModel;
+import com.gulf.arabchat.models.arabchat.User;
 
 import java.util.List;
 

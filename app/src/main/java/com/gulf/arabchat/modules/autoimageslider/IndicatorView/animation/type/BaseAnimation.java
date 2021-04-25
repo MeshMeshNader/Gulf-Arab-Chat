@@ -1,10 +1,10 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
 
 public abstract class BaseAnimation<T extends Animator> {
 

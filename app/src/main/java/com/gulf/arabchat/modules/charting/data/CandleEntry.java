@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;

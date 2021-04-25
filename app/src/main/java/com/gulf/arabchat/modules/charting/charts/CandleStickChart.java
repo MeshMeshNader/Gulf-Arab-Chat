@@ -1,12 +1,12 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.angopapo.datooapp.modules.charting.data.CandleData;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.CandleDataProvider;
-import com.angopapo.datooapp.modules.charting.renderer.CandleStickChartRenderer;
+import com.gulf.arabchat.modules.charting.data.CandleData;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.CandleDataProvider;
+import com.gulf.arabchat.modules.charting.renderer.CandleStickChartRenderer;
 
 /**
  * Financial chart type that draws candle-sticks (OHCL chart).

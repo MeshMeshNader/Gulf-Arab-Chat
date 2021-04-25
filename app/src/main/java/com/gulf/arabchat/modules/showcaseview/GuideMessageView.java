@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.showcaseview;
+package com.gulf.arabchat.modules.showcaseview;
 
 import android.content.Context;
 import android.graphics.Canvas;

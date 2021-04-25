@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.calls;
+package com.gulf.arabchat.home.calls;
 
 
 import android.Manifest;
@@ -16,15 +16,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.utils.rtcUtils.EngineConfig;
-import com.angopapo.datooapp.utils.rtcUtils.MyEngineEventHandler;
-import com.angopapo.datooapp.utils.rtcUtils.WorkerThread;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.utils.rtcUtils.EngineConfig;
+import com.gulf.arabchat.utils.rtcUtils.MyEngineEventHandler;
+import com.gulf.arabchat.utils.rtcUtils.WorkerThread;
 
 
 import io.agora.rtc.RtcEngine;
 
-import static com.angopapo.datooapp.utils.rtcUtils.AGEventHandler.EVENT_TYPE_ON_RELOGIN_NEEDED;
+import static com.gulf.arabchat.utils.rtcUtils.AGEventHandler.EVENT_TYPE_ON_RELOGIN_NEEDED;
 
 public abstract class BaseActivity extends AppCompatActivity {
 

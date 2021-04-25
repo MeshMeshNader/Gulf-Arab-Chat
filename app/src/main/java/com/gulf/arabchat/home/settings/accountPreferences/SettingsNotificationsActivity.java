@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.settings.accountPreferences;
+package com.gulf.arabchat.home.settings.accountPreferences;
 
 import android.os.Bundle;
 
@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.Tools;
 
 import java.util.Objects;
 

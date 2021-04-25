@@ -1,12 +1,12 @@
 
-package com.angopapo.datooapp.modules.charting.utils;
+package com.gulf.arabchat.modules.charting.utils;
 
 import android.content.res.AssetManager;
 import android.os.Environment;
 import android.util.Log;
 
-import com.angopapo.datooapp.modules.charting.data.BarEntry;
-import com.angopapo.datooapp.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.data.BarEntry;
+import com.gulf.arabchat.modules.charting.data.Entry;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
 
-    <com.angopapo.datooapp.utils.RelativeGridViewItem
+    <com.gulf.arabchat.utils.RelativeGridViewItem
         android:id="@+id/photos"
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_centerInParent="true"
             android:layout_margin="0dp"/>
 
-    </com.angopapo.datooapp.utils.RelativeGridViewItem>
+    </com.gulf.arabchat.utils.RelativeGridViewItem>
 
 
 </RelativeLayout>

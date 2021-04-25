@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.charting.formatter;
+package com.gulf.arabchat.modules.charting.formatter;
 
-import com.angopapo.datooapp.modules.charting.charts.PieChart;
-import com.angopapo.datooapp.modules.charting.data.PieEntry;
+import com.gulf.arabchat.modules.charting.charts.PieChart;
+import com.gulf.arabchat.modules.charting.data.PieEntry;
 
 import java.text.DecimalFormat;
 

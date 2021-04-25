@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.autoimageslider.Transformations;
+package com.gulf.arabchat.modules.autoimageslider.Transformations;
 
 import androidx.viewpager.widget.ViewPager;
 import android.util.Log;

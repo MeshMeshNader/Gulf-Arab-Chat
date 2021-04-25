@@ -1,10 +1,10 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.controller;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.controller;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.Value;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.*;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.Value;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.*;
 
 public class ValueController {
 

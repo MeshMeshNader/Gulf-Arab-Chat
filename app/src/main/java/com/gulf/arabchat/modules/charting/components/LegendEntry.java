@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.charting.components;
+package com.gulf.arabchat.modules.charting.components;
 
 
 import android.graphics.DashPathEffect;
 
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
 
 public class LegendEntry {
     public LegendEntry() {

@@ -16,7 +16,7 @@
         android:textColor="@color/black"
         android:paddingBottom="4dp" />
 
-    <com.angopapo.datooapp.modules.flowlayout.FlowLayout
+    <com.gulf.arabchat.modules.flowlayout.FlowLayout
         android:id="@+id/profile_section_about_me_badges_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp">
 
-    </com.angopapo.datooapp.modules.flowlayout.FlowLayout>
+    </com.gulf.arabchat.modules.flowlayout.FlowLayout>
 
     <TextView
         android:layout_width="match_parent"

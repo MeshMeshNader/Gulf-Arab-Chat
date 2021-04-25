@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.adapters.others;
+package com.gulf.arabchat.adapters.others;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,10 +15,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.others.CountriesModel;
-import com.angopapo.datooapp.utils.RecyclerViewFastScroller;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.others.CountriesModel;
+import com.gulf.arabchat.utils.RecyclerViewFastScroller;
 
 import java.util.List;
 

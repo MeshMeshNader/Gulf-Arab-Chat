@@ -1,16 +1,16 @@
 
-package com.angopapo.datooapp.modules.charting.utils;
+package com.gulf.arabchat.modules.charting.utils;
 
 import android.graphics.Matrix;
 import android.graphics.Path;
 import android.graphics.RectF;
 
-import com.angopapo.datooapp.modules.charting.data.CandleEntry;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBubbleDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ICandleDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ILineDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IScatterDataSet;
+import com.gulf.arabchat.modules.charting.data.CandleEntry;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBubbleDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ICandleDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ILineDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IScatterDataSet;
 
 import java.util.List;
 

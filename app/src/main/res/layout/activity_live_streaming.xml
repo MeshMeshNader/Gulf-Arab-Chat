@@ -30,11 +30,11 @@
         android:layout_height="match_parent"
         android:background="@color/black">
 
-        <com.angopapo.datooapp.utils.liveUtils.VideoGridContainer
+        <com.gulf.arabchat.utils.liveUtils.VideoGridContainer
             android:id="@+id/liveStreaming_videoContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </com.angopapo.datooapp.utils.liveUtils.VideoGridContainer>
+        </com.gulf.arabchat.utils.liveUtils.VideoGridContainer>
 
         <View
             android:id="@+id/liveStreaming_dimOverlay"

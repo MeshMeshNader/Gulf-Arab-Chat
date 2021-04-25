@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.connections;
+package com.gulf.arabchat.home.connections;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,18 +15,18 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.calls.VoiceCallActivity;
-import com.angopapo.datooapp.utils.rtcUtils.AGEventHandler;
-import com.angopapo.datooapp.utils.rtcUtils.ConstantApp;
-import com.angopapo.datooapp.utils.rtcUtils.EngineConfig;
-import com.angopapo.datooapp.utils.rtcUtils.MyEngineEventHandler;
-import com.angopapo.datooapp.utils.rtcUtils.WorkerThread;
-import com.angopapo.datooapp.home.calls.CallActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.circularimageview.CircleImageView;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.calls.VoiceCallActivity;
+import com.gulf.arabchat.utils.rtcUtils.AGEventHandler;
+import com.gulf.arabchat.utils.rtcUtils.ConstantApp;
+import com.gulf.arabchat.utils.rtcUtils.EngineConfig;
+import com.gulf.arabchat.utils.rtcUtils.MyEngineEventHandler;
+import com.gulf.arabchat.utils.rtcUtils.WorkerThread;
+import com.gulf.arabchat.home.calls.CallActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.circularimageview.CircleImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;

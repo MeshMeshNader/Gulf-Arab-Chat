@@ -1,16 +1,16 @@
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
 import android.graphics.Canvas;
 import android.util.Log;
 
-import com.angopapo.datooapp.modules.charting.animation.ChartAnimator;
-import com.angopapo.datooapp.modules.charting.charts.Chart;
-import com.angopapo.datooapp.modules.charting.charts.CombinedChart;
-import com.angopapo.datooapp.modules.charting.charts.CombinedChart.DrawOrder;
-import com.angopapo.datooapp.modules.charting.data.ChartData;
-import com.angopapo.datooapp.modules.charting.data.CombinedData;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.animation.ChartAnimator;
+import com.gulf.arabchat.modules.charting.charts.Chart;
+import com.gulf.arabchat.modules.charting.charts.CombinedChart;
+import com.gulf.arabchat.modules.charting.charts.CombinedChart.DrawOrder;
+import com.gulf.arabchat.modules.charting.data.ChartData;
+import com.gulf.arabchat.modules.charting.data.CombinedData;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

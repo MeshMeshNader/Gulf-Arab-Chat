@@ -1,11 +1,11 @@
 
-package com.angopapo.datooapp.modules.charting.jobs;
+package com.gulf.arabchat.modules.charting.jobs;
 
 import android.view.View;
 
-import com.angopapo.datooapp.modules.charting.utils.ObjectPool;
-import com.angopapo.datooapp.modules.charting.utils.Transformer;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.utils.ObjectPool;
+import com.gulf.arabchat.modules.charting.utils.Transformer;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * Created by Philipp Jahoda on 19/02/16.

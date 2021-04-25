@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.dotsindicator;
+package com.gulf.arabchat.modules.dotsindicator;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -19,13 +19,13 @@ import androidx.dynamicanimation.animation.SpringAnimation;
 import androidx.dynamicanimation.animation.SpringForce;
 import androidx.viewpager.widget.ViewPager;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.widget.LinearLayout.HORIZONTAL;
-import static com.angopapo.datooapp.modules.dotsindicator.UiUtils.getThemePrimaryColor;
+import static com.gulf.arabchat.modules.dotsindicator.UiUtils.getThemePrimaryColor;
 
 public class SpringDotsIndicator extends FrameLayout {
   public static final float DEFAULT_DAMPING_RATIO = 0.5f;

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.discretescrollview.transform;
+package com.gulf.arabchat.modules.discretescrollview.transform;
 
 
 import android.view.View;

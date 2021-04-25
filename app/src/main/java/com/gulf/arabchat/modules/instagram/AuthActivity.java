@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.instagram;
+package com.gulf.arabchat.modules.instagram;
 
 import android.os.Bundle;
 import android.view.Window;
@@ -6,7 +6,7 @@ import android.view.Window;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.angopapo.datooapp.models.others.InstagramUser;
+import com.gulf.arabchat.models.others.InstagramUser;
 
 abstract class AuthActivity extends AppCompatActivity {
 

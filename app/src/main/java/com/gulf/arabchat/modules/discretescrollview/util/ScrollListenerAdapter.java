@@ -1,11 +1,11 @@
-package com.angopapo.datooapp.modules.discretescrollview.util;
+package com.gulf.arabchat.modules.discretescrollview.util;
 
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.modules.discretescrollview.DiscreteScrollView;
+import com.gulf.arabchat.modules.discretescrollview.DiscreteScrollView;
 
 public class ScrollListenerAdapter<T extends RecyclerView.ViewHolder> implements DiscreteScrollView.ScrollStateChangeListener<T> {
 

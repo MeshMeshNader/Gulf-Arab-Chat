@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.adapters.others;
+package com.gulf.arabchat.adapters.others;
 
 import android.content.Context;
 import android.os.Build;
 
-import com.angopapo.datooapp.models.others.CountriesModel;
+import com.gulf.arabchat.models.others.CountriesModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;

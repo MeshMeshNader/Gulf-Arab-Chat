@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.camera;
+package com.gulf.arabchat.modules.camera;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.angopapo.datooapp.helpers.QuickHelp;
+import com.gulf.arabchat.helpers.QuickHelp;
 
 import java.io.File;
 import java.io.FileInputStream;

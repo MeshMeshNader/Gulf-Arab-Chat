@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.animation;
+package com.gulf.arabchat.modules.charting.animation;
 
 import android.animation.TimeInterpolator;
 import androidx.annotation.RequiresApi;

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.connections;
+package com.gulf.arabchat.home.connections;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,12 +8,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.payments.PaymentsActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.circularimageview.CircleImageView;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.payments.PaymentsActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.circularimageview.CircleImageView;
 import com.parse.ParseUser;
 
 public class FeatureActivationActivity extends AppCompatActivity {

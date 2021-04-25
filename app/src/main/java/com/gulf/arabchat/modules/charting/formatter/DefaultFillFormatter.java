@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.charting.formatter;
+package com.gulf.arabchat.modules.charting.formatter;
 
 
-import com.angopapo.datooapp.modules.charting.data.LineData;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.LineDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ILineDataSet;
+import com.gulf.arabchat.modules.charting.data.LineData;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.LineDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ILineDataSet;
 
 /**
  * Default formatter that calculates the position of the filled line.

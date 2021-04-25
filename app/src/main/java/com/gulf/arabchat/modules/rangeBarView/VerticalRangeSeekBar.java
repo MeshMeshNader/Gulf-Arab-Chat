@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.rangeBarView;
+package com.gulf.arabchat.modules.rangeBarView;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,7 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 
 public class VerticalRangeSeekBar extends RangeSeekBar {

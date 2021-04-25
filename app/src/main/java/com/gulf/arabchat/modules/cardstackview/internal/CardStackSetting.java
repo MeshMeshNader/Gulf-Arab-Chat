@@ -1,14 +1,14 @@
-package com.angopapo.datooapp.modules.cardstackview.internal;
+package com.gulf.arabchat.modules.cardstackview.internal;
 
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
 
-import com.angopapo.datooapp.modules.cardstackview.Direction;
-import com.angopapo.datooapp.modules.cardstackview.RewindAnimationSetting;
-import com.angopapo.datooapp.modules.cardstackview.StackFrom;
-import com.angopapo.datooapp.modules.cardstackview.SwipeAnimationSetting;
-import com.angopapo.datooapp.modules.cardstackview.SwipeableMethod;
+import com.gulf.arabchat.modules.cardstackview.Direction;
+import com.gulf.arabchat.modules.cardstackview.RewindAnimationSetting;
+import com.gulf.arabchat.modules.cardstackview.StackFrom;
+import com.gulf.arabchat.modules.cardstackview.SwipeAnimationSetting;
+import com.gulf.arabchat.modules.cardstackview.SwipeableMethod;
 
 import java.util.List;
 

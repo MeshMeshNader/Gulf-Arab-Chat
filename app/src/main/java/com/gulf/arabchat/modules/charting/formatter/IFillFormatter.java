@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.charting.formatter;
+package com.gulf.arabchat.modules.charting.formatter;
 
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ILineDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.LineDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ILineDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.LineDataProvider;
 
 /**
  * Interface for providing a custom logic to where the filling line of a LineDataSet

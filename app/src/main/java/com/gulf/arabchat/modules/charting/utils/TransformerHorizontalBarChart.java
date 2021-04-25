@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.utils;
+package com.gulf.arabchat.modules.charting.utils;
 
 /**
  * Transformer class for the HorizontalBarChart.

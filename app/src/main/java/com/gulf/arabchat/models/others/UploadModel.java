@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.models.others;
+package com.gulf.arabchat.models.others;
 
 
 public class UploadModel {

@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.angopapo.datooapp.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat.modules.circularimageview.CircleImageView
         android:id="@+id/streamLoadingProgress_foregroundAvatar"
         android:layout_width="100dp"
         android:layout_height="100dp"

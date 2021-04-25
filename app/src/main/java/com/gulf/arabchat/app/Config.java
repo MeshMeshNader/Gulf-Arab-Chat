@@ -1,19 +1,19 @@
-package com.angopapo.datooapp.app;
+package com.gulf.arabchat.app;
 
 
 public class Config {
 
     // Parse Server
-    public static final String SERVER_URL = "https://server.url/";
-    public static final String LIVE_QUERY_URL = "ws://live.query:port";
-    static final String SERVER_APP_ID = "HYCScpeir3fdfdfdHDOPTpjYPQVqSvGDHS";
-    static final String SERVER_CLIENT_KEY = "DF4YRDEDZbOfdfdfdb3CJJDssDFfdfdUJ56F";
+    public static final String SERVER_URL = "https://parseapi.back4app.com/";
+    public static final String LIVE_QUERY_URL = "wss://arabchat.b4a.app/";
+    static final String SERVER_APP_ID = "oKOS4wOe3DbE3bVn42R1224k6lq6z6xkXNlHFbyH";
+    static final String SERVER_CLIENT_KEY = "gZQrzpG2io0vQoGD85Z8XFoAaClv0kyGhgTE08VH";
 
     // Push notifications
     public static final String CHANNEL = "global";
 
     // Agora API
-    public static final String AGORA_APP_ID = "0d493144900a474fdfdfdff5bc5eab03";
+    public static final String AGORA_APP_ID = "f087cd018335428796c55cff865ada7e";
 
     // FlutterWave
     public static final String FLUTTERWAYE_PUBLISH_KEY = "FLWPUBK-b3fdfdfd9a3d68ecfadbace19b569-X";
@@ -24,35 +24,35 @@ public class Config {
 
 
     // Instagram API
-    public static final String INSTAGRAM_APP_ID = "211170555498873";
-    public static final String INSTAGRAM_APP_SECRET = "8c56be05fdfdfdfac96d9a8a9a4b31900";
+    public static final String INSTAGRAM_APP_ID = "359868688647307";
+    public static final String INSTAGRAM_APP_SECRET = "e5b5e2e2e82a45061a31ce6c9ddc05ae";
     public static final String INSTAGRAM_REDIRECT_URI = "https://www.angopapo.com/";
 
     // Google Admob
-    static final String HOME_BANNER_ADS = "ca-app-pub-8614234010137830/5572570626";
-    static final String REWARDED_ADS= "ca-app-pub-8614234010137830/1441753926";
-    static final String NEARBY_NATIVE_ADS = "ca-app-pub-8614234010137830/4913013508";
-    static final String ENCOUNTERS_NATIVE_ADS = "ca-app-pub-8614234010137830/4274912773";
+    static final String HOME_BANNER_ADS = "ca-app-pub-5718962829212392/6612851440";
+    static final String REWARDED_ADS= "ca-app-pub-5718962829212392/7538920300";
+    static final String NEARBY_NATIVE_ADS = "ca-app-pub-3357491191456114/8542466089";
+    static final String ENCOUNTERS_NATIVE_ADS = "ca-app-pub-5718962829212392/6608982014";
 
     // Google Play In-app Purchases IDs
-    public static final String CREDIT_550 = "datoo.550.credits";
-    public static final String CREDIT_100 = "datoo.100.credits";
-    public static final String CREDIT_1250 = "datoo.1250.credits";
-    public static final String CREDIT_2750 = "datoo.2750.credits";
+    public static final String CREDIT_550 = "arabchat.550.credits";
+    public static final String CREDIT_100 = "arabchat.100.credits";
+    public static final String CREDIT_1250 = "arabchat.1250.credits";
+    public static final String CREDIT_2750 = "arabchat.2750.credits";
 
-    public static final String PAY_LIFETIME = "datoo.pay.lifetime";
+    public static final String PAY_LIFETIME = "arabchat.pay.lifetime";
 
     //Google Play In-app Subscription IDs
-    public static final String SUBS_3_MONTHS = "datoo.3.months";
-    public static final String SUBS_1_WEEK = "datoo.1.week";
-    public static final String SUBS_1_MONTH = "datoo.1.month";
-    public static final String SUBS_6_MONTHS = "datoo.6.months";
+    public static final String SUBS_3_MONTHS = "arabchat.3.months";
+    public static final String SUBS_1_WEEK = "arabchat.1.week";
+    public static final String SUBS_1_MONTH = "arabchat.1.month";
+    public static final String SUBS_6_MONTHS = "arabchat.6.months";
 
     // Web links for help, privacy policy and terms of use.
     public static final String HELP_CENTER = "https://datoo.angopapo.com/help.html";
-    public static final String PRIVACY_POLICY = "https://datoo.angopapo.com/privacy.html";
-    public static final String TERMS_OF_USE = "https://datoo.angopapo.com/terms.html";
-    public static final String TERMS_OF_USE_IN_APP = "https://datoo.angopapo.com/terms.html";
+    public static final String PRIVACY_POLICY = "https://arab-chat-0.flycricket.io/privacy.html";
+    public static final String TERMS_OF_USE = "https://arab-chat-0.flycricket.io/terms.html";
+    public static final String TERMS_OF_USE_IN_APP = "https://arab-chat-0.flycricket.io/terms.html";
 
     // Withdraw tokens to PayPal
     public static final int MinTokenWithdraw = 200; // Minimum amount of tokens allowed to exchange
@@ -86,7 +86,7 @@ public class Config {
     public static int DAYS_TO_ACTIVATE_FEATURES = 7;
 
     // Enable or Disable Ads and Premium.
-    public static final boolean isAdsActivated = true;
+    public static final boolean isAdsActivated = false;
     public static final boolean isPremiumEnabled = true;
     public static final boolean isNearByNativeAdsActivated = false;
     public static final boolean isEncountersNativeAdsActivated = false;
@@ -98,7 +98,7 @@ public class Config {
     public static final int CrushAdsLimitPerDay = 5;
 
     // Application setup
-    public static final String bio = "Hey! i'm using datoo!";
+    public static final String bio = "Hey! i'm using Arab Chat!";
     public static final int WelcomeCredit = 10;
     public static final int MinimumAgeToRegister = 18;
     public static final int MaximumAgeToRegister = 80;

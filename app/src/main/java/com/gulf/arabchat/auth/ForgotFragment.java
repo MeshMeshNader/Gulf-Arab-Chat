@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.auth;
+package com.gulf.arabchat.auth;
 
 import android.app.Activity;
 import android.content.Context;
@@ -17,8 +17,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.authUtils.AngopapoLoginActivity;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.authUtils.ArabChatLoginActivity;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.ui.login.ParseLoginFragmentBase;
@@ -65,11 +65,11 @@ public class ForgotFragment extends ParseLoginFragmentBase implements OnClickLis
 
         if (getActivity() != null){
 
-            ((AngopapoLoginActivity)getActivity()).setSupportActionBar(mToolbar);
+            ((ArabChatLoginActivity)getActivity()).setSupportActionBar(mToolbar);
 
-            Objects.requireNonNull(((AngopapoLoginActivity) getActivity()).getSupportActionBar()).setTitle("");
-            Objects.requireNonNull(((AngopapoLoginActivity) getActivity()).getSupportActionBar()).setElevation(3.0f);
-            Objects.requireNonNull(((AngopapoLoginActivity) getActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+            Objects.requireNonNull(((ArabChatLoginActivity) getActivity()).getSupportActionBar()).setTitle("");
+            Objects.requireNonNull(((ArabChatLoginActivity) getActivity()).getSupportActionBar()).setElevation(3.0f);
+            Objects.requireNonNull(((ArabChatLoginActivity) getActivity()).getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         }
 
         mToolbar.setBackgroundResource(R.color.transparent);

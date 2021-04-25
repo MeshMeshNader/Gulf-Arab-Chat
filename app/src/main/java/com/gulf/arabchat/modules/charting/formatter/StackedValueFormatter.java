@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.modules.charting.formatter;
+package com.gulf.arabchat.modules.charting.formatter;
 
-import com.angopapo.datooapp.modules.charting.data.BarEntry;
+import com.gulf.arabchat.modules.charting.data.BarEntry;
 
 import java.text.DecimalFormat;
 

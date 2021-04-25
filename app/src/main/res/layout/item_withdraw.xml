@@ -11,7 +11,7 @@
     android:gravity="center_horizontal"
     android:orientation="horizontal">
 
-    <com.angopapo.datooapp.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat.modules.circularimageview.CircleImageView
         android:id="@+id/avatar"
         android:layout_width="80dp"
         android:layout_height="80dp"

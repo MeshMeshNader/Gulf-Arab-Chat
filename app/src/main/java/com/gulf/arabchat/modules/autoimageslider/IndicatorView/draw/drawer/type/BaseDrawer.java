@@ -1,8 +1,8 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.drawer.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.drawer.type;
 
 import android.graphics.Paint;
 import androidx.annotation.NonNull;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
 
 class BaseDrawer {
 

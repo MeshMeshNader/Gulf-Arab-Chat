@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.profile;
+package com.gulf.arabchat.home.profile;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,13 +10,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.datoo.PhotoGalleryAdapter;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.uploads.UploadsActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.discretescrollview.DSVOrientation;
-import com.angopapo.datooapp.modules.discretescrollview.DiscreteScrollView;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.arabchat.PhotoGalleryAdapter;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.uploads.UploadsActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.discretescrollview.DSVOrientation;
+import com.gulf.arabchat.modules.discretescrollview.DiscreteScrollView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.parse.ParseFile;
 import com.parse.ParseUser;

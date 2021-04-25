@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.centersheet;
+package com.gulf.arabchat.modules.centersheet;
 
 import android.app.Dialog;
 import android.os.Bundle;

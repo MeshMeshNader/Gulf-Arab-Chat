@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type;
 
 import android.animation.IntEvaluator;
 import android.animation.PropertyValuesHolder;
 import androidx.annotation.NonNull;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.controller.ValueController;
 
 public class ScaleDownAnimation extends ScaleAnimation {
 

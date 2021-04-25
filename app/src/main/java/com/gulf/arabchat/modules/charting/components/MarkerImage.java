@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.components;
+package com.gulf.arabchat.modules.charting.components;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,11 +6,11 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 
-import com.angopapo.datooapp.modules.charting.charts.Chart;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.utils.FSize;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.charts.Chart;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.utils.FSize;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
 
 import java.lang.ref.WeakReference;
 

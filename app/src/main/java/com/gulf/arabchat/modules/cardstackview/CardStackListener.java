@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.cardstackview;
+package com.gulf.arabchat.modules.cardstackview;
 
 import android.view.View;
 

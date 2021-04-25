@@ -80,7 +80,7 @@
         android:scrollbars="none"
         tools:listitem="@layout/row_countries" />
 
-    <com.angopapo.datooapp.utils.RecyclerViewFastScroller
+    <com.gulf.arabchat.utils.RecyclerViewFastScroller
         android:id="@+id/fastscroller"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

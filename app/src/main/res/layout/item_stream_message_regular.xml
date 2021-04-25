@@ -10,7 +10,7 @@
     android:paddingStart="@dimen/spacing_md"
     android:paddingEnd="@dimen/spacing_md">
 
-    <com.angopapo.datooapp.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat.modules.circularimageview.CircleImageView
         android:id="@+id/userImageView"
         android:layout_width="@dimen/icon_xlg"
         android:layout_height="@dimen/icon_xlg"

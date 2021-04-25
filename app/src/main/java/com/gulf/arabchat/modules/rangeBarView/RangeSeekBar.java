@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.rangeBarView;
+package com.gulf.arabchat.modules.rangeBarView;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,9 +12,9 @@ import android.view.MotionEvent;
 import android.view.View;
 
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
-import static com.angopapo.datooapp.modules.rangeBarView.SeekBar.INDICATOR_MODE_ALWAYS_SHOW;
+import static com.gulf.arabchat.modules.rangeBarView.SeekBar.INDICATOR_MODE_ALWAYS_SHOW;
 
 
 public class RangeSeekBar extends View {

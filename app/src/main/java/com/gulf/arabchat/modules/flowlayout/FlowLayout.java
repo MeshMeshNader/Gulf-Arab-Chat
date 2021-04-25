@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.flowlayout;
+package com.gulf.arabchat.modules.flowlayout;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.util.ArrayList;
 import java.util.List;

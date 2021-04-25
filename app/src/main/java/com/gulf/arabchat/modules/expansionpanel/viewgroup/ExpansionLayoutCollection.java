@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.expansionpanel.viewgroup;
+package com.gulf.arabchat.modules.expansionpanel.viewgroup;
 
 
-import com.angopapo.datooapp.modules.expansionpanel.ExpansionLayout;
+import com.gulf.arabchat.modules.expansionpanel.ExpansionLayout;
 
 import java.util.Collection;
 import java.util.HashSet;

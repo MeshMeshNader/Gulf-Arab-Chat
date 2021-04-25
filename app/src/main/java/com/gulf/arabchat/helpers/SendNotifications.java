@@ -1,8 +1,8 @@
-package com.angopapo.datooapp.helpers;
+package com.gulf.arabchat.helpers;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.models.arabchat.User;
 import com.parse.ParseCloud;
 
 import java.util.HashMap;

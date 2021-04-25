@@ -1,16 +1,16 @@
 
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 
-import com.angopapo.datooapp.modules.charting.components.AxisBase;
-import com.angopapo.datooapp.modules.charting.utils.MPPointD;
-import com.angopapo.datooapp.modules.charting.utils.Transformer;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.components.AxisBase;
+import com.gulf.arabchat.modules.charting.utils.MPPointD;
+import com.gulf.arabchat.modules.charting.utils.Transformer;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * Baseclass of all axis renderers.

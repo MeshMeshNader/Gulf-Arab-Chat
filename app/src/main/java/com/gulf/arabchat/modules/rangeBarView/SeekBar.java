@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.rangeBarView;
+package com.gulf.arabchat.modules.rangeBarView;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -21,7 +21,7 @@ import android.util.AttributeSet;
 import androidx.core.content.ContextCompat;
 
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.text.DecimalFormat;
 

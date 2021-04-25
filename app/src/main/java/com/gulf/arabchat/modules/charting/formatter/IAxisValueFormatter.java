@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.modules.charting.formatter;
+package com.gulf.arabchat.modules.charting.formatter;
 
-import com.angopapo.datooapp.modules.charting.components.AxisBase;
+import com.gulf.arabchat.modules.charting.components.AxisBase;
 
 /**
  * Created by Philipp Jahoda on 20/09/15.

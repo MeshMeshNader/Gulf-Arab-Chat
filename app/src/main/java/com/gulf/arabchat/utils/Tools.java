@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.utils;
+package com.gulf.arabchat.utils;
 
 import android.app.Activity;
 import android.os.Build;
@@ -8,7 +8,7 @@ import android.view.WindowManager;
 
 import androidx.annotation.ColorRes;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 import com.google.android.material.appbar.AppBarLayout;
 
 public class Tools {

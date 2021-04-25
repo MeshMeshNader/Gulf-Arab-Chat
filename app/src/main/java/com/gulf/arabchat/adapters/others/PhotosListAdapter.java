@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.adapters.others;
+package com.gulf.arabchat.adapters.others;
 
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.helpers.QuickHelp;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.helpers.QuickHelp;
 import com.bumptech.glide.Glide;
 
 import java.util.List;

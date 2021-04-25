@@ -1,18 +1,18 @@
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Typeface;
 
-import com.angopapo.datooapp.modules.charting.components.Legend;
-import com.angopapo.datooapp.modules.charting.components.YAxis;
-import com.angopapo.datooapp.modules.charting.formatter.ValueFormatter;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
-import com.angopapo.datooapp.modules.charting.model.GradientColor;
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.components.Legend;
+import com.gulf.arabchat.modules.charting.components.YAxis;
+import com.gulf.arabchat.modules.charting.formatter.ValueFormatter;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.model.GradientColor;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

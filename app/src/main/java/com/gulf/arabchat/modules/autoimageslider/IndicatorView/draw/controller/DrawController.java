@@ -1,14 +1,14 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.controller;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.controller;
 
 import android.graphics.Canvas;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.MotionEvent;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.Value;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.drawer.Drawer;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils.CoordinatesUtils;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.Value;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.drawer.Drawer;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils.CoordinatesUtils;
 
 public class DrawController {
 

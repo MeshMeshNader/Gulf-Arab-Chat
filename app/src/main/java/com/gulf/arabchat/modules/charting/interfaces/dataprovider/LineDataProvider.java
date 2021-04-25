@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.charting.interfaces.dataprovider;
+package com.gulf.arabchat.modules.charting.interfaces.dataprovider;
 
-import com.angopapo.datooapp.modules.charting.components.YAxis;
-import com.angopapo.datooapp.modules.charting.data.LineData;
+import com.gulf.arabchat.modules.charting.components.YAxis;
+import com.gulf.arabchat.modules.charting.data.LineData;
 
 public interface LineDataProvider extends BarLineScatterCandleBubbleDataProvider {
 

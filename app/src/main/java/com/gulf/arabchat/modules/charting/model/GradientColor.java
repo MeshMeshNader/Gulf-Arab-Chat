@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.model;
+package com.gulf.arabchat.modules.charting.model;
 
 public class GradientColor {
 

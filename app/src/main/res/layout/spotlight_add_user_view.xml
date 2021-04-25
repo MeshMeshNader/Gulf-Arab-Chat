@@ -8,7 +8,7 @@
     android:paddingEnd="10dp"
     android:orientation="vertical">
 
-    <com.angopapo.datooapp.modules.circularimageview.RoundedImage
+    <com.gulf.arabchat.modules.circularimageview.RoundedImage
         android:id="@+id/spotlightProfilePhoto"
         android:layout_width="@dimen/connections_avatarSize"
         android:layout_height="@dimen/connections_avatarSize"

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.profile;
+package com.gulf.arabchat.home.profile;
 
 
 import android.graphics.Color;
@@ -21,18 +21,17 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.datoo.OwnProfilePhotosAdapter;
-import com.angopapo.datooapp.adapters.others.LanguageAdapter;
-import com.angopapo.datooapp.helpers.QuickActions;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.nearby.ManualLocationActivity;
-import com.angopapo.datooapp.home.settings.basicInfo.BasicInfoActivity;
-import com.angopapo.datooapp.home.uploads.UploadsActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.models.others.LanguageModel;
-import com.angopapo.datooapp.utils.SharedPrefUtil;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.arabchat.OwnProfilePhotosAdapter;
+import com.gulf.arabchat.adapters.others.LanguageAdapter;
+import com.gulf.arabchat.helpers.QuickActions;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.nearby.ManualLocationActivity;
+import com.gulf.arabchat.home.settings.basicInfo.BasicInfoActivity;
+import com.gulf.arabchat.home.uploads.UploadsActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.models.others.LanguageModel;
+import com.gulf.arabchat.utils.Tools;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.parse.ParseFile;

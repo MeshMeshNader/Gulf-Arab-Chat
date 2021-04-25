@@ -1,0 +1,3 @@
+Key Alias : mykey
+Key Store Password : 01002452480
+Key Password : 01002452480

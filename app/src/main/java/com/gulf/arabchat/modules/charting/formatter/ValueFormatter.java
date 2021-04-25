@@ -1,13 +1,13 @@
-package com.angopapo.datooapp.modules.charting.formatter;
+package com.gulf.arabchat.modules.charting.formatter;
 
-import com.angopapo.datooapp.modules.charting.components.AxisBase;
-import com.angopapo.datooapp.modules.charting.data.BarEntry;
-import com.angopapo.datooapp.modules.charting.data.BubbleEntry;
-import com.angopapo.datooapp.modules.charting.data.CandleEntry;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.data.PieEntry;
-import com.angopapo.datooapp.modules.charting.data.RadarEntry;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.components.AxisBase;
+import com.gulf.arabchat.modules.charting.data.BarEntry;
+import com.gulf.arabchat.modules.charting.data.BubbleEntry;
+import com.gulf.arabchat.modules.charting.data.CandleEntry;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.data.PieEntry;
+import com.gulf.arabchat.modules.charting.data.RadarEntry;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * Class to format all values before they are drawn as labels.

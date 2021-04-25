@@ -1,12 +1,12 @@
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.graphics.Typeface;
 import android.util.Log;
 
-import com.angopapo.datooapp.modules.charting.components.YAxis.AxisDependency;
-import com.angopapo.datooapp.modules.charting.formatter.ValueFormatter;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.components.YAxis.AxisDependency;
+import com.gulf.arabchat.modules.charting.formatter.ValueFormatter;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
 
 import java.util.ArrayList;
 import java.util.List;

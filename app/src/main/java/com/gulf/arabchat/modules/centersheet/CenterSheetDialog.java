@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.centersheet;
+package com.gulf.arabchat.modules.centersheet;
 /*
  * Copyright (C) 2015 The Android Open Source Project
  *
@@ -30,7 +30,7 @@ import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatDialog;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 public class CenterSheetDialog extends AppCompatDialog {

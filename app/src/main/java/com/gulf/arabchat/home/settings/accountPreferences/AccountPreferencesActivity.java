@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.settings.accountPreferences;
+package com.gulf.arabchat.home.settings.accountPreferences;
 
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -6,12 +6,12 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.payments.PaymentsActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.payments.PaymentsActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.Tools;
 
 import java.util.Objects;
 

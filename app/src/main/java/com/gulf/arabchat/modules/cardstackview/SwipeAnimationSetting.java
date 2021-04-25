@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.cardstackview;
+package com.gulf.arabchat.modules.cardstackview;
 
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Interpolator;
 
-import com.angopapo.datooapp.modules.cardstackview.internal.AnimationSetting;
+import com.gulf.arabchat.modules.cardstackview.internal.AnimationSetting;
 
 
 public class SwipeAnimationSetting implements AnimationSetting {

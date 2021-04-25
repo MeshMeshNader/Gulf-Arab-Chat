@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.cardstackview.internal;
+package com.gulf.arabchat.modules.cardstackview.internal;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.modules.cardstackview.CardStackLayoutManager;
+import com.gulf.arabchat.modules.cardstackview.CardStackLayoutManager;
 
 
 public class CardStackDataObserver extends RecyclerView.AdapterDataObserver {

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.live;
+package com.gulf.arabchat.home.live;
 
 import android.Manifest;
 import android.app.Activity;
@@ -22,17 +22,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.datoo.UsersLiveAdapter;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.auth.WelcomeActivity;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.HomeActivity;
-import com.angopapo.datooapp.models.datoo.FollowModel;
-import com.angopapo.datooapp.models.datoo.LiveStreamModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.topsheet.TopSheetBehavior;
-import com.angopapo.datooapp.modules.topsheet.TopSheetDialog;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.arabchat.UsersLiveAdapter;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.auth.WelcomeActivity;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.HomeActivity;
+import com.gulf.arabchat.models.arabchat.FollowModel;
+import com.gulf.arabchat.models.arabchat.LiveStreamModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.topsheet.TopSheetBehavior;
+import com.gulf.arabchat.modules.topsheet.TopSheetDialog;
 import com.google.android.material.tabs.TabLayout;
 import com.greysonparrelli.permiso.Permiso;
 import com.parse.ParseException;

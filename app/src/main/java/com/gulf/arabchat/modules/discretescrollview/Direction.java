@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.discretescrollview;
+package com.gulf.arabchat.modules.discretescrollview;
 
 
 enum Direction {

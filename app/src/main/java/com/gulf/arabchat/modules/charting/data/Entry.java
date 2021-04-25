@@ -1,12 +1,12 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.ParcelFormatException;
 import android.os.Parcelable;
 
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * Class representing one entry in the chart. Might contain multiple values.

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.live;
+package com.gulf.arabchat.home.live;
 
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -6,11 +6,11 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.User;
 
-import com.angopapo.datooapp.utils.StatusBarUtil;
+import com.gulf.arabchat.utils.StatusBarUtil;
 import com.parse.ParseUser;
 
 public class LiveActivity extends AppCompatActivity {

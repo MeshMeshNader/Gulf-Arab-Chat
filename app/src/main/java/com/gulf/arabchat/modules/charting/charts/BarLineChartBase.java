@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -14,27 +14,27 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 
-import com.angopapo.datooapp.modules.charting.components.XAxis.XAxisPosition;
-import com.angopapo.datooapp.modules.charting.components.YAxis;
-import com.angopapo.datooapp.modules.charting.components.YAxis.AxisDependency;
-import com.angopapo.datooapp.modules.charting.data.BarLineScatterCandleBubbleData;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.highlight.ChartHighlighter;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.BarLineScatterCandleBubbleDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
-import com.angopapo.datooapp.modules.charting.jobs.AnimatedMoveViewJob;
-import com.angopapo.datooapp.modules.charting.jobs.AnimatedZoomJob;
-import com.angopapo.datooapp.modules.charting.jobs.MoveViewJob;
-import com.angopapo.datooapp.modules.charting.jobs.ZoomJob;
-import com.angopapo.datooapp.modules.charting.listener.BarLineChartTouchListener;
-import com.angopapo.datooapp.modules.charting.listener.OnDrawListener;
-import com.angopapo.datooapp.modules.charting.renderer.XAxisRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.YAxisRenderer;
-import com.angopapo.datooapp.modules.charting.utils.MPPointD;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Transformer;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.components.XAxis.XAxisPosition;
+import com.gulf.arabchat.modules.charting.components.YAxis;
+import com.gulf.arabchat.modules.charting.components.YAxis.AxisDependency;
+import com.gulf.arabchat.modules.charting.data.BarLineScatterCandleBubbleData;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.highlight.ChartHighlighter;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.BarLineScatterCandleBubbleDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
+import com.gulf.arabchat.modules.charting.jobs.AnimatedMoveViewJob;
+import com.gulf.arabchat.modules.charting.jobs.AnimatedZoomJob;
+import com.gulf.arabchat.modules.charting.jobs.MoveViewJob;
+import com.gulf.arabchat.modules.charting.jobs.ZoomJob;
+import com.gulf.arabchat.modules.charting.listener.BarLineChartTouchListener;
+import com.gulf.arabchat.modules.charting.listener.OnDrawListener;
+import com.gulf.arabchat.modules.charting.renderer.XAxisRenderer;
+import com.gulf.arabchat.modules.charting.renderer.YAxisRenderer;
+import com.gulf.arabchat.modules.charting.utils.MPPointD;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Transformer;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * Base-class of LineChart, BarChart, ScatterChart and CandleStickChart.

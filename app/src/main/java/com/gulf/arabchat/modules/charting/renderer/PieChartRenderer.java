@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -14,20 +14,20 @@ import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
 
-import com.angopapo.datooapp.modules.charting.animation.ChartAnimator;
-import com.angopapo.datooapp.modules.charting.charts.LineChart;
-import com.angopapo.datooapp.modules.charting.charts.PieChart;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.data.PieData;
-import com.angopapo.datooapp.modules.charting.data.PieDataSet;
-import com.angopapo.datooapp.modules.charting.data.PieEntry;
-import com.angopapo.datooapp.modules.charting.formatter.ValueFormatter;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IPieDataSet;
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.animation.ChartAnimator;
+import com.gulf.arabchat.modules.charting.charts.LineChart;
+import com.gulf.arabchat.modules.charting.charts.PieChart;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.data.PieData;
+import com.gulf.arabchat.modules.charting.data.PieDataSet;
+import com.gulf.arabchat.modules.charting.data.PieEntry;
+import com.gulf.arabchat.modules.charting.formatter.ValueFormatter;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IPieDataSet;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 import java.lang.ref.WeakReference;
 import java.util.List;

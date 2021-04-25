@@ -1,11 +1,11 @@
-package com.angopapo.datooapp.app;
+package com.gulf.arabchat.app;
 
 import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.helpers.QuickHelp;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.helpers.QuickHelp;
 
 
 public class BaseActivity extends AppCompatActivity {

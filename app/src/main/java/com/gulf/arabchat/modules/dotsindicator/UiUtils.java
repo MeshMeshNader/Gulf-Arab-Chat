@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.dotsindicator;
+package com.gulf.arabchat.modules.dotsindicator;
 
 import android.content.Context;
 import android.util.TypedValue;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 
 public class UiUtils {

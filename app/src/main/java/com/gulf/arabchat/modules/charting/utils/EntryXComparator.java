@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.modules.charting.utils;
+package com.gulf.arabchat.modules.charting.utils;
 
-import com.angopapo.datooapp.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.data.Entry;
 
 import java.util.Comparator;
 

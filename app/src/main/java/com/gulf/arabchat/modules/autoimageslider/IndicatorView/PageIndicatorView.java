@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -20,16 +20,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.ScaleAnimation;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.controller.DrawController;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Orientation;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.PositionSavedState;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.RtlMode;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils.CoordinatesUtils;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils.DensityUtils;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils.IdUtils;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.ScaleAnimation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.controller.DrawController;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Orientation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.PositionSavedState;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.RtlMode;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils.CoordinatesUtils;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils.DensityUtils;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils.IdUtils;
 
 public class PageIndicatorView extends View implements ViewPager.OnPageChangeListener, IndicatorManager.Listener, ViewPager.OnAdapterChangeListener {
 

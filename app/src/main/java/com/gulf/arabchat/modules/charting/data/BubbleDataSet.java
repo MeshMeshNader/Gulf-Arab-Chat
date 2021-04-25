@@ -1,8 +1,8 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBubbleDataSet;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBubbleDataSet;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

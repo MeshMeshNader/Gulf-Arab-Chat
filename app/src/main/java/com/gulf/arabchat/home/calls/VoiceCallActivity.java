@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.calls;
+package com.gulf.arabchat.home.calls;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -20,14 +20,14 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.CallsModel;
-import com.angopapo.datooapp.models.datoo.ConnectionListModel;
-import com.angopapo.datooapp.models.datoo.MessageModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.rtcUtils.AGEventHandler;
-import com.angopapo.datooapp.utils.rtcUtils.ConstantApp;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.CallsModel;
+import com.gulf.arabchat.models.arabchat.ConnectionListModel;
+import com.gulf.arabchat.models.arabchat.MessageModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.rtcUtils.AGEventHandler;
+import com.gulf.arabchat.utils.rtcUtils.ConstantApp;
 import com.greysonparrelli.permiso.Permiso;
 import com.parse.ParseQuery;
 

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.circularimageview;
+package com.gulf.arabchat.modules.circularimageview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -29,7 +29,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatImageView;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 public class CircleImageView extends AppCompatImageView {
 

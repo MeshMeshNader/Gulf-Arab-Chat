@@ -1,8 +1,8 @@
-package com.angopapo.datooapp.modules.charting.interfaces.datasets;
+package com.gulf.arabchat.modules.charting.interfaces.datasets;
 
 import android.graphics.drawable.Drawable;
 
-import com.angopapo.datooapp.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.data.Entry;
 
 /**
  * Created by Philipp Jahoda on 21/10/15.

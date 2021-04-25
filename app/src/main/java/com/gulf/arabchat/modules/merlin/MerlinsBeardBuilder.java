@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.merlin;
+package com.gulf.arabchat.modules.merlin;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

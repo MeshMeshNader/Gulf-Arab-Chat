@@ -35,7 +35,7 @@
                 android:clipToPadding="false"
                 android:paddingTop="@dimen/size_3_5">
 
-                <com.angopapo.datooapp.modules.circularimageview.RoundedImage
+                <com.gulf.arabchat.modules.circularimageview.RoundedImage
                     android:id="@+id/matchScreen_myImage"
                     android:layout_width="@dimen/size_18"
                     android:layout_height="@dimen/size_18"
@@ -49,7 +49,7 @@
                     android:layout_marginStart="@dimen/size_8"
                     app:rounded_radius="@integer/mutual_attraction_image_rounded_corner"/>
 
-                <com.angopapo.datooapp.modules.circularimageview.RoundedImage
+                <com.gulf.arabchat.modules.circularimageview.RoundedImage
                     android:id="@+id/matchScreen_otherUserImage"
                     android:layout_width="@dimen/size_18"
                     android:layout_height="@dimen/size_18"

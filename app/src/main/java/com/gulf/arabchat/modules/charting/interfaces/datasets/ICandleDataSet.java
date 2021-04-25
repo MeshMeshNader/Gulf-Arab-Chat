@@ -1,8 +1,8 @@
-package com.angopapo.datooapp.modules.charting.interfaces.datasets;
+package com.gulf.arabchat.modules.charting.interfaces.datasets;
 
 import android.graphics.Paint;
 
-import com.angopapo.datooapp.modules.charting.data.CandleEntry;
+import com.gulf.arabchat.modules.charting.data.CandleEntry;
 
 /**
  * Created by philipp on 21/10/15.

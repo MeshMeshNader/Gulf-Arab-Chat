@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.matrix;
+package com.gulf.arabchat.modules.charting.matrix;
 
 /**
  * Simple 3D vector class. Handles basic vector math for 3D vectors.

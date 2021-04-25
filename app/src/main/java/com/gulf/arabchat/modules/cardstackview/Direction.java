@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.cardstackview;
+package com.gulf.arabchat.modules.cardstackview;
 
 import java.util.Arrays;
 import java.util.List;

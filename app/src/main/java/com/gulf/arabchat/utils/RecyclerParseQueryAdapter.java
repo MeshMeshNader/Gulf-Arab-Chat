@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.utils;
+package com.gulf.arabchat.utils;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;

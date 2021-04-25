@@ -1,8 +1,8 @@
 
-package com.angopapo.datooapp.modules.charting.buffer;
+package com.gulf.arabchat.modules.charting.buffer;
 
-import com.angopapo.datooapp.modules.charting.data.BarEntry;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarDataSet;
+import com.gulf.arabchat.modules.charting.data.BarEntry;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarDataSet;
 
 public class HorizontalBarBuffer extends BarBuffer {
 

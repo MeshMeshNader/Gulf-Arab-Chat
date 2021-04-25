@@ -1,10 +1,10 @@
-package com.angopapo.datooapp.modules.charting.interfaces.dataprovider;
+package com.gulf.arabchat.modules.charting.interfaces.dataprovider;
 
 import android.graphics.RectF;
 
-import com.angopapo.datooapp.modules.charting.data.ChartData;
-import com.angopapo.datooapp.modules.charting.formatter.ValueFormatter;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.data.ChartData;
+import com.gulf.arabchat.modules.charting.formatter.ValueFormatter;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
 
 /**
  * Interface that provides everything there is to know about the dimensions,

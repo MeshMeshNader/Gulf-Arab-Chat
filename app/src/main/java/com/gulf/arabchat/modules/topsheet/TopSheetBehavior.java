@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.topsheet;
+package com.gulf.arabchat.modules.topsheet;
 
 
 import android.content.Context;
@@ -25,7 +25,7 @@ import androidx.core.view.ViewCompat;
 import androidx.customview.view.AbsSavedState;
 import androidx.customview.widget.ViewDragHelper;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

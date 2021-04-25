@@ -1,6 +1,6 @@
-package com.angopapo.datooapp.modules.charting.interfaces.dataprovider;
+package com.gulf.arabchat.modules.charting.interfaces.dataprovider;
 
-import com.angopapo.datooapp.modules.charting.data.CombinedData;
+import com.gulf.arabchat.modules.charting.data.CombinedData;
 
 /**
  * Created by philipp on 11/06/16.

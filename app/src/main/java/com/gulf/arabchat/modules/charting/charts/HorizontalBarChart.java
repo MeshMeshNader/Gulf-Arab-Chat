@@ -1,24 +1,24 @@
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
 
-import com.angopapo.datooapp.modules.charting.components.XAxis.XAxisPosition;
-import com.angopapo.datooapp.modules.charting.components.YAxis.AxisDependency;
-import com.angopapo.datooapp.modules.charting.data.BarEntry;
-import com.angopapo.datooapp.modules.charting.data.Entry;
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.highlight.HorizontalBarHighlighter;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarDataSet;
-import com.angopapo.datooapp.modules.charting.renderer.HorizontalBarChartRenderer;
-import com.angopapo.datooapp.modules.charting.renderer.XAxisRendererHorizontalBarChart;
-import com.angopapo.datooapp.modules.charting.renderer.YAxisRendererHorizontalBarChart;
-import com.angopapo.datooapp.modules.charting.utils.HorizontalViewPortHandler;
-import com.angopapo.datooapp.modules.charting.utils.MPPointF;
-import com.angopapo.datooapp.modules.charting.utils.TransformerHorizontalBarChart;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.components.XAxis.XAxisPosition;
+import com.gulf.arabchat.modules.charting.components.YAxis.AxisDependency;
+import com.gulf.arabchat.modules.charting.data.BarEntry;
+import com.gulf.arabchat.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.highlight.HorizontalBarHighlighter;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarDataSet;
+import com.gulf.arabchat.modules.charting.renderer.HorizontalBarChartRenderer;
+import com.gulf.arabchat.modules.charting.renderer.XAxisRendererHorizontalBarChart;
+import com.gulf.arabchat.modules.charting.renderer.YAxisRendererHorizontalBarChart;
+import com.gulf.arabchat.modules.charting.utils.HorizontalViewPortHandler;
+import com.gulf.arabchat.modules.charting.utils.MPPointF;
+import com.gulf.arabchat.modules.charting.utils.TransformerHorizontalBarChart;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 /**
  * BarChart with horizontal bar orientation. In this implementation, x- and y-axis are switched, meaning the YAxis class

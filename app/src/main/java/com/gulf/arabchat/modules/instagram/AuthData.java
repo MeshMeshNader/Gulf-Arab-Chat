@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.instagram;
+package com.gulf.arabchat.modules.instagram;
 
 import java.util.ArrayList;
 import java.util.List;

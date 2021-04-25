@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.controller;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.controller;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,12 +8,12 @@ import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils.DensityUtils;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.*;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Orientation;;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.RtlMode;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils.DensityUtils;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.*;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Orientation;;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.RtlMode;
 
 public class AttributeController {
 

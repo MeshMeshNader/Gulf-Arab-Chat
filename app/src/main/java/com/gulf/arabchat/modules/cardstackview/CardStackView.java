@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.cardstackview;
+package com.gulf.arabchat.modules.cardstackview;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -7,8 +7,8 @@ import android.view.MotionEvent;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.angopapo.datooapp.modules.cardstackview.internal.CardStackDataObserver;
-import com.angopapo.datooapp.modules.cardstackview.internal.CardStackSnapHelper;
+import com.gulf.arabchat.modules.cardstackview.internal.CardStackDataObserver;
+import com.gulf.arabchat.modules.cardstackview.internal.CardStackSnapHelper;
 
 public class CardStackView extends RecyclerView {
 

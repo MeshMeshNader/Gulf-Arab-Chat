@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.auth;
+package com.gulf.arabchat.auth;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -17,13 +17,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textfield.TextInputEditText;
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.others.CountriesAdapter;
-import com.angopapo.datooapp.adapters.others.CountriesFetcher;
-import com.angopapo.datooapp.adapters.others.TextWatcherAdapter;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.others.CountriesModel;
-import com.angopapo.datooapp.utils.RecyclerViewFastScroller;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.others.CountriesAdapter;
+import com.gulf.arabchat.adapters.others.CountriesFetcher;
+import com.gulf.arabchat.adapters.others.TextWatcherAdapter;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.others.CountriesModel;
+import com.gulf.arabchat.utils.RecyclerViewFastScroller;
 
 import java.util.ArrayList;
 import java.util.List;

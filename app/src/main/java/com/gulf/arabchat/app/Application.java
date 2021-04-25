@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.app;
+package com.gulf.arabchat.app;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -23,25 +23,25 @@ import androidx.multidex.MultiDexApplication;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.connections.IncomingActivity;
-import com.angopapo.datooapp.models.datoo.AutoMessagesModel;
-import com.angopapo.datooapp.models.datoo.CallsModel;
-import com.angopapo.datooapp.models.datoo.FollowModel;
-import com.angopapo.datooapp.models.datoo.GiftModel;
-import com.angopapo.datooapp.models.datoo.LiveMessageModel;
-import com.angopapo.datooapp.models.datoo.LiveStreamModel;
-import com.angopapo.datooapp.models.datoo.WithdrawModel;
-import com.angopapo.datooapp.modules.parsegooglesignin.ParseGoogleSignIn;
-import com.angopapo.datooapp.utils.SharedPrefUtil;
-import com.angopapo.datooapp.utils.rtcUtils.AGEventHandler;
-import com.angopapo.datooapp.utils.rtcUtils.WorkerThread;
-import com.angopapo.datooapp.models.datoo.ConnectionListModel;
-import com.angopapo.datooapp.models.datoo.EncountersModel;
-import com.angopapo.datooapp.models.datoo.MessageModel;
-import com.angopapo.datooapp.models.datoo.ReportModel;
-import com.angopapo.datooapp.utils.FontsOverride;
-import com.angopapo.datooapp.models.datoo.User;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.connections.IncomingActivity;
+import com.gulf.arabchat.models.arabchat.AutoMessagesModel;
+import com.gulf.arabchat.models.arabchat.CallsModel;
+import com.gulf.arabchat.models.arabchat.FollowModel;
+import com.gulf.arabchat.models.arabchat.GiftModel;
+import com.gulf.arabchat.models.arabchat.LiveMessageModel;
+import com.gulf.arabchat.models.arabchat.LiveStreamModel;
+import com.gulf.arabchat.models.arabchat.WithdrawModel;
+import com.gulf.arabchat.modules.parsegooglesignin.ParseGoogleSignIn;
+import com.gulf.arabchat.utils.SharedPrefUtil;
+import com.gulf.arabchat.utils.rtcUtils.AGEventHandler;
+import com.gulf.arabchat.utils.rtcUtils.WorkerThread;
+import com.gulf.arabchat.models.arabchat.ConnectionListModel;
+import com.gulf.arabchat.models.arabchat.EncountersModel;
+import com.gulf.arabchat.models.arabchat.MessageModel;
+import com.gulf.arabchat.models.arabchat.ReportModel;
+import com.gulf.arabchat.utils.FontsOverride;
+import com.gulf.arabchat.models.arabchat.User;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.parse.Parse;
@@ -65,7 +65,7 @@ import io.agora.rtm.ErrorInfo;
 import io.agora.rtm.LocalInvitation;
 import io.agora.rtm.RemoteInvitation;
 
-import static com.angopapo.datooapp.app.Constants.LOG_TAG;
+import static com.gulf.arabchat.app.Constants.LOG_TAG;
 
 public class Application extends MultiDexApplication implements AGEventHandler, LifecycleObserver, android.app.Application.ActivityLifecycleCallbacks {
 

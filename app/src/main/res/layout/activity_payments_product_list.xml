@@ -84,7 +84,7 @@
 
                     </FrameLayout>
 
-                    <com.angopapo.datooapp.modules.dotsindicator.SpringDotsIndicator
+                    <com.gulf.arabchat.modules.dotsindicator.SpringDotsIndicator
                         android:layout_gravity="center_horizontal"
                         android:id="@+id/productList_carouselIndicator"
                         android:layout_width="wrap_content"

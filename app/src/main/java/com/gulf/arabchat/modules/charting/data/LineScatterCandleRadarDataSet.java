@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.graphics.DashPathEffect;
 
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ILineScatterCandleRadarDataSet;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ILineScatterCandleRadarDataSet;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 import java.util.List;
 

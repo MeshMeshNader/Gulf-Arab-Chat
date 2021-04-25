@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.profile;
+package com.gulf.arabchat.home.profile;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -7,10 +7,10 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.utils.StatusBarUtil;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.utils.StatusBarUtil;
+import com.gulf.arabchat.utils.Tools;
 import com.bumptech.glide.Glide;
 
 

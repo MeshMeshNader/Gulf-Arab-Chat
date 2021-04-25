@@ -1,10 +1,10 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.util.Log;
 
-import com.angopapo.datooapp.modules.charting.highlight.Highlight;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
+import com.gulf.arabchat.modules.charting.highlight.Highlight;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
 
 import java.util.ArrayList;
 import java.util.List;

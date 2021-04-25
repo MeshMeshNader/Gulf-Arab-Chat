@@ -1,13 +1,13 @@
-package com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.drawer.type;
+package com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.drawer.type;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import androidx.annotation.NonNull;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.Value;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.data.type.WormAnimationValue;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Indicator;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Orientation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.Value;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.data.type.WormAnimationValue;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Indicator;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Orientation;
 
 public class WormDrawer extends BaseDrawer {
 

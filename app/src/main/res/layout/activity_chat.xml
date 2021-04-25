@@ -52,7 +52,7 @@
                 android:minHeight="?attr/actionBarSize"
                 android:gravity="center">
 
-                <com.angopapo.datooapp.modules.circularimageview.CircleImageView
+                <com.gulf.arabchat.modules.circularimageview.CircleImageView
                     android:id="@+id/toolbar_image"
                     android:layout_width="40dp"
                     android:layout_height="40dp"

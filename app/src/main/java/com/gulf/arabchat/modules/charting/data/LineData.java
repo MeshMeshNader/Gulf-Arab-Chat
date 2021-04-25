@@ -1,7 +1,7 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ILineDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ILineDataSet;
 
 import java.util.List;
 

@@ -1,5 +1,5 @@
 
-package com.angopapo.datooapp.modules.charting.renderer;
+package com.gulf.arabchat.modules.charting.renderer;
 
 import android.graphics.Canvas;
 import android.graphics.DashPathEffect;
@@ -8,17 +8,17 @@ import android.graphics.Paint.Align;
 import android.graphics.Path;
 import android.graphics.Typeface;
 
-import com.angopapo.datooapp.modules.charting.components.Legend;
-import com.angopapo.datooapp.modules.charting.components.LegendEntry;
-import com.angopapo.datooapp.modules.charting.data.ChartData;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ICandleDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IDataSet;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IPieDataSet;
-import com.angopapo.datooapp.modules.charting.utils.ColorTemplate;
-import com.angopapo.datooapp.modules.charting.utils.FSize;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.components.Legend;
+import com.gulf.arabchat.modules.charting.components.LegendEntry;
+import com.gulf.arabchat.modules.charting.data.ChartData;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ICandleDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IPieDataSet;
+import com.gulf.arabchat.modules.charting.utils.ColorTemplate;
+import com.gulf.arabchat.modules.charting.utils.FSize;
+import com.gulf.arabchat.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.auth;
+package com.gulf.arabchat.auth;
 
 import android.app.Activity;
 import android.content.Context;
@@ -23,15 +23,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.Toolbar;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.authUtils.AngopapoLoginConfig;
-import com.angopapo.datooapp.authUtils.AngopapoSignupActivity;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.settings.WebUrlsActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.SharedPrefUtil;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.authUtils.ArabChatLoginConfig;
+import com.gulf.arabchat.authUtils.ArabChatSignupActivity;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.settings.WebUrlsActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.SharedPrefUtil;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ui.login.ParseLoginFragmentBase;
@@ -56,7 +56,7 @@ public class SignupFragment extends ParseLoginFragmentBase {
     private EditText mDay1, mDay2, mMonth1, mMonth2, mYear1, mYear2, mYear3, mYear4;
     private String dateDay, dateMonth, dateYear, mBirthday;
 
-    private AngopapoLoginConfig config;
+    private ArabChatLoginConfig config;
     private int minPasswordLength;
 
     private static final String LOG_TAG = "SignupFragment";
@@ -78,7 +78,7 @@ public class SignupFragment extends ParseLoginFragmentBase {
                              Bundle savedInstanceState) {
 
         Bundle args = getArguments();
-        config = AngopapoLoginConfig.fromBundle(args, getActivity());
+        config = ArabChatLoginConfig.fromBundle(args, getActivity());
 
         minPasswordLength = DEFAULT_MIN_PASSWORD_LENGTH;
         if (config.getParseSignupMinPasswordLength() != null) {
@@ -125,10 +125,10 @@ public class SignupFragment extends ParseLoginFragmentBase {
 
         setmTermsText(mTermsText);
 
-        ((AngopapoSignupActivity)getActivity()).setSupportActionBar(mToolbar);
-        ((AngopapoSignupActivity)getActivity()).getSupportActionBar().setTitle("");
-        ((AngopapoSignupActivity)getActivity()).getSupportActionBar().setElevation(3.0f);
-        ((AngopapoSignupActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((ArabChatSignupActivity)getActivity()).setSupportActionBar(mToolbar);
+        ((ArabChatSignupActivity)getActivity()).getSupportActionBar().setTitle("");
+        ((ArabChatSignupActivity)getActivity()).getSupportActionBar().setElevation(3.0f);
+        ((ArabChatSignupActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mToolbar.setBackgroundResource(R.color.transparent);
 

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.adapters.others;
+package com.gulf.arabchat.adapters.others;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.models.others.FbAlbumModel;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.models.others.FbAlbumModel;
 
 import java.util.List;
 

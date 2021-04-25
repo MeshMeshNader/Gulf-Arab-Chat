@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.badgeview;
+package com.gulf.arabchat.modules.badgeview;
 
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.utils;
+package com.gulf.arabchat.utils;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -17,8 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Application;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Application;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

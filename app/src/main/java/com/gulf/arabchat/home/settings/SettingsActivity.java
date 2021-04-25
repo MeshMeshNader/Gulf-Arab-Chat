@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.settings;
+package com.gulf.arabchat.home.settings;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,15 +8,15 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.settings.accountPreferences.AccountPreferencesActivity;
-import com.angopapo.datooapp.home.settings.about.AboutActivity;
-import com.angopapo.datooapp.home.settings.account.AccountActivity;
-import com.angopapo.datooapp.home.settings.basicInfo.BasicInfoActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.settings.accountPreferences.AccountPreferencesActivity;
+import com.gulf.arabchat.home.settings.about.AboutActivity;
+import com.gulf.arabchat.home.settings.account.AccountActivity;
+import com.gulf.arabchat.home.settings.basicInfo.BasicInfoActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.utils.Tools;
 
 import java.util.Objects;
 

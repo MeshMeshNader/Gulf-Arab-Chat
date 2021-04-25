@@ -1,7 +1,7 @@
-package com.angopapo.datooapp.modules.charting.listener;
+package com.gulf.arabchat.modules.charting.listener;
 
-import com.angopapo.datooapp.modules.charting.data.DataSet;
-import com.angopapo.datooapp.modules.charting.data.Entry;
+import com.gulf.arabchat.modules.charting.data.DataSet;
+import com.gulf.arabchat.modules.charting.data.Entry;
 
 /**
  * Listener for callbacks when drawing on the chart.

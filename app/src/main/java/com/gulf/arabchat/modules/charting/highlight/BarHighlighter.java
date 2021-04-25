@@ -1,11 +1,11 @@
-package com.angopapo.datooapp.modules.charting.highlight;
+package com.gulf.arabchat.modules.charting.highlight;
 
-import com.angopapo.datooapp.modules.charting.data.BarData;
-import com.angopapo.datooapp.modules.charting.data.BarEntry;
-import com.angopapo.datooapp.modules.charting.data.BarLineScatterCandleBubbleData;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.BarDataProvider;
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarDataSet;
-import com.angopapo.datooapp.modules.charting.utils.MPPointD;
+import com.gulf.arabchat.modules.charting.data.BarData;
+import com.gulf.arabchat.modules.charting.data.BarEntry;
+import com.gulf.arabchat.modules.charting.data.BarLineScatterCandleBubbleData;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.BarDataProvider;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarDataSet;
+import com.gulf.arabchat.modules.charting.utils.MPPointD;
 
 /**
  * Created by Philipp Jahoda on 22/07/15.

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.autoimageslider;
+package com.gulf.arabchat.modules.autoimageslider;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.utils.rtcUtils;
+package com.gulf.arabchat.utils.rtcUtils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,8 +12,8 @@ import android.view.SurfaceView;
 
 import androidx.annotation.NonNull;
 
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.helpers.QuickHelp;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.helpers.QuickHelp;
 
 import java.util.HashSet;
 import java.util.Map;

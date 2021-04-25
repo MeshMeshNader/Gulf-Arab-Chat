@@ -1,11 +1,11 @@
 
-package com.angopapo.datooapp.modules.charting.jobs;
+package com.gulf.arabchat.modules.charting.jobs;
 
 import android.view.View;
 
-import com.angopapo.datooapp.modules.charting.utils.ObjectPool;
-import com.angopapo.datooapp.modules.charting.utils.Transformer;
-import com.angopapo.datooapp.modules.charting.utils.ViewPortHandler;
+import com.gulf.arabchat.modules.charting.utils.ObjectPool;
+import com.gulf.arabchat.modules.charting.utils.Transformer;
+import com.gulf.arabchat.modules.charting.utils.ViewPortHandler;
 
 /**
  * Runnable that is used for viewport modifications since they cannot be

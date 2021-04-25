@@ -1,12 +1,12 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.annotation.TargetApi;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.ILineRadarDataSet;
-import com.angopapo.datooapp.modules.charting.utils.Utils;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.ILineRadarDataSet;
+import com.gulf.arabchat.modules.charting.utils.Utils;
 
 import java.util.List;
 

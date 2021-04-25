@@ -1,12 +1,12 @@
 
-package com.angopapo.datooapp.modules.charting.charts;
+package com.gulf.arabchat.modules.charting.charts;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.angopapo.datooapp.modules.charting.data.BubbleData;
-import com.angopapo.datooapp.modules.charting.interfaces.dataprovider.BubbleDataProvider;
-import com.angopapo.datooapp.modules.charting.renderer.BubbleChartRenderer;
+import com.gulf.arabchat.modules.charting.data.BubbleData;
+import com.gulf.arabchat.modules.charting.interfaces.dataprovider.BubbleDataProvider;
+import com.gulf.arabchat.modules.charting.renderer.BubbleChartRenderer;
 
 /**
  * The BubbleChart. Draws bubbles. Bubble chart implementation: Copyright 2015

@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.expansionpanel;
+package com.gulf.arabchat.modules.expansionpanel;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 
-import com.angopapo.datooapp.R;
+import com.gulf.arabchat.R;
 
 import java.util.ArrayList;
 import java.util.List;

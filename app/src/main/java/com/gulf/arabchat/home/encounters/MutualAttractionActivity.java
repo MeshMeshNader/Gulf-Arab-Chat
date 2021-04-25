@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.encounters;
+package com.gulf.arabchat.home.encounters;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,12 +7,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.helpers.QuickActions;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.ConnectionListModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.circularimageview.RoundedImage;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.helpers.QuickActions;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.ConnectionListModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.circularimageview.RoundedImage;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 

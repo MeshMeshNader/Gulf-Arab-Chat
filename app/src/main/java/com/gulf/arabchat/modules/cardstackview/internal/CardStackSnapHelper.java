@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.cardstackview.internal;
+package com.gulf.arabchat.modules.cardstackview.internal;
 
 import android.view.View;
 
@@ -7,9 +7,9 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
-import com.angopapo.datooapp.modules.cardstackview.CardStackLayoutManager;
-import com.angopapo.datooapp.modules.cardstackview.Duration;
-import com.angopapo.datooapp.modules.cardstackview.SwipeAnimationSetting;
+import com.gulf.arabchat.modules.cardstackview.CardStackLayoutManager;
+import com.gulf.arabchat.modules.cardstackview.Duration;
+import com.gulf.arabchat.modules.cardstackview.SwipeAnimationSetting;
 
 
 public class CardStackSnapHelper extends SnapHelper {

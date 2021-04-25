@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.autoimageslider;
+package com.gulf.arabchat.modules.autoimageslider;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,39 +14,39 @@ import android.widget.FrameLayout;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.PageIndicatorView;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.BaseAnimation;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.animation.type.ColorAnimation;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.controller.DrawController;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.Orientation;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.data.RtlMode;
-import com.angopapo.datooapp.modules.autoimageslider.IndicatorView.utils.DensityUtils;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.AntiClockSpinTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.Clock_SpinTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.CubeInDepthTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.CubeInRotationTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.CubeInScalingTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.CubeOutDepthTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.CubeOutRotationTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.CubeOutScalingTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.DepthTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.FadeTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.FanTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.FidgetSpinTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.GateTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.HingeTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.HorizontalFlipTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.PopTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.SimpleTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.SpinnerTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.TossTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.VerticalFlipTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.VerticalShutTransformation;
-import com.angopapo.datooapp.modules.autoimageslider.Transformations.ZoomOutTransformation;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.PageIndicatorView;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.AnimationType;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.BaseAnimation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.animation.type.ColorAnimation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.controller.DrawController;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.Orientation;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.data.RtlMode;
+import com.gulf.arabchat.modules.autoimageslider.IndicatorView.utils.DensityUtils;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.AntiClockSpinTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.Clock_SpinTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.CubeInDepthTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.CubeInRotationTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.CubeInScalingTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.CubeOutDepthTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.CubeOutRotationTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.CubeOutScalingTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.DepthTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.FadeTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.FanTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.FidgetSpinTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.GateTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.HingeTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.HorizontalFlipTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.PopTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.SimpleTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.SpinnerTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.TossTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.VerticalFlipTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.VerticalShutTransformation;
+import com.gulf.arabchat.modules.autoimageslider.Transformations.ZoomOutTransformation;
 
-import static com.angopapo.datooapp.modules.autoimageslider.IndicatorView.draw.controller.AttributeController.getRtlMode;
+import static com.gulf.arabchat.modules.autoimageslider.IndicatorView.draw.controller.AttributeController.getRtlMode;
 
 public class SliderView extends FrameLayout {
 

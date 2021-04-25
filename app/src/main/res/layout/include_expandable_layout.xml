@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
 
-    <com.angopapo.datooapp.modules.expansionpanel.ExpansionHeader
+    <com.gulf.arabchat.modules.expansionpanel.ExpansionHeader
         android:id="@+id/expansionHeader"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -84,9 +84,9 @@
 
         </LinearLayout>
 
-    </com.angopapo.datooapp.modules.expansionpanel.ExpansionHeader>
+    </com.gulf.arabchat.modules.expansionpanel.ExpansionHeader>
 
-    <com.angopapo.datooapp.modules.expansionpanel.ExpansionLayout
+    <com.gulf.arabchat.modules.expansionpanel.ExpansionLayout
         android:id="@+id/expansionLayout"
         app:expansion_expanded="false"
         android:layout_height="wrap_content"
@@ -310,7 +310,7 @@
 
         </LinearLayout>
 
-    </com.angopapo.datooapp.modules.expansionpanel.ExpansionLayout>
+    </com.gulf.arabchat.modules.expansionpanel.ExpansionLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/connections_rv"

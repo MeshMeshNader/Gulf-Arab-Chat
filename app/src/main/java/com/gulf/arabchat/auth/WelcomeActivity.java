@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.auth;
+package com.gulf.arabchat.auth;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,19 +19,19 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.app.BaseActivity;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.app.DispatchActivity;
-import com.angopapo.datooapp.authUtils.AngopapoLoginBuilder;
-import com.angopapo.datooapp.authUtils.AngopapoSignupBuilder;
-import com.angopapo.datooapp.helpers.QuickActions;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.home.HomeActivity;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.parsegooglesignin.ParseGoogleSignIn;
-import com.angopapo.datooapp.utils.SharedPrefUtil;
-import com.angopapo.datooapp.utils.Tools;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.app.BaseActivity;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.app.DispatchActivity;
+import com.gulf.arabchat.authUtils.ArabChatLoginBuilder;
+import com.gulf.arabchat.authUtils.ArabChatSignupBuilder;
+import com.gulf.arabchat.helpers.QuickActions;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.home.HomeActivity;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.parsegooglesignin.ParseGoogleSignIn;
+import com.gulf.arabchat.utils.SharedPrefUtil;
+import com.gulf.arabchat.utils.Tools;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -160,7 +160,7 @@ public class WelcomeActivity extends BaseActivity {
 
                     mGenderLayout.setVisibility(View.INVISIBLE);
 
-                    AngopapoSignupBuilder builder = new AngopapoSignupBuilder(WelcomeActivity.this);
+                    ArabChatSignupBuilder builder = new ArabChatSignupBuilder(WelcomeActivity.this);
                     builder.setAppLogo(R.mipmap.ic_launcher);
                     builder.setParseLoginButtonText((R.string.sign_in));
                     startActivityForResult(builder.build(), 0);
@@ -194,7 +194,7 @@ public class WelcomeActivity extends BaseActivity {
 
                     mGenderLayout.setVisibility(View.INVISIBLE);
 
-                    AngopapoSignupBuilder builder = new AngopapoSignupBuilder(WelcomeActivity.this);
+                    ArabChatSignupBuilder builder = new ArabChatSignupBuilder(WelcomeActivity.this);
                     builder.setAppLogo(R.mipmap.ic_launcher);
                     builder.setParseLoginButtonText((R.string.sign_in));
                     startActivityForResult(builder.build(), 0);
@@ -296,7 +296,7 @@ public class WelcomeActivity extends BaseActivity {
 
     public void goToLogin(){
 
-        AngopapoLoginBuilder builder = new AngopapoLoginBuilder(WelcomeActivity.this);
+        ArabChatLoginBuilder builder = new ArabChatLoginBuilder(WelcomeActivity.this);
         builder.setAppLogo(R.mipmap.ic_launcher);
         builder.setParseLoginButtonText((R.string.sign_in));
         builder.setParseLoginHelpText(getString(R.string.forgot_pass));

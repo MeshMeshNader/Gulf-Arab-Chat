@@ -1,7 +1,7 @@
 
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
-import com.angopapo.datooapp.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
+import com.gulf.arabchat.modules.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
 
 import java.util.List;
 

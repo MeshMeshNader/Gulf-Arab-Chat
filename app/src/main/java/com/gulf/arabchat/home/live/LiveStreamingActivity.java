@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.home.live;
+package com.gulf.arabchat.home.live;
 
 import android.animation.Animator;
 
@@ -25,22 +25,22 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.adapters.datoo.GiftLiveAdapter;
-import com.angopapo.datooapp.adapters.datoo.GiftLiveFooterAdapter;
-import com.angopapo.datooapp.adapters.datoo.LiveMessageAdapter;
-import com.angopapo.datooapp.app.Config;
-import com.angopapo.datooapp.helpers.QuickActions;
-import com.angopapo.datooapp.helpers.QuickHelp;
-import com.angopapo.datooapp.models.datoo.FollowModel;
-import com.angopapo.datooapp.models.datoo.GiftModel;
-import com.angopapo.datooapp.models.datoo.LiveMessageModel;
-import com.angopapo.datooapp.models.datoo.LiveStreamModel;
-import com.angopapo.datooapp.models.datoo.ReportModel;
-import com.angopapo.datooapp.models.datoo.User;
-import com.angopapo.datooapp.modules.circularimageview.CircleImageView;
-import com.angopapo.datooapp.utils.StatusBarUtil;
-import com.angopapo.datooapp.utils.liveUtils.VideoGridContainer;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.adapters.arabchat.GiftLiveAdapter;
+import com.gulf.arabchat.adapters.arabchat.GiftLiveFooterAdapter;
+import com.gulf.arabchat.adapters.arabchat.LiveMessageAdapter;
+import com.gulf.arabchat.app.Config;
+import com.gulf.arabchat.helpers.QuickActions;
+import com.gulf.arabchat.helpers.QuickHelp;
+import com.gulf.arabchat.models.arabchat.FollowModel;
+import com.gulf.arabchat.models.arabchat.GiftModel;
+import com.gulf.arabchat.models.arabchat.LiveMessageModel;
+import com.gulf.arabchat.models.arabchat.LiveStreamModel;
+import com.gulf.arabchat.models.arabchat.ReportModel;
+import com.gulf.arabchat.models.arabchat.User;
+import com.gulf.arabchat.modules.circularimageview.CircleImageView;
+import com.gulf.arabchat.utils.StatusBarUtil;
+import com.gulf.arabchat.utils.liveUtils.VideoGridContainer;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.parse.FunctionCallback;
 import com.parse.ParseCloud;
@@ -63,8 +63,8 @@ import io.agora.rtc.RtcEngine;
 import io.agora.rtc.video.VideoCanvas;
 import io.agora.rtc.video.VideoEncoderConfiguration;
 
-import static com.angopapo.datooapp.app.Constants.VIDEO_DIMENSIONS;
-import static com.angopapo.datooapp.models.datoo.GiftModel.SEND_GIFT_PARAM;
+import static com.gulf.arabchat.app.Constants.VIDEO_DIMENSIONS;
+import static com.gulf.arabchat.models.arabchat.GiftModel.SEND_GIFT_PARAM;
 
 public class LiveStreamingActivity extends AppCompatActivity {
 

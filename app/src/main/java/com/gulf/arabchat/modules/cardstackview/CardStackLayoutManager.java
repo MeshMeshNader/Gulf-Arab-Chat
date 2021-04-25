@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.cardstackview;
+package com.gulf.arabchat.modules.cardstackview;
 
 import android.content.Context;
 import android.graphics.PointF;
@@ -13,11 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.angopapo.datooapp.R;
-import com.angopapo.datooapp.modules.cardstackview.internal.CardStackSetting;
-import com.angopapo.datooapp.modules.cardstackview.internal.CardStackSmoothScroller;
-import com.angopapo.datooapp.modules.cardstackview.internal.CardStackState;
-import com.angopapo.datooapp.modules.cardstackview.internal.DisplayUtil;
+import com.gulf.arabchat.R;
+import com.gulf.arabchat.modules.cardstackview.internal.CardStackSetting;
+import com.gulf.arabchat.modules.cardstackview.internal.CardStackSmoothScroller;
+import com.gulf.arabchat.modules.cardstackview.internal.CardStackState;
+import com.gulf.arabchat.modules.cardstackview.internal.DisplayUtil;
 
 import java.util.List;
 

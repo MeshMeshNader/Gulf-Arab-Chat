@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.showcaseview;
+package com.gulf.arabchat.modules.showcaseview;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -25,9 +25,9 @@ import android.view.ViewTreeObserver;
 import android.view.animation.AlphaAnimation;
 import android.widget.FrameLayout;
 
-import com.angopapo.datooapp.modules.showcaseview.config.DismissType;
-import com.angopapo.datooapp.modules.showcaseview.config.Gravity;
-import com.angopapo.datooapp.modules.showcaseview.listener.GuideListener;
+import com.gulf.arabchat.modules.showcaseview.config.DismissType;
+import com.gulf.arabchat.modules.showcaseview.config.Gravity;
+import com.gulf.arabchat.modules.showcaseview.listener.GuideListener;
 
 public class GuideView extends FrameLayout {
 

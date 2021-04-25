@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.utils;
+package com.gulf.arabchat.utils;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

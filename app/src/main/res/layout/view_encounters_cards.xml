@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/ic_floating_action_yes_inverted"
         android:scaleType="fitXY" />
 
-    <com.angopapo.datooapp.modules.cardstackview.CardStackView
+    <com.gulf.arabchat.modules.cardstackview.CardStackView
         android:id="@+id/encounters_stackView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

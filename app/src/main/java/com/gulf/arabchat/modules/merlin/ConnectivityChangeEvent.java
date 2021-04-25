@@ -1,4 +1,4 @@
-package com.angopapo.datooapp.modules.merlin;
+package com.gulf.arabchat.modules.merlin;
 
 /**
  * TODO: Seems like this class is only used internally and some fields ignored.

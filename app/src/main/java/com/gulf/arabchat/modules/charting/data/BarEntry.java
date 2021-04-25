@@ -1,9 +1,9 @@
-package com.angopapo.datooapp.modules.charting.data;
+package com.gulf.arabchat.modules.charting.data;
 
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 
-import com.angopapo.datooapp.modules.charting.highlight.Range;
+import com.gulf.arabchat.modules.charting.highlight.Range;
 
 /**
  * Entry class for the BarChart. (especially stacked bars)
