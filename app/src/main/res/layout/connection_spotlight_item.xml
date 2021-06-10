@@ -8,13 +8,13 @@
     android:layout_marginEnd="10dp"
     android:layout_marginRight="5dp">
 
-    <com.gulf.arabchat.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat0.modules.circularimageview.CircleImageView
         android:id="@+id/image"
         android:layout_width="@dimen/connections_avatarSize"
         android:layout_height="@dimen/connections_avatarSize"
         android:src="@drawable/photo_placeholder_grey" />
 
-    <com.gulf.arabchat.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat0.modules.circularimageview.CircleImageView
         android:id="@+id/read"
         android:layout_width="14dp"
         android:layout_height="14dp"

@@ -261,8 +261,8 @@
     <string name="peoplenearby_explanation_button">शुरू हो जाओ</string>
     <string name="peoplenearby_explanation_subtitle">अपने आस-पास के अन्य लोगों को खोजने और उनसे बातचीत करने के लिए डाटू का उपयोग करें</string>
     <string name="peoplenearby_explanation_title">आस-पास के लोगों में आपका स्वागत है!</string>
-    <string name="get_datoo_premium">डाटू प्रीमियम प्राप्त करें</string>
-    <string name="get_datoo_premium_explain">अपनी लोकप्रियता में वृद्धि करें और अन्य लोगों तक विशेष सुविधाओं का उपयोग करें, बस नहीं है।</string>
+    <string name="get_arabchat_premium">डाटू प्रीमियम प्राप्त करें</string>
+    <string name="get_arabchat_premium_explain">अपनी लोकप्रियता में वृद्धि करें और अन्य लोगों तक विशेष सुविधाओं का उपयोग करें, बस नहीं है।</string>
     <string name="continue_">जारी रखें</string>
     <string name="you_need">आप की जरूरत है</string>
    
@@ -273,7 +273,7 @@
     <string name="you_re_online">लड़कियों को आपको ऑनलाइन बताने के लिए। टॉप-अप क्रेडिट अब - आप जितना सस्ता खरीदेंगे उतना अधिक होगा।</string>
     <string name="refill_cre">फिर से भरना क्रेडिट</string>
     <string name="premium">प्रीमियम</string>
-    <string name="datoo_premium">डाटू प्रीमियम</string>
+    <string name="arabchat_premium">डाटू प्रीमियम</string>
     <string name="activate">सक्रिय</string>
     <string name="Payments_Most_Popular">सबसे लोकप्रिय</string>
     <string name="terms_and_conditions">नियम और शर्तें</string>
@@ -371,8 +371,8 @@
     <string name="noti_profile_visitor_text">अपने प्रोफ़ाइल पर जाने वाले लोगों के बारे में अपडेट प्राप्त करें</string>
     <string name="noti_favorited_you">आपको अच्छा लगा</string>
     <string name="noti_favorited_you_text">उन लोगों के बारे में अपडेट प्राप्त करें, जिन्होंने आपका पक्ष लिया</string>
-    <string name="noti_datoo_live">दातू लाइव</string>
-    <string name="noti_datoo_live_text">अपडेट प्राप्त करें जब आपके पसंदीदा स्ट्रीमर लाइव हों</string>
+    <string name="noti_arabchat_live">दातू लाइव</string>
+    <string name="noti_arabchat_live_text">अपडेट प्राप्त करें जब आपके पसंदीदा स्ट्रीमर लाइव हों</string>
     <string name="notification_new_message_title">आपको एक नया संदेश आया है</string>
     <string name="notification_new_match_title">आपका नया मैच है</string>
     <string name="notification_new_like_title">आपके पास नया है</string>
@@ -388,7 +388,7 @@
     <string name="privacy_policy">गोपनीयता नीति</string>
     <string name="terms_of_use">उपयोग की शर्तें</string>
     <string name="about_copyright">कॉपीराइट २०१५-२०१९ अंगोप्पो, एलडीए, सभी अधिकार सुरक्षित</string>
-    <string name="about_more">अधिक जानकारी के लिए, https://datoo.angopapo.com/पर जाएं। "</string>
+    <string name="about_more">अधिक जानकारी के लिए, https://www.instagram.com/gulf_arab_chat/पर जाएं। "</string>
     <string name="report_user_block">इस उपयोगकर्ता को ब्लॉक करें</string>
     <string name="report_user_dont">दुरुपयोग की रिपोर्ट न करें</string>
     <string name="report_user_fake">चोरी की तस्वीरों की रिपोर्ट करें</string>

@@ -14,8 +14,8 @@
     <string name="offline_mode">Sem conexão à internet</string>
     <string name="wait_refresh">Atualizar</string>
     <string name="error_network_connection_lost">Conexão perdida</string>
-    <string name="error_connection_non_modal_no_internet_description">"Você está usando Datoo no modo offline"</string>
-    <string name="error_connection_non_modal_no_internet_subtitle">Ative o Bluetooth para continuar usando o Datoo offline</string>
+    <string name="error_connection_non_modal_no_internet_description">"Você está usando ARABCHAT no modo offline"</string>
+    <string name="error_connection_non_modal_no_internet_subtitle">Ative o Bluetooth para continuar usando o ARABCHAT offline</string>
 
     
     <string name="permission_alert">Alerta de permissões</string>
@@ -61,7 +61,7 @@
     <string name="login_press_again">Pressione novamente para sair</string>
 
     <string name="splash_loading">Carregando…</string>
-    <string name="welcome_to_dateyou">Bem-vindo ao Datoo</string>
+    <string name="welcome_to_dateyou">Bem-vindo ao ARABCHAT</string>
     <string name="login_with_phone">Entrar com número de telefone</string>
     <string name="login_with_facebook">Entrar com o Facebook</string>
     <string name="auth">Autenticando…</string>
@@ -69,10 +69,10 @@
     
     <string name="signin_alert_cancel">Cancelar</string>
     <string name="signin_alert_create_new_account">Criar nova conta</string>
-    <string name="signin_alert_nofacebook">Desculpe, esta conta do Facebook não possui uma conta do Datoo correspondente.</string>
+    <string name="signin_alert_nofacebook">Desculpe, esta conta do Facebook não possui uma conta do ARABCHAT correspondente.</string>
     <string name="signin_alert_retry">Repetir</string>
     <string name="signin_alert_title">Entrar com</string>
-    <string name="signin_alert_use_badoo_account">Use a conta do Datoo</string>
+    <string name="signin_alert_use_badoo_account">Use a conta do ARABCHAT</string>
     <string name="signin_alert_use_facebook_account">Use o Facebook</string>
     <string name="signin_cancel">Cancelar</string>
     <string name="signin_existing_account">Do utilizador</string>
@@ -86,7 +86,7 @@
     <string name="signin_existing_getnewpassword">Crie uma nova senha</string>
     <string name="signin_existing_mobile">Número de telefone</string>
     <string name="signin_existing_password">Senha</string>
-    <string name="signin_existing_register_byemail">Criar conta Datoo</string>
+    <string name="signin_existing_register_byemail">Criar conta ARABCHAT</string>
     <string name="signin_existing_required">Requeridos</string>
     <string name="signin_existing_signin">Entrar com</string>
     <string name="signin_existing_signin_byemail">Entrar por e-mail</string>
@@ -95,10 +95,10 @@
     <string name="signin_forgot_password_account">Do utilizador</string>
     <string name="signin_forgot_password_alert_message">As instruções para criar uma nova senha foram enviadas.</string>
     <string name="signin_forgot_password_alert_title">Feito!</string>
-    <string name="signin_forgot_password_alert_both_message">"Uma mensagem de texto com um link Datoo e uma nova senha foram enviadas para o seu telefone celular. Também enviamos um e-mail mostrando como você pode alterar essa senha no seu PC."</string>
+    <string name="signin_forgot_password_alert_both_message">"Uma mensagem de texto com um link ARABCHAT e uma nova senha foram enviadas para o seu telefone celular. Também enviamos um e-mail mostrando como você pode alterar essa senha no seu PC."</string>
     <string name="signin_forgot_password_alert_both_title">Lembrete enviado</string>
     <string name="signin_forgot_password_alert_wap_message">Sua senha foi redefinida_ Um e-mail com sua nova senha foi enviado para você_</string>
-    <string name="signin_forgot_password_alertsms_message">Enviamos uma mensagem de texto com uma nova senha e um link para Datoo.</string>
+    <string name="signin_forgot_password_alertsms_message">Enviamos uma mensagem de texto com uma nova senha e um link para ARABCHAT.</string>
     <string name="signin_forgot_password_alertsms_title">Mensagem de texto enviada</string>
     <string name="signin_forgot_password_enter_your_address">E-mail ou telefone celular</string>
     <string name="signin_forgot_password_error_email_required">Digite seu endereço de e-mail ou número de telefone celular</string>
@@ -135,7 +135,7 @@
     <string name="signin_new_title_social_attention">Conversar, paquerar, conectar</string>
     <string name="signup_tiw_error">"Selecione para que você está aqui"</string>
     <string name="signup_tiw_placeholder">Por favor selecione</string>
-    <string name="social_accounts_whats_new_description">Agora você pode conhecer alguém ainda melhor ao verificar seus perfis sociais e compartilhá-los com outras pessoas no Datoo!</string>
+    <string name="social_accounts_whats_new_description">Agora você pode conhecer alguém ainda melhor ao verificar seus perfis sociais e compartilhá-los com outras pessoas no ARABCHAT!</string>
     <string name="social_accounts_whats_new_title">Deixe o real pelo qual você brilha!</string>
     <string name="or">OU</string>
     <string name="landing_useOther">Outras opções</string>
@@ -155,7 +155,7 @@
     <string name="year_of_age">ano de idade</string>
     <string name="signup_user_date">Seu aniversário por favor</string>
 
-    <string name="signup_by_clinging">Eu aceito Datoo</string>
+    <string name="signup_by_clinging">Eu aceito ARABCHAT</string>
     <string name="signup_terms">Termos e Condições.</string>
     <string name="signup_we_will">Nós nunca compartilharemos seus detalhes de contato</string>
 
@@ -172,7 +172,7 @@
 
     <string name="facebook_ad_sponsored">Patrocinadas</string>
     <string name="facebook_onboarding_connect">Conecte o Facebook</string>
-    <string name="facebook_onboarding_continue">Continue para Datoo</string>
+    <string name="facebook_onboarding_continue">Continue para ARABCHAT</string>
     <string name="facebook_onboarding_title">Conecte seu Facebook para conferir:</string>
     <string name="facebook_warning_2nd_item">Todos os seus amigos do Facebook</string>
     <string name="facebook_warning_3rd_item">"As redes dos seus amigos do Facebook"</string>
@@ -259,10 +259,10 @@
     <string name="video_ads_not_loaded">O Vdeo ainda não foi carregado, tente novamente</string>
     <string name="video_ads_failed_loaded">Falha ao exibir o vídeo. Tente novamente</string>
     <string name="peoplenearby_explanation_button">Iniciar</string>
-    <string name="peoplenearby_explanation_subtitle">Use Datoo para encontrar e conversar com outras pessoas perto de você</string>
+    <string name="peoplenearby_explanation_subtitle">Use ARABCHAT para encontrar e conversar com outras pessoas perto de você</string>
     <string name="peoplenearby_explanation_title">Bem-vindo às pessoas próximas!</string>
-    <string name="get_datoo_premium">Obter o Datoo Premium</string>
-    <string name="get_datoo_premium_explain">Aumente sua popularidade e acesse recursos especiais que outras pessoas simplesmente não têm.</string>
+    <string name="get_arabchat_premium">Obter o ARABCHAT Premium</string>
+    <string name="get_arabchat_premium_explain">Aumente sua popularidade e acesse recursos especiais que outras pessoas simplesmente não têm.</string>
     <string name="continue_">Continuar</string>
     <string name="you_need">Você precisa</string>
    
@@ -273,7 +273,7 @@
     <string name="you_re_online">para que as garotas saibam que você está online. Recarregue os créditos agora - quanto mais você comprar, mais barato ficará.</string>
     <string name="refill_cre">Recarregar créditos</string>
     <string name="premium">Prêmio</string>
-    <string name="datoo_premium">Datoo Premium</string>
+    <string name="arabchat_premium">ARABCHAT Premium</string>
     <string name="activate">Ativar</string>
     <string name="Payments_Most_Popular">Mais popular</string>
     <string name="terms_and_conditions">Termos e Condições</string>
@@ -293,7 +293,7 @@
     <string name="lifetime">Tempo de vida</string>
     <string name="no_subscription">Sem assinatura</string>
     <string name="for_life">para a vida</string>
-    <string name="get_messsage_read">Leia suas mensagens primeiro com o Datoo Premium!</string>
+    <string name="get_messsage_read">Leia suas mensagens primeiro com o ARABCHAT Premium!</string>
     <string name="chat_with_girls">Converse com novas garotas!</string>
     <string name="undo_no">Desfazer votos \'Não\' em Encontros</string>
     <string name="chat_popular">Conversar com garotas populares</string>
@@ -301,7 +301,7 @@
     <string name="credit_added_to_yo_a">créditos adicionados à sua conta.</string>
     <string name="error_try_again_later">Erro, tente novamente mais tarde</string>
     <string name="purchase_canceled">Seu pagamento foi cancelado. Esperamos que você decida tentar novamente.</string>
-    <string name="you_are_premium">Datoo Premium ativado!</string>
+    <string name="you_are_premium">ARABCHAT Premium ativado!</string>
     <string name="tap_to_see">Toque para ver seu perfil</string>
     <string name="credits">Créditos</string>
     <string name="credits_">créditos</string>
@@ -371,8 +371,8 @@
     <string name="noti_profile_visitor_text">Receba atualizações sobre pessoas que visitam seu perfil</string>
     <string name="noti_favorited_you">Favorito você</string>
     <string name="noti_favorited_you_text">Receba atualizações sobre as pessoas que o adicionaram como favorito</string>
-    <string name="noti_datoo_live">Datoo Live</string>
-    <string name="noti_datoo_live_text">Receba atualizações quando seus streamers favoritos estiverem ao vivo</string>
+    <string name="noti_arabchat_live">ARABCHAT Live</string>
+    <string name="noti_arabchat_live_text">Receba atualizações quando seus streamers favoritos estiverem ao vivo</string>
     <string name="notification_new_message_title">Você tem uma nova mensagem</string>
     <string name="notification_new_match_title">Você tem uma nova partida</string>
     <string name="notification_new_like_title">Você tem novo como</string>
@@ -388,7 +388,7 @@
     <string name="privacy_policy">Política de Privacidade</string>
     <string name="terms_of_use">Termos de uso</string>
     <string name="about_copyright">Copyright 2015–2019 ArabChat, Lda, todos os direitos reservados</string>
-    <string name="about_more">Para mais informações, visite https://datoo.angopapo.com/</string>
+    <string name="about_more">Para mais informações, visite https://www.instagram.com/gulf_arab_chat/</string>
     <string name="report_user_block">Bloqueie esse usuário</string>
     <string name="report_user_dont">Não denuncie abuso</string>
     <string name="report_user_fake">Denunciar fotos roubadas</string>

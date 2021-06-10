@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name" translatable="false">Arab Chat</string>
-    <string name="top_sheet_behavior" translatable="false">com.gulf.arabchat.modules.topsheet.TopSheetBehavior</string>
-    <string name="center_sheet_behavior" translatable="false">com.gulf.arabchat.modules.centersheet.CenterSheetBehavior</string>
+    <string name="app_name" translatable="false">Gulf Arab Chat</string>
+    <string name="top_sheet_behavior" translatable="false">com.gulf.arabchat0.modules.topsheet.TopSheetBehavior</string>
+    <string name="center_sheet_behavior" translatable="false">com.gulf.arabchat0.modules.centersheet.CenterSheetBehavior</string>
 
     <!--Warnings-->
     <string name="dsv_ex_msg_dont_set_lm" translatable="false">You should not set LayoutManager on DiscreteScrollView.class instance. Library uses a special one. Just don\'t call the method.</string>
@@ -32,8 +32,8 @@
     <string name="offline_mode">No internet connection</string>
     <string name="wait_refresh">Refresh</string>
     <string name="error_network_connection_lost">Connection lost</string>
-    <string name="error_connection_non_modal_no_internet_description">"You're using Datoo in offline mode"</string>
-    <string name="error_connection_non_modal_no_internet_subtitle">Enable Bluetooth to keep using Datoo offline</string>
+    <string name="error_connection_non_modal_no_internet_description">"You're using Gulf Arab Chat in offline mode"</string>
+    <string name="error_connection_non_modal_no_internet_subtitle">Enable Bluetooth to keep using Gulf Arab Chat offline</string>
 
     <!--Permissions-->
     <string name="permission_alert">Permissions Alert</string>
@@ -79,7 +79,7 @@
     <string name="login_press_again">Press back again to exit</string>
 
     <string name="splash_loading">Loading…</string>
-    <string name="welcome_to_dateyou">Welcome to Datoo</string>
+    <string name="welcome_to_dateyou">Welcome to Gulf Arab Chat</string>
     <string name="login_with_phone">Login with phone number</string>
     <string name="login_with_facebook">Login with facebook</string>
     <string name="auth">Authenticating…</string>
@@ -87,7 +87,7 @@
     <!-- Login -->
     <string name="signin_alert_cancel">Cancel</string>
     <string name="signin_alert_create_new_account">Create new account</string>
-    <string name="signin_alert_nofacebook">Sorry, this Facebook account does not have a matching Datoo account.</string>
+    <string name="signin_alert_nofacebook">Sorry, this Facebook account does not have a matching Gulf Arab Chat account.</string>
     <string name="signin_alert_retry">Retry</string>
     <string name="signin_alert_title">Sign in</string>
     <string name="signin_alert_use_badoo_account">Use Dadoo account</string>
@@ -104,7 +104,7 @@
     <string name="signin_existing_getnewpassword">Create new password</string>
     <string name="signin_existing_mobile">Phone number</string>
     <string name="signin_existing_password">Password</string>
-    <string name="signin_existing_register_byemail">Create Datoo account</string>
+    <string name="signin_existing_register_byemail">Create Gulf Arab Chat account</string>
     <string name="signin_existing_required">Required</string>
     <string name="signin_existing_signin">Sign in</string>
     <string name="signin_existing_signin_byemail">Sign in by email</string>
@@ -113,10 +113,10 @@
     <string name="signin_forgot_password_account">User</string>
     <string name="signin_forgot_password_alert_message">Instructions for creating a new password have been sent.</string>
     <string name="signin_forgot_password_alert_title">Done!</string>
-    <string name="signin_forgot_password_alert_both_message">"An text message with a Datoo link and new password has been sent to your cell phone_ We've also sent you an email that shows you how you can change this password on your PC."</string>
+    <string name="signin_forgot_password_alert_both_message">"An text message with a Gulf Arab Chat link and new password has been sent to your cell phone_ We've also sent you an email that shows you how you can change this password on your PC."</string>
     <string name="signin_forgot_password_alert_both_title">Reminder sent</string>
     <string name="signin_forgot_password_alert_wap_message">Your password has been reset_ An email with your new password has been sent to you_</string>
-    <string name="signin_forgot_password_alertsms_message">We have sent you a text message with a new password and link to Datoo.</string>
+    <string name="signin_forgot_password_alertsms_message">We have sent you a text message with a new password and link to Gulf Arab Chat.</string>
     <string name="signin_forgot_password_alertsms_title">Text message sent</string>
     <string name="signin_forgot_password_enter_your_address">Email or cell phone</string>
     <string name="signin_forgot_password_error_email_required">Enter your email address or cell phone number</string>
@@ -153,7 +153,7 @@
     <string name="signin_new_title_social_attention">Chat, flirt, connect</string>
     <string name="signup_tiw_error">"Please select what you're here for"</string>
     <string name="signup_tiw_placeholder">Please select</string>
-    <string name="social_accounts_whats_new_description">You can now get to know someone even better when you verify your social profiles and share them with other people on Datoo!</string>
+    <string name="social_accounts_whats_new_description">You can now get to know someone even better when you verify your social profiles and share them with other people on Gulf Arab Chat!</string>
     <string name="social_accounts_whats_new_title">Let the real you shine through!</string>
     <string name="or">OR</string>
     <string name="landing_useOther">Other Options</string>
@@ -173,7 +173,7 @@
     <string name="year_of_age">year of age</string>
     <string name="signup_user_date">Your birthday please</string>
 
-    <string name="signup_by_clinging">I accept Datoo</string>
+    <string name="signup_by_clinging">I accept Gulf Arab Chat</string>
     <string name="signup_terms">Terms and Conditions.</string>
     <string name="signup_we_will">We will never share your contact details</string>
 
@@ -190,7 +190,7 @@
 
     <string name="facebook_ad_sponsored">Sponsored</string>
     <string name="facebook_onboarding_connect">Connect Facebook</string>
-    <string name="facebook_onboarding_continue">Continue To Datoo</string>
+    <string name="facebook_onboarding_continue">Continue To Gulf Arab Chat</string>
     <string name="facebook_onboarding_title">Connect your Facebook to check out:</string>
     <string name="facebook_warning_2nd_item">All your Facebook friends</string>
     <string name="facebook_warning_3rd_item">"Your Facebook friends' networks"</string>
@@ -277,10 +277,10 @@
     <string name="video_ads_not_loaded">Vdeo wasn\'t loaded yet, try again</string>
     <string name="video_ads_failed_loaded">Video failed to show, try again</string>
     <string name="peoplenearby_explanation_button">Get Started</string>
-    <string name="peoplenearby_explanation_subtitle">Use Datoo to find and chat to other people near you</string>
+    <string name="peoplenearby_explanation_subtitle">Use Gulf Arab Chat to find and chat to other people near you</string>
     <string name="peoplenearby_explanation_title">Welcome to People nearby!</string>
-    <string name="get_datoo_premium">Get Datoo Premium</string>
-    <string name="get_datoo_premium_explain">Increase your popularity and access special features other guys simply don\'t have.</string>
+    <string name="get_arabchat_premium">Get Gulf Arab Chat Premium</string>
+    <string name="get_arabchat_premium_explain">Increase your popularity and access special features other guys simply don\'t have.</string>
     <string name="continue_">Continue</string>
     <string name="you_need">You need</string>
     <string name="enyoy_service">to enjoy this service</string>
@@ -290,7 +290,7 @@
     <string name="you_re_online">to let girls know you\'re online. Top-up credits now - more you buy the cheaper you are.</string>
     <string name="refill_cre">Refill credits</string>
     <string name="premium">Premium</string>
-    <string name="datoo_premium">Datoo Premium</string>
+    <string name="arabchat_premium">Gulf Arab Chat Premium</string>
     <string name="activate">Activate</string>
     <string name="Payments_Most_Popular">Most popular</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
@@ -310,7 +310,7 @@
     <string name="lifetime">Lifetime</string>
     <string name="no_subscription">No subscription</string>
     <string name="for_life">for life</string>
-    <string name="get_messsage_read">Get your messages read first with Datoo Premium!</string>
+    <string name="get_messsage_read">Get your messages read first with Gulf Arab Chat Premium!</string>
     <string name="chat_with_girls">Chat with new girls!</string>
     <string name="undo_no">Undo \'No\' votes in Encounters</string>
     <string name="chat_popular">Chat with popular girls</string>
@@ -318,7 +318,7 @@
     <string name="credit_added_to_yo_a">credits added to your account.</string>
     <string name="error_try_again_later">Error, try again later</string>
     <string name="purchase_canceled">Your payment was cancelled, we hope you decide to try again.</string>
-    <string name="you_are_premium">Datoo Premium Activated!</string>
+    <string name="you_are_premium">Gulf Arab Chat Premium Activated!</string>
     <string name="tap_to_see">Tap to see your profile</string>
     <string name="credits">Credits</string>
     <string name="credits_">credits</string>
@@ -388,8 +388,8 @@
     <string name="noti_profile_visitor_text">Get updates about people who visit your profile</string>
     <string name="noti_favorited_you">Favorited you</string>
     <string name="noti_favorited_you_text">Get updates about people who favorited you</string>
-    <string name="noti_datoo_live">Datoo Live</string>
-    <string name="noti_datoo_live_text">Get updates when your favorite streamers are live</string>
+    <string name="noti_arabchat_live">Gulf Arab Chat Live</string>
+    <string name="noti_arabchat_live_text">Get updates when your favorite streamers are live</string>
     <string name="notification_new_message_title">You have a new message</string>
     <string name="notification_new_match_title">You have new match</string>
     <string name="notification_new_like_title">You have new like</string>
@@ -405,7 +405,7 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_use">Terms of Use</string>
     <string name="about_copyright">Copyright 2015–2019 ArabChat, Lda, all rights reserved</string>
-    <string name="about_more">For more information, visit https://datoo.angopapo.com/"</string>
+    <string name="about_more">For more information, visit https://www.instagram.com/gulf_arab_chat/"</string>
     <string name="report_user_block">Block this user</string>
     <string name="report_user_dont">Don\'t report abuse</string>
     <string name="report_user_fake">Report stolen photos</string>
@@ -699,7 +699,7 @@
     <string name="to_choose_your_country"> to choose your country</string>
     <string name="problem_with_server">Problem connecting with the server!</string>
     <string name="search_">Search …</string>
-    <string name="your_login_code_text">Your login code for Datoo is</string>
+    <string name="your_login_code_text">Your login code for Gulf Arab Chat is</string>
     <string name="login_error">Login error, try again later</string>
     <string name="verifying">Verifying…</string>
     <string name="wait_for_sms_fake">We are sending you an SMS</string>

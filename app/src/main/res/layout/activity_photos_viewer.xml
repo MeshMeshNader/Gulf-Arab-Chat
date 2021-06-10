@@ -7,7 +7,7 @@
     android:gravity="center"
     android:background="@color/black">
 
-    <com.gulf.arabchat.modules.discretescrollview.DiscreteScrollView
+    <com.gulf.arabchat0.modules.discretescrollview.DiscreteScrollView
         android:id="@+id/imageSlider"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

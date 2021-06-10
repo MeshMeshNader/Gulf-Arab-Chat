@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <com.gulf.arabchat.modules.circularimageview.CircleImageView
+        <com.gulf.arabchat0.modules.circularimageview.CircleImageView
             android:id="@+id/peopleNearby_personImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -85,7 +85,7 @@
             android:lineSpacingMultiplier="1.0"
             style="?textStyleP3" />
 
-        <com.gulf.arabchat.modules.circularimageview.CircleImageView
+        <com.gulf.arabchat0.modules.circularimageview.CircleImageView
             android:id="@+id/peopleNearby_personStatus"
             android:layout_width="6dp"
             android:layout_height="match_parent"

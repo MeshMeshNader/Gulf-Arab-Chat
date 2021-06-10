@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
 
-    <com.gulf.arabchat.modules.expansionpanel.ExpansionHeader
+    <com.gulf.arabchat0.modules.expansionpanel.ExpansionHeader
         android:id="@+id/expansionHeader"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:visibility="gone"
-                android:tint="@color/black"/>
+                app:tint="@color/black"/>
 
             <TextView
                 android:id="@+id/counter_txt"
@@ -84,9 +84,9 @@
 
         </LinearLayout>
 
-    </com.gulf.arabchat.modules.expansionpanel.ExpansionHeader>
+    </com.gulf.arabchat0.modules.expansionpanel.ExpansionHeader>
 
-    <com.gulf.arabchat.modules.expansionpanel.ExpansionLayout
+    <com.gulf.arabchat0.modules.expansionpanel.ExpansionLayout
         android:id="@+id/expansionLayout"
         app:expansion_expanded="false"
         android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
                     android:layout_marginLeft="18dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:tint="@color/black"
+                    app:tint="@color/black"
                     app:srcCompat="@drawable/ic_connections_filter_online" />
 
                 <TextView
@@ -201,7 +201,7 @@
                     android:layout_marginLeft="18dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:tint="@color/black"
+                    app:tint="@color/black"
                     app:srcCompat="@drawable/ic_navigation_bar_visible" />
 
                 <TextView
@@ -244,7 +244,7 @@
                     android:layout_marginLeft="18dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:tint="@color/black"
+                    app:tint="@color/black"
                     app:srcCompat="@drawable/ic_navigation_bar_liked_you" />
 
                 <TextView
@@ -310,7 +310,7 @@
 
         </LinearLayout>
 
-    </com.gulf.arabchat.modules.expansionpanel.ExpansionLayout>
+    </com.gulf.arabchat0.modules.expansionpanel.ExpansionLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/connections_rv"
@@ -342,7 +342,7 @@
                 android:id="@+id/image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:tint="@color/grey_60"
+                app:tint="@color/grey_60"
                 app:srcCompat="@drawable/ic_users" />
 
             <TextView
@@ -363,7 +363,8 @@
                 android:text="@string/no_one_found_update"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:textColor="@color/grey_40" />
+                android:textColor="@color/grey_40"
+                android:gravity="center_horizontal" />
 
 
         </LinearLayout>

@@ -13,8 +13,8 @@
     <string name="offline_mode">İnternet bağlantısı yok</string>
     <string name="wait_refresh">Yenile</string>
     <string name="error_network_connection_lost">Bağlantı koptu</string>
-    <string name="error_connection_non_modal_no_internet_description">"Datoo\'yu çevrimdışı modda kullanıyorsunuz"</string>
-    <string name="error_connection_non_modal_no_internet_subtitle">Datoo\'yu çevrimdışı kullanmaya devam etmek için Bluetooth\'u etkinleştirme</string>
+    <string name="error_connection_non_modal_no_internet_description">"ARABCHAT\'yu çevrimdışı modda kullanıyorsunuz"</string>
+    <string name="error_connection_non_modal_no_internet_subtitle">ARABCHAT\'yu çevrimdışı kullanmaya devam etmek için Bluetooth\'u etkinleştirme</string>
 
     
     <string name="permission_alert">İzin Uyarısı</string>
@@ -60,17 +60,17 @@
     <string name="login_press_again">Çıkmak için tekrar basın</string>
 
     <string name="splash_loading">Yükleniyor…</string>
-    <string name="welcome_to_dateyou">Datoo\'ya Hoşgeldiniz</string>
+    <string name="welcome_to_dateyou">ARABCHAT\'ya Hoşgeldiniz</string>
     <string name="login_with_phone">Telefon numarası ile giriş</string>
     <string name="login_with_facebook">Facebook ile giriş</string>
     <string name="auth">Kimlik doğrulanıyor …</string>
     
     <string name="signin_alert_cancel">İptal etmek</string>
     <string name="signin_alert_create_new_account">Yeni hesap oluştur</string>
-    <string name="signin_alert_nofacebook">Maalesef, bu Facebook hesabının eşleşen bir Datoo hesabı yok.</string>
+    <string name="signin_alert_nofacebook">Maalesef, bu Facebook hesabının eşleşen bir ARABCHAT hesabı yok.</string>
     <string name="signin_alert_retry">Yeniden Dene</string>
     <string name="signin_alert_title">oturum aç</string>
-    <string name="signin_alert_use_badoo_account">Datoo hesabını kullan</string>
+    <string name="signin_alert_use_badoo_account">ARABCHAT hesabını kullan</string>
     <string name="signin_alert_use_facebook_account">Facebook kullan</string>
     <string name="signin_cancel">İptal etmek</string>
     <string name="signin_existing_account">kullanıcı</string>
@@ -84,7 +84,7 @@
     <string name="signin_existing_getnewpassword">Yeni şifre oluştur</string>
     <string name="signin_existing_mobile">Telefon numarası</string>
     <string name="signin_existing_password">Parola</string>
-    <string name="signin_existing_register_byemail">Datoo hesabı oluştur</string>
+    <string name="signin_existing_register_byemail">ARABCHAT hesabı oluştur</string>
     <string name="signin_existing_required">gereklidir</string>
     <string name="signin_existing_signin">oturum aç</string>
     <string name="signin_existing_signin_byemail">E-posta ile oturum açın</string>
@@ -93,10 +93,10 @@
     <string name="signin_forgot_password_account">kullanıcı</string>
     <string name="signin_forgot_password_alert_message">Yeni bir şifre oluşturma talimatları gönderildi.</string>
     <string name="signin_forgot_password_alert_title">Bitti!</string>
-    <string name="signin_forgot_password_alert_both_message">"Cep telefonunuza Datoo bağlantısı ve yeni bir parola içeren bir kısa mesaj gönderildi_ Ayrıca, size bu parolayı PC\'nizde nasıl değiştirebileceğinizi gösteren bir e-posta da gönderdik."</string>
+    <string name="signin_forgot_password_alert_both_message">"Cep telefonunuza ARABCHAT bağlantısı ve yeni bir parola içeren bir kısa mesaj gönderildi_ Ayrıca, size bu parolayı PC\'nizde nasıl değiştirebileceğinizi gösteren bir e-posta da gönderdik."</string>
     <string name="signin_forgot_password_alert_both_title">Hatırlatıcı gönderildi</string>
     <string name="signin_forgot_password_alert_wap_message">Parolanız sıfırlandı_ Yeni parolanızı içeren bir e-posta size gönderildi_</string>
-    <string name="signin_forgot_password_alertsms_message">Size yeni bir şifre ve Datoo bağlantısı içeren bir kısa mesaj gönderdik.</string>
+    <string name="signin_forgot_password_alertsms_message">Size yeni bir şifre ve ARABCHAT bağlantısı içeren bir kısa mesaj gönderdik.</string>
     <string name="signin_forgot_password_alertsms_title">Kısa mesaj gönderildi</string>
     <string name="signin_forgot_password_enter_your_address">E-posta veya cep telefonu</string>
     <string name="signin_forgot_password_error_email_required">E-posta adresinizi veya cep telefonu numaranızı girin</string>
@@ -133,7 +133,7 @@
     <string name="signin_new_title_social_attention">Sohbet et, flört et, bağlan</string>
     <string name="signup_tiw_error">"Lütfen ne için burada olduğunuzu seçin"</string>
     <string name="signup_tiw_placeholder">Lütfen seçin</string>
-    <string name="social_accounts_whats_new_description">Artık sosyal profillerinizi doğruladığınızda ve Datoo\'daki diğer kullanıcılarla paylaştığınızda birisini daha iyi tanıyabilirsiniz!</string>
+    <string name="social_accounts_whats_new_description">Artık sosyal profillerinizi doğruladığınızda ve ARABCHAT\'daki diğer kullanıcılarla paylaştığınızda birisini daha iyi tanıyabilirsiniz!</string>
     <string name="social_accounts_whats_new_title">Bırakın gerçek parlasın!</string>
     <string name="or">VEYA</string>
     <string name="landing_useOther">Diğer seçenekler</string>
@@ -153,7 +153,7 @@
     <string name="year_of_age">yaş yılı</string>
     <string name="signup_user_date">Doğum günün lütfen</string>
 
-    <string name="signup_by_clinging">Datoo\'yu kabul ediyorum</string>
+    <string name="signup_by_clinging">ARABCHAT\'yu kabul ediyorum</string>
     <string name="signup_terms">Şartlar ve koşullar.</string>
     <string name="signup_we_will">İletişim bilgilerinizi asla paylaşmayacağız</string>
 
@@ -170,7 +170,7 @@
 
     <string name="facebook_ad_sponsored">Sponsor</string>
     <string name="facebook_onboarding_connect">Facebook\'a bağlan</string>
-    <string name="facebook_onboarding_continue">Datoo\'ya devam et</string>
+    <string name="facebook_onboarding_continue">ARABCHAT\'ya devam et</string>
     <string name="facebook_onboarding_title">Kontrol etmek için Facebook\'unuzu bağlayın:</string>
     <string name="facebook_warning_2nd_item">Tüm Facebook arkadaşların</string>
     <string name="facebook_warning_3rd_item">"Facebook arkadaşlarınızın ağları"</string>
@@ -257,10 +257,10 @@
     <string name="video_ads_not_loaded">Vdeo henüz yüklenmedi, tekrar deneyin</string>
     <string name="video_ads_failed_loaded">Video gösterilemedi, tekrar deneyin</string>
     <string name="peoplenearby_explanation_button">Başlamak</string>
-    <string name="peoplenearby_explanation_subtitle">Yakınınızdaki diğer kişileri bulmak ve sohbet etmek için Datoo kullanın</string>
+    <string name="peoplenearby_explanation_subtitle">Yakınınızdaki diğer kişileri bulmak ve sohbet etmek için ARABCHAT kullanın</string>
     <string name="peoplenearby_explanation_title">Yakındaki kişilere hoş geldiniz!</string>
-    <string name="get_datoo_premium">Datoo Premium\'u edinin</string>
-    <string name="get_datoo_premium_explain">Popülerliğinizi artırın ve diğer adamlara sahip olmayan özel özelliklere erişin.</string>
+    <string name="get_arabchat_premium">ARABCHAT Premium\'u edinin</string>
+    <string name="get_arabchat_premium_explain">Popülerliğinizi artırın ve diğer adamlara sahip olmayan özel özelliklere erişin.</string>
     <string name="continue_">Devam et</string>
     <string name="you_need">İhtiyacın var</string>
    
@@ -271,7 +271,7 @@
     <string name="you_re_online">kızların çevrimiçi olduğunuzu bilmelerine izin vermek. Şimdi kontör yükleyin - daha ucuza daha çok satın alırsınız.</string>
     <string name="refill_cre">Kredileri doldurun</string>
     <string name="premium">Ödül</string>
-    <string name="datoo_premium">Datoo Premium</string>
+    <string name="arabchat_premium">ARABCHAT Premium</string>
     <string name="activate">etkinleştirme</string>
     <string name="Payments_Most_Popular">En popüler</string>
     <string name="terms_and_conditions">Şartlar ve koşullar</string>
@@ -291,7 +291,7 @@
     <string name="lifetime">Ömür</string>
     <string name="no_subscription">Abonelik yok</string>
     <string name="for_life">yaşam için</string>
-    <string name="get_messsage_read">Datoo Premium ile mesajlarınızı ilk kez okuyun!</string>
+    <string name="get_messsage_read">ARABCHAT Premium ile mesajlarınızı ilk kez okuyun!</string>
     <string name="chat_with_girls">Yeni kızlarla sohbet et!</string>
     <string name="undo_no">Karşılaşmalarda \'Hayır \' oylarını geri al</string>
     <string name="chat_popular">Popüler kızlarla sohbet et</string>
@@ -299,7 +299,7 @@
     <string name="credit_added_to_yo_a">hesabınıza kredi eklendi.</string>
     <string name="error_try_again_later">Hata, daha sonra tekrar deneyin</string>
     <string name="purchase_canceled">Ödemeniz iptal edildi, umarız tekrar denemeye karar vermişsinizdir.</string>
-    <string name="you_are_premium">Datoo Premium Etkinleştirildi!</string>
+    <string name="you_are_premium">ARABCHAT Premium Etkinleştirildi!</string>
     <string name="tap_to_see">Profilinizi görmek için hafifçe vurun</string>
     <string name="credits">Kredi</string>
     <string name="credits_">kredi</string>
@@ -369,8 +369,8 @@
     <string name="noti_profile_visitor_text">Profilinizi ziyaret eden kişilerle ilgili güncellemeleri alın</string>
     <string name="noti_favorited_you">Seni favorilerime ekledi</string>
     <string name="noti_favorited_you_text">Sizi tercih eden kişiler hakkında güncellemeler alın</string>
-    <string name="noti_datoo_live">Datoo Live</string>
-    <string name="noti_datoo_live_text">Favori yayın akışlarınız yayınlandığında güncellemeler alın</string>
+    <string name="noti_arabchat_live">ARABCHAT Live</string>
+    <string name="noti_arabchat_live_text">Favori yayın akışlarınız yayınlandığında güncellemeler alın</string>
     <string name="notification_new_message_title">Yeni bir mesajınız var</string>
     <string name="notification_new_match_title">Yeni maçın var</string>
     <string name="notification_new_like_title">Yeni beğenin var</string>
@@ -386,7 +386,7 @@
     <string name="privacy_policy">Gizlilik Politikası</string>
     <string name="terms_of_use">Kullanım Şartları</string>
     <string name="about_copyright">Telif hakkı 2015–2019 ArabChat, Lda, tüm hakları saklıdır</string>
-    <string name="about_more">Daha fazla bilgi için https://datoo.angopapo.com/"adresini ziyaret edin.</string>
+    <string name="about_more">Daha fazla bilgi için https://www.instagram.com/gulf_arab_chat/"adresini ziyaret edin.</string>
     <string name="report_user_block">Bu kullanıcıyı engelle</string>
     <string name="report_user_dont">Kötüye kullanımı bildirme</string>
     <string name="report_user_fake">Çalınan fotoğrafları bildirme</string>

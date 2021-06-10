@@ -37,7 +37,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.gulf.arabchat.utils.NonSwipeViewPager
+    <com.gulf.arabchat0.utils.NonSwipeViewPager
         android:id="@+id/viewPagerVertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -149,7 +149,7 @@
                             android:visibility="gone" />
 
 
-                        <com.gulf.arabchat.utils.CustomProgressView
+                        <com.gulf.arabchat0.utils.CustomProgressView
                             android:id="@+id/progress_bar_load"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
@@ -312,7 +312,7 @@
             </androidx.core.widget.NestedScrollView>
         </LinearLayout>
 
-    </com.gulf.arabchat.utils.NonSwipeViewPager>
+    </com.gulf.arabchat0.utils.NonSwipeViewPager>
 
 
 </LinearLayout>

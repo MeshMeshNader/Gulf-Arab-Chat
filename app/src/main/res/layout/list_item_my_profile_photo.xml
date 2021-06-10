@@ -8,7 +8,7 @@
     android:layout_marginEnd="8dp"
     android:layout_marginRight="8dp">
 
-    <com.gulf.arabchat.modules.circularimageview.RoundedImage
+    <com.gulf.arabchat0.modules.circularimageview.RoundedImage
         android:id="@+id/photo_photo"
         android:layout_width="110dp"
         android:layout_height="150dp"
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:tint="@color/white"
+            app:tint="@color/white"
             app:srcCompat="@drawable/ic_generic_button_lock" />
 
         <Space

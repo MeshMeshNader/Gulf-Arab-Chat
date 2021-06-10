@@ -52,7 +52,7 @@
                 android:minHeight="?attr/actionBarSize"
                 android:gravity="center">
 
-                <com.gulf.arabchat.modules.circularimageview.CircleImageView
+                <com.gulf.arabchat0.modules.circularimageview.CircleImageView
                     android:id="@+id/toolbar_image"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -251,8 +251,23 @@
                     android:layout_marginRight="@dimen/size_1"
                     android:enabled="false"
                     android:gravity="center"
-                    android:tint="@color/black"
+                    app:tint="@color/black"
                     app:srcCompat="@drawable/ic_chat_control_action_multimedia" />
+
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/mic_btn"
+                    android:scaleType="fitCenter"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_mic_fill"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_toRightOf="@+id/uploadimagebtn"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true"/>
 
                 <LinearLayout
                     android:id="@+id/send_message_panel"

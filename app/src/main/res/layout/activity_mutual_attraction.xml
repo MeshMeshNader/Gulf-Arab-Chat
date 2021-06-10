@@ -35,7 +35,7 @@
                 android:clipToPadding="false"
                 android:paddingTop="@dimen/size_3_5">
 
-                <com.gulf.arabchat.modules.circularimageview.RoundedImage
+                <com.gulf.arabchat0.modules.circularimageview.RoundedImage
                     android:id="@+id/matchScreen_myImage"
                     android:layout_width="@dimen/size_18"
                     android:layout_height="@dimen/size_18"
@@ -49,7 +49,7 @@
                     android:layout_marginStart="@dimen/size_8"
                     app:rounded_radius="@integer/mutual_attraction_image_rounded_corner"/>
 
-                <com.gulf.arabchat.modules.circularimageview.RoundedImage
+                <com.gulf.arabchat0.modules.circularimageview.RoundedImage
                     android:id="@+id/matchScreen_otherUserImage"
                     android:layout_width="@dimen/size_18"
                     android:layout_height="@dimen/size_18"
@@ -127,7 +127,7 @@
         android:layout_height="@dimen/size_6_75"
         android:padding="@dimen/size_0_5"
         android:scaleType="centerInside"
-        android:tint="@color/white"
+        app:tint="@color/white"
         app:backgroundTint="@color/black_1_alpha_20"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"

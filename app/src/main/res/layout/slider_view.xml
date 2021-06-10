@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.gulf.arabchat.modules.autoimageslider.SliderPager
+    <com.gulf.arabchat0.modules.autoimageslider.SliderPager
         android:id="@+id/vp_slider_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never" />
 
-    <com.gulf.arabchat.modules.autoimageslider.IndicatorView.PageIndicatorView
+    <com.gulf.arabchat0.modules.autoimageslider.IndicatorView.PageIndicatorView
         android:id="@+id/pager_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

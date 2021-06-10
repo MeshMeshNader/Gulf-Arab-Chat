@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <com.gulf.arabchat.modules.circularimageview.CircleImageView
+            <com.gulf.arabchat0.modules.circularimageview.CircleImageView
                 android:id="@+id/avatar_img"
                 android:layout_width="200dp"
                 android:layout_height="200dp"

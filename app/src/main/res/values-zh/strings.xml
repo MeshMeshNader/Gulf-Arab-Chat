@@ -13,8 +13,8 @@
     <string name="offline_mode">没有网络连接</string>
     <string name="wait_refresh">刷新</string>
     <string name="error_network_connection_lost">连接丢失</string>
-    <string name="error_connection_non_modal_no_internet_description">“您在离线模式下使用Datoo”</string>
-    <string name="error_connection_non_modal_no_internet_subtitle">启用蓝牙以继续离线使用Datoo</string>
+    <string name="error_connection_non_modal_no_internet_description">“您在离线模式下使用ARABCHAT”</string>
+    <string name="error_connection_non_modal_no_internet_subtitle">启用蓝牙以继续离线使用ARABCHAT</string>
 
     
     <string name="permission_alert">权限警报</string>
@@ -85,7 +85,7 @@
     <string name="signin_existing_getnewpassword">建立新密码</string>
     <string name="signin_existing_mobile">电话号码</string>
     <string name="signin_existing_password">密码</string>
-    <string name="signin_existing_register_byemail">创建Datoo帐户</string>
+    <string name="signin_existing_register_byemail">创建ARABCHAT帐户</string>
     <string name="signin_existing_required">需要</string>
     <string name="signin_existing_signin">登入</string>
     <string name="signin_existing_signin_byemail">通过电子邮件登录</string>
@@ -94,10 +94,10 @@
     <string name="signin_forgot_password_account">用户</string>
     <string name="signin_forgot_password_alert_message">已发送创建新密码的说明。</string>
     <string name="signin_forgot_password_alert_title">做完了！</string>
-    <string name="signin_forgot_password_alert_both_message">“带有Datoo链接和新密码的短信已发送到您的手机_我们还向您发送了一封电子邮件，向您显示如何在PC上更改此密码。”</string>
+    <string name="signin_forgot_password_alert_both_message">“带有ARABCHAT链接和新密码的短信已发送到您的手机_我们还向您发送了一封电子邮件，向您显示如何在PC上更改此密码。”</string>
     <string name="signin_forgot_password_alert_both_title">提醒已发送</string>
     <string name="signin_forgot_password_alert_wap_message">您的密码已重设_已将包含您新密码的电子邮件发送给您_</string>
-    <string name="signin_forgot_password_alertsms_message">我们已向您发送了一条包含新密码的短信，并链接至Datoo。</string>
+    <string name="signin_forgot_password_alertsms_message">我们已向您发送了一条包含新密码的短信，并链接至ARABCHAT。</string>
     <string name="signin_forgot_password_alertsms_title">短信已发送</string>
     <string name="signin_forgot_password_enter_your_address">电子邮件或手机</string>
     <string name="signin_forgot_password_error_email_required">输入您的电子邮件地址或手机号码</string>
@@ -134,7 +134,7 @@
     <string name="signin_new_title_social_attention">聊天，调情，连接</string>
     <string name="signup_tiw_error">“请选择您要在这里做什么”</string>
     <string name="signup_tiw_placeholder">请选择</string>
-    <string name="social_accounts_whats_new_description">现在，当您验证自己的社交资料并在Datoo上与其他人共享时，您甚至可以更好地认识某个人！</string>
+    <string name="social_accounts_whats_new_description">现在，当您验证自己的社交资料并在ARABCHAT上与其他人共享时，您甚至可以更好地认识某个人！</string>
     <string name="social_accounts_whats_new_title">让真实的你闪耀！</string>
     <string name="or">要么</string>
     <string name="landing_useOther">其他选择</string>
@@ -258,10 +258,10 @@
     <string name="video_ads_not_loaded">Vdeo尚未加载，请重试</string>
     <string name="video_ads_failed_loaded">视频无法显示，请重试</string>
     <string name="peoplenearby_explanation_button">开始使用</string>
-    <string name="peoplenearby_explanation_subtitle">使用Datoo查找附近的人并与之聊天</string>
+    <string name="peoplenearby_explanation_subtitle">使用ARABCHAT查找附近的人并与之聊天</string>
     <string name="peoplenearby_explanation_title">欢迎来到附近的人！</string>
-    <string name="get_datoo_premium">获取Datoo Premium</string>
-    <string name="get_datoo_premium_explain">提高您的知名度，并使用其他人根本没有的特殊功能。</string>
+    <string name="get_arabchat_premium">获取ARABCHAT Premium</string>
+    <string name="get_arabchat_premium_explain">提高您的知名度，并使用其他人根本没有的特殊功能。</string>
     <string name="continue_">继续</string>
     <string name="you_need">你需要</string>
    
@@ -272,7 +272,7 @@
     <string name="you_re_online">让女孩知道您在线。现在充值积分-您购买的越便宜，越便宜。</string>
     <string name="refill_cre">充值额</string>
     <string name="premium">保费</string>
-    <string name="datoo_premium">拿督高级版</string>
+    <string name="arabchat_premium">拿督高级版</string>
     <string name="activate">启用</string>
     <string name="Payments_Most_Popular">最受欢迎</string>
     <string name="terms_and_conditions">条款和条件</string>
@@ -292,7 +292,7 @@
     <string name="lifetime">一生</string>
     <string name="no_subscription">没有订阅</string>
     <string name="for_life">一生</string>
-    <string name="get_messsage_read">使用Datoo Premium首先阅读您的消息！</string>
+    <string name="get_messsage_read">使用ARABCHAT Premium首先阅读您的消息！</string>
     <string name="chat_with_girls">与新女孩聊天！</string>
     <string name="undo_no">撤消遭遇中的“否”票</string>
     <string name="chat_popular">与受欢迎的女孩聊天</string>
@@ -300,7 +300,7 @@
     <string name="credit_added_to_yo_a">点数已添加到您的帐户。</string>
     <string name="error_try_again_later">错误，请稍后再试</string>
     <string name="purchase_canceled">您的付款已被取消，我们希望您决定重试。</string>
-    <string name="you_are_premium">Datoo Premium已激活！</string>
+    <string name="you_are_premium">ARABCHAT Premium已激活！</string>
     <string name="tap_to_see">点按即可查看您的个人资料</string>
     <string name="credits">学分</string>
     <string name="credits_">学分</string>
@@ -370,8 +370,8 @@
     <string name="noti_profile_visitor_text">获取有关访问您个人资料的人的最新信息</string>
     <string name="noti_favorited_you">喜欢你</string>
     <string name="noti_favorited_you_text">获取有关喜爱您的人的最新消息</string>
-    <string name="noti_datoo_live">拿督直播</string>
-    <string name="noti_datoo_live_text">当您最喜欢的彩带直播时获取更新</string>
+    <string name="noti_arabchat_live">拿督直播</string>
+    <string name="noti_arabchat_live_text">当您最喜欢的彩带直播时获取更新</string>
     <string name="notification_new_message_title">您有新讯息</string>
     <string name="notification_new_match_title">您有新比赛</string>
     <string name="notification_new_like_title">你有新的喜欢</string>
@@ -387,7 +387,7 @@
     <string name="privacy_policy">隐私政策</string>
     <string name="terms_of_use">使用条款</string>
     <string name="about_copyright">版权所有2015–2019 Lda ArabChat，保留所有权利</string>
-    <string name="about_more">有关更多信息，请访问https://datoo.angopapo.com/“</string>
+    <string name="about_more">有关更多信息，请访问 https://www.instagram.com/gulf_arab_chat/“</string>
     <string name="report_user_block">阻止此用户</string>
     <string name="report_user_dont">不要举报滥用行为</string>
     <string name="report_user_fake">报告被盗照片</string>

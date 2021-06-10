@@ -5,13 +5,21 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
 
+    signingConfigs {
+        release {
+            storeFile file('D:\\Work\\Gulf Arab Chat\\Arab Chat\\arabchatKey.jks')
+            storePassword '01002452480'
+            keyAlias 'myKey'
+            keyPassword '01002452480'
+        }
+    }
     def versionMajor = 1
     def versionMinor = 0
     def versionPatch = 9
 
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.gulf.arabchat"
+        applicationId "com.gulf.arabchat0"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
@@ -23,6 +31,7 @@ android {
             abiFilters "x86_64", "x86", "armeabi-v7a", "arm64-v8a"
         }
         googleServices { disableVersionCheck = false }
+        signingConfig signingConfigs.release
     }
 
     buildTypes {

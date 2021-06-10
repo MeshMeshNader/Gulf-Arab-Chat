@@ -173,7 +173,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myProfileTopAvatarSpace">
 
-        <com.gulf.arabchat.modules.circularimageview.CircleImageView
+        <com.gulf.arabchat0.modules.circularimageview.CircleImageView
             android:id="@+id/avatar"
             android:layout_width="180dp"
             android:layout_height="180dp"
@@ -188,7 +188,7 @@
             app:srcCompat="@drawable/ic_badge_add_photos" />
     </FrameLayout>
 
-    <com.gulf.arabchat.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat0.modules.circularimageview.CircleImageView
         android:id="@+id/invisibleModeIcon"
         android:layout_width="@dimen/icon_sm"
         android:layout_height="@dimen/icon_sm"

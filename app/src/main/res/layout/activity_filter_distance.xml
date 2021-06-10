@@ -30,7 +30,7 @@
 
     </FrameLayout>
 
-    <com.gulf.arabchat.modules.rangeBarView.RangeSeekBar
+    <com.gulf.arabchat0.modules.rangeBarView.RangeSeekBar
         android:id="@+id/rangeBar_distance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

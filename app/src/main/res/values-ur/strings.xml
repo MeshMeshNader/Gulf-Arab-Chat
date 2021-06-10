@@ -68,10 +68,10 @@
     
     <string name="signin_alert_cancel">منسوخ کریں</string>
     <string name="signin_alert_create_new_account">نیا اکاؤنٹ بنانے</string>
-    <string name="signin_alert_nofacebook">معذرت ، اس فیس بک اکاؤنٹ میں مماثل Datoo اکاؤنٹ نہیں ہے۔</string>
+    <string name="signin_alert_nofacebook">معذرت ، اس فیس بک اکاؤنٹ میں مماثل ARABCHAT اکاؤنٹ نہیں ہے۔</string>
     <string name="signin_alert_retry">دوبارہ کوشش کریں</string>
     <string name="signin_alert_title">سائن ان</string>
-    <string name="signin_alert_use_badoo_account">Datoo اکاؤنٹ استعمال کریں</string>
+    <string name="signin_alert_use_badoo_account">ARABCHAT اکاؤنٹ استعمال کریں</string>
     <string name="signin_alert_use_facebook_account">فیس بک استعمال کریں</string>
     <string name="signin_cancel">منسوخ کریں</string>
     <string name="signin_existing_account">صارف</string>
@@ -260,8 +260,8 @@
     <string name="peoplenearby_explanation_button">شروع کرنے کے</string>
     <string name="peoplenearby_explanation_subtitle">اپنے قریب کے دوسرے لوگوں کو تلاش کرنے اور ان سے گفتگو کرنے کیلئے ڈیٹو کا استعمال کریں</string>
     <string name="peoplenearby_explanation_title">قریبی لوگوں میں آپ کا استقبال ہے!</string>
-    <string name="get_datoo_premium">ڈیٹو پریمیم حاصل کریں</string>
-    <string name="get_datoo_premium_explain">اپنی مقبولیت میں اضافہ کریں اور خصوصی خصوصیات تک رسائی حاصل کریں دوسرے لڑکوں کو صرف ان کی ضرورت نہیں ہے۔</string>
+    <string name="get_arabchat_premium">ڈیٹو پریمیم حاصل کریں</string>
+    <string name="get_arabchat_premium_explain">اپنی مقبولیت میں اضافہ کریں اور خصوصی خصوصیات تک رسائی حاصل کریں دوسرے لڑکوں کو صرف ان کی ضرورت نہیں ہے۔</string>
     <string name="continue_">جاری رہے</string>
     <string name="you_need">آپ کو ضرورت ہے</string>
    
@@ -272,7 +272,7 @@
     <string name="you_re_online">آن لائن پر لڑکیوں کو آپ کو بتانے کے ل.۔ ٹاپ اپ کریڈٹ ابھی - زیادہ سے زیادہ آپ خود خریدتے ہیں۔</string>
     <string name="refill_cre">ریفل کریڈٹ</string>
     <string name="premium">پریمیم</string>
-    <string name="datoo_premium">ڈیٹو پریمیم</string>
+    <string name="arabchat_premium">ڈیٹو پریمیم</string>
     <string name="activate">محرک کریں</string>
     <string name="Payments_Most_Popular">سب سے زیادہ مقبول</string>
     <string name="terms_and_conditions">شرائط و ضوابط</string>
@@ -370,8 +370,8 @@
     <string name="noti_profile_visitor_text">ان لوگوں کے بارے میں اپ ڈیٹس حاصل کریں جو آپ کے پروفائل پر جاتے ہیں</string>
     <string name="noti_favorited_you">آپ کو پسند کیا</string>
     <string name="noti_favorited_you_text">ان لوگوں کے بارے میں اپ ڈیٹس حاصل کریں جنہوں نے آپ کو پسند کیا</string>
-    <string name="noti_datoo_live">ڈیٹو لائیو</string>
-    <string name="noti_datoo_live_text">جب آپ کے پسندیدہ اسٹریمرز رواں ہوں تو تازہ ترین معلومات حاصل کریں</string>
+    <string name="noti_arabchat_live">ڈیٹو لائیو</string>
+    <string name="noti_arabchat_live_text">جب آپ کے پسندیدہ اسٹریمرز رواں ہوں تو تازہ ترین معلومات حاصل کریں</string>
     <string name="notification_new_message_title">آپ کے پاس نیا پیغام ہے</string>
     <string name="notification_new_match_title">آپ کا نیا میچ ہے</string>
     <string name="notification_new_like_title">آپ کی طرح نئی ہے</string>
@@ -387,7 +387,7 @@
     <string name="privacy_policy">رازداری کی پالیسی</string>
     <string name="terms_of_use">استعمال کی شرائط</string>
     <string name="about_copyright">کاپی رائٹ 2015–2019 انگوپاپو ، ایل ڈی اے ، تمام حقوق محفوظ ہیں</string>
-    <string name="about_more">مزید معلومات کے لئے ، https://datoo.angopapo.com/ملاحظہ کریں۔</string>
+    <string name="about_more">مزید معلومات کے لئے ، https://www.instagram.com/gulf_arab_chat/ملاحظہ کریں۔</string>
     <string name="report_user_block">اس صارف کو مسدود کریں</string>
     <string name="report_user_dont">غلط استعمال کی اطلاع نہیں دیں</string>
     <string name="report_user_fake">چوری شدہ تصاویر کی اطلاع دیں</string>

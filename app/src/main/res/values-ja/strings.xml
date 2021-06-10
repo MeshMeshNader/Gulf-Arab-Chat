@@ -13,8 +13,8 @@
     <string name="offline_mode">インターネットに接続されていません</string>
     <string name="wait_refresh">リフレッシュ</string>
     <string name="error_network_connection_lost">接続切断</string>
-    <string name="error_connection_non_modal_no_internet_description">「Datooをオフラインモードで使用しています」</string>
-    <string name="error_connection_non_modal_no_internet_subtitle">Bluetoothを有効にして、Datooをオフラインで使用し続ける</string>
+    <string name="error_connection_non_modal_no_internet_description">「ARABCHATをオフラインモードで使用しています」</string>
+    <string name="error_connection_non_modal_no_internet_subtitle">Bluetoothを有効にして、ARABCHATをオフラインで使用し続ける</string>
 
     
     <string name="permission_alert">権限アラート</string>
@@ -60,7 +60,7 @@
     <string name="login_press_again">もう一度押すと終了します</string>
 
     <string name="splash_loading">読み込んでいます…</string>
-    <string name="welcome_to_dateyou">Datooへようこそ</string>
+    <string name="welcome_to_dateyou">ARABCHATへようこそ</string>
     <string name="login_with_phone">電話番号でログイン</string>
     <string name="login_with_facebook">Facebookでログイン</string>
     <string name="auth">認証しています…</string>
@@ -85,7 +85,7 @@
     <string name="signin_existing_getnewpassword">新しいパスワードを作成する</string>
     <string name="signin_existing_mobile">電話番号</string>
     <string name="signin_existing_password">パスワード</string>
-    <string name="signin_existing_register_byemail">Datooアカウントを作成する</string>
+    <string name="signin_existing_register_byemail">ARABCHATアカウントを作成する</string>
     <string name="signin_existing_required">必須</string>
     <string name="signin_existing_signin">サインイン</string>
     <string name="signin_existing_signin_byemail">メールでサインイン</string>
@@ -94,10 +94,10 @@
     <string name="signin_forgot_password_account">ユーザー</string>
     <string name="signin_forgot_password_alert_message">新しいパスワードの作成手順が送信されました。</string>
     <string name="signin_forgot_password_alert_title">できた！</string>
-    <string name="signin_forgot_password_alert_both_message">「Datooリンクと新しいパスワードが記載されたテキストメッセージが携帯電話に送信されました_ PCでこのパスワードを変更する方法を示すメールも送信されました。」</string>
+    <string name="signin_forgot_password_alert_both_message">「ARABCHATリンクと新しいパスワードが記載されたテキストメッセージが携帯電話に送信されました_ PCでこのパスワードを変更する方法を示すメールも送信されました。」</string>
     <string name="signin_forgot_password_alert_both_title">リマインダーを送信しました</string>
     <string name="signin_forgot_password_alert_wap_message">パスワードがリセットされました_新しいパスワードを記載したメールがあなたに送信されました_</string>
-    <string name="signin_forgot_password_alertsms_message">新しいパスワードとDatooへのリンクを記載したテキストメッセージを送信しました。</string>
+    <string name="signin_forgot_password_alertsms_message">新しいパスワードとARABCHATへのリンクを記載したテキストメッセージを送信しました。</string>
     <string name="signin_forgot_password_alertsms_title">テキストメッセージを送信しました</string>
     <string name="signin_forgot_password_enter_your_address">メールまたは携帯電話</string>
     <string name="signin_forgot_password_error_email_required">メールアドレスまたは携帯電話番号を入力してください</string>
@@ -134,7 +134,7 @@
     <string name="signin_new_title_social_attention">チャット、浮気、つながり</string>
     <string name="signup_tiw_error">「あなたがここにいる目的を選択してください」</string>
     <string name="signup_tiw_placeholder">選んでください</string>
-    <string name="social_accounts_whats_new_description">ソーシャルプロフィールを確認して、Datooで他の人と共有することで、より良い人物を知ることができるようになりました！</string>
+    <string name="social_accounts_whats_new_description">ソーシャルプロフィールを確認して、ARABCHATで他の人と共有することで、より良い人物を知ることができるようになりました！</string>
     <string name="social_accounts_whats_new_title">本当のあなたを輝かせましょう！</string>
     <string name="or">または</string>
     <string name="landing_useOther">その他のオプション</string>
@@ -154,7 +154,7 @@
     <string name="year_of_age">歳</string>
     <string name="signup_user_date">お誕生日おねがいします</string>
 
-    <string name="signup_by_clinging">私はDatooを受け入れます</string>
+    <string name="signup_by_clinging">私はARABCHATを受け入れます</string>
     <string name="signup_terms">規約と条件。</string>
     <string name="signup_we_will">私たちはあなたの連絡先の詳細を共有することはありません</string>
 
@@ -171,7 +171,7 @@
 
     <string name="facebook_ad_sponsored">スポンサー付き</string>
     <string name="facebook_onboarding_connect">Facebookに接続</string>
-    <string name="facebook_onboarding_continue">Datooに進む</string>
+    <string name="facebook_onboarding_continue">ARABCHATに進む</string>
     <string name="facebook_onboarding_title">チェックアウトするにはFacebookを接続してください：</string>
     <string name="facebook_warning_2nd_item">Facebookの友達全員</string>
     <string name="facebook_warning_3rd_item">「あなたのFacebook友達のネットワーク」</string>
@@ -258,10 +258,10 @@
     <string name="video_ads_not_loaded">Vdeoはまだ読み込まれていません。もう一度お試しください</string>
     <string name="video_ads_failed_loaded">動画を表示できませんでした。もう一度お試しください</string>
     <string name="peoplenearby_explanation_button">始めましょう</string>
-    <string name="peoplenearby_explanation_subtitle">Datooを使用して、近くにいる他の人を見つけてチャットする</string>
+    <string name="peoplenearby_explanation_subtitle">ARABCHATを使用して、近くにいる他の人を見つけてチャットする</string>
     <string name="peoplenearby_explanation_title">近くの人々へようこそ！</string>
-    <string name="get_datoo_premium">Datooプレミアムを入手</string>
-    <string name="get_datoo_premium_explain">あなたの人気を高め、他の人が持っていない特別な機能にアクセスしてください。</string>
+    <string name="get_arabchat_premium">ARABCHATプレミアムを入手</string>
+    <string name="get_arabchat_premium_explain">あなたの人気を高め、他の人が持っていない特別な機能にアクセスしてください。</string>
     <string name="continue_">継続する</string>
     <string name="you_need">あなたは必要です</string>
    
@@ -272,7 +272,7 @@
     <string name="you_re_online">オンラインであることを女の子に知らせます。今すぐクレジットを追加してください-購入するほど、安くなります。</string>
     <string name="refill_cre">クレジットを補充</string>
     <string name="premium">プレミアム</string>
-    <string name="datoo_premium">Datooプレミアム</string>
+    <string name="arabchat_premium">ARABCHATプレミアム</string>
     <string name="activate">活性化</string>
     <string name="Payments_Most_Popular">最も人気のある</string>
     <string name="terms_and_conditions">規約と条件</string>
@@ -292,7 +292,7 @@
     <string name="lifetime">一生</string>
     <string name="no_subscription">サブスクリプションなし</string>
     <string name="for_life">生活のために</string>
-    <string name="get_messsage_read">Datoo Premiumでメッセージを最初に読んでください！</string>
+    <string name="get_messsage_read">Gulf Arab Chat Premiumでメッセージを最初に読んでください！</string>
     <string name="chat_with_girls">新しい女の子とチャットしよう！</string>
     <string name="undo_no">エンカウンターで「いいえ」の投票を取り消す</string>
     <string name="chat_popular">人気の女の子とチャット</string>
@@ -300,7 +300,7 @@
     <string name="credit_added_to_yo_a">アカウントに追加されたクレジット。</string>
     <string name="error_try_again_later">エラー、後でもう一度やり直してください</string>
     <string name="purchase_canceled">お支払いはキャンセルされました。もう一度お試しください。</string>
-    <string name="you_are_premium">Datooプレミアムが有効になりました！</string>
+    <string name="you_are_premium">ARABCHATプレミアムが有効になりました！</string>
     <string name="tap_to_see">タップしてプロフィールを表示します</string>
     <string name="credits">クレジット</string>
     <string name="credits_">クレジット</string>
@@ -370,8 +370,8 @@
     <string name="noti_profile_visitor_text">プロフィールにアクセスしたユーザーに関する最新情報を受け取る</string>
     <string name="noti_favorited_you">あなたをお気に入りに追加しました</string>
     <string name="noti_favorited_you_text">あなたをお気に入りに追加した人の最新情報を入手</string>
-    <string name="noti_datoo_live">Datoo Live</string>
-    <string name="noti_datoo_live_text">お気に入りのストリーマーがライブになったときに更新を取得します</string>
+    <string name="noti_arabchat_live">ARABCHAT Live</string>
+    <string name="noti_arabchat_live_text">お気に入りのストリーマーがライブになったときに更新を取得します</string>
     <string name="notification_new_message_title">新しいメッセージがあります</string>
     <string name="notification_new_match_title">新しい試合があります</string>
     <string name="notification_new_like_title">あなたは新しいような</string>
@@ -387,7 +387,7 @@
     <string name="privacy_policy">個人情報保護方針</string>
     <string name="terms_of_use">利用規約</string>
     <string name="about_copyright">Copyright 2015–2019 ArabChat、Lda、all rights reserved</string>
-    <string name="about_more">詳細については、https：//datoo.angopapo.com/をご覧ください。 "</string>
+    <string name="about_more">詳細については、https://www.instagram.com/gulf_arab_chat/ "</string>
     <string name="report_user_block">このユーザーをブロック</string>
     <string name="report_user_dont">不正行為を報告しない</string>
     <string name="report_user_fake">盗まれた写真を報告する</string>

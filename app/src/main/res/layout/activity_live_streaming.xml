@@ -30,11 +30,11 @@
         android:layout_height="match_parent"
         android:background="@color/black">
 
-        <com.gulf.arabchat.utils.liveUtils.VideoGridContainer
+        <com.gulf.arabchat0.utils.liveUtils.VideoGridContainer
             android:id="@+id/liveStreaming_videoContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </com.gulf.arabchat.utils.liveUtils.VideoGridContainer>
+        </com.gulf.arabchat0.utils.liveUtils.VideoGridContainer>
 
         <View
             android:id="@+id/liveStreaming_dimOverlay"
@@ -233,7 +233,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
                         android:gravity="center"
-                        android:tint="@color/white"
+                        app:tint="@color/white"
                         app:srcCompat="@drawable/ic_autorenew_black_24dp" />
 
 

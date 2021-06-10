@@ -11,7 +11,7 @@
     android:minWidth="@dimen/size_44"
     android:orientation="vertical">
 
-    <com.gulf.arabchat.modules.circularimageview.CircleImageView
+    <com.gulf.arabchat0.modules.circularimageview.CircleImageView
         android:id="@+id/videoChatConfirmation_avatar"
         tools:src="@color/gray_12"
         android:layout_width="@dimen/size_15"

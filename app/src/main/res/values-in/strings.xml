@@ -15,8 +15,8 @@
     <string name="offline_mode">Tidak ada koneksi internet</string>
     <string name="wait_refresh">Menyegarkan</string>
     <string name="error_network_connection_lost">Koneksi terputus</string>
-    <string name="error_connection_non_modal_no_internet_description">"Kamu menggunakan Datoo dalam mode offline"</string>
-    <string name="error_connection_non_modal_no_internet_subtitle">Aktifkan Bluetooth untuk terus menggunakan Datoo offline</string>
+    <string name="error_connection_non_modal_no_internet_description">"Kamu menggunakan Gulf Arab Chat dalam mode offline"</string>
+    <string name="error_connection_non_modal_no_internet_subtitle">Aktifkan Bluetooth untuk terus menggunakan Gulf Arab Chat offline</string>
 
     
     <string name="permission_alert">Peringatan Izin</string>
@@ -62,7 +62,7 @@
     <string name="login_press_again">Tekan kembali untuk keluar</string>
 
     <string name="splash_loading">Memuat…</string>
-    <string name="welcome_to_dateyou">Selamat datang di Datoo</string>
+    <string name="welcome_to_dateyou">Selamat datang di Gulf Arab Chat</string>
     <string name="login_with_phone">Login dengan nomor telepon</string>
     <string name="login_with_facebook">Masuk dengan Facebook</string>
     <string name="auth">Mengautentikasi …</string>
@@ -70,10 +70,10 @@
     
     <string name="signin_alert_cancel">Membatalkan</string>
     <string name="signin_alert_create_new_account">Buat akun baru</string>
-    <string name="signin_alert_nofacebook">Maaf, akun Facebook ini tidak memiliki akun Datoo yang cocok.</string>
+    <string name="signin_alert_nofacebook">Maaf, akun Facebook ini tidak memiliki akun Gulf Arab Chat yang cocok.</string>
     <string name="signin_alert_retry">Mencoba kembali</string>
     <string name="signin_alert_title">Masuk</string>
-    <string name="signin_alert_use_badoo_account">Gunakan akun Datoo</string>
+    <string name="signin_alert_use_badoo_account">Gunakan akun Gulf Arab Chat</string>
     <string name="signin_alert_use_facebook_account">Gunakan Facebook</string>
     <string name="signin_cancel">Membatalkan</string>
     <string name="signin_existing_account">Pengguna</string>
@@ -87,7 +87,7 @@
     <string name="signin_existing_getnewpassword">Buat kata sandi baru</string>
     <string name="signin_existing_mobile">Nomor telepon</string>
     <string name="signin_existing_password">Kata sandi</string>
-    <string name="signin_existing_register_byemail">Buat akun Datoo</string>
+    <string name="signin_existing_register_byemail">Buat akun Gulf Arab Chat</string>
     <string name="signin_existing_required">Yg dibutuhkan</string>
     <string name="signin_existing_signin">Masuk</string>
     <string name="signin_existing_signin_byemail">Masuk melalui email</string>
@@ -96,10 +96,10 @@
     <string name="signin_forgot_password_account">Pengguna</string>
     <string name="signin_forgot_password_alert_message">Petunjuk untuk membuat kata sandi baru telah dikirim.</string>
     <string name="signin_forgot_password_alert_title">Selesai!</string>
-    <string name="signin_forgot_password_alert_both_message">"Pesan teks dengan tautan Datoo dan kata sandi baru telah dikirim ke ponsel Anda_ Kami juga telah mengirimi Anda email yang menunjukkan kepada Anda bagaimana Anda dapat mengubah kata sandi ini di PC Anda."</string>
+    <string name="signin_forgot_password_alert_both_message">"Pesan teks dengan tautan Gulf Arab Chat dan kata sandi baru telah dikirim ke ponsel Anda_ Kami juga telah mengirimi Anda email yang menunjukkan kepada Anda bagaimana Anda dapat mengubah kata sandi ini di PC Anda."</string>
     <string name="signin_forgot_password_alert_both_title">Pengingat terkirim</string>
     <string name="signin_forgot_password_alert_wap_message">Kata sandi Anda telah disetel ulang_Email dengan kata sandi baru Anda telah dikirimkan kepada Anda_</string>
-    <string name="signin_forgot_password_alertsms_message">Kami telah mengirimi Anda pesan teks dengan kata sandi baru dan tautan ke Datoo.</string>
+    <string name="signin_forgot_password_alertsms_message">Kami telah mengirimi Anda pesan teks dengan kata sandi baru dan tautan ke Gulf Arab Chat.</string>
     <string name="signin_forgot_password_alertsms_title">Pesan teks terkirim</string>
     <string name="signin_forgot_password_enter_your_address">Email atau ponsel</string>
     <string name="signin_forgot_password_error_email_required">Masukkan alamat email atau nomor ponsel Anda</string>
@@ -136,7 +136,7 @@
     <string name="signin_new_title_social_attention">Ngobrol, goda, terhubung</string>
     <string name="signup_tiw_error">"Silakan pilih untuk apa kamu di sini"</string>
     <string name="signup_tiw_placeholder">Silahkan pilih</string>
-    <string name="social_accounts_whats_new_description">Anda sekarang dapat mengenal seseorang lebih baik ketika Anda memverifikasi profil sosial Anda dan membaginya dengan orang lain di Datoo!</string>
+    <string name="social_accounts_whats_new_description">Anda sekarang dapat mengenal seseorang lebih baik ketika Anda memverifikasi profil sosial Anda dan membaginya dengan orang lain di Gulf Arab Chat!</string>
     <string name="social_accounts_whats_new_title">Biarkan diri Anda yang sesungguhnya bersinar!</string>
     <string name="or">ATAU</string>
     <string name="landing_useOther">Pilihan lain</string>
@@ -156,7 +156,7 @@
     <string name="year_of_age">tahun</string>
     <string name="signup_user_date">Ulang tahunmu</string>
 
-    <string name="signup_by_clinging">Saya menerima Datoo</string>
+    <string name="signup_by_clinging">Saya menerima Gulf Arab Chat</string>
     <string name="signup_terms">Syarat dan ketentuan.</string>
     <string name="signup_we_will">Kami tidak akan pernah membagikan detail kontak Anda</string>
 
@@ -173,7 +173,7 @@
 
     <string name="facebook_ad_sponsored">Disponsori</string>
     <string name="facebook_onboarding_connect">Hubungkan Facebook</string>
-    <string name="facebook_onboarding_continue">Lanjutkan Ke Datoo</string>
+    <string name="facebook_onboarding_continue">Lanjutkan Ke Gulf Arab Chat</string>
     <string name="facebook_onboarding_title">Hubungkan Facebook Anda untuk check out:</string>
     <string name="facebook_warning_2nd_item">Semua teman Facebook Anda</string>
     <string name="facebook_warning_3rd_item">"Jaringan teman-teman Facebook Anda"</string>
@@ -260,10 +260,10 @@
     <string name="video_ads_not_loaded">Vdeo belum dimuat, coba lagi</string>
     <string name="video_ads_failed_loaded">Video gagal ditampilkan, coba lagi</string>
     <string name="peoplenearby_explanation_button">Memulai</string>
-    <string name="peoplenearby_explanation_subtitle">Gunakan Datoo untuk menemukan dan mengobrol dengan orang lain di dekat Anda</string>
+    <string name="peoplenearby_explanation_subtitle">Gunakan Gulf Arab Chat untuk menemukan dan mengobrol dengan orang lain di dekat Anda</string>
     <string name="peoplenearby_explanation_title">Selamat datang di Orang-orang terdekat!</string>
-    <string name="get_datoo_premium">Dapatkan Datoo Premium</string>
-    <string name="get_datoo_premium_explain">Tingkatkan popularitas Anda dan akses fitur-fitur khusus yang tidak dimiliki orang lain.</string>
+    <string name="get_arabchat_premium">Dapatkan Gulf Arab Chat Premium</string>
+    <string name="get_arabchat_premium_explain">Tingkatkan popularitas Anda dan akses fitur-fitur khusus yang tidak dimiliki orang lain.</string>
     <string name="continue_">Terus</string>
     <string name="you_need">Kamu butuh</string>
    
@@ -274,7 +274,7 @@
     <string name="you_re_online">untuk membiarkan gadis-gadis tahu Anda sedang online. Kredit isi ulang sekarang - semakin banyak Anda membeli semakin murah Anda.</string>
     <string name="refill_cre">Isi ulang kredit</string>
     <string name="premium">Premium</string>
-    <string name="datoo_premium">Datoo Premium</string>
+    <string name="arabchat_premium">Gulf Arab Chat Premium</string>
     <string name="activate">Mengaktifkan</string>
     <string name="Payments_Most_Popular">Paling populer</string>
     <string name="terms_and_conditions">Syarat dan ketentuan</string>
@@ -294,7 +294,7 @@
     <string name="lifetime">Seumur hidup</string>
     <string name="no_subscription">Tidak ada berlangganan</string>
     <string name="for_life">Untuk kehidupan</string>
-    <string name="get_messsage_read">Dapatkan pesan Anda dibaca terlebih dahulu dengan Datoo Premium!</string>
+    <string name="get_messsage_read">Dapatkan pesan Anda dibaca terlebih dahulu dengan Gulf Arab Chat Premium!</string>
     <string name="chat_with_girls">Ngobrol dengan gadis baru!</string>
     <string name="undo_no">Batalkan suara \'Tidak \' di Encounters</string>
     <string name="chat_popular">Mengobrol dengan gadis-gadis populer</string>
@@ -302,7 +302,7 @@
     <string name="credit_added_to_yo_a">kredit ditambahkan ke akun Anda.</string>
     <string name="error_try_again_later">Galat, coba lagi nanti</string>
     <string name="purchase_canceled">Pembayaran Anda dibatalkan, kami harap Anda memutuskan untuk mencoba lagi.</string>
-    <string name="you_are_premium">Datoo Premium Diaktifkan!</string>
+    <string name="you_are_premium">Gulf Arab Chat Premium Diaktifkan!</string>
     <string name="tap_to_see">Ketuk untuk melihat profil Anda</string>
     <string name="credits">Kredit</string>
     <string name="credits_">kredit</string>
@@ -372,8 +372,8 @@
     <string name="noti_profile_visitor_text">Dapatkan pembaruan tentang orang-orang yang mengunjungi profil Anda</string>
     <string name="noti_favorited_you">Disukai kamu</string>
     <string name="noti_favorited_you_text">Dapatkan pembaruan tentang orang-orang yang disukai Anda</string>
-    <string name="noti_datoo_live">Datoo Live</string>
-    <string name="noti_datoo_live_text">Dapatkan pembaruan saat streamer favorit Anda ditayangkan</string>
+    <string name="noti_arabchat_live">Gulf Arab Chat Live</string>
+    <string name="noti_arabchat_live_text">Dapatkan pembaruan saat streamer favorit Anda ditayangkan</string>
     <string name="notification_new_message_title">Anda memiliki pesan baru</string>
     <string name="notification_new_match_title">Anda memiliki kecocokan baru</string>
     <string name="notification_new_like_title">Anda memiliki like baru</string>
@@ -389,7 +389,7 @@
     <string name="privacy_policy">Rahasia pribadi</string>
     <string name="terms_of_use">Syarat Penggunaan</string>
     <string name="about_copyright">Hak Cipta 2015–2019 ArabChat, Lda, semua hak dilindungi undang-undang</string>
-    <string name="about_more">Untuk informasi lebih lanjut, kunjungi https://datoo.angopapo.com/"</string>
+    <string name="about_more">Untuk informasi lebih lanjut, kunjungi https://www.instagram.com/gulf_arab_chat/"</string>
     <string name="report_user_block">Blokir pengguna ini</string>
     <string name="report_user_dont">Jangan laporkan penyalahgunaan</string>
     <string name="report_user_fake">Laporkan foto yang dicuri</string>

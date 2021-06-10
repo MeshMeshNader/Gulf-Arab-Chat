@@ -7,18 +7,26 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:158984163667:android:73048a9650521a454591a6",
+        "mobilesdk_app_id": "1:158984163667:android:a8d245998b3280d64591a6",
         "android_client_info": {
-          "package_name": "com.gulf.arabchat"
+          "package_name": "com.gulf.arabchat0"
         }
       },
       "oauth_client": [
         {
-          "client_id": "158984163667-ostcvhidc8n3kl03rofaqiq63gm0t54h.apps.googleusercontent.com",
+          "client_id": "158984163667-1jtfrarfmlv7eru9itvest93bak1k5kr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.gulf.arabchat",
+            "package_name": "com.gulf.arabchat0",
             "certificate_hash": "107f6b140f5f4d5f4f48a087131a351c3304370b"
+          }
+        },
+        {
+          "client_id": "158984163667-5vop2r8iam9otk2cgo3k4v1p882isgou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gulf.arabchat0",
+            "certificate_hash": "620a9ef0f4a0bca9f3a808294e605f696031aaed"
           }
         },
         {
