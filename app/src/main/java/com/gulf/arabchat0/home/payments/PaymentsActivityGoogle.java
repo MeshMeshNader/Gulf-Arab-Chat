@@ -436,10 +436,13 @@ public class PaymentsActivityGoogle extends AppCompatActivity implements Payment
     public void initSKUCredits() {
 
         List<String> creditsPurchase = new ArrayList<> ();
-        creditsPurchase.add(Config.CREDIT_100);
-        creditsPurchase.add(Config.CREDIT_550);
-        creditsPurchase.add(Config.CREDIT_1250);
-        creditsPurchase.add(Config.CREDIT_2750);
+        creditsPurchase.add(Config.CREDIT_500);
+        creditsPurchase.add(Config.CREDIT_2000);
+        creditsPurchase.add(Config.CREDIT_10000);
+        creditsPurchase.add(Config.CREDIT_20000);
+        creditsPurchase.add(Config.CREDIT_40000);
+        creditsPurchase.add(Config.CREDIT_80000);
+        creditsPurchase.add(Config.CREDIT_100000);
 
         SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
         params.setSkusList(creditsPurchase).setType(BillingClient.SkuType.INAPP);
@@ -549,23 +552,39 @@ public class PaymentsActivityGoogle extends AppCompatActivity implements Payment
 
 
                     switch (purchase.getSku()) {
-                        case Config.CREDIT_100:
+                        case Config.CREDIT_500:
 
-                            acknowledgePurchaseConsume(100, purchase);
-
+                            acknowledgePurchaseConsume(500, purchase);
                             break;
-                        case Config.CREDIT_550:
 
-                            acknowledgePurchaseConsume(550, purchase);
+                        case Config.CREDIT_2000:
+
+                            acknowledgePurchaseConsume(2000, purchase);
                             break;
-                        case Config.CREDIT_1250:
 
-                            acknowledgePurchaseConsume(1250, purchase);
+                        case Config.CREDIT_10000:
 
+                            acknowledgePurchaseConsume(10000, purchase);
                             break;
-                        case Config.CREDIT_2750:
 
-                            acknowledgePurchaseConsume(2750, purchase);
+                        case Config.CREDIT_20000:
+
+                            acknowledgePurchaseConsume(20000, purchase);
+                            break;
+
+                        case Config.CREDIT_40000:
+
+                            acknowledgePurchaseConsume(40000, purchase);
+                            break;
+
+                        case Config.CREDIT_80000:
+
+                            acknowledgePurchaseConsume(80000, purchase);
+                            break;
+
+                        case Config.CREDIT_100000:
+
+                            acknowledgePurchaseConsume(100000, purchase);
                             break;
 
                         case Config.PAY_LIFETIME:

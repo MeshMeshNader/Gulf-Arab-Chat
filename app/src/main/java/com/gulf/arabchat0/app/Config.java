@@ -35,10 +35,14 @@ public class Config {
     static final String ENCOUNTERS_NATIVE_ADS = "ca-app-pub-5718962829212392/6608982014";
 
     // Google Play In-app Purchases IDs
-    public static final String CREDIT_550 = "arabchat.550.credits";
-    public static final String CREDIT_100 = "arabchat.100.credits";
-    public static final String CREDIT_1250 = "arabchat.1250.credits";
-    public static final String CREDIT_2750 = "arabchat.2750.credits";
+    public static final String CREDIT_500= "arabchat.500.credits"; // 1
+    public static final String CREDIT_2000 = "arabchat.2000.credits"; //3.5
+    public static final String CREDIT_10000 = "arabchat.10000.credits"; // 19
+    public static final String CREDIT_20000 = "arabchat.20000.credits"; // 35
+    public static final String CREDIT_40000 = "arabchat.40000.credits"; // 70
+    public static final String CREDIT_80000 = "arabchat.80000.credits"; // 135
+    public static final String CREDIT_100000 = "arabchat.100000.credits"; // 170
+
 
     public static final String PAY_LIFETIME = "arabchat.pay.lifetime";
 
