@@ -281,10 +281,14 @@
     <string name="payment_of">지불</string>
     <string name="save">저장</string>
     <string name="full_price">총 매매가</string>
-    <string name="credits_1250">1,250 크레딧</string>
-    <string name="credits_2750">2,750 크레딧</string>
-    <string name="credits_550">550 크레딧</string>
     <string name="credits_100">100 크레딧</string>
+    <string name="credits_500">500 Golden Coin</string>
+    <string name="credits_2000">2000 Golden Coin</string>
+    <string name="credits_10000">10000 Golden Coin</string>
+    <string name="credits_20000">20000 Golden Coin</string>
+    <string name="credits_40000">40000 Golden Coin</string>
+    <string name="credits_80000">80000 Golden Coin</string>
+    <string name="credits_100000">100000 Golden Coin</string>
     <string name="who_added_you">누가 나를 즐겨 찾기에 추가했는지 알아보세요!</string>
     <string name="who_liked_you">누가 당신을 좋아했는지 알아보세요!</string>
     <string name="subs_3_months">3 개월</string>

@@ -46,7 +46,7 @@ public class PaymentProductListSkuAdapter extends RecyclerView.Adapter<RecyclerV
     }
 
     private boolean isHeader(int position) {
-        return position == mPaymentProductModels.size() -1;
+        return position == mPaymentProductModels.size() - 1;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class PaymentProductListSkuAdapter extends RecyclerView.Adapter<RecyclerV
             view = inflater.inflate(R.layout.payment_terms_item, parent, false);
             return new HeaderViewHolder(view);
 
-        }  else {
+        } else {
 
             view = inflater.inflate(R.layout.payment_product_package_list_item, parent, false);
             return new ItemViewHolder(view, itemSelectedListener);
@@ -81,7 +81,7 @@ public class PaymentProductListSkuAdapter extends RecyclerView.Adapter<RecyclerV
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
         SkuDetails productModel = mPaymentProductModels.get(viewHolder.getAdapterPosition());
 
-        if (viewHolder.getItemViewType() == FOOTER_VIEW){
+        if (viewHolder.getItemViewType() == FOOTER_VIEW) {
 
             HeaderViewHolder headerViewHolder = ((HeaderViewHolder) viewHolder);
 
@@ -91,31 +91,19 @@ public class PaymentProductListSkuAdapter extends RecyclerView.Adapter<RecyclerV
 
             headerViewHolder.mTermsnAndConditions.setOnClickListener(v -> QuickHelp.goToActivityWithNoClean(mActivity, WebUrlsActivity.class, WebUrlsActivity.WEB_URL_TYPE, Config.TERMS_OF_USE_IN_APP));
 
-        } else if (viewHolder.getItemViewType() == NORMAL_ITEM){
+        } else if (viewHolder.getItemViewType() == NORMAL_ITEM) {
 
             ItemViewHolder holder = ((ItemViewHolder) viewHolder);
 
             holder.selectedProduct.setChecked(lastSelectedPosition == position);
 
-            if (productModel.getType().equals(BillingClient.SkuType.INAPP)){
+            if (productModel.getType().equals(BillingClient.SkuType.INAPP)) {
 
                 switch (productModel.getSku()) {
-                    case Config.CREDIT_550:
 
-                        holder.ItemName.setText(mActivity.getString(R.string.credits_550));
+                    case Config.CREDIT_500:
 
-                        holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
-                        holder.savePercent.setText(String.format(" -%s%s", 9, "%"));
-                        holder.itemSave.setText(Application.getInstance().getText(R.string.save));
-
-                        holder.mostPopularIcon.setVisibility(View.VISIBLE);
-                        holder.mostPopularText.setVisibility(View.VISIBLE);
-                        holder.mItemLayout.setBackgroundColor(Application.getInstance().getResources().getColor(R.color.yellow_50));
-
-                        break;
-                    case Config.CREDIT_100:
-
-                        holder.ItemName.setText(mActivity.getString(R.string.credits_100));
+                        holder.ItemName.setText(mActivity.getString(R.string.credits_500));
 
                         holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
                         holder.itemSave.setText(Application.getInstance().getText(R.string.full_price));
@@ -125,9 +113,87 @@ public class PaymentProductListSkuAdapter extends RecyclerView.Adapter<RecyclerV
                         holder.mItemLayout.setBackgroundColor(Color.TRANSPARENT);
 
                         break;
-                    case Config.CREDIT_1250:
 
-                        holder.ItemName.setText(mActivity.getString(R.string.credits_1250));
+
+                    case Config.CREDIT_2000:
+
+                        holder.ItemName.setText(mActivity.getString(R.string.credits_2000));
+
+                        holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
+                        holder.itemSave.setText(Application.getInstance().getText(R.string.full_price));
+
+                        holder.mostPopularIcon.setVisibility(View.GONE);
+                        holder.mostPopularText.setVisibility(View.GONE);
+                        holder.mItemLayout.setBackgroundColor(Color.TRANSPARENT);
+
+                        break;
+
+
+
+                    case Config.CREDIT_10000:
+
+                        holder.ItemName.setText(mActivity.getString(R.string.credits_10000));
+
+                        holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
+                        holder.savePercent.setText(String.format(" -%s%s", 5, "%"));
+                        holder.itemSave.setText(Application.getInstance().getText(R.string.save));
+
+                        holder.mostPopularIcon.setVisibility(View.GONE);
+                        holder.mostPopularText.setVisibility(View.GONE);
+                        holder.mItemLayout.setBackgroundColor(Color.TRANSPARENT);
+
+                        break;
+
+
+
+
+                    case Config.CREDIT_20000:
+
+                        holder.ItemName.setText(mActivity.getString(R.string.credits_20000));
+
+                        holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
+                        holder.savePercent.setText(String.format(" -%s%s", 15, "%"));
+                        holder.itemSave.setText(Application.getInstance().getText(R.string.save));
+
+                        holder.mostPopularIcon.setVisibility(View.VISIBLE);
+                        holder.mostPopularText.setVisibility(View.VISIBLE);
+                        holder.mItemLayout.setBackgroundColor(Application.getInstance().getResources().getColor(R.color.yellow_50));
+
+                        break;
+
+
+                    case Config.CREDIT_40000:
+
+                        holder.ItemName.setText(mActivity.getString(R.string.credits_40000));
+
+                        holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
+                        holder.savePercent.setText(String.format(" -%s%s", 10, "%"));
+                        holder.itemSave.setText(Application.getInstance().getText(R.string.save));
+
+                        holder.mostPopularIcon.setVisibility(View.GONE);
+                        holder.mostPopularText.setVisibility(View.GONE);
+                        holder.mItemLayout.setBackgroundColor(Color.TRANSPARENT);
+
+                        break;
+
+                    case Config.CREDIT_80000:
+
+                        holder.ItemName.setText(mActivity.getString(R.string.credits_80000));
+
+                        holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
+                        holder.savePercent.setText(String.format(" -%s%s", 15, "%"));
+                        holder.itemSave.setText(Application.getInstance().getText(R.string.save));
+
+                        holder.mostPopularIcon.setVisibility(View.GONE);
+                        holder.mostPopularText.setVisibility(View.GONE);
+                        holder.mItemLayout.setBackgroundColor(Color.TRANSPARENT);
+
+                        break;
+
+
+                    case Config.CREDIT_100000:
+
+                        holder.ItemName.setText(mActivity.getString(R.string.credits_100000));
 
                         holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
                         holder.savePercent.setText(String.format(" -%s%s", 20, "%"));
@@ -138,22 +204,10 @@ public class PaymentProductListSkuAdapter extends RecyclerView.Adapter<RecyclerV
                         holder.mItemLayout.setBackgroundColor(Color.TRANSPARENT);
 
                         break;
-                    case Config.CREDIT_2750:
 
-                        holder.ItemName.setText(mActivity.getString(R.string.credits_2750));
-
-                        holder.ItemPrice.setText(String.format("%s %s", Application.getInstance().getText(R.string.payment_of), productModel.getPrice()));
-                        holder.savePercent.setText(String.format(" -%s%s", 27, "%"));
-                        holder.itemSave.setText(Application.getInstance().getText(R.string.save));
-
-                        holder.mostPopularIcon.setVisibility(View.GONE);
-                        holder.mostPopularText.setVisibility(View.GONE);
-                        holder.mItemLayout.setBackgroundColor(Color.TRANSPARENT);
-
-                        break;
                 }
 
-            } else if (productModel.getType().equals(BillingClient.SkuType.SUBS)){
+            } else if (productModel.getType().equals(BillingClient.SkuType.SUBS)) {
 
                 switch (productModel.getSku()) {
                     case Config.SUBS_3_MONTHS:
@@ -231,7 +285,7 @@ public class PaymentProductListSkuAdapter extends RecyclerView.Adapter<RecyclerV
         }
     }
 
-    public void setSelected(SkuDetails paymentProductModel){
+    public void setSelected(SkuDetails paymentProductModel) {
 
         itemSelectedListener.onItemSelected(paymentProductModel);
     }

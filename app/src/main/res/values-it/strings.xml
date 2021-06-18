@@ -279,10 +279,14 @@
     <string name="payment_of">Pagamento di</string>
     <string name="save">Salva</string>
     <string name="full_price">Prezzo pieno</string>
-    <string name="credits_1250">1.250 crediti</string>
-    <string name="credits_2750">2.750 crediti</string>
-    <string name="credits_550">550 crediti</string>
     <string name="credits_100">100 crediti</string>
+    <string name="credits_500">500 Golden Coin</string>
+    <string name="credits_2000">2000 Golden Coin</string>
+    <string name="credits_10000">10000 Golden Coin</string>
+    <string name="credits_20000">20000 Golden Coin</string>
+    <string name="credits_40000">40000 Golden Coin</string>
+    <string name="credits_80000">80000 Golden Coin</string>
+    <string name="credits_100000">100000 Golden Coin</string>
     <string name="who_added_you">Scopri chi ti ha aggiunto come preferito!</string>
     <string name="who_liked_you">Scopri chi ti è piaciuto!</string>
     <string name="subs_3_months">3 mesi</string>

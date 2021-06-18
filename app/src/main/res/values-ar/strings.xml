@@ -280,10 +280,14 @@
     <string name="payment_of">دفع</string>
     <string name="save">حفظ</string>
     <string name="full_price">السعر الكامل</string>
-    <string name="credits_1250">1250 وحدة دراسية</string>
-    <string name="credits_2750">2750 وحدة دراسية</string>
-    <string name="credits_550">550 ساعة معتمدة</string>
-    <string name="credits_100">100 ساعة معتمدة</string>
+    <string name="credits_100">100 عملة ذهبية</string>
+    <string name="credits_500">500 عملة ذهبية</string>
+    <string name="credits_2000">2000 عملة ذهبية</string>
+    <string name="credits_10000">10000 عملة ذهبية</string>
+    <string name="credits_20000">20000 عملة ذهبية</string>
+    <string name="credits_40000">40000 عملة ذهبية</string>
+    <string name="credits_80000">80000 عملة ذهبية</string>
+    <string name="credits_100000">100000 عملة ذهبية</string>
     <string name="who_added_you">اكتشف من أضافك كمفضل</string>
     <string name="who_liked_you">اكتشف من اعجبك</string>
     <string name="subs_3_months">3 اشهر</string>
@@ -666,4 +670,7 @@
     <string name="unlimited_messages">احصل على دردشة غير محدودة مع الفتيات المشهورات</string>
     <string name="your_dailly_message_quote">لقد استخدمت جميع رسائلك اليومية ، يرجى الترقية</string>
     <string name="your_total_message_quote">لقد استخدمت رسائل مجانية ، يرجى الترقية</string>
+    <string name="login_phone">تسجيل الدخول عبر الهاتف</string>
+    <string name="search_country">البحث عن بلد ...</string>
+
 </resources>

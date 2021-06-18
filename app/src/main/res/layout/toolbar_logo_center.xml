@@ -50,11 +50,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_logo"
-            android:scaleType="centerInside" />
+            app:srcCompat="@drawable/logo_action_bar"
+            />
 
     </androidx.appcompat.widget.Toolbar>
 
-    <include layout="@layout/include_no_connection" />
+     <include layout="@layout/include_no_connection" />
 
 </RelativeLayout>

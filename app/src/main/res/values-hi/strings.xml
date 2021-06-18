@@ -280,10 +280,14 @@
     <string name="payment_of">का भुगतान</string>
     <string name="save">सहेजें</string>
     <string name="full_price">पूरी कीमत</string>
-    <string name="credits_1250">1,250 क्रेडिट</string>
-    <string name="credits_2750">2,750 क्रेडिट</string>
-    <string name="credits_550">550 क्रेडिट</string>
     <string name="credits_100">100 क्रेडिट</string>
+    <string name="credits_500">500 क्रेडिट</string>
+    <string name="credits_2000">2000 क्रेडिट</string>
+    <string name="credits_10000">10000 क्रेडिट</string>
+    <string name="credits_20000">20000 क्रेडिट</string>
+    <string name="credits_40000">40000 क्रेडिट</string>
+    <string name="credits_80000">80000 क्रेडिट</string>
+    <string name="credits_100000">100000 क्रेडिट</string>
     <string name="who_added_you">पता लगाएं कि आपको पसंदीदा के रूप में किसने जोड़ा!</string>
     <string name="who_liked_you">पता करें कि आपको कौन पसंद आया!</string>
     <string name="subs_3_months">3 महीने</string>

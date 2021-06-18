@@ -35,13 +35,13 @@ public class Config {
     static final String ENCOUNTERS_NATIVE_ADS = "ca-app-pub-5718962829212392/6608982014";
 
     // Google Play In-app Purchases IDs
-    public static final String CREDIT_500= "arabchat.500.credits"; // 1
-    public static final String CREDIT_2000 = "arabchat.2000.credits"; //3.5
-    public static final String CREDIT_10000 = "arabchat.10000.credits"; // 19
-    public static final String CREDIT_20000 = "arabchat.20000.credits"; // 35
-    public static final String CREDIT_40000 = "arabchat.40000.credits"; // 70
-    public static final String CREDIT_80000 = "arabchat.80000.credits"; // 135
-    public static final String CREDIT_100000 = "arabchat.100000.credits"; // 170
+    public static final String CREDIT_500= "arabchat.500.credits"; // $1 // Full Price
+    public static final String CREDIT_2000 = "arabchat.2000.credits"; // $4 // Full Price
+    public static final String CREDIT_10000 = "arabchat.10000.credits"; // $19 // %5
+    public static final String CREDIT_20000 = "arabchat.20000.credits"; // $34 // %15 // most popular
+    public static final String CREDIT_40000 = "arabchat.40000.credits"; // $72 // %10
+    public static final String CREDIT_80000 = "arabchat.80000.credits"; // $136 // %15
+    public static final String CREDIT_100000 = "arabchat.100000.credits"; // $160 // %20
 
 
     public static final String PAY_LIFETIME = "arabchat.pay.lifetime";
@@ -80,17 +80,17 @@ public class Config {
     public static final boolean isPaidMessagesActivated = false;
 
     // Credits needed to activate features
-    public static int TYPE_RISE_UP = 50;
-    public static int TYPE_GET_MORE_VISITS = 100;
-    public static int TYPE_ADD_EXTRA_SHOWS = 100;
-    public static int TYPE_SHOW_IM_ONLINE = 100;
-    public static int TYPE_3X_POPULAR = 200;
+    public static int TYPE_RISE_UP = 1000;
+    public static int TYPE_GET_MORE_VISITS = 1000;
+    public static int TYPE_ADD_EXTRA_SHOWS = 1000;
+    public static int TYPE_SHOW_IM_ONLINE = 1000;
+    public static int TYPE_3X_POPULAR = 1000;
 
     // Amount of days to activate features
     public static int DAYS_TO_ACTIVATE_FEATURES = 7;
 
     // Enable or Disable Ads and Premium.
-    public static final boolean isAdsActivated = false;
+    public static final boolean isAdsActivated = true;
     public static final boolean isPremiumEnabled = true;
     public static final boolean isNearByNativeAdsActivated = false;
     public static final boolean isEncountersNativeAdsActivated = false;
@@ -121,6 +121,6 @@ public class Config {
     public static final int freeMessagesPerDay = 5;
 
     // Enable or Disable Fake messages.
-    public static final boolean isFakeMessagesActivated = false;
-    public static final String defaultFakeMessage = "Hello, how are you ?";
+    public static final boolean isFakeMessagesActivated = true;
+    public static final String defaultFakeMessage = "كيفك يا قمر ؟";
 }

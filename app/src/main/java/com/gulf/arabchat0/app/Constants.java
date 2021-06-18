@@ -28,9 +28,9 @@ public class Constants {
     public static final String CONNECTION_COUNTER_MESSAGES = "COUNTER_MESSAGES";
     public static final String CONNECTION_COUNTER_FAVORITES = "COUNTER_FAVORITES";
 
-    private static final String HOME_BANNER_ADS_TEST = "ca-app-pub-3940256099942544/6300978111";
-    private static final String REWARDED_ADS_TEST = "ca-app-pub-3940256099942544/5224354917";
-    private static final String NATIVE_ADS_TEST = "ca-app-pub-3940256099942544/2247696110";
+    private static final String HOME_BANNER_ADS_TEST = "ca-app-pub-5718962829212392/6612851440";
+    private static final String REWARDED_ADS_TEST = "ca-app-pub-5718962829212392/7538920300";
+    private static final String NATIVE_ADS_TEST = "ca-app-pub-5718962829212392/6608982014";
 
     public static final String FLUTTERWAYE_PUBLISH_KEY = "FLWPUBK_TEST-63f53fa73d352064dbc4ac125817eb11-X";
     public static final String FLUTTERWAYE_ENCRYPTION_KEY = "FLWSECK_TEST90a17db1f71c";
