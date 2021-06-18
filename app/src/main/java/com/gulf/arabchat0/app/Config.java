@@ -47,10 +47,10 @@ public class Config {
     public static final String PAY_LIFETIME = "arabchat.pay.lifetime";
 
     //Google Play In-app Subscription IDs
-    public static final String SUBS_3_MONTHS = "arabchat.3.months";
-    public static final String SUBS_1_WEEK = "arabchat.1.week";
-    public static final String SUBS_1_MONTH = "arabchat.1.month";
-    public static final String SUBS_6_MONTHS = "arabchat.6.months";
+    public static final String SUBS_3_MONTHS = "arabchat.3.months"; // 8
+    public static final String SUBS_1_WEEK = "arabchat.1.week"; // 1
+    public static final String SUBS_1_MONTH = "arabchat.1.month"; // 3
+    public static final String SUBS_6_MONTHS = "arabchat.6.months"; // 15
 
     // Web links for help, privacy policy and terms of use.
     public static final String HELP_CENTER = "https://www.instagram.com/gulf_arab_chat";
@@ -68,8 +68,8 @@ public class Config {
     public static final boolean GOOGLE_LOGIN = true;
     public static final boolean FACEBOOK_LOGIN = true;
     // Enable or Disable Payment Systems
-    public static final boolean PAYPAL_ENABLED = false;
-    public static final boolean FLUTTER_WAVE_ENABLED = false;
+    public static final boolean PAYPAL_ENABLED = true;
+    public static final boolean FLUTTER_WAVE_ENABLED = true;
     // Extra features to add in payment methods
     public static final boolean PAYPAL_CREDIT_CARD_ENABLED = false;
     // Exchange your tokens
