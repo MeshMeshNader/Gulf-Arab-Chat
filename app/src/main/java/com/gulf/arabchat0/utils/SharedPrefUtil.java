@@ -163,6 +163,6 @@ public class SharedPrefUtil {
      */
     public String getLanguage(Context mContext) {
         mSharedPreferences = mContext.getSharedPreferences(APP_PREFS, Context.MODE_PRIVATE);
-        return mSharedPreferences.getString(KEY_LANGUAGE, "en");
+        return mSharedPreferences.getString(KEY_LANGUAGE, "ar");
     }
 }

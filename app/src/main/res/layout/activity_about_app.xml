@@ -28,10 +28,10 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_logo"/>
+            app:srcCompat="@drawable/logo_action_bar"/>
 
         <View
             android:layout_width="wrap_content"

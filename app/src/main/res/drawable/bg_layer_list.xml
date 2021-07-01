@@ -6,7 +6,7 @@
         </shape>
     </item>
     <item
-        android:drawable="@drawable/ic_logo"
+        android:drawable="@drawable/logo_action_bar"
         android:bottom="20dp"
         android:left="20dp"
         android:right="20dp"

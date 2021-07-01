@@ -1862,49 +1862,9 @@ public class QuickHelp {
         ar.setName(Application.getInstance().getBaseContext().getString(R.string.lang_ar));
         ar.setCode("ar");
 
-        LanguageModel de = new LanguageModel();
-        de.setName(Application.getInstance().getBaseContext().getString(R.string.lang_de));
-        de.setCode("de");
-
         LanguageModel fr = new LanguageModel();
         fr.setName(Application.getInstance().getBaseContext().getString(R.string.lang_fr));
         fr.setCode("fr");
-
-        LanguageModel hi = new LanguageModel();
-        hi.setName(Application.getInstance().getBaseContext().getString(R.string.lang_hi));
-        hi.setCode("hi");
-
-        LanguageModel in = new LanguageModel();
-        in.setName(Application.getInstance().getBaseContext().getString(R.string.lang_in));
-        in.setCode("in");
-
-        LanguageModel it = new LanguageModel();
-        it.setName(Application.getInstance().getBaseContext().getString(R.string.lang_it));
-        it.setCode("it");
-
-        LanguageModel ja = new LanguageModel();
-        ja.setName(Application.getInstance().getBaseContext().getString(R.string.lang_ja));
-        ja.setCode("ja");
-
-        LanguageModel ko = new LanguageModel();
-        ko.setName(Application.getInstance().getBaseContext().getString(R.string.lang_ko));
-        ko.setCode("ko");
-
-        LanguageModel pt = new LanguageModel();
-        pt.setName(Application.getInstance().getBaseContext().getString(R.string.lang_pt));
-        pt.setCode("pt");
-
-        LanguageModel tr = new LanguageModel();
-        tr.setName(Application.getInstance().getBaseContext().getString(R.string.lang_tr));
-        tr.setCode("tr");
-
-        LanguageModel ur = new LanguageModel();
-        ur.setName(Application.getInstance().getBaseContext().getString(R.string.lang_ur));
-        ur.setCode("ur");
-
-        LanguageModel zh = new LanguageModel();
-        zh.setName(Application.getInstance().getBaseContext().getString(R.string.lang_zh));
-        zh.setCode("zh");
 
         LanguageModel en = new LanguageModel();
         en.setName(Application.getInstance().getBaseContext().getString(R.string.lang_en));
@@ -1915,18 +1875,7 @@ public class QuickHelp {
 
         languageModelArrayList.add(en);
         languageModelArrayList.add(ar);
-        languageModelArrayList.add(de);
         languageModelArrayList.add(fr);
-        languageModelArrayList.add(hi);
-        languageModelArrayList.add(in);
-        languageModelArrayList.add(it);
-        languageModelArrayList.add(ja);
-        languageModelArrayList.add(ko);
-        languageModelArrayList.add(pt);
-        languageModelArrayList.add(tr);
-        languageModelArrayList.add(ur);
-        languageModelArrayList.add(zh);
-
 
         return languageModelArrayList;
     }
@@ -1938,49 +1887,9 @@ public class QuickHelp {
 
                 return Application.getInstance().getBaseContext().getString(R.string.lang_ar);
 
-            case "de":
-
-                return  Application.getInstance().getBaseContext().getString(R.string.lang_de);
-
             case "fr":
 
                 return  Application.getInstance().getCurrentActivity().getString(R.string.lang_fr);
-
-            case "hi":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_hi);
-
-            case "in":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_in);
-
-            case "it":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_it);
-
-            case "ja":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_ja);
-
-            case "ko":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_ko);
-
-            case "pt":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_pt);
-
-            case "tr":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_tr);
-
-            case "ur":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_ur);
-
-            case "zh":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_zh);
 
             default:
                 return Application.getInstance().getCurrentActivity().getString(R.string.lang_en);
@@ -1994,49 +1903,9 @@ public class QuickHelp {
 
                 return Application.getInstance().getCurrentActivity().getString(R.string.lang_ar);
 
-            case "de":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_de);
-
             case "fr":
 
                 return  Application.getInstance().getCurrentActivity().getString(R.string.lang_fr);
-
-            case "hi":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_hi);
-
-            case "in":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_in);
-
-            case "it":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_it);
-
-            case "ja":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_ja);
-
-            case "ko":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_ko);
-
-            case "pt":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_pt);
-
-            case "tr":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_tr);
-
-            case "ur":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_ur);
-
-            case "zh":
-
-                return  Application.getInstance().getCurrentActivity().getString(R.string.lang_zh);
 
             default:
                 return Application.getInstance().getCurrentActivity().getString(R.string.lang_en);

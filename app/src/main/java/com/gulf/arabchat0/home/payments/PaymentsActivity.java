@@ -647,7 +647,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
     public void initPurchaseFlow(){
 
-        String amount  = productModel.getPrice().replaceAll("[^0-9,.]+", "");
+        String amount  = productModel.getPrice().replaceAll("[^0-9]+", "");
         String amountFinal  = amount.replaceAll(",", ".");
         double price = Double.parseDouble(amountFinal);
 

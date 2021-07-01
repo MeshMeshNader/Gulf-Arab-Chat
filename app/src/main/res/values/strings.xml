@@ -289,15 +289,14 @@
     <string name="more_visits">to get more visitors. Top-up credits now - more you buy the cheaper you are.</string>
     <string name="you_re_online">to let girls know you\'re online. Top-up credits now - more you buy the cheaper you are.</string>
     <string name="refill_cre">Refill credits</string>
-    <string name="premium">Premium</string>
-    <string name="arabchat_premium">Gulf Arab Chat Premium</string>
+    <string name="premium">VIP</string>
+    <string name="arabchat_premium">Gulf Arab Chat VIP</string>
     <string name="activate">Activate</string>
     <string name="Payments_Most_Popular">Most popular</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="payment_of">Payment of</string>
     <string name="save">Save</string>
     <string name="full_price">Full price</string>
-    <string name="credits_100" translatable="false">550</string>
     <string name="credits_500">500 Golden Coin</string>
     <string name="credits_2000">2000 Golden Coin</string>
     <string name="credits_10000">10000 Golden Coin</string>
@@ -314,7 +313,7 @@
     <string name="lifetime">Lifetime</string>
     <string name="no_subscription">No subscription</string>
     <string name="for_life">for life</string>
-    <string name="get_messsage_read">Get your messages read first with Gulf Arab Chat Premium!</string>
+    <string name="get_messsage_read">Get your messages read first with Gulf Arab Chat VIP!</string>
     <string name="chat_with_girls">Chat with new girls!</string>
     <string name="undo_no">Undo \'No\' votes in Encounters</string>
     <string name="chat_popular">Chat with popular girls</string>
@@ -322,10 +321,10 @@
     <string name="credit_added_to_yo_a">credits added to your account.</string>
     <string name="error_try_again_later">Error, try again later</string>
     <string name="purchase_canceled">Your payment was cancelled, we hope you decide to try again.</string>
-    <string name="you_are_premium">Gulf Arab Chat Premium Activated!</string>
+    <string name="you_are_premium">Gulf Arab Chat VIP Activated!</string>
     <string name="tap_to_see">Tap to see your profile</string>
-    <string name="credits">Credits</string>
-    <string name="credits_">credits</string>
+    <string name="credits">Coins</string>
+    <string name="credits_">coins</string>
     <string name="photos_needed">Profile photos</string>
     <string name="verified">You are - Verified</string>
     <string name="verify_account">Stand out - get verified</string>
@@ -380,8 +379,8 @@
     <string name="almost_invisible_text">Hide my presence from other users</string>
     <string name="cloaked_invisibility">Cloaked Invisibility</string>
     <string name="cloaked_invisibility_text">Don\'t show me as \'profile visitor\' on people\'s profiles</string>
-    <string name="hide_premium_status">Hide Premium status</string>
-    <string name="hide_premium_status_text">Hide my Premium Status from other users</string>
+    <string name="hide_premium_status">Hide VIP status</string>
+    <string name="hide_premium_status_text">Hide my VIP Status from other users</string>
     <string name="noti_messages">Messages</string>
     <string name="noti_messages_text">Get updates about new messages</string>
     <string name="noti_matches">Matches</string>
@@ -689,88 +688,79 @@
     <string name="your_total_message_quote">You used free messages, please upgrade</string>
 
     <!--SMS Verification-->
-    <string name="login_phone" translatable="false">Login With Phone Number</string>
-    <string name="search_country" translatable="false">Search country …</string>
-    <string name="resend" translatable="false">You didn\'t receive any code? Resend</string>
-    <string name="enter_the_code_below_to_verify" translatable="false">Enter the code below to verify</string>
-    <string name="enter_your_code" translatable="false">-- -- -- -- -- --</string>
-    <string name="next" translatable="false">NEXT</string>
-    <string name="please_enter_your_ver_code" translatable="false">Please enter your verification code</string>
-    <string name="enter_a_val_number" translatable="false">Enter a valid mobile phone</string>
-    <string name="wait_for_sms" translatable="false">We are sending an SMS code for verification…</string>
-    <string name="number" translatable="false">Mobile number</string>
-    <string name="click_on" translatable="false">Click on </string>
-    <string name="to_choose_your_country" translatable="false"> to choose your country</string>
-    <string name="problem_with_server" translatable="false">Problem connecting with the server!</string>
-    <string name="search_" translatable="false">Search …</string>
-    <string name="your_login_code_text" translatable="false">Your login code for Gulf Arab Chat is</string>
-    <string name="login_error" translatable="false">Login error, try again later</string>
-    <string name="verifying" translatable="false">Verifying…</string>
-    <string name="wait_for_sms_fake" translatable="false">We are sending you an SMS</string>
-    <string name="sms_quota_out" translatable="false">Quota exceeded.</string>
-    <string name="instant_validation" translatable="false">Verified</string>
+    <string name="login_phone">Login With Phone Number</string>
+    <string name="search_country">Search country …</string>
+    <string name="resend">You didn\'t receive any code? Resend</string>
+    <string name="enter_the_code_below_to_verify">Enter the code below to verify</string>
+    <string name="enter_your_code">-- -- -- -- -- --</string>
+    <string name="next">NEXT</string>
+    <string name="please_enter_your_ver_code">Please enter your verification code</string>
+    <string name="enter_a_val_number">Enter a valid mobile phone</string>
+    <string name="wait_for_sms">We are sending an SMS code for verification…</string>
+    <string name="number">Mobile number</string>
+    <string name="click_on">Click on </string>
+    <string name="to_choose_your_country"> to choose your country</string>
+    <string name="problem_with_server">Problem connecting with the server!</string>
+    <string name="search_">Search …</string>
+    <string name="your_login_code_text">Your login code for Gulf Arab Chat is</string>
+    <string name="login_error">Login error, try again later</string>
+    <string name="verifying">Verifying…</string>
+    <string name="wait_for_sms_fake">We are sending you an SMS</string>
+    <string name="sms_quota_out">Quota exceeded.</string>
+    <string name="instant_validation">Verified</string>
 
     <!--Wallet and Tokens-->
-    <string name="wallet_withdraw_title" translatable="false">Transactions</string>
-    <string name="wallet_withdraw" translatable="false">Exchange Tokens</string>
-    <string name="exchange" translatable="false">Exchange</string>
-    <string name="wallet_choose_method" translatable="false">What you want to do?</string>
-    <string name="wallet_withdraw_pay" translatable="false">Withdraw</string>
-    <string name="insuficient_token" translatable="false">You need minimum of %d tokens to continue</string>
-    <string name="insuficient_token_error" translatable="false">You only have of %d tokens</string>
-    <string name="exchange_to_credits" translatable="false">Exchange tokens</string>
-    <string name="withdraw_to_paypal" translatable="false">Withdraw tokens to PayPal</string>
-    <string name="wallet_amount" translatable="false">Tokens amount</string>
-    <string name="paypal_email" translatable="false">PayPal email</string>
-    <string name="amount_final_exchange" translatable="false">Exchange %d tokens to %d credits ?</string>
-    <string name="amount_final_withdraw" translatable="false">Withdraw %d tokens to %d US$ to %s ?</string>
-    <string name="wallet_amount_error" translatable="false">Set amount to exchange!</string>
-    <string name="wallet_excha_min" translatable="false">Minimum amount is %d</string>
-    <string name="tokens_exchanged" translatable="false">Tokens exchanged to credit!</string>
-    <string name="tokens_withdrawed" translatable="false">Tokens withdrawn</string>
-    <string name="exchange_to_money" translatable="false">Withdraw tokens</string>
-    <string name="no_withdraw_found" translatable="false">No transactions was found!</string>
-    <string name="withdraw_completed" translatable="false">Completed - %s</string>
-    <string name="withdraw_pending" translatable="false">Pending - %s</string>
-    <string name="withdraw_credits" translatable="false">Exchange %d tokens</string>
-    <string name="withdraw_money" translatable="false">Withdraw %d tokens</string>
-    <string name="us_dollar" translatable="false">US$</string>
+    <string name="wallet_withdraw_title">Transactions</string>
+    <string name="wallet_withdraw">Exchange Tokens</string>
+    <string name="exchange">Exchange</string>
+    <string name="wallet_choose_method">What you want to do?</string>
+    <string name="wallet_withdraw_pay">Withdraw</string>
+    <string name="insuficient_token">You need minimum of %d tokens to continue</string>
+    <string name="insuficient_token_error">You only have of %d tokens</string>
+    <string name="exchange_to_credits">Exchange tokens</string>
+    <string name="withdraw_to_paypal">Withdraw tokens to PayPal</string>
+    <string name="wallet_amount">Tokens amount</string>
+    <string name="paypal_email">PayPal email</string>
+    <string name="amount_final_exchange">Exchange %d tokens to %d coins ?</string>
+    <string name="amount_final_withdraw">Withdraw %d tokens to %d US$ to %s ?</string>
+    <string name="wallet_amount_error">Set amount to exchange!</string>
+    <string name="wallet_excha_min">Minimum amount is %d</string>
+    <string name="tokens_exchanged">Tokens exchanged to coins!</string>
+    <string name="tokens_withdrawed">Tokens withdrawn</string>
+    <string name="exchange_to_money">Withdraw tokens</string>
+    <string name="no_withdraw_found">No transactions was found!</string>
+    <string name="withdraw_completed">Completed - %s</string>
+    <string name="withdraw_pending">Pending - %s</string>
+    <string name="withdraw_credits">Exchange %d tokens</string>
+    <string name="withdraw_money">Withdraw %d tokens</string>
+    <string name="us_dollar">US$</string>
 
     <!-- Languages -->
-    <string name="profile_current_language_title" translatable="false">Language</string>
-    <string name="lang_ar" translatable="false">Arabic</string>
-    <string name="lang_zh" translatable="false">Chinese</string>
-    <string name="lang_ur" translatable="false">Urdu</string>
-    <string name="lang_tr" translatable="false">Turkish</string>
-    <string name="lang_pt" translatable="false">Portuguese</string>
-    <string name="lang_ko" translatable="false">Korean</string>
-    <string name="lang_ja" translatable="false">Japanese</string>
-    <string name="lang_it" translatable="false">Italian</string>
-    <string name="lang_in" translatable="false">Indonesian</string>
-    <string name="lang_hi" translatable="false">Hindi</string>
+    <string name="profile_current_language_title">Language</string>
+    <string name="lang_ar">Arabic</string>
     <string name="lang_fr" translatable="false">French</string>
-    <string name="lang_de" translatable="false">German</string>
     <string name="lang_en" translatable="false">English</string>
-    <string name="you_need_to_restart_the_application" translatable="false">You need to restart the App.</string>
+    <string name="you_need_to_restart_the_application">You need to restart the App.</string>
 
     <!-- Payments -->
     <string name="google_play" translatable="false">Google Play</string>
-    <string name="credit_card" translatable="false">Card</string>
-    <string name="paypal" translatable="false">PayPal</string>
+    <string name="credit_card">Card</string>
+    <string name="paypal">PayPal</string>
 
     <!-- Encounters -->
-    <string name="notification_new_show_love_title" translatable="false">You have new crush love</string>
-    <string name="notification_show_love" translatable="false">You have been loved by… click to see who</string>
-    <string name="cush_service_text" translatable="false">to let %s know %s your crush</string>
+    <string name="notification_new_show_love_title">You have new crush love</string>
+    <string name="notification_show_love">You have been loved by… click to see who</string>
+    <string name="cush_service_text">to let %s know %s your crush</string>
     <string name="her" translatable="false">her</string>
     <string name="him" translatable="false">him</string>
     <string name="shes" translatable="false">she\'s</string>
     <string name="hes" translatable="false">he\'s</string>
-    <string name="dont_just_swipe_right" translatable="false">Don\'t just swipe right</string>
-    <string name="crush_stangout" translatable="false">Stand out to the people you really like</string>
-    <string name="ads_credits_amount" translatable="false">%d credits</string>
-    <string name="crush_or" translatable="false">or</string>
-    <string name="crush_free_ads" translatable="false">Get It For Free</string>
+    <string name="dont_just_swipe_right">Don\'t just swipe right</string>
+    <string name="crush_stangout">Stand out to the people you really like</string>
+    <string name="ads_credits_amount">%d credits</string>
+    <string name="crush_or">or</string>
+    <string name="crush_free_ads">Get It For Free</string>
     <string name="invalid_session_token" translatable="false">Invalid session, login again!</string>
+    <string name="account_lang">Language</string>
 
 </resources>

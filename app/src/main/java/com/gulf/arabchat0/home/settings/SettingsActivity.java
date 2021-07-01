@@ -26,7 +26,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     User mCurrentUser;
 
-    LinearLayout mBasicInfo, mAccount, mAccountPreference, mHelpCenter, mAbout, mBlockedUsers;
+    LinearLayout mBasicInfo, mAccount, mAccountLang, mAccountPreference, mHelpCenter, mAbout, mBlockedUsers;
 
     TextView mAccountEmail, mBlockedUsersText;
 
@@ -43,6 +43,7 @@ public class SettingsActivity extends AppCompatActivity {
         mBasicInfo = findViewById(R.id.basic_info);
         mAccount = findViewById(R.id.account);
         mAccountPreference = findViewById(R.id.account_preference);
+        mAccountLang= findViewById(R.id.account_lang);
         mHelpCenter = findViewById(R.id.help_center);
         mAbout = findViewById(R.id.about);
         mBlockedUsers = findViewById(R.id.blocked_users);
@@ -82,10 +83,15 @@ public class SettingsActivity extends AppCompatActivity {
         mBasicInfo.setOnClickListener(v -> goToBasicInfo());
         mAccount.setOnClickListener(v -> goToAccount());
         mAccountPreference.setOnClickListener(v -> goToAccountPreference());
+        mAccountLang.setOnClickListener(v -> goToAccountLanguage());
         mHelpCenter.setOnClickListener(v -> goToHelpCenter());
         mAbout.setOnClickListener(v -> goToAbout());
         mBlockedUsers.setOnClickListener(v -> goToBlockedUsers());
 
+    }
+
+    private void goToAccountLanguage() {
+        QuickHelp.goToActivityWithNoClean(this, BasicInfoActivity.class);
     }
 
 
