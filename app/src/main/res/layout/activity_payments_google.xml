@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/payments_rootview"
     android:layout_width="fill_parent"
+    android:layoutDirection="ltr"
     android:layout_height="fill_parent"
     android:background="@color/white"
     android:orientation="vertical">
@@ -158,7 +159,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         app:srcCompat="@drawable/ic_users"
-                        app:tint="@color/grey_60" />
+                        app:tint="@color/grey_60"
+                        android:contentDescription="@string/no_chat_yet" />
 
                     <TextView
                         android:id="@+id/title"

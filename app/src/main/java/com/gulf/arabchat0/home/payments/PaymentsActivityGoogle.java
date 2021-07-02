@@ -1,7 +1,9 @@
 package com.gulf.arabchat0.home.payments;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -40,6 +42,7 @@ import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
@@ -482,7 +485,35 @@ public class PaymentsActivityGoogle extends AppCompatActivity implements Payment
 
         mPaymentProductModels.clear();
         mPaymentProductModels.addAll(skuDetailsList);
-        mPaymentProductModels.add(skuDetails);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            mPaymentProductModels.sort(new Comparator<SkuDetails>() {
+                @Override
+                public int compare(SkuDetails skuDetails, SkuDetails t1) {
+
+
+                    String amount1 = skuDetails.getPrice().replaceAll("[^0-9.]", "");
+                    double price1 = Double.parseDouble(amount1);
+                    Log.e("Price_Compare", "compare: price1 = " + price1);
+
+
+                    String amount2 = t1.getPrice().replaceAll("[^0-9.]", "");
+                    double price2 = Double.parseDouble(amount2);
+
+                    return Double.compare(price1, price2);
+                }
+            });
+        }
+
+        for(SkuDetails x : skuDetailsList) {
+            if (x.getSku().equals(Config.CREDIT_100000)) {
+                mPaymentProductModels.add(x);
+            } else if (x.getSku().equals(Config.SUBS_6_MONTHS)) {
+                mPaymentProductModels.add(x);
+            }
+        }
+
+
         mPaymentProductListAdapter.notifyDataSetChanged();
 
         productModel = mPaymentProductModels.get(0);

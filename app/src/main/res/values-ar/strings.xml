@@ -172,7 +172,7 @@
 
     <string name="facebook_ad_sponsored">برعاية</string>
     <string name="facebook_onboarding_connect">ربط الفيسبوك</string>
-    <string name="facebook_onboarding_continue">تواصل داتو</string>
+    <string name="facebook_onboarding_continue">تخطي والدخول الي شات الخليج العربي</string>
     <string name="facebook_onboarding_title">قم بتوصيل Facebook الخاص بك للتحقق من:</string>
     <string name="facebook_warning_2nd_item">جميع أصدقائك على Facebook</string>
     <string name="facebook_warning_3rd_item">"شبكات أصدقائك على Facebook"</string>
@@ -349,7 +349,7 @@
     <string name="settings_delete_account">حذف الحساب</string>
     <string name="email_empty">بريدك الالكتروني!</string>
     <string name="profile_account_message">تأكد من أنه يمكنك تذكر كلمة المرور الخاصة بك ، حيث ستحتاج إليها لتسجيل الدخول مرة أخرى.</string>
-    <string name="profile_account_signout">خروج</string>
+    <string name="profile_account_signout">تسجيل الخروج</string>
     <string name="profile_account_signout_success">لقد قمت بتسجيل الخروج بنجاح</string>
     <string name="setting_privacy">خصوصية</string>
     <string name="setting_notifications">إشعارات</string>
@@ -755,7 +755,7 @@
     <string name="enter_your_code">-- -- -- -- --</string>
     <string name="com_parse_ui_login_dispatch_user_logged_in">اللغة قام المستخدم بتسجيل الدخول ، بدءًا من:</string>
     <string name="com_parse_ui_login_dispatch_user_not_logged_in">لم يقم المستخدم بتسجيل الدخول ، وبدء تشغيل ParseLoginActivity</string>
-    <string name="cush_service_text">للسماح لـ٪ s بمعرفة٪ s الذي يعجبك</string>
+    <string name="cush_service_text">للسماح لـ %s بمعرفة %s الذي يعجبك</string>
     <string name="ads_credits_amount">%d عملة ذهبية</string>
     <string name="dont_just_swipe_right">"لا تقم بالتخطي "</string>
     <string name="crush_stangout">تعرف علي من تحب</string>

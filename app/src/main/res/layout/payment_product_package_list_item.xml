@@ -9,6 +9,7 @@
         android:id="@+id/productListItem_paymentBox"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
         android:background="?selectableItemBackground"
         android:paddingTop="16.0dip"
         android:paddingBottom="16.0dip">
@@ -24,16 +25,16 @@
 
         <LinearLayout
             android:id="@+id/productListItem_nameLayout"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/productListItem_radio"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/productListItem_name"
-                android:layout_width="match_parent"
-                android:gravity="center"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/rela_taken"
                 android:fontFamily="sans-serif-medium"
                 android:textColor="@color/grey_4"
                 android:textSize="@dimen/textSizeP1"
@@ -82,7 +83,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_below="@+id/productListItem_nameLayout"
             android:layout_marginLeft="16.0dip"
             android:layout_marginRight="16.0dip"
             android:gravity="center"

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -91,7 +92,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
     TextView mToolbarText;
     AppCompatButton mContinueBtn;
 
-    private ArrayList<SkuDetails> mPaymentProductModels;
+    private List<SkuDetails> mPaymentProductModels;
     private PaymentProductListSkuAdapter mPaymentProductListAdapter;
     public RecyclerView mRecyclerView;
 
@@ -435,7 +436,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
             String gender1 = isMale ? getString(R.string.her) : getString(R.string.him);
             String gender2 = isMale ? getString(R.string.shes) : getString(R.string.hes);
-            ;
+
 
             PaymentSliderModel crush = new PaymentSliderModel();
             crush.setType(PaymentSliderModel.SLIDER_YPE_NORMAL);
@@ -570,7 +571,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
                         if (skuDetailsList != null && skuDetailsList.size() > 0) {
 
-                            createList(skuDetailsList, skuDetailsList.get(skuDetailsList.size()-1));
+                            createList(skuDetailsList, skuDetailsList.get(0));
 
                             hideLoading(true);
 
@@ -599,22 +600,24 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         mPaymentProductModels.clear();
         mPaymentProductModels.addAll(skuDetailsList);
 
-        mPaymentProductModels.sort(new Comparator<SkuDetails>() {
-            @Override
-            public int compare(SkuDetails skuDetails, SkuDetails t1) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            mPaymentProductModels.sort(new Comparator<SkuDetails>() {
+                @Override
+                public int compare(SkuDetails skuDetails, SkuDetails t1) {
 
 
-                String amount1 = skuDetails.getPrice().replaceAll("[^0-9.]", "");
-                double price1 = Double.parseDouble(amount1);
-                Log.e("Price_Compare", "compare: price1 = " + price1);
+                    String amount1 = skuDetails.getPrice().replaceAll("[^0-9.]", "");
+                    double price1 = Double.parseDouble(amount1);
+                    Log.e("Price_Compare", "compare: price1 = " + price1);
 
 
-                String amount2 = t1.getPrice().replaceAll("[^0-9.]", "");
-                double price2 = Double.parseDouble(amount2);
+                    String amount2 = t1.getPrice().replaceAll("[^0-9.]", "");
+                    double price2 = Double.parseDouble(amount2);
 
-                return Double.compare(price1, price2);
-            }
-        });
+                    return Double.compare(price1, price2);
+                }
+            });
+        }
 
         for(SkuDetails x : skuDetailsList) {
             if (x.getSku().equals(Config.CREDIT_100000)) {
