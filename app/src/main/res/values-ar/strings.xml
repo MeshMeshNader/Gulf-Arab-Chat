@@ -110,7 +110,7 @@
     <string name="signin_forgot_password_title">هل نسيت كلمة المرور</string>
     <string name="signin_new_activated">مفعل!</string>
     <string name="signin_new_back">عودة</string>
-    <string name="signin_new_birthday">عيد الميلاد</string>
+    <string name="signin_new_birthday">تاريخ الميلاد</string>
     <string name="signin_new_dd_mm_yyyy">يوم /شهر /سنة</string>
     <string name="signin_new_email">البريد الإلكتروني</string>
     <string name="signin_new_email_alert_cancel">إلغاء</string>
@@ -153,7 +153,7 @@
     <string name="registration_tiw_header">وأنت هنا ل …</string>
     <string name="startup_str_reg_footer">"&lt;html&gt; &lt;center&gt; من خلال الاستمرار ، فإنك تقبل &lt;b&gt; &lt;a href=\'terms\'&gt; البنود والشروط &lt;/a&gt; &lt;/b&gt;. ولن نشارك تفاصيل الاتصال &lt;a href=\'terms\'&gt; الخاصة بك &lt;/a&gt;. &lt;/center&gt; &lt;/html&gt; "</string>
     <string name="year_of_age">سنة من العمر</string>
-    <string name="signup_user_date">عيد ميلادك من فضلك</string>
+    <string name="signup_user_date">تاريخ ميلادك من فضلك</string>
 
     <string name="signup_by_clinging">أقبل Gulf Arab Chat</string>
     <string name="signup_terms">الأحكام والشروط.</string>
@@ -192,7 +192,7 @@
     <string name="say_cheese">قل مرجباا</string>
     <string name="add_photos">إضافة الصور</string>
     <string name="you_dont_have_any_people_near">لم نتمكن من العثور على أي شخص!</string>
-    <string name="ok">android: string /ok</string>
+    <string name="ok">حسنا</string>
     <string name="enter_the_same_info">أدخل نفس المعلومات التي استخدمتها لإعداد حسابك. سنرسل تفاصيل حول كيفية إنشاء كلمة مرور جديدة.</string>
     <string name="create_new_password">أنشئ كلمة مرور جديدة</string>
     <string name="no_one_found_update">لم يتم العثور على أي شخص بالقرب من موقعك. نوصيك بتغيير أو تحديث موقعك</string>
@@ -276,7 +276,7 @@
     <string name="arabchat_premium">"شات الخليج العربي VIP "</string>
     <string name="activate">تفعيل</string>
     <string name="Payments_Most_Popular">الأكثر شعبية</string>
-    <string name="terms_and_conditions">لا يوجد محادثات</string>
+    <string name="terms_and_conditions">الشروط و الاحكام</string>
     <string name="payment_of">دفع</string>
     <string name="save">حفظ</string>
     <string name="full_price">السعر الكامل</string>
@@ -432,9 +432,9 @@
     <string name="profile_smoking">التدخين</string>
     <string name="profile_drinking">الشرب</string>
     <string name="profile_language">أتكلم</string>
-    <string name="profile_no_answer">لا اجابة</string>
+    <string name="profile_no_answer">لا توجد اجابة</string>
     <string name="rela_single">غير مرتبطة</string>
-    <string name="rela_taken">تؤخذ</string>
+    <string name="rela_taken">مرتبط</string>
     <string name="rela_compli">أنا في علاقة معقدة</string>
     <string name="sex_bi">ثنائي الجنس</string>
     <string name="sex_lesbian">مثلية</string>

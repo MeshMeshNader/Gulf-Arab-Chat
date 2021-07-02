@@ -330,6 +330,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginEnd="4dp"
         android:ellipsize="end"
+        android:gravity="center"
         android:maxLines="1"
         android:text="@string/credits"
         app:layout_constraintBottom_toTopOf="@+id/ownProfileElementOneSubtitle"
@@ -344,18 +345,16 @@
         android:id="@+id/ownProfileElementOneSubtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
         android:ellipsize="end"
-        android:maxLines="1"
-        android:textSize="@dimen/my_profile_cta_text_size"
-        android:textColor="@color/black"
-        tools:text="10"
         android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/my_profile_cta_text_size"
         app:layout_constraintBottom_toTopOf="@+id/ownProfileElementHorizontalDivider"
-        app:layout_constraintLeft_toLeftOf="@+id/ownProfileElementOneTitle"
-        app:layout_constraintRight_toLeftOf="@+id/ownProfileElementVerticalDivider"
-        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementOneTitle"
-        android:layout_marginRight="4dp" />
+        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"
+        app:layout_constraintStart_toEndOf="@+id/ownProfileElementOneImage"        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementOneTitle"
+        tools:text="10" />
 
     <TextView
         android:id="@+id/ownProfileElementTwoTitle"

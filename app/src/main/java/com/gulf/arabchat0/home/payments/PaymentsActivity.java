@@ -19,20 +19,23 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-
 import com.android.billingclient.api.AcknowledgePurchaseParams;
 import com.android.billingclient.api.AcknowledgePurchaseResponseListener;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingFlowParams;
 import com.android.billingclient.api.BillingResult;
-
 import com.android.billingclient.api.ConsumeParams;
 import com.android.billingclient.api.ConsumeResponseListener;
 import com.android.billingclient.api.Purchase;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
+import com.flutterwave.raveandroid.RavePayActivity;
+import com.flutterwave.raveandroid.RaveUiManager;
+import com.flutterwave.raveandroid.rave_java_commons.Meta;
+import com.flutterwave.raveandroid.rave_java_commons.RaveConstants;
+import com.google.android.material.tabs.TabLayout;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.adapters.others.PaymentProductListSkuAdapter;
 import com.gulf.arabchat0.adapters.others.SliderPagerAdapter;
@@ -40,15 +43,10 @@ import com.gulf.arabchat0.app.Config;
 import com.gulf.arabchat0.app.Constants;
 import com.gulf.arabchat0.helpers.QuickHelp;
 import com.gulf.arabchat0.home.settings.basicInfo.BasicInfoActivity;
-import com.gulf.arabchat0.models.others.PaymentSliderModel;
 import com.gulf.arabchat0.models.arabchat.User;
+import com.gulf.arabchat0.models.others.PaymentSliderModel;
 import com.gulf.arabchat0.modules.dotsindicator.SpringDotsIndicator;
 import com.gulf.arabchat0.utils.Tools;
-import com.flutterwave.raveandroid.RavePayActivity;
-import com.flutterwave.raveandroid.RaveUiManager;
-import com.flutterwave.raveandroid.rave_java_commons.Meta;
-import com.flutterwave.raveandroid.rave_java_commons.RaveConstants;
-import com.google.android.material.tabs.TabLayout;
 import com.parse.ParseUser;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
@@ -59,6 +57,7 @@ import com.paypal.android.sdk.payments.PaymentConfirmation;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
@@ -92,7 +91,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
     TextView mToolbarText;
     AppCompatButton mContinueBtn;
 
-    private List<SkuDetails> mPaymentProductModels;
+    private ArrayList<SkuDetails> mPaymentProductModels;
     private PaymentProductListSkuAdapter mPaymentProductListAdapter;
     public RecyclerView mRecyclerView;
 
@@ -118,7 +117,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
     private String PaymentMethodSelected = PAYMENT_GOOGLE;
 
-    private  PayPalConfiguration config = new PayPalConfiguration()
+    private PayPalConfiguration config = new PayPalConfiguration()
             .environment(Constants.isProduction() ? PayPalConfiguration.ENVIRONMENT_PRODUCTION : PayPalConfiguration.ENVIRONMENT_SANDBOX)
             .acceptCreditCards(Config.PAYPAL_CREDIT_CARD_ENABLED)
             .clientId(Config.PAYPAL_CLIENT_ID);
@@ -150,8 +149,8 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         mRecyclerView = findViewById(R.id.productList_productPackageList);
 
         mEmptyView = findViewById(R.id.empty_view);
-        mEmptyLayout= findViewById(R.id.empty_layout);
-        mLoadingLayout= findViewById(R.id.loading);
+        mEmptyLayout = findViewById(R.id.empty_layout);
+        mLoadingLayout = findViewById(R.id.loading);
 
         mErrorImage = findViewById(R.id.image);
         mErrorTitle = findViewById(R.id.title);
@@ -162,7 +161,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         mContinueBtn = findViewById(R.id.payments_purchaseButton);
         tabLayout = findViewById(R.id.productList_paymentProviderList);
 
-        if (Config.PAYPAL_ENABLED){
+        if (Config.PAYPAL_ENABLED) {
             startPayPalService();
         }
 
@@ -188,22 +187,22 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 //highLightCurrentTab(tab.getPosition());
-                if (tab.getPosition() == 0){
+                if (tab.getPosition() == 0) {
                     PaymentMethodSelected = PAYMENT_GOOGLE;
 
                     tab.getIcon().setColorFilter(QuickHelp.getColor(PaymentsActivity.this, R.color.light_blue_400), PorterDuff.Mode.SRC_ATOP);
 
-                } else if (tab.getPosition() == 1){
+                } else if (tab.getPosition() == 1) {
 
-                    if (Config.FLUTTER_WAVE_ENABLED){
+                    if (Config.FLUTTER_WAVE_ENABLED) {
                         PaymentMethodSelected = PAYMENT_CARD;
                         tab.getIcon().setColorFilter(QuickHelp.getColor(PaymentsActivity.this, R.color.orange_4), PorterDuff.Mode.SRC_ATOP);
-                    } else if (Config.PAYPAL_ENABLED){
+                    } else if (Config.PAYPAL_ENABLED) {
                         PaymentMethodSelected = PAYMENT_PAYPAL;
                         tab.getIcon().setColorFilter(QuickHelp.getColor(PaymentsActivity.this, R.color.light_blue_700), PorterDuff.Mode.SRC_ATOP);
                     }
 
-                } else if (tab.getPosition() == 2){
+                } else if (tab.getPosition() == 2) {
                     PaymentMethodSelected = PAYMENT_PAYPAL;
                     tab.getIcon().setColorFilter(QuickHelp.getColor(PaymentsActivity.this, R.color.light_blue_700), PorterDuff.Mode.SRC_ATOP);
                 }
@@ -252,7 +251,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         mRecyclerView.setBackgroundColor(Color.WHITE);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        if (mType.equals(TYPE_ARABCHAT_PREMIUM)){
+        if (mType.equals(TYPE_ARABCHAT_PREMIUM)) {
 
             mToolbarText.setText(String.format("%s %s %s", getString(R.string.activate), getString(R.string.app_name), getString(R.string.premium)));
 
@@ -272,11 +271,11 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         initPurchase();
     }
 
-    public void createSlider(){
+    public void createSlider() {
 
         List<PaymentSliderModel> paymentSliderModelList = new ArrayList<>();
 
-        if (mType.equals(TYPE_ARABCHAT_PREMIUM)){
+        if (mType.equals(TYPE_ARABCHAT_PREMIUM)) {
 
             PaymentSliderModel unlimitedMessages = new PaymentSliderModel();
             unlimitedMessages.setType(PaymentSliderModel.SLIDER_YPE_PREMIUM);
@@ -327,10 +326,10 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
             //goIncognito.setOtherImage();
 
 
-            if (mPremiumType.equals(TYPE_ARABCHAT_PREMIUM_LIKED)){
+            if (mPremiumType.equals(TYPE_ARABCHAT_PREMIUM_LIKED)) {
 
                 paymentSliderModelList.add(whoLiked);
-                if (Config.isPaidMessagesActivated){
+                if (Config.isPaidMessagesActivated) {
                     paymentSliderModelList.add(unlimitedMessages);
                 }
                 paymentSliderModelList.add(undo);
@@ -340,10 +339,10 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
                 paymentSliderModelList.add(chatPopular);
                 paymentSliderModelList.add(goIncognito);
 
-            } else if (mPremiumType.equals(TYPE_ARABCHAT_PREMIUM_UNDO)){
+            } else if (mPremiumType.equals(TYPE_ARABCHAT_PREMIUM_UNDO)) {
 
                 paymentSliderModelList.add(undo);
-                if (Config.isPaidMessagesActivated){
+                if (Config.isPaidMessagesActivated) {
                     paymentSliderModelList.add(unlimitedMessages);
                 }
                 paymentSliderModelList.add(whoLiked);
@@ -353,10 +352,10 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
                 paymentSliderModelList.add(chatPopular);
                 paymentSliderModelList.add(goIncognito);
 
-            } else if (mPremiumType.equals(TYPE_ARABCHAT_PREMIUM_INCOGNITO)){
+            } else if (mPremiumType.equals(TYPE_ARABCHAT_PREMIUM_INCOGNITO)) {
 
                 paymentSliderModelList.add(goIncognito);
-                if (Config.isPaidMessagesActivated){
+                if (Config.isPaidMessagesActivated) {
                     paymentSliderModelList.add(unlimitedMessages);
                 }
                 paymentSliderModelList.add(undo);
@@ -366,9 +365,9 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
                 paymentSliderModelList.add(chatWithNewGirls);
                 paymentSliderModelList.add(chatPopular);
 
-            } else if (mPremiumType.equals(TYPE_ARABCHAT_PREMIUM_MESSAGES)){
+            } else if (mPremiumType.equals(TYPE_ARABCHAT_PREMIUM_MESSAGES)) {
 
-                if (Config.isPaidMessagesActivated){
+                if (Config.isPaidMessagesActivated) {
                     paymentSliderModelList.add(unlimitedMessages);
                 }
                 paymentSliderModelList.add(whoLiked);
@@ -381,7 +380,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
             } else {
 
-                if (Config.isPaidMessagesActivated){
+                if (Config.isPaidMessagesActivated) {
                     paymentSliderModelList.add(unlimitedMessages);
                 }
                 paymentSliderModelList.add(findFavorite);
@@ -428,14 +427,15 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
             imOnline.setBadgeImage(R.drawable.ic_badge_feature_attention_boost);
 
             boolean isMale = false;
-            if (mUser != null && !mUser.getColGender().isEmpty()){
-                if (mUser.getColGender().equals(User.GENDER_MALE)){
+            if (mUser != null && !mUser.getColGender().isEmpty()) {
+                if (mUser.getColGender().equals(User.GENDER_MALE)) {
                     isMale = true;
                 }
             }
 
             String gender1 = isMale ? getString(R.string.her) : getString(R.string.him);
-            String gender2 = isMale ? getString(R.string.shes) : getString(R.string.hes);;
+            String gender2 = isMale ? getString(R.string.shes) : getString(R.string.hes);
+            ;
 
             PaymentSliderModel crush = new PaymentSliderModel();
             crush.setType(PaymentSliderModel.SLIDER_YPE_NORMAL);
@@ -444,7 +444,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
             crush.setTitle(String.format(getString(R.string.cush_service_text), gender1, gender2));
             crush.setBadgeImage(R.drawable.ic_badge_feature_bundle_sale);
 
-            if (mType.equals(TYPE_3X_POPULAR)){
+            if (mType.equals(TYPE_3X_POPULAR)) {
 
                 paymentSliderModelList.add(popular3x);
                 paymentSliderModelList.add(riseUp);
@@ -452,28 +452,28 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
                 paymentSliderModelList.add(extraShow);
                 paymentSliderModelList.add(imOnline);
 
-            } else if (mType.equals(TYPE_RISE_UP)){
+            } else if (mType.equals(TYPE_RISE_UP)) {
 
                 paymentSliderModelList.add(riseUp);
                 paymentSliderModelList.add(getMoreVisits);
                 paymentSliderModelList.add(extraShow);
                 paymentSliderModelList.add(imOnline);
 
-            } else if (mType.equals(TYPE_GET_MORE_VISITS)){
+            } else if (mType.equals(TYPE_GET_MORE_VISITS)) {
 
                 paymentSliderModelList.add(getMoreVisits);
                 paymentSliderModelList.add(riseUp);
                 paymentSliderModelList.add(extraShow);
                 paymentSliderModelList.add(imOnline);
 
-            } else if (mType.equals(TYPE_ADD_EXTRA_SHOWS)){
+            } else if (mType.equals(TYPE_ADD_EXTRA_SHOWS)) {
 
                 paymentSliderModelList.add(extraShow);
                 paymentSliderModelList.add(riseUp);
                 paymentSliderModelList.add(getMoreVisits);
                 paymentSliderModelList.add(imOnline);
 
-            }  else if (mType.equals(TYPE_ENCOUNTERS_ADS)){
+            } else if (mType.equals(TYPE_ENCOUNTERS_ADS)) {
 
                 paymentSliderModelList.add(crush);
                 paymentSliderModelList.add(imOnline);
@@ -497,7 +497,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
     }
 
-    private void setLoading(){
+    private void setLoading() {
 
         mRecyclerView.setVisibility(View.GONE);
         mEmptyLayout.setVisibility(View.VISIBLE);
@@ -506,9 +506,9 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         mContinueBtn.setVisibility(View.GONE);
     }
 
-    private void hideLoading(boolean isLoaded){
+    private void hideLoading(boolean isLoaded) {
 
-        if (isLoaded){
+        if (isLoaded) {
             mEmptyLayout.setVisibility(View.GONE);
             mRecyclerView.setVisibility(View.VISIBLE);
             mContinueBtn.setVisibility(View.VISIBLE);
@@ -530,14 +530,15 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     // The BillingClient is ready. You can query purchases here.
 
-                    if (mType.equals(TYPE_ARABCHAT_PREMIUM)){
-                       initSKUPurchase();
+                    if (mType.equals(TYPE_ARABCHAT_PREMIUM)) {
+                        initSKUPurchase();
                     } else {
                         initSKUCredits();
                     }
 
                 }
             }
+
             @Override
             public void onBillingServiceDisconnected() {
                 // Try to restart the connection on the next request to
@@ -550,7 +551,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
     public void initSKUCredits() {
 
-        List<String> creditsPurchase = new ArrayList<> ();
+        List<String> creditsPurchase = new ArrayList<>();
         creditsPurchase.add(Config.CREDIT_500);
         creditsPurchase.add(Config.CREDIT_2000);
         creditsPurchase.add(Config.CREDIT_10000);
@@ -567,9 +568,9 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
                     if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
 
-                        if (skuDetailsList != null && skuDetailsList.size() > 0){
+                        if (skuDetailsList != null && skuDetailsList.size() > 0) {
 
-                            createList(skuDetailsList, skuDetailsList.get(0));
+                            createList(skuDetailsList, skuDetailsList.get(skuDetailsList.size()-1));
 
                             hideLoading(true);
 
@@ -597,7 +598,31 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
         mPaymentProductModels.clear();
         mPaymentProductModels.addAll(skuDetailsList);
-        mPaymentProductModels.add(skuDetails);
+
+        mPaymentProductModels.sort(new Comparator<SkuDetails>() {
+            @Override
+            public int compare(SkuDetails skuDetails, SkuDetails t1) {
+
+
+                String amount1 = skuDetails.getPrice().replaceAll("[^0-9.]", "");
+                double price1 = Double.parseDouble(amount1);
+                Log.e("Price_Compare", "compare: price1 = " + price1);
+
+
+                String amount2 = t1.getPrice().replaceAll("[^0-9.]", "");
+                double price2 = Double.parseDouble(amount2);
+
+                return Double.compare(price1, price2);
+            }
+        });
+
+        for(SkuDetails x : skuDetailsList) {
+            if (x.getSku().equals(Config.CREDIT_100000)) {
+                mPaymentProductModels.add(x);
+            } else if (x.getSku().equals(Config.SUBS_6_MONTHS)) {
+                mPaymentProductModels.add(x);
+            }
+        }
         mPaymentProductListAdapter.notifyDataSetChanged();
 
         productModel = mPaymentProductModels.get(0);
@@ -605,7 +630,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
     public void initSKUPurchase() {
 
-        List<String> creditsPurchase = new ArrayList<> ();
+        List<String> creditsPurchase = new ArrayList<>();
         creditsPurchase.add(Config.SUBS_1_WEEK);
         creditsPurchase.add(Config.SUBS_1_MONTH);
         creditsPurchase.add(Config.SUBS_3_MONTHS);
@@ -619,7 +644,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
                     if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
 
-                        if (skuDetailsList != null && skuDetailsList.size() > 0){
+                        if (skuDetailsList != null && skuDetailsList.size() > 0) {
 
                             createList(skuDetailsList, skuDetailsList.get(0));
 
@@ -645,21 +670,19 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
                 });
     }
 
-    public void initPurchaseFlow(){
+    public void initPurchaseFlow() {
 
-        String amount  = productModel.getPrice().replaceAll("[^0-9]+", "");
-        String amountFinal  = amount.replaceAll(",", ".");
-        double price = Double.parseDouble(amountFinal);
+        String amount = productModel.getPrice().replaceAll("[^0-9.]", "");
+        double price = Double.parseDouble(amount);
 
         Log.d("AMOUNT", productModel.getPrice());
-        Log.d("AMOUNT", amountFinal);
 
-        if (PaymentMethodSelected.equals(PAYMENT_GOOGLE)){
+        if (PaymentMethodSelected.equals(PAYMENT_GOOGLE)) {
 
             BillingFlowParams flowParams = BillingFlowParams.newBuilder().setSkuDetails(productModel).build();
             mBillingClient.launchBillingFlow(PaymentsActivity.this, flowParams);
 
-        } else if (PaymentMethodSelected.equals(PAYMENT_CARD)){
+        } else if (PaymentMethodSelected.equals(PAYMENT_CARD)) {
 
             Meta PaymentSKU = new Meta("SKU", productModel.getSku());
             Meta UserObjectId = new Meta("UserId", mCurrentUser.getObjectId());
@@ -679,11 +702,11 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
             raveUiManager.setfName(mCurrentUser.getColFirstName());
             raveUiManager.setlName(mCurrentUser.getColFullName());
 
-            if (!mCurrentUser.getPhoneNumberFull().isEmpty()){
+            if (!mCurrentUser.getPhoneNumberFull().isEmpty()) {
                 raveUiManager.setPhoneNumber(mCurrentUser.getPhoneNumberFull(), true);
             }
 
-            if (!mCurrentUser.getEmail().isEmpty()){
+            if (!mCurrentUser.getEmail().isEmpty()) {
                 raveUiManager.setEmail(mCurrentUser.getEmail());
             } else {
 
@@ -698,14 +721,14 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
             raveUiManager.initialize();
 
-        } else if (PaymentMethodSelected.equals(PAYMENT_PAYPAL)){
+        } else if (PaymentMethodSelected.equals(PAYMENT_PAYPAL)) {
 
-            PayPalPayment payPalPayment = new PayPalPayment(new BigDecimal(amountFinal),productModel.getPriceCurrencyCode(),
-                    productModel.getTitle(),PayPalPayment.PAYMENT_INTENT_SALE);
+            PayPalPayment payPalPayment = new PayPalPayment(new BigDecimal(amount), productModel.getPriceCurrencyCode(),
+                    productModel.getTitle(), PayPalPayment.PAYMENT_INTENT_SALE);
             Intent intent = new Intent(this, PaymentActivity.class);
             intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
-            intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payPalPayment);
-            startActivityForResult(intent,PAYPAL_REQUEST_CODE);
+            intent.putExtra(PaymentActivity.EXTRA_PAYMENT, payPalPayment);
+            startActivityForResult(intent, PAYPAL_REQUEST_CODE);
         }
 
     }
@@ -721,8 +744,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
             if (resultCode == RavePayActivity.RESULT_SUCCESS) {
                 //Toast.makeText(this, "SUCCESS " + message, Toast.LENGTH_SHORT).show();
                 creditUser(productModel.getSku());
-            }
-            else if (resultCode == RavePayActivity.RESULT_ERROR) {
+            } else if (resultCode == RavePayActivity.RESULT_ERROR) {
                 //Toast.makeText(this, "ERROR " + message, Toast.LENGTH_SHORT).show();
 
                 QuickHelp.showNotification(PaymentsActivity.this, getString(R.string.error_try_again_later), true);
@@ -732,17 +754,17 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
                 QuickHelp.showNotification(PaymentsActivity.this, getString(R.string.purchase_canceled), true);
             }
 
-        } else if (requestCode == PAYPAL_REQUEST_CODE){
-            if (resultCode == RESULT_OK){
+        } else if (requestCode == PAYPAL_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
                 PaymentConfirmation confirmation = data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
-                if (confirmation != null){
+                if (confirmation != null) {
                     creditUser(productModel.getSku());
                 }
-            } else if (resultCode == Activity.RESULT_CANCELED){
+            } else if (resultCode == Activity.RESULT_CANCELED) {
                 QuickHelp.showNotification(PaymentsActivity.this, getString(R.string.purchase_canceled), true);
                 //Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show();
             }
-        } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID){
+        } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID) {
             QuickHelp.showNotification(PaymentsActivity.this, getString(R.string.error_try_again_later), true);
             //Toast.makeText(this, "Invalid", Toast.LENGTH_SHORT).show();
         } else {
@@ -750,7 +772,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         }
     }
 
-    public void creditUser(String Sku){
+    public void creditUser(String Sku) {
 
         switch (Sku) {
             case Config.CREDIT_500:
@@ -901,7 +923,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         }
     }
 
-    public void acknowledgePurchaseConsume(int credits, Purchase purchase){
+    public void acknowledgePurchaseConsume(int credits, Purchase purchase) {
 
 
         ConsumeParams consumeParams = ConsumeParams.newBuilder()
@@ -913,7 +935,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         mBillingClient.consumeAsync(consumeParams, consumeResponseListener);
     }
 
-    public void acknowledgePurchaseSubs(int days, Purchase purchase){
+    public void acknowledgePurchaseSubs(int days, Purchase purchase) {
 
 
         AcknowledgePurchaseParams acknowledgePurchaseParams = AcknowledgePurchaseParams.newBuilder()
@@ -932,7 +954,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         mCurrentUser.addCredit(credits);
         mCurrentUser.saveEventually(e -> {
 
-            if (e == null){
+            if (e == null) {
 
                 QuickHelp.showNotification(PaymentsActivity.this, credits + " " + getString(R.string.credit_added_to_yo_a), false);
             }
@@ -943,19 +965,19 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
         Calendar calendar = Calendar.getInstance();
 
-        if (days == 7){
+        if (days == 7) {
 
             calendar.add(Calendar.DAY_OF_WEEK, 7);
 
-        } else if (days == 30){
+        } else if (days == 30) {
 
             calendar.add(Calendar.DAY_OF_MONTH, 30);
 
-        } else if (days == 90){
+        } else if (days == 90) {
 
             calendar.add(Calendar.MONTH, 3);
 
-        } else if (days == 180){
+        } else if (days == 180) {
 
             calendar.add(Calendar.MONTH, 6);
 
@@ -964,7 +986,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
         mCurrentUser.setPremium(calendar.getTime());
         mCurrentUser.saveEventually(e -> {
 
-            if (e == null){
+            if (e == null) {
 
                 QuickHelp.showNotification(PaymentsActivity.this, getString(R.string.you_are_premium), false);
             }
@@ -982,7 +1004,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
             mCurrentUser.setPremiumLifetime(isLifetime);
             mCurrentUser.saveEventually(e -> {
 
-                if (e == null){
+                if (e == null) {
 
                     QuickHelp.showNotification(PaymentsActivity.this, getString(R.string.you_are_premium), false);
                 }
@@ -993,9 +1015,9 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
     }
 
-    public void startPayPalService(){
+    public void startPayPalService() {
 
-        Intent intent = new Intent(this,PayPalService.class);
+        Intent intent = new Intent(this, PayPalService.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
         startService(intent);
     }
@@ -1037,7 +1059,7 @@ public class PaymentsActivity extends AppCompatActivity implements PaymentProduc
 
     @Override
     protected void onDestroy() {
-        if (Config.PAYPAL_ENABLED){
+        if (Config.PAYPAL_ENABLED) {
             stopService(new Intent(this, PayPalService.class));
         }
 

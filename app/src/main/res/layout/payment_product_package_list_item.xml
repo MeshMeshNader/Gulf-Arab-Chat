@@ -31,7 +31,8 @@
 
             <TextView
                 android:id="@+id/productListItem_name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:textColor="@color/grey_4"
@@ -81,6 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_below="@+id/productListItem_nameLayout"
             android:layout_marginLeft="16.0dip"
             android:layout_marginRight="16.0dip"
             android:gravity="center"

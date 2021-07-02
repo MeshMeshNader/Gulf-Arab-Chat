@@ -473,7 +473,7 @@ public class Application extends MultiDexApplication implements AGEventHandler, 
         Locale.setDefault(locale);
         Configuration configLang = new Configuration();
         configLang.locale = locale;
-        activity.getResources().updateConfiguration(configLang, activity.getResources().getDisplayMetrics());
+        getInstance().getBaseContext().getResources().updateConfiguration(configLang, getInstance().getBaseContext().getResources().getDisplayMetrics());
 
         Log.d("LANG: ",  "onActivityStarted: " + Locale.getDefault().getLanguage());
 
