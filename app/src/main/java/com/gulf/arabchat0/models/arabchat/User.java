@@ -41,6 +41,8 @@ public class User extends ParseUser {
     public static final String STATUS_ONLINE = "online";
     public static final String STATUS_NEW = "new";
 
+    public static final String CREDIT_AMOUNT = "credit";
+
     private static final String COL_INSTALLATION = "installation";
     public static final String COL_ID = "objectId";
     public static final String COL_ROLE = "role";

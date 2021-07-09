@@ -376,8 +376,9 @@ public class PeopleNearbyFragment extends Fragment {
                     break;
             }
 
-            UsersNearQuery.setLimit(Config.MaxUsersNearToShow);
 
+            UsersNearQuery.setLimit(Config.MaxUsersNearToShow);
+            UsersNearQuery.orderByDescending(User.CREDIT_AMOUNT);
             return UsersNearQuery;
         };
 

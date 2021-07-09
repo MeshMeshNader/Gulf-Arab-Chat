@@ -55,6 +55,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:layout_gravity="top|left"
+            android:id="@+id/peopleNearby_coins"
+            android:background="@drawable/button_bg_rounded_corners"
+            tools:text="1.0 km"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <View
             android:id="@+id/peopleNearby_disabledPersonOverlay"
             android:background="@drawable/neraby_diabled_person_overlay"

@@ -112,6 +112,8 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
 
         });
 
+        viewHolder.mUserCoins.setText(String.valueOf(user.getCredits()) + " Coins");
+
         if (user.getLastOnline() != null){
 
 
@@ -148,7 +150,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
 
         // Comment of Uncomment if you want to use Badoo Style grid or not
 
-        /*if (getItemCount() > 2 && position == 1) {
+        if (getItemCount() > 2 && position == 1) {
 
             ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) viewHolder.userItemLayout.getLayoutParams();
             int height = viewHolder.userItemLayout.getMeasuredHeight();
@@ -158,7 +160,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
                 viewHolder.userItemLayout.setLayoutParams(params);
             }
 
-        }*/
+        }
 
     }
 
@@ -169,7 +171,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
         LinearLayout userItemLayout;
         CircleImageView userPhoto, userStatus;
         ImageView userNearBadge;
-        TextView firstName, mUserDistance;
+        TextView firstName, mUserDistance , mUserCoins;
 
         ViewHolder(View v) {
             super(v);
@@ -177,6 +179,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
             userItemLayout = v.findViewById(R.id.users_item_layout);
             userPhoto = v.findViewById(R.id.peopleNearby_personImage);
             firstName = v.findViewById(R.id.peopleNearby_personName);
+            mUserCoins = v.findViewById(R.id.peopleNearby_coins);
             userNearBadge = v.findViewById(R.id.peopleNearby_personBadge);
             userStatus = v.findViewById(R.id.peopleNearby_personStatus);
             mUserDistance = v.findViewById(R.id.peopleNearby_distance);
