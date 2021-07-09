@@ -90,7 +90,7 @@
 
                 <include layout="@layout/activity_filter_gender" />
                 <include layout="@layout/activity_filter_age" />
-                <include layout="@layout/activity_filter_distance" />
+                <!--<include layout="@layout/activity_filter_distance" />-->
 
             </LinearLayout>
         </FrameLayout>

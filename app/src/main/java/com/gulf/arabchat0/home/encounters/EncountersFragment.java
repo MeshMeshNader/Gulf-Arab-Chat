@@ -533,8 +533,8 @@ public class EncountersFragment extends Fragment implements CardStackListener {
         ImageView doneBtn = sheetDialog.findViewById(R.id.filter_confirm);
         RangeSeekBar rangeSeekBar = sheetDialog.findViewById(R.id.rangeBar);
 
-        TextView distanceRange = sheetDialog.findViewById(R.id.rangeBarDistanceLabel);
-        RangeSeekBar rangeSeekBarDistance = sheetDialog.findViewById(R.id.rangeBar_distance);
+//        TextView distanceRange = sheetDialog.findViewById(R.id.rangeBarDistanceLabel);
+//        RangeSeekBar rangeSeekBarDistance = sheetDialog.findViewById(R.id.rangeBar_distance);
 
         RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
         RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
@@ -555,14 +555,14 @@ public class EncountersFragment extends Fragment implements CardStackListener {
             rangeSeekBar.setTickMarkGravity(RangeSeekBar.TRICK_MARK_GRAVITY_CENTER);
         }
 
-        if (rangeSeekBarDistance != null) {
-            rangeSeekBarDistance.setSeekBarMode(RangeSeekBar.SEEKBAR_MODE_SINGLE);
-            rangeSeekBarDistance.setRange(Config.MinDistanceBetweenUsers, Config.MaxDistanceBetweenUsers);
-            rangeSeekBarDistance.setValue(user.getPrefDistance());
-
-            rangeSeekBarDistance.setTickMarkMode(RangeSeekBar.TRICK_MARK_MODE_NUMBER);
-            rangeSeekBarDistance.setTickMarkGravity(RangeSeekBar.TRICK_MARK_GRAVITY_CENTER);
-        }
+//        if (rangeSeekBarDistance != null) {
+//            rangeSeekBarDistance.setSeekBarMode(RangeSeekBar.SEEKBAR_MODE_SINGLE);
+//            rangeSeekBarDistance.setRange(Config.MinDistanceBetweenUsers, Config.MaxDistanceBetweenUsers);
+//            rangeSeekBarDistance.setValue(user.getPrefDistance());
+//
+//            rangeSeekBarDistance.setTickMarkMode(RangeSeekBar.TRICK_MARK_MODE_NUMBER);
+//            rangeSeekBarDistance.setTickMarkGravity(RangeSeekBar.TRICK_MARK_GRAVITY_CENTER);
+//        }
 
 
         if (ageRange != null) {
@@ -570,9 +570,9 @@ public class EncountersFragment extends Fragment implements CardStackListener {
         }
 
 
-        if (distanceRange != null) {
-            distanceRange.setText(String.format(Locale.US, Application.getInstance().getBaseContext().getString(R.string.distance_range_filter), user.getPrefDistance()));
-        }
+//        if (distanceRange != null) {
+//            distanceRange.setText(String.format(Locale.US, Application.getInstance().getBaseContext().getString(R.string.distance_range_filter), user.getPrefDistance()));
+//        }
 
 
         assert genderMale != null;
@@ -642,29 +642,29 @@ public class EncountersFragment extends Fragment implements CardStackListener {
             }
         });
 
-        assert distanceRange != null;
-        assert rangeSeekBarDistance != null;
-
-        rangeSeekBarDistance.setOnRangeChangedListener(new OnRangeChangedListener() {
-            @Override
-            public void onRangeChanged(RangeSeekBar view, float leftValue, float rightValue, boolean isFromUser) {
-
-                distanceRange.setText(String.format(Locale.US, Application.getInstance().getBaseContext().getString(R.string.distance_range_filter), (int) leftValue));
-                user.setPrefDistance((int) leftValue);
-                ///user.setPrefMaxAge((int) rightValue);
-            }
-
-            @Override
-            public void onStartTrackingTouch(RangeSeekBar view, boolean isLeft) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(RangeSeekBar view, boolean isLeft) {
-
-            }
-
-        });
+//        assert distanceRange != null;
+//        assert rangeSeekBarDistance != null;
+//
+//        rangeSeekBarDistance.setOnRangeChangedListener(new OnRangeChangedListener() {
+//            @Override
+//            public void onRangeChanged(RangeSeekBar view, float leftValue, float rightValue, boolean isFromUser) {
+//
+//                distanceRange.setText(String.format(Locale.US, Application.getInstance().getBaseContext().getString(R.string.distance_range_filter), (int) leftValue));
+//                user.setPrefDistance((int) leftValue);
+//                ///user.setPrefMaxAge((int) rightValue);
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(RangeSeekBar view, boolean isLeft) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(RangeSeekBar view, boolean isLeft) {
+//
+//            }
+//
+//        });
 
 
         if (closeBtn != null) {

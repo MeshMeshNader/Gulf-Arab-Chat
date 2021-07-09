@@ -296,7 +296,7 @@ public class LiveFragment extends Fragment {
         UsersNearQuery.whereExists(User.COL_BIRTHDATE); // Only show users with birthday
         UsersNearQuery.whereNotEqualTo(User.PRIVACY_ALMOST_INVISIBLE, true);
         UsersNearQuery.whereNotContainedIn(User.BLOCKED_USERS, userArrayList);
-//      UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), Config.DistanceBetweenUsersLive);
+        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), Config.DistanceBetweenUsersLive);
         UsersNearQuery.whereNotEqualTo(User.USER_BLOCKED_STATUS, true);
 
         if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)) { // Gender

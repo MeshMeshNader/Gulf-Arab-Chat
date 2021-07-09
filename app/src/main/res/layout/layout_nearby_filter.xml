@@ -88,11 +88,11 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
 
-                <include layout="@layout/activity_filter_location" />
+                <!--<include layout="@layout/activity_filter_location" />-->
                 <include layout="@layout/activity_filter_gender" />
                 <include layout="@layout/activity_filter_status" />
                 <include layout="@layout/activity_filter_age" />
-                <include layout="@layout/activity_filter_distance" />
+                <!--<include layout="@layout/activity_filter_distance" />-->
 
             </LinearLayout>
         </FrameLayout>
