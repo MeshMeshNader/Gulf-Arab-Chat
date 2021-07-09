@@ -37,6 +37,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.gms.common.api.ResolvableApiException;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResponse;
+import com.google.android.gms.location.SettingsClient;
+import com.google.android.gms.tasks.Task;
+import com.greysonparrelli.permiso.Permiso;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.adapters.arabchat.UsersNearAdapter;
 import com.gulf.arabchat0.adapters.arabchat.UsersNearSpotLightAdapter;
@@ -55,18 +66,6 @@ import com.gulf.arabchat0.modules.topsheet.TopSheetDialog;
 import com.gulf.arabchat0.utils.ParseRecyclerQueryAdapter;
 import com.gulf.arabchat0.utils.SharedPrefUtil;
 import com.gulf.arabchat0.utils.StaggeredGridLayoutManagerWrapper;
-import com.google.android.gms.common.api.ResolvableApiException;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.LocationSettingsRequest;
-import com.google.android.gms.location.LocationSettingsResponse;
-import com.google.android.gms.location.SettingsClient;
-import com.google.android.gms.tasks.Task;
-import com.greysonparrelli.permiso.Permiso;
-
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
@@ -351,7 +350,7 @@ public class PeopleNearbyFragment extends Fragment {
                 UsersNearQuery.whereNotContainedIn(User.COL_ID, blockedUserId);
             }
 
-            UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
+//          UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
             if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)) { // Gender
                 UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());
@@ -826,7 +825,7 @@ public class PeopleNearbyFragment extends Fragment {
         mFusedLocationClient.removeLocationUpdates(locationCallback);
     }
 
-    private void initializeSpotlight(){
+    private void initializeSpotlight() {
 
         mUsersNearSpotLight.clear();
         mUsersNearSpotLight.add(mCurrentUser);
@@ -841,7 +840,7 @@ public class PeopleNearbyFragment extends Fragment {
         UsersNearQuery.whereExists(User.COL_PHOTOS); // Only show users with at lest one picture
         UsersNearQuery.whereExists(User.COL_BIRTHDATE); // Only show users with birthday
 
-        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
+//        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
         UsersNearQuery.whereNotEqualTo(User.PRIVACY_ALMOST_INVISIBLE, true); // Remove users that are insisible
         UsersNearQuery.whereNotContainedIn(User.BLOCKED_USERS, userArrayList); // Removed all blockers
@@ -849,7 +848,7 @@ public class PeopleNearbyFragment extends Fragment {
         UsersNearQuery.orderByAscending(User.VIP_MORE_VISITS);
         UsersNearQuery.whereNotEqualTo(User.USER_BLOCKED_STATUS, true);
 
-        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0){
+        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0) {
 
             List<String> blockedUserId = new ArrayList<>();
 
@@ -864,7 +863,7 @@ public class PeopleNearbyFragment extends Fragment {
 
         UsersNearQuery.findInBackground((objects, e) -> {
 
-            if (objects != null && objects.size() > 0){
+            if (objects != null && objects.size() > 0) {
 
                 mUsersNearSpotLight.clear();
                 mUsersNearSpotLight.add(mCurrentUser);
@@ -877,13 +876,13 @@ public class PeopleNearbyFragment extends Fragment {
 
 
     @SuppressLint("MissingPermission")
-    private void getLastLocation(){
+    private void getLastLocation() {
 
-        if (!mCurrentUser.isLocationTypeNearby()){
+        if (!mCurrentUser.isLocationTypeNearby()) {
             return;
         }
 
-        if (mFusedLocationClient == null){
+        if (mFusedLocationClient == null) {
             return;
         }
 
@@ -898,7 +897,7 @@ public class PeopleNearbyFragment extends Fragment {
 
                 mCurrentUser.saveInBackground(e -> {
 
-                    if (e == null){
+                    if (e == null) {
 
                         loadUsers(mCurrentUser);
                         setLoading();
@@ -937,7 +936,7 @@ public class PeopleNearbyFragment extends Fragment {
 
         initializeSpotlight();
 
-        if (mCurrentUser.isLocationTypeNearby()){
+        if (mCurrentUser.isLocationTypeNearby()) {
             startLocationUpdates();
         } else {
             stopLocationUpdates();
@@ -950,7 +949,7 @@ public class PeopleNearbyFragment extends Fragment {
         stopLocationUpdates();
     }
 
-    public boolean isInternetAvailable(){
+    public boolean isInternetAvailable() {
         ConnectivityManager cm =
                 (ConnectivityManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = null;

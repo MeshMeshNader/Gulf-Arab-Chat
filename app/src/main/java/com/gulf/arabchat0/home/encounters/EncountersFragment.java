@@ -748,7 +748,7 @@ public class EncountersFragment extends Fragment implements CardStackListener {
                     }
                 }
 
-                UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
+//                UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
                 if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)){ // Gender
                     UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());
@@ -841,7 +841,7 @@ public class EncountersFragment extends Fragment implements CardStackListener {
                     }
                 }
 
-                UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
+//                UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
                 if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)){ // Gender
                     UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());

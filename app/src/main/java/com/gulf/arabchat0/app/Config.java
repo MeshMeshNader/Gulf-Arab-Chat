@@ -103,7 +103,7 @@ public class Config {
 
     // Application setup
     public static final String bio = "Hey! i'm using Gulf Arab Chat!";
-    public static final int WelcomeCredit = 10;
+    public static final int WelcomeCredit = 100;
     public static final int MinimumAgeToRegister = 18;
     public static final int MaximumAgeToRegister = 80;
     public static final int MaxUsersNearToShow = 100;

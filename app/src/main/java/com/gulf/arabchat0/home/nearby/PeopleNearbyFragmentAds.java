@@ -590,7 +590,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
             UsersNearQuery.whereNotContainedIn(User.COL_ID, blockedUserId);
         }
 
-        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
+//        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
         if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)){ // Gender
             UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());
@@ -861,7 +861,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         UsersNearQuery.whereExists(User.COL_FULL_NAME); // Only show users with name
         UsersNearQuery.whereExists(User.COL_BIRTHDATE); // Only show users with birthday
 
-        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
+//        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
         UsersNearQuery.whereNotEqualTo(User.PRIVACY_ALMOST_INVISIBLE, true); // Remove users that are insisible
         UsersNearQuery.whereNotContainedIn(User.BLOCKED_USERS, userArrayList); // Removed all blockers

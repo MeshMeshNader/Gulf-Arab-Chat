@@ -22,6 +22,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.tabs.TabLayout;
+import com.greysonparrelli.permiso.Permiso;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.adapters.arabchat.UsersLiveAdapter;
 import com.gulf.arabchat0.app.Config;
@@ -33,8 +35,6 @@ import com.gulf.arabchat0.models.arabchat.LiveStreamModel;
 import com.gulf.arabchat0.models.arabchat.User;
 import com.gulf.arabchat0.modules.topsheet.TopSheetBehavior;
 import com.gulf.arabchat0.modules.topsheet.TopSheetDialog;
-import com.google.android.material.tabs.TabLayout;
-import com.greysonparrelli.permiso.Permiso;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -93,20 +93,20 @@ public class LiveFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater,ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_live_broadcast, container,false);
+        View v = inflater.inflate(R.layout.fragment_live_broadcast, container, false);
 
         mCurrentUser = (User) ParseUser.getCurrentUser();
 
         tabLayout = v.findViewById(R.id.tab);
 
-        swipeRefreshLayout =v.findViewById(R.id.streamingList_swipeRefresh);
+        swipeRefreshLayout = v.findViewById(R.id.streamingList_swipeRefresh);
         mRecyclerView = v.findViewById(R.id.streamingList_recycler);
 
         mEmptyView = v.findViewById(R.id.empty_view);
-        mEmptyLayout= v.findViewById(R.id.empty_layout);
-        mLoadingLayout= v.findViewById(R.id.loading);
+        mEmptyLayout = v.findViewById(R.id.empty_layout);
+        mLoadingLayout = v.findViewById(R.id.loading);
 
         mErrorImage = v.findViewById(R.id.image);
         mErrorTitle = v.findViewById(R.id.title);
@@ -118,14 +118,14 @@ public class LiveFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setText(R.string.live_title_nearby), 1);
         tabLayout.addTab(tabLayout.newTab().setText(R.string.live_title_following), 2);
 
-        if (getActivity()!= null){
+        if (getActivity() != null) {
 
             Permiso.getInstance().setActivity(getActivity());
         }
 
         if (getActivity() != null) {
 
-            ((HomeActivity)getActivity()).initializeToolBar(R.drawable.ic_navigation_bar_wallet, R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_STREAMING);
+            ((HomeActivity) getActivity()).initializeToolBar(R.drawable.ic_navigation_bar_wallet, R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_STREAMING);
         }
 
         mLiveStreamBtn.setOnClickListener(v1 -> initNewStream());
@@ -133,7 +133,7 @@ public class LiveFragment extends Fragment {
 
         swipeRefreshLayout.setRefreshing(false);
 
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(3 , StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
 
         mRecyclerView.setAdapter(mUsersLiveAdapter);
         mRecyclerView.setItemViewCacheSize(12);
@@ -149,7 +149,7 @@ public class LiveFragment extends Fragment {
         return v;
     }
 
-    private void initNewStream(){
+    private void initNewStream() {
 
         Permiso.getInstance().requestPermissions(new Permiso.IOnPermissionResult() {
             @Override
@@ -173,7 +173,7 @@ public class LiveFragment extends Fragment {
         }, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA);
     }
 
-    private void initiatePopular(boolean isUnique){
+    private void initiatePopular(boolean isUnique) {
 
         if (isUnique) mUsersLive.clear();
 
@@ -193,11 +193,11 @@ public class LiveFragment extends Fragment {
         UsersNearQuery.orderByAscending(User.LIVE_STREAMS_COUNT);
         UsersNearQuery.whereNotEqualTo(User.USER_BLOCKED_STATUS, true);
 
-        if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)){ // Gender
+        if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)) { // Gender
             UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());
         }
 
-        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0){
+        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0) {
 
             List<String> blockedUserId = new ArrayList<>();
 
@@ -217,9 +217,9 @@ public class LiveFragment extends Fragment {
         liveStreamModelParseQuery.include(LiveStreamModel.AUTHOR);
         liveStreamModelParseQuery.findInBackground((usersNear, e) -> {
 
-            if (usersNear != null){
+            if (usersNear != null) {
 
-                if (usersNear.size() > 0){
+                if (usersNear.size() > 0) {
 
                     mUsersLive.clear();
                     mUsersLive.addAll(usersNear);
@@ -243,7 +243,7 @@ public class LiveFragment extends Fragment {
                     mErrorDesc.setText(R.string.you_dont_have_any_popular_explain);
                 }
 
-                if (swipeRefreshLayout.isRefreshing()){
+                if (swipeRefreshLayout.isRefreshing()) {
                     swipeRefreshLayout.setRefreshing(false);
 
                 }
@@ -253,13 +253,13 @@ public class LiveFragment extends Fragment {
 
                 hideLoading(false);
 
-                if (e.getCode() == ParseException.CONNECTION_FAILED){
+                if (e.getCode() == ParseException.CONNECTION_FAILED) {
 
                     mErrorImage.setImageResource(R.drawable.ic_blocker_large_connection_grey1);
                     mErrorTitle.setText(R.string.not_internet_connection);
                     mErrorDesc.setText(R.string.settings_no_inte);
 
-                } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN){
+                } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN) {
 
                     User.logOut();
                     QuickHelp.goToActivityAndFinish(getActivity(), WelcomeActivity.class);
@@ -272,7 +272,7 @@ public class LiveFragment extends Fragment {
 
                 }
 
-                if (swipeRefreshLayout.isRefreshing()){
+                if (swipeRefreshLayout.isRefreshing()) {
                     swipeRefreshLayout.setRefreshing(false);
                 }
             }
@@ -280,7 +280,7 @@ public class LiveFragment extends Fragment {
 
     }
 
-    private void initiateNearby(boolean isUnique){
+    private void initiateNearby(boolean isUnique) {
 
         if (isUnique) mUsersLive.clear();
 
@@ -296,14 +296,14 @@ public class LiveFragment extends Fragment {
         UsersNearQuery.whereExists(User.COL_BIRTHDATE); // Only show users with birthday
         UsersNearQuery.whereNotEqualTo(User.PRIVACY_ALMOST_INVISIBLE, true);
         UsersNearQuery.whereNotContainedIn(User.BLOCKED_USERS, userArrayList);
-        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), Config.DistanceBetweenUsersLive);
+//      UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), Config.DistanceBetweenUsersLive);
         UsersNearQuery.whereNotEqualTo(User.USER_BLOCKED_STATUS, true);
 
-        if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)){ // Gender
+        if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)) { // Gender
             UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());
         }
 
-        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0){
+        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0) {
 
             List<String> blockedUserId = new ArrayList<>();
 
@@ -324,9 +324,9 @@ public class LiveFragment extends Fragment {
         liveStreamModelParseQuery.include(LiveStreamModel.AUTHOR);
         liveStreamModelParseQuery.findInBackground((usersNear, e) -> {
 
-            if (usersNear != null){
+            if (usersNear != null) {
 
-                if (usersNear.size() > 0){
+                if (usersNear.size() > 0) {
 
                     mUsersLive.clear();
                     mUsersLive.addAll(usersNear);
@@ -350,7 +350,7 @@ public class LiveFragment extends Fragment {
                     mErrorDesc.setText(R.string.you_dont_have_any_nearby_explain);
                 }
 
-                if (swipeRefreshLayout.isRefreshing()){
+                if (swipeRefreshLayout.isRefreshing()) {
                     swipeRefreshLayout.setRefreshing(false);
 
                 }
@@ -360,13 +360,13 @@ public class LiveFragment extends Fragment {
 
                 hideLoading(false);
 
-                if (e.getCode() == ParseException.CONNECTION_FAILED){
+                if (e.getCode() == ParseException.CONNECTION_FAILED) {
 
                     mErrorImage.setImageResource(R.drawable.ic_blocker_large_connection_grey1);
                     mErrorTitle.setText(R.string.not_internet_connection);
                     mErrorDesc.setText(R.string.settings_no_inte);
 
-                } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN){
+                } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN) {
 
                     User.logOut();
                     QuickHelp.goToActivityAndFinish(getActivity(), WelcomeActivity.class);
@@ -379,7 +379,7 @@ public class LiveFragment extends Fragment {
 
                 }
 
-                if (swipeRefreshLayout.isRefreshing()){
+                if (swipeRefreshLayout.isRefreshing()) {
                     swipeRefreshLayout.setRefreshing(false);
                 }
             }
@@ -387,7 +387,7 @@ public class LiveFragment extends Fragment {
 
     }
 
-    private void initiateFollowing(boolean isUnique){
+    private void initiateFollowing(boolean isUnique) {
 
         if (isUnique) mUsersLive.clear();
 
@@ -406,9 +406,9 @@ public class LiveFragment extends Fragment {
         liveStreamModelParseQuery.include(LiveStreamModel.AUTHOR);
         liveStreamModelParseQuery.findInBackground((usersNear, e) -> {
 
-            if (usersNear != null){
+            if (usersNear != null) {
 
-                if (usersNear.size() > 0){
+                if (usersNear.size() > 0) {
 
                     mUsersLive.clear();
                     mUsersLive.addAll(usersNear);
@@ -432,7 +432,7 @@ public class LiveFragment extends Fragment {
                     mErrorDesc.setText(R.string.you_dont_have_any_favorites_explain);
                 }
 
-                if (swipeRefreshLayout.isRefreshing()){
+                if (swipeRefreshLayout.isRefreshing()) {
                     swipeRefreshLayout.setRefreshing(false);
 
                 }
@@ -442,13 +442,13 @@ public class LiveFragment extends Fragment {
 
                 hideLoading(false);
 
-                if (e.getCode() == ParseException.CONNECTION_FAILED){
+                if (e.getCode() == ParseException.CONNECTION_FAILED) {
 
                     mErrorImage.setImageResource(R.drawable.ic_blocker_large_connection_grey1);
                     mErrorTitle.setText(R.string.not_internet_connection);
                     mErrorDesc.setText(R.string.settings_no_inte);
 
-                } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN){
+                } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN) {
 
                     User.logOut();
                     QuickHelp.goToActivityAndFinish(getActivity(), WelcomeActivity.class);
@@ -461,7 +461,7 @@ public class LiveFragment extends Fragment {
 
                 }
 
-                if (swipeRefreshLayout.isRefreshing()){
+                if (swipeRefreshLayout.isRefreshing()) {
                     swipeRefreshLayout.setRefreshing(false);
                 }
             }
@@ -470,16 +470,16 @@ public class LiveFragment extends Fragment {
     }
 
 
-    private void setLoading(){
+    private void setLoading() {
 
         mEmptyLayout.setVisibility(View.VISIBLE);
         mEmptyView.setVisibility(View.GONE);
         mLoadingLayout.setVisibility(View.VISIBLE);
     }
 
-    private void hideLoading(boolean isLoaded){
+    private void hideLoading(boolean isLoaded) {
 
-        if (isLoaded){
+        if (isLoaded) {
             mEmptyLayout.setVisibility(View.GONE);
 
         } else {
@@ -488,12 +488,12 @@ public class LiveFragment extends Fragment {
         mLoadingLayout.setVisibility(View.GONE);
     }
 
-    public void getIconLeft(Activity activity){
+    public void getIconLeft(Activity activity) {
 
         QuickHelp.goToActivityWithNoClean(activity, WalletActivity.class);
     }
 
-    public void getIconRight(Activity activity, User user){
+    public void getIconRight(Activity activity, User user) {
 
         sheetDialog = new TopSheetDialog(activity);
         sheetDialog.setContentView(R.layout.layout_live_filter);
@@ -546,15 +546,15 @@ public class LiveFragment extends Fragment {
         if (gender != null) {
             gender.setOnCheckedChangeListener((group, checkedId) -> {
 
-                if (checkedId == R.id.radio_male){
+                if (checkedId == R.id.radio_male) {
 
                     user.setPrefGender(User.GENDER_MALE);
 
-                } else if (checkedId == R.id.radio_female){
+                } else if (checkedId == R.id.radio_female) {
 
                     user.setPrefGender(User.GENDER_FEMALE);
 
-                } else if (checkedId == R.id.radio_both){
+                } else if (checkedId == R.id.radio_both) {
 
                     user.setPrefGender(User.GENDER_BOTH);
 
@@ -566,7 +566,7 @@ public class LiveFragment extends Fragment {
         if (closeBtn != null) {
             closeBtn.setOnClickListener(v -> {
 
-                if (sheetDialog.isShowing()){
+                if (sheetDialog.isShowing()) {
                     sheetDialog.cancel();
                 }
             });
@@ -574,7 +574,7 @@ public class LiveFragment extends Fragment {
 
         if (doneBtn != null) {
             doneBtn.setOnClickListener(v -> {
-                if (sheetDialog.isShowing()){
+                if (sheetDialog.isShowing()) {
                     sheetDialog.cancel();
                 }
 
@@ -595,13 +595,13 @@ public class LiveFragment extends Fragment {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
 
-                if (tab.getPosition() == 0){
+                if (tab.getPosition() == 0) {
                     mTabPosition = 0;
                     initiatePopular(true);
-                } else if (tab.getPosition() == 1){
+                } else if (tab.getPosition() == 1) {
                     mTabPosition = 1;
                     initiateNearby(true);
-                } else if (tab.getPosition() == 2){
+                } else if (tab.getPosition() == 2) {
                     mTabPosition = 3;
                     initiateFollowing(true);
                 }
@@ -636,17 +636,17 @@ public class LiveFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        if (getActivity()!= null){
+        if (getActivity() != null) {
 
             Permiso.getInstance().setActivity(getActivity());
         }
 
 
-        if (mTabPosition == 0){
+        if (mTabPosition == 0) {
             initiatePopular(false);
-        } else if (mTabPosition == 1){
+        } else if (mTabPosition == 1) {
             initiateNearby(false);
-        } else if (mTabPosition == 2){
+        } else if (mTabPosition == 2) {
             initiateFollowing(false);
         }
 
@@ -667,7 +667,7 @@ public class LiveFragment extends Fragment {
         super.onDestroyView();
     }
 
-    private ParseLiveQueryClient getLiveQueryClient(){
+    private ParseLiveQueryClient getLiveQueryClient() {
 
         return liveQueryClient;
     }
@@ -682,11 +682,11 @@ public class LiveFragment extends Fragment {
         liveQueryStreamSubscription = getLiveQueryClient().subscribe(liveStreamModelParseQuery);
         liveQueryStreamSubscription.handleEvent(SubscriptionHandling.Event.CREATE, (query, liveStream) -> {
 
-            if (mTabPosition == 0){
+            if (mTabPosition == 0) {
                 initiatePopular(false);
-            } else if (mTabPosition == 1){
+            } else if (mTabPosition == 1) {
                 initiateNearby(false);
-            } else if (mTabPosition == 2){
+            } else if (mTabPosition == 2) {
                 initiateFollowing(false);
             }
 
@@ -694,11 +694,11 @@ public class LiveFragment extends Fragment {
         }).handleEvent(SubscriptionHandling.Event.UPDATE, (query, liveStream) -> {
 
 
-            if (mTabPosition == 0){
+            if (mTabPosition == 0) {
                 initiatePopular(false);
-            } else if (mTabPosition == 1){
+            } else if (mTabPosition == 1) {
                 initiateNearby(false);
-            } else if (mTabPosition == 2){
+            } else if (mTabPosition == 2) {
                 initiateFollowing(false);
             }
 

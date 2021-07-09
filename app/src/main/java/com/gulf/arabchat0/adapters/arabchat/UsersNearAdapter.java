@@ -2,6 +2,7 @@ package com.gulf.arabchat0.adapters.arabchat;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +59,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         User user = getItem(position);
-
+        Log.d("Users", "onBindViewHolder: " + user.getColFullName());
         QuickHelp.getAvatars(user, viewHolder.userPhoto);
 
         viewHolder.firstName.setText(user.getColFirstName());
@@ -160,6 +161,8 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
         }*/
 
     }
+
+
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
