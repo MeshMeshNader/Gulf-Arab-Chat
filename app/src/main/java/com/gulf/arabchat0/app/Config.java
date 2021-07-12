@@ -107,8 +107,8 @@ public class Config {
     public static final int MinimumAgeToRegister = 18;
     public static final int MaximumAgeToRegister = 80;
     public static final int MaxUsersNearToShow = 100;
-    public static final int DistanceForRealBadge = 5;
-    public static final int DistanceForRealKm = 40;
+    public static final int DistanceForRealBadge = 50;
+    public static final int DistanceForRealKm = 1000;
     public static final int MinDistanceBetweenUsers = 20;
     public static final int MaxDistanceBetweenUsers = 1000;
     public static final double DistanceBetweenUsersLive = 1000;

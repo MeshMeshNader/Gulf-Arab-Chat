@@ -37,7 +37,7 @@ public class BasicInfoActivity extends AppCompatActivity {
     RadioGroup mGenderGroup;
     AppCompatRadioButton mGenderMale, mGenderFemale;
 
-    LinearLayout mBirthdayLayout, mNameLayout;
+    LinearLayout mBirthdayLayout, mNameLayout, mGenderLayout;
 
     Date date;
     Date birthday;
@@ -59,6 +59,7 @@ public class BasicInfoActivity extends AppCompatActivity {
 
         mNameLayout = findViewById(R.id.basic_info);
         mBirthdayLayout = findViewById(R.id.birthday_layout);
+        mGenderLayout = findViewById(R.id.gender_Layout);
 
         mName = findViewById(R.id.textName);
         mBirthday = findViewById(R.id.birthday);
@@ -99,7 +100,7 @@ public class BasicInfoActivity extends AppCompatActivity {
             }
 
             if (!mCurrentUser.getColGender().isEmpty()){
-
+                mGenderLayout.setVisibility(View.GONE);
                 if (mCurrentUser.getColGender().equals(User.GENDER_MALE)){
 
                     mGenderMale.setChecked(true);
@@ -111,6 +112,8 @@ public class BasicInfoActivity extends AppCompatActivity {
                     genderSelected = User.GENDER_FEMALE;
 
                 } else genderSelected = null;
+            }else if (mCurrentUser.getColGender().isEmpty()){
+                mGenderLayout.setVisibility(View.VISIBLE);
             }
         }
 
@@ -286,9 +289,16 @@ public class BasicInfoActivity extends AppCompatActivity {
         onBackPressed();
         return true;
     }
-
     @Override
     public void onBackPressed() {
+
+        if(mCurrentUser.getColGender().equals(User.GENDER_MALE))
+            mCurrentUser.setPrefGender(User.GENDER_FEMALE);
+        else if(mCurrentUser.getColGender().equals(User.GENDER_FEMALE))
+            mCurrentUser.setPrefGender(User.GENDER_MALE);
+
+
+        mCurrentUser.saveEventually();
         finish();
     }
 }

@@ -14,6 +14,7 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gulf.arabchat0.R;
+import com.gulf.arabchat0.app.Application;
 import com.gulf.arabchat0.helpers.QuickHelp;
 import com.gulf.arabchat0.home.encounters.EncountersFragmentAds;
 import com.gulf.arabchat0.models.arabchat.User;
@@ -76,6 +77,8 @@ public class EncountersAdapterAds extends RecyclerView.Adapter<RecyclerView.View
 
 
             holder.userCity.setText(QuickHelp.getOnlyCityFromLocation(user));
+            String userCoins = String.valueOf(user.getCredits()) + " " + Application.getInstance().getApplicationContext().getResources().getString(R.string.credits);
+            holder.userCoins.setText(userCoins);
 
             holder.userPhoto.setOnClickListener(v1 -> {
 
@@ -141,6 +144,7 @@ public class EncountersAdapterAds extends RecyclerView.Adapter<RecyclerView.View
         ImageView userPhoto;
         TextView nameAndAge;
         TextView userCity;
+        TextView userCoins;
 
         ImageView dislikeBtn;
         ImageView likeBtn;
@@ -151,6 +155,7 @@ public class EncountersAdapterAds extends RecyclerView.Adapter<RecyclerView.View
             userPhoto = v.findViewById(R.id.profilePhoto);
             nameAndAge = v.findViewById(R.id.nameAndAge);
             userCity = v.findViewById(R.id.location);
+            userCoins = v.findViewById(R.id.card_view_coins);
             dislikeBtn = v.findViewById(R.id.dislikeBtn);
             likeBtn = v.findViewById(R.id.likeBtn);
         }

@@ -2053,7 +2053,7 @@ public class QuickHelp {
     public static int generateUId(){
 
         Random rnd = new Random();
-        return  1000000000 + rnd.nextInt(999999999);
+        return  10000 + rnd.nextInt(9999);
     }
 
     public static void setupTextWatcher(EditText editText, ImageButton sendButton) {

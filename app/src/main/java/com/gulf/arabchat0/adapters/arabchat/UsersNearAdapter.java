@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gulf.arabchat0.R;
+import com.gulf.arabchat0.app.Application;
 import com.gulf.arabchat0.app.Config;
 import com.gulf.arabchat0.app.Constants;
 import com.gulf.arabchat0.helpers.QuickActions;
@@ -36,7 +37,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
 
     @Override
     public View getNextPageView(View v, ViewGroup parent) {
-        if(v == null){
+        if (v == null) {
             v = ((LayoutInflater) mActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.view_load_more, null);
             v.measure(v.getMeasuredWidth(), v.getMeasuredWidth());
         }
@@ -59,27 +60,26 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         User user = getItem(position);
-        Log.d("Users", "onBindViewHolder: " + user.getColFullName());
         QuickHelp.getAvatars(user, viewHolder.userPhoto);
 
         viewHolder.firstName.setText(user.getColFirstName());
 
-        if (user.getGeoPoint() != null && User.getUser().getGeoPoint() != null){
+        if (user.getGeoPoint() != null && User.getUser().getGeoPoint() != null) {
 
-            if (user.getGeoPoint().distanceInKilometersTo(User.getUser().getGeoPoint()) <= Config.DistanceForRealBadge){
+            if (user.getGeoPoint().distanceInKilometersTo(User.getUser().getGeoPoint()) <= Config.DistanceForRealBadge) {
 
                 viewHolder.userNearBadge.setVisibility(View.VISIBLE);
                 viewHolder.mUserDistance.setVisibility(View.GONE);
 
-            } else  if (user.getGeoPoint().distanceInKilometersTo(User.getUser().getGeoPoint()) <= Config.DistanceForRealKm){
+            } else if (user.getGeoPoint().distanceInKilometersTo(User.getUser().getGeoPoint()) <= Config.DistanceForRealKm) {
 
                 viewHolder.userNearBadge.setVisibility(View.GONE);
 
-                if (!User.getUser().getPrivacyDistanceEnabled()){
+                if (!User.getUser().getPrivacyDistanceEnabled()) {
 
                     viewHolder.mUserDistance.setVisibility(View.GONE);
 
-                } else if (!user.getPrivacyDistanceEnabled()){
+                } else if (!user.getPrivacyDistanceEnabled()) {
 
                     viewHolder.mUserDistance.setVisibility(View.GONE);
 
@@ -103,7 +103,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
 
         viewHolder.userPhoto.setOnClickListener(v1 -> {
 
-            if (user.getObjectId() != null){
+            if (user.getObjectId() != null) {
                 // Go to user profile
 
                 QuickActions.showProfile(mActivity, user, false);
@@ -112,16 +112,17 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
 
         });
 
-        viewHolder.mUserCoins.setText(String.valueOf(user.getCredits()) + " Coins");
+        String userCoins = String.valueOf(user.getCredits()) + " " + Application.getInstance().getApplicationContext().getResources().getString(R.string.credits);
+        viewHolder.mUserCoins.setText(userCoins);
 
-        if (user.getLastOnline() != null){
+        if (user.getLastOnline() != null) {
 
 
-            if (!User.getUser().getPrivacyOnlineStatusEnabled()){
+            if (!User.getUser().getPrivacyOnlineStatusEnabled()) {
 
                 viewHolder.userStatus.setVisibility(View.GONE);
 
-            } else if (!user.getPrivacyOnlineStatusEnabled()){
+            } else if (!user.getPrivacyOnlineStatusEnabled()) {
 
                 viewHolder.userStatus.setVisibility(View.GONE);
 
@@ -129,17 +130,25 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
 
                 if (System.currentTimeMillis() - user.getUpdatedAt().getTime() > Constants.TIME_TO_OFFLINE) {
 
-                    viewHolder.userStatus.setVisibility(View.GONE);
+                    viewHolder.userStatus.setVisibility(View.VISIBLE);
+                    viewHolder.userStatus.setImageResource(R.color.red_500);
+                    viewHolder.mUserStatusText.setText(Application.getInstance().getApplicationContext()
+                    .getResources().getString(R.string.user_status_offline));
 
                 } else if (System.currentTimeMillis() - user.getUpdatedAt().getTime() > Constants.TIME_TO_SOON) {
 
                     viewHolder.userStatus.setVisibility(View.VISIBLE);
                     viewHolder.userStatus.setImageResource(R.color.orange_500);
+                    viewHolder.mUserStatusText.setText(Application.getInstance().getApplicationContext()
+                            .getResources().getString(R.string.user_status_offline));
+
 
                 } else {
 
                     viewHolder.userStatus.setVisibility(View.VISIBLE);
                     viewHolder.userStatus.setImageResource(R.color.green_500);
+                    viewHolder.mUserStatusText.setText(Application.getInstance().getApplicationContext()
+                            .getResources().getString(R.string.user_status_online));
                 }
             }
 
@@ -155,7 +164,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
             ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) viewHolder.userItemLayout.getLayoutParams();
             int height = viewHolder.userItemLayout.getMeasuredHeight();
 
-            if (height <= 150){
+            if (height <= 150) {
                 params.topMargin = 150;
                 viewHolder.userItemLayout.setLayoutParams(params);
             }
@@ -165,13 +174,12 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
     }
 
 
-
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         LinearLayout userItemLayout;
         CircleImageView userPhoto, userStatus;
         ImageView userNearBadge;
-        TextView firstName, mUserDistance , mUserCoins;
+        TextView firstName, mUserDistance, mUserCoins, mUserStatusText;
 
         ViewHolder(View v) {
             super(v);
@@ -180,6 +188,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
             userPhoto = v.findViewById(R.id.peopleNearby_personImage);
             firstName = v.findViewById(R.id.peopleNearby_personName);
             mUserCoins = v.findViewById(R.id.peopleNearby_coins);
+            mUserStatusText = v.findViewById(R.id.peopleNearby_personStatusText);
             userNearBadge = v.findViewById(R.id.peopleNearby_personBadge);
             userStatus = v.findViewById(R.id.peopleNearby_personStatus);
             mUserDistance = v.findViewById(R.id.peopleNearby_distance);

@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/Landing_scroll"
-    android:background="@color/white"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fillViewport="true"
+    android:background="@color/white"
     android:fadeScrollbars="false"
-    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:fillViewport="true">
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
+
         <include
+            layout="@layout/include_hearts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8.0dip"
             android:layout_above="@+id/layout_registration_footer"
             android:layout_below="@+id/registration_app_logo"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            layout="@layout/include_hearts"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8.0dip" />
 
         <ImageView
             android:id="@+id/registration_app_logo"
-            android:background="@color/white"
-            android:paddingTop="@dimen/size_2"
-            android:paddingBottom="@dimen/size_1"
             android:layout_width="wrap_content"
             android:layout_height="400dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@null"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            app:srcCompat="@drawable/logo_action_bar"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:contentDescription="@null"
+            android:paddingTop="@dimen/size_2"
+            android:paddingBottom="@dimen/size_1"
+            app:srcCompat="@drawable/logo_action_bar" />
 
         <LinearLayout
             android:id="@+id/register_gender"
@@ -95,17 +96,17 @@
         </LinearLayout>
 
         <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
             android:id="@+id/layout_registration_footer"
-            android:clipChildren="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true">
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:clipChildren="false"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <FrameLayout
                 android:layout_width="fill_parent"
@@ -139,61 +140,61 @@
 
                 <Button
                     android:id="@+id/button_login_facebook"
+                    style="?buttonStylePrimary"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="visible"
                     android:drawableStart="@drawable/com_parse_ui_facebook_login_logo"
-                    style="?buttonStylePrimary"
-                    android:drawableLeft="@drawable/com_parse_ui_facebook_login_logo" />
+                    android:drawableLeft="@drawable/com_parse_ui_facebook_login_logo"
+                    android:visibility="visible" />
 
                 <TextView
-                    android:textColor="@color/white"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center"
                     android:id="@+id/text_login_facebook"
-                    android:padding="0.0dip"
+                    style="?textStyleActionMedium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/com_facebook_loginview_log_in_button_continue"
-                    android:minWidth="0.0dip"
-                    android:singleLine="true"
+                    android:layout_gravity="center"
                     android:drawablePadding="@dimen/size_1_25"
-                    style="?textStyleActionMedium" />
+                    android:gravity="center_vertical"
+                    android:minWidth="0.0dip"
+                    android:padding="0.0dip"
+                    android:singleLine="true"
+                    android:text="@string/com_facebook_loginview_log_in_button_continue"
+                    android:textColor="@color/white" />
 
                 <ProgressBar
-                    android:layout_gravity="center"
                     android:id="@+id/progress_bar"
-                    android:visibility="visible"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
             </FrameLayout>
 
             <TextView
                 android:id="@+id/landingScreen_otherOptions"
-                android:paddingLeft="@dimen/size_2"
-                android:paddingRight="@dimen/size_2"
+                style="?buttonStyleButtonSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6.0dip"
                 android:maxWidth="360.0dip"
-                android:text="@string/signin_existing_signin"
-                style="?buttonStyleButtonSmall" />
+                android:paddingLeft="@dimen/size_2"
+                android:paddingRight="@dimen/size_2"
+                android:text="@string/signin_existing_signin" />
 
             <TextView
                 android:id="@+id/facebook_alert"
-                android:textSize="12sp"
-                android:textColor="@color/grey_2"
-                android:gravity="center"
-                android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/size_4"
                 android:layout_marginTop="6.0dip"
                 android:layout_marginRight="@dimen/size_4"
                 android:layout_marginBottom="@dimen/size_2"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
                 android:maxWidth="360.0dip"
                 android:text="@string/landing_facebook_disclaimer"
-                android:focusable="true" />
+                android:textColor="@color/grey_2"
+                android:textSize="12sp" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

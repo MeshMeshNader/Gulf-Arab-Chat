@@ -12,11 +12,12 @@
 
     <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="100dp">
 
         <com.gulf.arabchat0.modules.circularimageview.CircleImageView
             android:id="@+id/peopleNearby_personImage"
             android:layout_width="100dp"
+            android:layout_gravity="center_horizontal"
             android:layout_height="100dp"
             android:src="@color/highlight_light_ripple"
             android:layout_marginBottom="@dimen/size_1_75" />
@@ -25,6 +26,7 @@
             android:id="@+id/peopleNearby_personSelector"
             android:background="@drawable/pnb_item_overlay"
             android:layout_width="100dp"
+            android:layout_gravity="center_horizontal"
             android:layout_height="100dp"
             android:layout_marginBottom="@dimen/size_1_75" />
 
@@ -50,16 +52,16 @@
             android:textStyle="normal"
             android:visibility="visible"
             android:fontFamily="sans-serif"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
-            android:layout_gravity="top|left"
+            android:layout_gravity="top|center"
             android:id="@+id/peopleNearby_coins"
             android:background="@drawable/button_bg_rounded_corners"
-            tools:text="1.0 km"
+            tools:text="100000 عملة ذهبية"
             android:paddingRight="5dp"
             android:paddingLeft="5dp"
             android:paddingTop="2dp"
@@ -67,7 +69,7 @@
             android:textStyle="bold"
             android:visibility="visible"
             android:fontFamily="sans-serif"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -82,36 +84,56 @@
 
     </FrameLayout>
 
+    <TextView
+        android:ellipsize="end"
+        android:id="@+id/peopleNearby_personName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100.0dip"
+        android:singleLine="true"
+        tools:text="John Doe"
+        android:drawablePadding="@dimen/size_0_5"
+        android:layout_gravity="center"
+        android:lineSpacingMultiplier="1.0"
+        style="?textStyleP3" />
+
     <LinearLayout
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_gravity="center"
+        android:layoutDirection="ltr"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:ellipsize="end"
-            android:id="@+id/peopleNearby_personName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxWidth="100.0dip"
-            android:singleLine="true"
-            tools:text="John Doe"
-            android:drawablePadding="@dimen/size_0_5"
-            android:layout_gravity="center"
-            android:lineSpacingMultiplier="1.0"
-            style="?textStyleP3" />
-
         <com.gulf.arabchat0.modules.circularimageview.CircleImageView
             android:id="@+id/peopleNearby_personStatus"
-            android:layout_width="6dp"
+            android:layout_width="8dp"
             android:layout_height="match_parent"
             android:layout_marginTop="2dp"
             android:src="@color/red_500"
             android:gravity="center"
             android:layout_gravity="center"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp" />
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp" />
+
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/peopleNearby_personStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100.0dip"
+            android:singleLine="true"
+            tools:text="Online"
+            android:drawablePadding="@dimen/size_0_5"
+            android:layout_gravity="center"
+            android:lineSpacingMultiplier="1.0"
+            style="?textStyleP3" />
+
+
+
+
+
 
     </LinearLayout>
 

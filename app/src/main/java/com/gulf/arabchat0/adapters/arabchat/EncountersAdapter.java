@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gulf.arabchat0.R;
+import com.gulf.arabchat0.app.Application;
 import com.gulf.arabchat0.helpers.QuickHelp;
 import com.gulf.arabchat0.home.encounters.EncountersFragment;
 import com.gulf.arabchat0.models.arabchat.User;
@@ -45,7 +46,7 @@ public class EncountersAdapter extends RecyclerView.Adapter<EncountersAdapter.Vi
 
         QuickHelp.getEncountersAvatars(user, viewHolder.userPhoto);
 
-        if (user.getBirthDate() != null){
+        if (user.getBirthDate() != null) {
             viewHolder.nameAndAge.setText(String.format("%s, %s", user.getColFullName(), QuickHelp.getAgeFromDate(user.getBirthDate())));
         } else {
             viewHolder.nameAndAge.setText(user.getColFullName());
@@ -53,10 +54,12 @@ public class EncountersAdapter extends RecyclerView.Adapter<EncountersAdapter.Vi
 
 
         viewHolder.userCity.setText(QuickHelp.getOnlyCityFromLocation(user));
+        String userCoins = String.valueOf(user.getCredits()) + " " + Application.getInstance().getApplicationContext().getResources().getString(R.string.credits);
+        viewHolder.userCoins.setText(userCoins);
 
         viewHolder.userPhoto.setOnClickListener(v1 -> {
 
-            if (user.getProfilePhotos().size() > 0){
+            if (user.getProfilePhotos().size() > 0) {
 
                 QuickHelp.goToActivityPhotoViewer(mEncountersFragment.getActivity(), user, user.getAvatarPhotoPosition());
             }
@@ -80,6 +83,7 @@ public class EncountersAdapter extends RecyclerView.Adapter<EncountersAdapter.Vi
         ImageView userPhoto;
         TextView nameAndAge;
         TextView userCity;
+        TextView userCoins;
 
         ImageView dislikeBtn;
         ImageView crush;
@@ -91,6 +95,7 @@ public class EncountersAdapter extends RecyclerView.Adapter<EncountersAdapter.Vi
             userPhoto = v.findViewById(R.id.profilePhoto);
             nameAndAge = v.findViewById(R.id.nameAndAge);
             userCity = v.findViewById(R.id.location);
+            userCoins = v.findViewById(R.id.card_view_coins);
             dislikeBtn = v.findViewById(R.id.dislikeBtn);
             crush = v.findViewById(R.id.crushBtn);
             likeBtn = v.findViewById(R.id.likeBtn);

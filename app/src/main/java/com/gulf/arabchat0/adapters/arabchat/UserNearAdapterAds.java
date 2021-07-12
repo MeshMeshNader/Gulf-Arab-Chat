@@ -16,16 +16,17 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.google.android.gms.ads.formats.NativeAd;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 import com.gulf.arabchat0.R;
+import com.gulf.arabchat0.app.Application;
 import com.gulf.arabchat0.app.Config;
 import com.gulf.arabchat0.app.Constants;
 import com.gulf.arabchat0.helpers.QuickActions;
 import com.gulf.arabchat0.helpers.QuickHelp;
 import com.gulf.arabchat0.models.arabchat.User;
 import com.gulf.arabchat0.modules.circularimageview.CircleImageView;
-import com.google.android.gms.ads.formats.NativeAd;
-import com.google.android.gms.ads.formats.UnifiedNativeAd;
-import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 
 import java.util.List;
 import java.util.Locale;
@@ -135,6 +136,9 @@ public class UserNearAdapterAds extends RecyclerView.Adapter<RecyclerView.ViewHo
 
             });
 
+            String userCoins = String.valueOf(user.getCredits()) + " " + Application.getInstance().getApplicationContext().getResources().getString(R.string.credits);
+            holder.mUserCoins.setText(userCoins);
+
             if (user.getLastOnline() != null) {
 
 
@@ -150,17 +154,24 @@ public class UserNearAdapterAds extends RecyclerView.Adapter<RecyclerView.ViewHo
 
                     if (System.currentTimeMillis() - user.getUpdatedAt().getTime() > Constants.TIME_TO_OFFLINE) {
 
-                        holder.userStatus.setVisibility(View.GONE);
+                        holder.userStatus.setVisibility(View.VISIBLE);
+                        holder.userStatus.setImageResource(R.color.red_500);
+                        holder.mUserStatusText.setText(Application.getInstance().getApplicationContext()
+                                .getResources().getString(R.string.user_status_offline));
 
                     } else if (System.currentTimeMillis() - user.getUpdatedAt().getTime() > Constants.TIME_TO_SOON) {
 
                         holder.userStatus.setVisibility(View.VISIBLE);
                         holder.userStatus.setImageResource(R.color.orange_500);
+                        holder.mUserStatusText.setText(Application.getInstance().getApplicationContext()
+                                .getResources().getString(R.string.user_status_offline));
 
                     } else {
 
                         holder.userStatus.setVisibility(View.VISIBLE);
                         holder.userStatus.setImageResource(R.color.green_500);
+                        holder.mUserStatusText.setText(Application.getInstance().getApplicationContext()
+                                .getResources().getString(R.string.user_status_online));
                     }
                 }
 
@@ -185,7 +196,7 @@ public class UserNearAdapterAds extends RecyclerView.Adapter<RecyclerView.ViewHo
     public long getItemId(int position) {
         Object recyclerViewItem = mObjctsList.get(position);
 
-        if (recyclerViewItem instanceof UnifiedNativeAd){
+        if (recyclerViewItem instanceof UnifiedNativeAd) {
             UnifiedNativeAd nativeAd = (UnifiedNativeAd) mObjctsList.get(position);
             return nativeAd.hashCode();
         } else {
@@ -233,7 +244,8 @@ public class UserNearAdapterAds extends RecyclerView.Adapter<RecyclerView.ViewHo
         CircleImageView userStatus;
         CircleImageView userPhoto;
         ImageView userNearBadge;
-        TextView firstName, mUserDistance;
+        TextView firstName, mUserDistance, mUserCoins, mUserStatusText;
+        ;
 
         ViewHolder(View v) {
             super(v);
@@ -242,6 +254,8 @@ public class UserNearAdapterAds extends RecyclerView.Adapter<RecyclerView.ViewHo
             userPhoto = v.findViewById(R.id.peopleNearby_personImage);
             firstName = v.findViewById(R.id.peopleNearby_personName);
             userNearBadge = v.findViewById(R.id.peopleNearby_personBadge);
+            mUserCoins = v.findViewById(R.id.peopleNearby_coins);
+            mUserStatusText = v.findViewById(R.id.peopleNearby_personStatusText);
             userStatus = v.findViewById(R.id.peopleNearby_personStatus);
             mUserDistance = v.findViewById(R.id.peopleNearby_distance);
         }

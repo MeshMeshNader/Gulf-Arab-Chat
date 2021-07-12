@@ -278,6 +278,11 @@ public class SignupFragment extends ParseLoginFragmentBase {
                 user.setBio(Config.bio);
                 user.setPasswordEnabled(true);
 
+                if(user.getColGender().equals(User.GENDER_MALE))
+                    user.setPrefGender(User.GENDER_FEMALE);
+                else if(user.getColGender().equals(User.GENDER_FEMALE))
+                    user.setPrefGender(User.GENDER_MALE);
+
                 loadingStart();
                 user.signUpInBackground(e -> {
                     if (isActivityDestroyed()) {

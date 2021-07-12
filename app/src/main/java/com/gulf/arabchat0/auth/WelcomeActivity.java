@@ -363,11 +363,14 @@ public class WelcomeActivity extends BaseActivity {
 
             if (parseUser != null) {
 
-                parseUser.setUsername(account.getFamilyName().trim().toLowerCase(Locale.US) + account.getGivenName().trim().toLowerCase(Locale.US));
+
 
                 parseUser.setColFullName(account.getDisplayName());
                 parseUser.setGoogleId(account.getId());
                 parseUser.setColFirstName(account.getGivenName());
+                String username = (account.getDisplayName()+account.getGivenName()).toLowerCase().trim().replaceAll(" ", "");
+                parseUser.setUsername(username);
+
                 parseUser.setEmail(account.getEmail());
 
                 bitmap = QuickHelp.getBitmapFromURLOrPath(account.getPhotoUrl().toString());
@@ -381,10 +384,10 @@ public class WelcomeActivity extends BaseActivity {
                 parseUser.addCredit(Config.WelcomeCredit);
                 parseUser.setBio(Config.bio);
                 parseUser.setPasswordEnabled(false);
-                parseUser.saveInBackground(e -> {
+                parseUser.saveEventually(e -> {
                     if (e != null) {
 
-                        Log.d("GOOGLE_LOGIN","Failed to save Google data to Server");
+                        Log.d("GOOGLE_LOGIN","Failed to save Google data to Server" +e.getMessage());
                     }
 
                     Log.d("GOOGLE_LOGIN","Saved Google to Server");

@@ -140,7 +140,7 @@
     <string name="or">أو</string>
     <string name="landing_useOther">خيارات أخرى</string>
 
-    <string name="registration_date_with_both">على حد سواء</string>
+    <string name="registration_date_with_both">الجميع</string>
     <string name="registration_date_with_header">أنت هنا حتى الآن مع …</string>
     <string name="registration_email_preferences_body">هل تتلقى رسائل بريد إلكتروني من حين لآخر مع عروض خاصة وأرصدة مجانية والمزيد؟</string>
     <string name="registration_email_preferences_header">تفضيلات البريد الإلكتروني</string>
@@ -201,11 +201,11 @@
     <string name="location">موقعك</string>
     <string name="people_nearby">الناس في مكان قريب</string>
     <string name="filters_showme">أرني</string>
-    <string name="pnb_filters_both">على حد سواء</string>
+    <string name="pnb_filters_both">الجميع</string>
     <string name="pnb_filters_girl">الفتيات</string>
     <string name="pnb_filters_guy">الأولاد</string>
     <string name="cmd_filter_new">جديد</string>
-    <string name="cmd_filter_online">عبر الانترنت</string>
+    <string name="cmd_filter_online">متصل</string>
     <string name="cmd_filter_all">الكل</string>
     <string name="nearby_filter">مصنف بواسطة</string>
     <string name="people_filter_age">عمر</string>
@@ -306,8 +306,8 @@
     <string name="purchase_canceled">تم إلغاء دفعتك ، نأمل أن تقرر إعادة المحاولة.</string>
     <string name="you_are_premium">تم تفعيل Gulf Arab Chat VIP!</string>
     <string name="tap_to_see">انقر لرؤية ملف التعريف الخاص بك</string>
-    <string name="credits">عملات ذهبية</string>
-    <string name="credits_">عملات ذهبية</string>
+    <string name="credits">عملة ذهبية</string>
+    <string name="credits_">عملة ذهبية</string>
     <string name="photos_needed">الصور الشخصية</string>
     <string name="verified">أنت - تم التحقق</string>
     <string name="verify_account">تبرز - احصل على التحقق</string>
@@ -502,7 +502,7 @@
     <string name="connection_favorites">المفضلة</string>
     <string name="connection_visits">الزيارات</string>
     <string name="connection_likes">الإعجابات</string>
-    <string name="connection_online">عبر الانترنت</string>
+    <string name="connection_online">متصل</string>
     <string name="connection_chats">الدردشات</string>
     <string name="connection_all_connections">جميع الاتصالات</string>
     <string name="visited_you">قمت بزيارتك</string>
@@ -541,9 +541,9 @@
     <string name="popularity_lowest">الأدنى</string>
     <string name="popularity_highest">أعلى</string>
     <string name="popularity_hight">عالي</string>
-    <string name="user_status_offline">غير متصل على الانترنت</string>
+    <string name="user_status_offline">غير متصل</string>
     <string name="user_status_private">نشر</string>
-    <string name="user_status_online">عبر الانترنت</string>
+    <string name="user_status_online">متصل</string>
     <string name="user_status_online_ago">%s متصل</string>
 
     <string name="video_call_duration_minutes">٪ 1 $ s دقيقة.</string>
@@ -566,7 +566,7 @@
     <string name="video_chat_busy">مشغول</string>
     <string name="video_chat_busy_in_call">في مكالمة أخرى</string>
     <string name="video_chat_call_ended">انتهى</string>
-    <string name="video_chat_offline">غير متصل على الانترنت</string>
+    <string name="video_chat_offline">غير متصل</string>
     <string name="video_chat_callingg">جارٍ الاتصال …</string>
     <string name="video_chat_ringing">رنين…</string>
     <string name="video_chat_contacting">جارٍ الاتصال …</string>

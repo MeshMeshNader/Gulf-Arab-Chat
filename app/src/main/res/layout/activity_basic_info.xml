@@ -96,10 +96,11 @@
             android:background="@color/divider_color" />
 
         <LinearLayout
-            android:id="@+id/account_preference"
+            android:id="@+id/gender_Layout"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:gravity="center_vertical"
+            android:visibility="visible"
             android:background="?attr/selectableItemBackground"
             android:layout_height="60dp">
 
