@@ -762,4 +762,6 @@
     <string name="crush_free_ads">Get It For Free</string>
     <string name="crush_stangout">Stand out to the people you really like</string>
     <string name="dont_just_swipe_right">Don\'t just swipe right</string>
+    <string name="my_information">My Information</string>
+    <string name="user_info_ID">"ID: "</string>
 </resources>

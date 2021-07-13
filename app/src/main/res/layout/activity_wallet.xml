@@ -70,7 +70,7 @@
         android:layout_alignParentBottom="true">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/streamingList_goLiveButton"
+            android:id="@+id/exchange_tokensButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"

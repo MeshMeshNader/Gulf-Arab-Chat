@@ -562,7 +562,6 @@
     <string name="user_status_private">Private</string>
     <string name="user_status_online">Online</string>
     <string name="user_status_online_ago">Online %s</string>
-
     <string name="video_call_duration_minutes">%1$s min.</string>
     <string name="video_chat_call_end">End</string>
     <string name="video_chat_callee_busy">%1$s is busy</string>
@@ -635,7 +634,7 @@
     <string name="live_stream_has_ended">Your live stream has ended</string>
     <string name="live_stream_share_with_your_friends">Share With Friends</string>
     <string name="live_stream_share_sucess">Share your success with your friends</string>
-    <string name="tokens_">tokens</string>
+    <string name="tokens_">Tokens</string>
     <string name="live_followers_">followers</string>
     <string name="live_views_">viewers</string>
     <string name="live_duration_">length</string>
@@ -762,5 +761,7 @@
     <string name="crush_free_ads">Get It For Free</string>
     <string name="invalid_session_token" translatable="false">Invalid session, login again!</string>
     <string name="account_lang">Language</string>
+    <string name="my_information">My Information</string>
+    <string name="user_info_ID">"ID: "</string>
 
 </resources>

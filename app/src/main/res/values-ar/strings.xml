@@ -310,7 +310,7 @@
     <string name="credits_">عملة ذهبية</string>
     <string name="photos_needed">الصور الشخصية</string>
     <string name="verified">أنت - تم التحقق</string>
-    <string name="verify_account">تبرز - احصل على التحقق</string>
+    <string name="verify_account">أكد حسابك - احصل على التحقق</string>
     <string name="no_subs_found">لم يتم العثور على منتج!</string>
     <string name="no_subs_found_explain">تحتاج إلى إضافة عمليات شراء داخل التطبيق في حساب مطور برامج Google ، وتحقق من المستندات</string>
     <string name="Settings">الإعدادات</string>
@@ -599,10 +599,10 @@
     <string name="live_followers">متابعون</string>
     <string name="live_views">جميع المشاهدين</string>
     <string name="live_streamings">يعيش تيارات</string>
-    <string name="live_tokens">رموزك المميزة</string>
+    <string name="live_tokens">الجواهر</string>
     <string name="livestream_stream_countdown_title">إستعد!</string>
     <string name="live_i_understand">فهمتك</string>
-    <string name="live_livestream_earn_tokens">البث المباشر ، كسب الرموز</string>
+    <string name="live_livestream_earn_tokens">البث المباشر ، كسب الجواهر</string>
     <string name="live_rules">مهما كانت موهبتك ، اعرضها لكسب المكافآت ، ولكن يرجى تجنب:</string>
     <string name="live_terms_and_conditions">يعني النقر على \"حسنًا \" أنك توافق على البنود والشروط المباشرة الخاصة بنا</string>
     <string name="live_rules_nudity_or_pornography">العُري أو المواد الإباحية</string>
@@ -618,7 +618,7 @@
     <string name="live_stream_has_ended">انتهى البث المباشر الخاص بك</string>
     <string name="live_stream_share_with_your_friends">شارك مع الاصدقاء</string>
     <string name="live_stream_share_sucess">شارك نجاحك مع أصدقائك</string>
-    <string name="tokens_">الرموز</string>
+    <string name="tokens_">الجواهر</string>
     <string name="live_followers_">متابعون</string>
     <string name="live_views_">المشاهدين</string>
     <string name="live_duration_">الطول</string>
@@ -733,7 +733,7 @@
     <string name="wallet_amount">كمية الجواهر</string>
     <string name="paypal_email">"بريد الباي بال "</string>
     <string name="amount_final_exchange">تبديل %d جوهرة الي %d عملة ذهبية ؟</string>
-    <string name="amount_final_withdraw">سحب %d جوهرة الي %d دولار  الي %d ؟</string>
+    <string name="amount_final_withdraw">سحب %d جوهرة الي %d دولار  الي %s ؟</string>
     <string name="wallet_amount_error">وضع كمية للتبديل!</string>
     <string name="wallet_excha_min">اقل كمية %d ؟</string>
     <string name="tokens_exchanged">تم تحويل الجواهر الي عملات ذهبية</string>
@@ -761,5 +761,7 @@
     <string name="crush_stangout">تعرف علي من تحب</string>
     <string name="crush_free_ads">احصل عليه مجانا</string>
     <string name="crush_or" translatable="false">"أو "</string>
+    <string name="my_information">معلوماتي</string>
+    <string name="user_info_ID">الرقم التعريفي: </string>
 
 </resources>

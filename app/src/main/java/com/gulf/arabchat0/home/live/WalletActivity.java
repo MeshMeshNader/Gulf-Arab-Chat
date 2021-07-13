@@ -36,7 +36,7 @@ public class WalletActivity extends AppCompatActivity {
     Toolbar toolbar;
 
     TextView mTokens, mFollowers, mViewers, mLiveStreaming;
-    AppCompatButton mStartLive;
+    AppCompatButton mExchangeTokens;
 
     User mCurrentUser;
 
@@ -61,7 +61,7 @@ public class WalletActivity extends AppCompatActivity {
         mViewers = findViewById(R.id.stats_viewers);
         mLiveStreaming = findViewById(R.id.stats_streams);
 
-        mStartLive = findViewById(R.id.streamingList_goLiveButton);
+        mExchangeTokens = findViewById(R.id.exchange_tokensButton);
 
         mCurrentUser = (User) ParseUser.getCurrentUser();
 
@@ -86,7 +86,7 @@ public class WalletActivity extends AppCompatActivity {
 
         mLiveStreaming.setOnClickListener(v -> QuickHelp.goToActivityWithNoClean(this, LiveActivity.class));
 
-        mStartLive.setOnClickListener(v -> OpenExchange());
+        mExchangeTokens.setOnClickListener(v -> OpenExchange());
 
         init();
 
