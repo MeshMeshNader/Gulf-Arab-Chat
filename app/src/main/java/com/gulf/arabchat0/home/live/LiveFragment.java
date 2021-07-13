@@ -113,6 +113,8 @@ public class LiveFragment extends Fragment {
         mErrorDesc = v.findViewById(R.id.brief);
 
         AppCompatButton mLiveStreamBtn = v.findViewById(R.id.streamingList_goLiveButton);
+        if(mCurrentUser.getColGender().equals(User.GENDER_MALE))
+            mLiveStreamBtn.setVisibility(View.GONE);
 
         tabLayout.addTab(tabLayout.newTab().setText(R.string.live_title_popular), 0, true);
         tabLayout.addTab(tabLayout.newTab().setText(R.string.live_title_nearby), 1);

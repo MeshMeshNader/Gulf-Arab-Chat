@@ -15,9 +15,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.greysonparrelli.permiso.Permiso;
 import com.gulf.arabchat0.R;
+import com.gulf.arabchat0.adapters.arabchat.OwnProfilePhotosAdapter;
 import com.gulf.arabchat0.app.Application;
 import com.gulf.arabchat0.helpers.QuickActions;
 import com.gulf.arabchat0.helpers.QuickHelp;
@@ -26,10 +29,13 @@ import com.gulf.arabchat0.home.live.WalletActivity;
 import com.gulf.arabchat0.home.payments.PaymentsActivity;
 import com.gulf.arabchat0.home.popularity.PopularityActivity;
 import com.gulf.arabchat0.home.settings.SettingsActivity;
+import com.gulf.arabchat0.home.settings.accountPreferences.AccountPreferencesActivity;
 import com.gulf.arabchat0.home.uploads.UploadsActivity;
 import com.gulf.arabchat0.models.arabchat.User;
 import com.gulf.arabchat0.modules.circularimageview.CircleImageView;
+import com.parse.ParseFile;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 
@@ -39,6 +45,11 @@ public class MyProfileFragment extends Fragment {
 
     private CircleImageView circleImageView;
     private TextView mNameAndAge, mTapToSee;
+
+    ArrayList<ParseFile> parseFiles;
+    OwnProfilePhotosAdapter ownProfilePhotosAdapter;
+
+    RecyclerView mRecyclerView;
 
     private ImageView mPopularityImage;
     private TextView mPopularityText;
@@ -130,7 +141,34 @@ public class MyProfileFragment extends Fragment {
 
         mCredits.setText(String.valueOf(mCurrentUser.getCredits()));
         mTokens.setText(String.valueOf(mCurrentUser.getTokens()));
-        mUserID.setText(getResources().getString(R.string.user_info_ID )+ mCurrentUser.getUid());
+        String userID = getResources().getString(R.string.user_info_ID )+ mCurrentUser.getUid();
+        mUserID.setText(userID);
+
+
+        mRecyclerView = v.findViewById(R.id.myProfile_photos);
+
+        //Profile Images
+
+        parseFiles = new ArrayList<>();
+        ownProfilePhotosAdapter = new OwnProfilePhotosAdapter(getActivity(), parseFiles, mCurrentUser);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        layoutManager.setReverseLayout(false);
+
+
+
+        mRecyclerView.setAdapter(ownProfilePhotosAdapter);
+        mRecyclerView.setItemViewCacheSize(12);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setNestedScrollingEnabled(true);
+        mRecyclerView.setBackgroundResource(R.color.white);
+        mRecyclerView.setBackgroundColor(Color.WHITE);
+        mRecyclerView.setLayoutManager(layoutManager);
+
+
+
+
 
         mPopularityImage.setImageResource(QuickHelp.getPopularityLevelIndicator(mCurrentUser));
         mPopularityText.setText(QuickHelp.getPopularityLevel(mCurrentUser));
@@ -169,7 +207,7 @@ public class MyProfileFragment extends Fragment {
 
 
         if (mCurrentUser.isVerified()) {
-            myProfileBannerCardContainer.setVisibility(View.GONE);
+            myProfileBannerCardContainer.setVisibility(View.INVISIBLE);
             mProfileBannerImage.setImageResource(R.drawable.ic_badge_feature_verification_verified);
             mProfileBannerView.setBackground(Application.getInstance().getResources().getDrawable(R.drawable.notification_background_rounded_with_border_verified));
             mProfileBannerText.setText(getString(R.string.verified));
@@ -236,7 +274,7 @@ public class MyProfileFragment extends Fragment {
 
     public void getIconRight(Activity activity) {
 
-        QuickHelp.goToActivityWithNoClean(activity, EditProfileActivity.class);
+        QuickHelp.goToActivityWithNoClean(activity, AccountPreferencesActivity.class);
     }
 
     @Override
@@ -276,6 +314,14 @@ public class MyProfileFragment extends Fragment {
 
                 mNameAndAge.setText(String.format(" %s, %s", mCurrentUser.getColFullName(), QuickHelp.getAgeFromDate(mCurrentUser.getBirthDate())));
             } else mNameAndAge.setText(mCurrentUser.getColFullName());
+
+
+
+            parseFiles.clear();
+            parseFiles.addAll(mCurrentUser.getProfilePhotos());
+            ownProfilePhotosAdapter.notifyDataSetChanged();
+
+            mRecyclerView.scrollToPosition(mCurrentUser.getAvatarPhotoPosition());
         }
     }
 }

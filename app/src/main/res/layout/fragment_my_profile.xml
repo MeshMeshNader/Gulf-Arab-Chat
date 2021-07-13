@@ -662,7 +662,8 @@
         android:background="@drawable/profile_banner"
         app:layout_constraintBottom_toTopOf="@+id/myProfileElementsTop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myProfileNameAndAge">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/myProfileBannerCard"
@@ -794,11 +795,19 @@
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/red_500"
         app:layout_constraintBottom_toTopOf="@+id/ownProfileElementVerticalDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myProfileElementsTop">
+        app:layout_constraintTop_toBottomOf="@+id/myProfileSubtitle">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myProfile_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
 
     </FrameLayout>
 
