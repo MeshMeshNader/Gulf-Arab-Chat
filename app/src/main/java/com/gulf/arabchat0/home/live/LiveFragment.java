@@ -113,7 +113,7 @@ public class LiveFragment extends Fragment {
         mErrorDesc = v.findViewById(R.id.brief);
 
         AppCompatButton mLiveStreamBtn = v.findViewById(R.id.streamingList_goLiveButton);
-        if(mCurrentUser.getColGender().equals(User.GENDER_MALE))
+        if (mCurrentUser.getColGender().equals(User.GENDER_MALE))
             mLiveStreamBtn.setVisibility(View.GONE);
 
         tabLayout.addTab(tabLayout.newTab().setText(R.string.live_title_popular), 0, true);
@@ -127,7 +127,11 @@ public class LiveFragment extends Fragment {
 
         if (getActivity() != null) {
 
-            ((HomeActivity) getActivity()).initializeToolBar(R.drawable.ic_navigation_bar_wallet, R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_STREAMING);
+            if (mCurrentUser.getColGender().equals(User.GENDER_FEMALE))
+                ((HomeActivity) getActivity()).initializeToolBar(R.drawable.ic_navigation_bar_wallet, R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_STREAMING);
+            else
+                ((HomeActivity) getActivity()).initializeToolBar(0, R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_STREAMING);
+
         }
 
         mLiveStreamBtn.setOnClickListener(v1 -> initNewStream());

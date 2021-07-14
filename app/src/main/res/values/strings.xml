@@ -762,6 +762,6 @@
     <string name="invalid_session_token" translatable="false">Invalid session, login again!</string>
     <string name="account_lang">Language</string>
     <string name="my_information">My Information</string>
-    <string name="user_info_ID">"ID: "</string>
+    <string name="user_info_ID">"ID: \n"</string>
 
 </resources>

@@ -370,6 +370,7 @@ public class HomeActivity extends AppCompatActivity implements Connectable, Disc
 
             } else if (view.equals(VIEW_TYPE_STREAMING)){
 
+
                 new LiveFragment().getIconLeft(this);
             }
 
