@@ -8,6 +8,37 @@
     android:layout_height="match_parent">
 
 
+
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/connections_tabsLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/white"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/_connection_tab"-->
+<!--            style="@style/LiveTabLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:filterTouchesWhenObscured="true"-->
+<!--            app:tabGravity="center"-->
+<!--            app:tabMaxWidth="0dp"-->
+<!--            app:tabMode="fixed" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/divider"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.5dp"-->
+<!--            android:background="@color/gray_12"/>-->
+<!--    </LinearLayout>-->
+
+
     <com.gulf.arabchat0.modules.expansionpanel.ExpansionHeader
         android:id="@+id/expansionHeader"
         android:layout_height="wrap_content"

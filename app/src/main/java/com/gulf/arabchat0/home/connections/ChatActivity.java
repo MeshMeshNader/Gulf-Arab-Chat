@@ -512,7 +512,7 @@ public class ChatActivity extends AppCompatActivity {
             if (message.getSenderAuthorId().equals(mCurrentUser.getObjectId())){
 
                 // You can do things like send push, etc...
-                //Log.v("Parse", "I sent the message");
+                Log.v("Parse", "I sent the message");
                 SendNotifications.SendPush(message.getSenderAuthor(), message.getReceiverAuthor(), SendNotifications.PUSH_TYPE_MESSAGES, message.getMessage());
 
                 mChatAdapter.updateMessage(message);
@@ -554,7 +554,6 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
-    @SuppressLint("StringFormatInvalid")
     public void setUserStatus(User user){
 
         runOnUiThread(() -> {
@@ -588,7 +587,6 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
-    @SuppressLint("StringFormatInvalid")
     public void loadMessages(Boolean onUpdate){
 
         if (mCurrentUser == null) return;
@@ -1216,5 +1214,4 @@ public class ChatActivity extends AppCompatActivity {
         //unsubscribeToLiveQuery();
         Log.d("Parse","onDestroy invoked");
     }
-
 }

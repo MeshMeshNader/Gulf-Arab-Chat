@@ -5,7 +5,7 @@ public class Config {
 
     // Parse Server
     public static final String SERVER_URL = "https://parseapi.back4app.com/";
-    public static final String LIVE_QUERY_URL = "wss://arabchatii.b4a.app/";
+    public static final String LIVE_QUERY_URL = "wss://gulfarabchat.b4a.io/";
     static final String SERVER_APP_ID = "mTjrvBCd3gMwdbMqlM1lTx6aYvRm6LMPNJCM14PN";
     static final String SERVER_CLIENT_KEY = "bfJaCIiEoJNXWXDL0Povkp7lzV4KY1jfSup6OD9w";
 
@@ -68,8 +68,8 @@ public class Config {
     public static final boolean GOOGLE_LOGIN = true;
     public static final boolean FACEBOOK_LOGIN = true;
     // Enable or Disable Payment Systems
-    public static final boolean PAYPAL_ENABLED = true;
-    public static final boolean FLUTTER_WAVE_ENABLED = true;
+    public static final boolean PAYPAL_ENABLED = false;
+    public static final boolean FLUTTER_WAVE_ENABLED = false;
     // Extra features to add in payment methods
     public static final boolean PAYPAL_CREDIT_CARD_ENABLED = false;
     // Exchange your tokens
@@ -121,6 +121,6 @@ public class Config {
     public static final int freeMessagesPerDay = 5;
 
     // Enable or Disable Fake messages.
-    public static final boolean isFakeMessagesActivated = true;
+    public static final boolean isFakeMessagesActivated = false;
     public static final String defaultFakeMessage = "كيفك يا قمر ؟";
 }

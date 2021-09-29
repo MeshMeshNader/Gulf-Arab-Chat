@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.tabs.TabLayout;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.adapters.arabchat.ConnectionsAdapter;
 import com.gulf.arabchat0.adapters.arabchat.ConnectionsSpotLightAdapter;
@@ -161,6 +162,12 @@ public class ConnectionsFragment extends Fragment {
 
         mOnlineLayout.setVisibility(View.GONE);
 
+        //New
+       // tabLayout = v.findViewById(R.id.connections_tabsLayout);
+
+//        tabLayout.addTab(tabLayout.newTab().setText(R.string.live_title_popular), 0, true);
+//        tabLayout.addTab(tabLayout.newTab().setText(R.string.live_title_nearby), 1);
+//        tabLayout.addTab(tabLayout.newTab().setText(R.string.live_title_following), 2);
 
         if (getActivity() != null) {
 
