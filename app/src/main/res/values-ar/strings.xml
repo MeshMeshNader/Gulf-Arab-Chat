@@ -591,7 +591,7 @@
     <string name="livestream_stream_go_live">البث المباشر للمكافآت</string>
     <string name="you_dont_have_any_popular">لا يوجد ستريمر مشهور</string>
     <string name="you_dont_have_any_popular_explain">لم نتمكن من العثور على أي ستريمر مشهور. حاول تحديث عامل التصفية الخاص بك</string>
-    <string name="live_streamers_user_photo_ratio_h">هـ ، 52: 67</string>
+    <string name="live_streamers_user_photo_ratio_h">H,52:67</string>
     <string name="you_dont_have_any_nearby">لا يوجد تدفق قريب</string>
     <string name="you_dont_have_any_nearby_explain">لا أحد يتجه بالقرب من موقعك الحالي ، حاول تغيير موقعك في الفلاتر</string>
     <string name="you_dont_have_any_favorites">لم تجد بعض المفضلة؟</string>

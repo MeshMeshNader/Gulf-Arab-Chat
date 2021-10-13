@@ -1004,7 +1004,7 @@ public class LiveStreamingActivity extends AppCompatActivity {
             int secs = (int) (updatedTime / 1000);
             int mins = secs / 60;
             secs = secs % 60;
-            mTimeText.setText(String.format(Locale.US, "%02d:%s", mins, String.format(Locale.getDefault(), "%02d", secs)));
+            mTimeText.setText(String.format(Locale.getDefault(), "%02d:%s", mins, String.format(Locale.getDefault(), "%02d", secs)));
             customHandler.postDelayed(this, 0);
         }
 
