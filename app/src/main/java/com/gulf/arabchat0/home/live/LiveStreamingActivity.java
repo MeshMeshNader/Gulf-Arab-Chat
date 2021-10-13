@@ -1241,7 +1241,7 @@ public class LiveStreamingActivity extends AppCompatActivity {
     public void initGiftBottomSheet() {
 
         ArrayList<GiftModel> mGiftFooterList = new ArrayList<>();
-        GiftLiveAdapter mGiftLiveAdapter = new GiftLiveAdapter(this, mGiftFooterList);
+        GiftLiveAdapter mGiftLiveAdapter = new GiftLiveAdapter(this, mGiftFooterList ,false);
 
         mGiftBottomShet = new BottomSheetDialog(this, R.style.AppBottomSheetDialogTheme);
         mGiftBottomShet.setContentView(R.layout.view_stream_viewer_bottom_sheet);

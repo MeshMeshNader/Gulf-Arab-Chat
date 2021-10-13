@@ -9,6 +9,9 @@ import com.parse.ParseQuery;
 @ParseClassName("Message")
 public class MessageModel extends ParseObject {
 
+    public static final String GIFT_LIVE = "giftLive";
+    public static final String GIFT_LIVE_ID = "giftLiveId";
+
     public static final String SENDER_AUTHOR = "fromUser";
     public static final String SENDER_AUTHOR_ID = "fromUserId";
 
@@ -18,6 +21,7 @@ public class MessageModel extends ParseObject {
     public static final String MESSAGE = "message";
     public static final String MESSAGE_FILE = "messageFile";
     public static final String IS_MESSAGE_FILE = "isMessageFile";
+    public static final String IS_GIFT = "isGift";
     public static final String MESSAGE_FILE_UPLOADED = "fileUploaded";
     public String imagePath;
 
@@ -28,11 +32,20 @@ public class MessageModel extends ParseObject {
 
     public static final String COL_CALLS = "call";
 
+
+    public void setIsGift(boolean isGift) {
+        put(IS_GIFT, isGift);
+    }
+
+    public boolean isGift() {
+        return getBoolean(IS_GIFT);
+    }
+
     public User getSenderAuthor() {
         return (User) this.getParseObject(SENDER_AUTHOR);
     }
 
-    public void setSenderAuthor(User senderAuthor){
+    public void setSenderAuthor(User senderAuthor) {
         put(SENDER_AUTHOR, senderAuthor);
     }
 
@@ -40,8 +53,24 @@ public class MessageModel extends ParseObject {
         return (User) this.getParseObject(RECEIVER_AUTHOR);
     }
 
+    public GiftModel getLiveGift() {
+        return (GiftModel) this.getParseObject(GIFT_LIVE);
+    }
+
+    public void setLiveGift(GiftModel giftModel) {
+        put(GIFT_LIVE, giftModel);
+    }
+
+    public String getLiveGiftId() {
+        return getString(GIFT_LIVE_ID);
+    }
+
+    public void setLiveGiftId(String giftId) {
+        put(GIFT_LIVE_ID, giftId);
+    }
+
     //I change User receiverAuthor to
-    public void setReceiverAuthor(User receiverAuthor){
+    public void setReceiverAuthor(User receiverAuthor) {
         put(RECEIVER_AUTHOR, receiverAuthor);
     }
 
@@ -53,11 +82,11 @@ public class MessageModel extends ParseObject {
         return getString(MESSAGE);
     }
 
-    public void setMessage(String message){
+    public void setMessage(String message) {
         put(MESSAGE, message);
     }
 
-    public void setMessageFile(ParseFile messageFile){
+    public void setMessageFile(ParseFile messageFile) {
         put(MESSAGE_FILE, messageFile);
     }
 
@@ -65,7 +94,7 @@ public class MessageModel extends ParseObject {
         return getBoolean(MESSAGE_FILE_UPLOADED);
     }
 
-    public void setFileUploaded(boolean uploaded){
+    public void setFileUploaded(boolean uploaded) {
         put(MESSAGE_FILE_UPLOADED, uploaded);
     }
 
@@ -73,7 +102,7 @@ public class MessageModel extends ParseObject {
         return getBoolean(IS_MESSAGE_FILE);
     }
 
-    public void setMessageFile(boolean isfile){
+    public void setMessageFile(boolean isfile) {
         put(IS_MESSAGE_FILE, isfile);
     }
 
@@ -81,7 +110,7 @@ public class MessageModel extends ParseObject {
         return getString(SENDER_AUTHOR_ID);
     }
 
-    public void setSenderAuthorId(String senderAuthorId){
+    public void setSenderAuthorId(String senderAuthorId) {
         put(SENDER_AUTHOR_ID, senderAuthorId);
     }
 
@@ -89,7 +118,7 @@ public class MessageModel extends ParseObject {
         return getString(RECEIVER_AUTHOR_ID);
     }
 
-    public void setReceiverAuthorId(String receiverAuthorId){
+    public void setReceiverAuthorId(String receiverAuthorId) {
         put(RECEIVER_AUTHOR_ID, receiverAuthorId);
     }
 
@@ -113,11 +142,11 @@ public class MessageModel extends ParseObject {
         return getString(COL_CONNECTION_ID);
     }
 
-    public void setRead(boolean isRead){
+    public void setRead(boolean isRead) {
         put(COL_READ, isRead);
     }
 
-    public boolean getRead(){
+    public boolean getRead() {
         try {
             return fetchIfNeeded().getBoolean(COL_READ);
         } catch (ParseException e) {
@@ -125,6 +154,7 @@ public class MessageModel extends ParseObject {
             return false;
         }
     }
+
 
     public String getImagePath() {
         return imagePath;
@@ -138,12 +168,11 @@ public class MessageModel extends ParseObject {
         return (CallsModel) getParseObject(COL_CALLS);
     }
 
-    public void setCall(CallsModel callsModel){
+    public void setCall(CallsModel callsModel) {
         put(COL_CALLS, callsModel);
     }
 
-    public static ParseQuery<MessageModel> getMessageParseQuery()
-    {
-        return  ParseQuery.getQuery(MessageModel.class);
+    public static ParseQuery<MessageModel> getMessageParseQuery() {
+        return ParseQuery.getQuery(MessageModel.class);
     }
 }

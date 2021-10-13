@@ -3,6 +3,7 @@ package com.gulf.arabchat0.adapters.arabchat;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.helpers.QuickHelp;
 import com.gulf.arabchat0.home.profile.PhotoViewerActivity;
@@ -36,7 +38,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     // The Native Express ad view type.
     private static final int CHAT_OUT = 1;
 
-    private  List<MessageModel> mMessages;
+    private List<MessageModel> mMessages;
     private Activity mActivity;
 
     public ChatAdapter(Activity activity, List<MessageModel> messages) {
@@ -47,7 +49,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     @Override
     public int getItemViewType(int position) {
         final boolean isMe = mMessages.get(position).getSenderAuthorId().equals(User.getUser().getObjectId());
-        if(isMe){
+        if (isMe) {
             return CHAT_OUT;
         } else {
             return CHAT_IN;
@@ -85,21 +87,23 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
             case CHAT_OUT:
 
-                if (message.isMessageFile()){
+                if (message.isMessageFile()) {
+                   // Log.e("ChatAdapter", "onBindViewHolder: this is image" );
 
-                    if (!message.isFileUploaded()){
+                    if (!message.isFileUploaded()) {
 
                         holder.messageText.setVisibility(View.GONE);
+                        holder.mGiftImg.setVisibility(View.GONE);
                         holder.mImageLayout.setVisibility(View.VISIBLE);
                         holder.mProgressBar.setVisibility(View.VISIBLE);
 
                         QuickHelp.getMessageImage(message.getImagePath(), holder.mImageMsg);
 
 
-                    } else if (message.getMessageFile() != null){
+                    } else if (message.getMessageFile() != null) {
 
                         holder.messageText.setVisibility(View.GONE);
-
+                        holder.mGiftImg.setVisibility(View.GONE);
                         holder.mImageLayout.setVisibility(View.VISIBLE);
                         holder.mProgressBar.setVisibility(View.VISIBLE);
 
@@ -116,7 +120,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
                             holder.mImageLayout.setOnClickListener(v -> {
 
-                                if (message.isMessageFile() && message.isFileUploaded()){
+                                if (message.isMessageFile() && message.isFileUploaded()) {
 
                                     QuickHelp.goToActivityWithNoClean(mActivity, PhotoViewerActivity.class, PhotoViewerActivity.imageUrl, file.getPath());
                                 }
@@ -125,15 +129,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
                         }, percentDone -> holder.mProgressBar.setProgress(percentDone));
                     }
 
-                } else if (message.getCall() != null){
+                } else if (message.getCall() != null) {
 
                     holder.mImageLayout.setVisibility(View.GONE);
+                    holder.mGiftImg.setVisibility(View.GONE);
                     holder.messageText.setVisibility(View.VISIBLE);
                     holder.messageText.setBackground(mActivity.getResources().getDrawable(R.drawable.bubble_right_rect_call));
 
-                    if (message.getCall().isAccepted()){
+                    if (message.getCall().isAccepted()) {
 
-                        if (message.getCall().isVoiceCall()){
+                        if (message.getCall().isVoiceCall()) {
                             holder.messageText.setText(String.format(mActivity.getString(R.string.calls_caller_user_voice), message.getReceiverAuthor().getColFirstName(), message.getCall().getDuration()));
                         } else {
                             holder.messageText.setText(String.format(mActivity.getString(R.string.calls_caller_user), message.getReceiverAuthor().getColFirstName(), message.getCall().getDuration()));
@@ -146,26 +151,37 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
                     }
 
 
-                } else if (message.getMessage() != null && !message.getMessage().isEmpty()){
+                } else if (message.getMessage() != null && !message.getMessage().isEmpty()) {
+                    Log.e("ChatAdapter", "onBindViewHolder: this is Message   :   " + message.getMessage() );
 
                     holder.mImageLayout.setVisibility(View.GONE);
+                    holder.mGiftImg.setVisibility(View.GONE);
                     holder.messageText.setVisibility(View.VISIBLE);
                     holder.messageText.setBackground(mActivity.getResources().getDrawable(R.drawable.bubble_right_rect));
                     holder.messageText.setText(message.getMessage());
                     holder.messageText.setTextColor(Color.WHITE);
+
+                } else if (message.isGift() && message.getLiveGift() != null) {
+                    Log.e("ChatAdapter", "onBindViewHolder: this is Gift    :    " + message.getLiveGift().toString() );
+                    holder.mImageLayout.setVisibility(View.GONE);
+                    holder.messageText.setVisibility(View.GONE);
+                    holder.mGiftImg.setVisibility(View.VISIBLE);
+                    holder.mGiftImg.setAnimationFromUrl(message.getLiveGift().getGiftFile().getUrl());
+                    holder.mGiftImg.setSpeed(0.8f);
+
                 }
 
 
-                if(message.getCreatedAt() == null){
+                if (message.getCreatedAt() == null) {
 
-                    if (message.getCall() == null){
+                    if (message.getCall() == null) {
                         holder.status.setText(mActivity.getString(R.string.message_sending));
                     }
 
                 } else {
 
-                    if (message.getCall() == null){
-                        if (message.getRead()){
+                    if (message.getCall() == null) {
+                        if (message.getRead()) {
                             holder.status.setText(String.format(mActivity.getString(R.string.message_seen_format), DateUtils.formatDateTime(message.getCreatedAt().getTime())));
                         } else {
                             holder.status.setText(String.format(mActivity.getString(R.string.message_delivered_format), DateUtils.formatDateTime(message.getCreatedAt().getTime())));
@@ -184,10 +200,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
             case CHAT_IN:
 
 
-                if (message.getMessageFile() != null){
+                if (message.getMessageFile() != null) {
 
                     holder.messageText.setVisibility(View.GONE);
-
+                    holder.mGiftImg.setVisibility(View.GONE);
                     holder.mImageLayout.setVisibility(View.VISIBLE);
                     holder.mProgressBar.setVisibility(View.VISIBLE);
 
@@ -205,7 +221,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
                         holder.mImageLayout.setOnClickListener(v -> {
 
-                            if (message.isMessageFile() && message.isFileUploaded()){
+                            if (message.isMessageFile() && message.isFileUploaded()) {
 
                                 QuickHelp.goToActivityWithNoClean(mActivity, PhotoViewerActivity.class, PhotoViewerActivity.imageUrl, file.getPath());
                             }
@@ -213,15 +229,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
                     }, percentDone -> holder.mProgressBar.setProgress(percentDone));
 
-                } else if (message.getCall() != null){
+                } else if (message.getCall() != null) {
 
                     holder.mImageLayout.setVisibility(View.GONE);
+                    holder.mGiftImg.setVisibility(View.GONE);
                     holder.messageText.setVisibility(View.VISIBLE);
                     holder.messageText.setBackground(mActivity.getResources().getDrawable(R.drawable.bubble_left_rect_call));
 
-                    if (message.getCall().isAccepted()){
+                    if (message.getCall().isAccepted()) {
 
-                        if (message.getCall().isVoiceCall()){
+                        if (message.getCall().isVoiceCall()) {
                             holder.messageText.setText(String.format(mActivity.getString(R.string.calls_callee_user_voice), message.getReceiverAuthor().getColFirstName(), message.getCall().getDuration()));
                         } else {
                             holder.messageText.setText(String.format(mActivity.getString(R.string.calls_callee_user), message.getSenderAuthor().getColFirstName(), message.getCall().getDuration()));
@@ -234,17 +251,28 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
                     }
 
 
-                } else if (message.getMessage() != null && !message.getMessage().isEmpty()){
+                } else if (message.getMessage() != null && !message.getMessage().isEmpty()) {
+                    Log.e("ChatAdapter", "onBindViewHolder: this is message" + message.getMessage() );
 
+                    holder.mGiftImg.setVisibility(View.GONE);
                     holder.mImageLayout.setVisibility(View.GONE);
                     holder.messageText.setVisibility(View.VISIBLE);
                     holder.messageText.setBackground(mActivity.getResources().getDrawable(R.drawable.bubble_left_rect));
                     holder.messageText.setText(message.getMessage());
                     holder.messageText.setTextColor(Color.BLACK);
+
+                } else if (message.isGift() && message.getLiveGift() != null) {
+                    Log.e("ChatAdapter", "onBindViewHolder: this is Gift    :    " + message.getLiveGift().toString() );
+                    holder.mImageLayout.setVisibility(View.GONE);
+                    holder.messageText.setVisibility(View.GONE);
+                    holder.mGiftImg.setVisibility(View.VISIBLE);
+                    holder.mGiftImg.setAnimationFromUrl(message.getLiveGift().getGiftFile().getUrl());
+                    holder.mGiftImg.setSpeed(0.8f);
+
                 }
 
 
-                if (message.getCall() == null){
+                if (message.getCall() == null) {
 
                     holder.timeText.setText(DateUtils.formatDateTime(message.getCreatedAt().getTime()));
                 } else {
@@ -252,7 +280,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
                 }
 
 
-                if (!message.getRead()){
+                if (!message.getRead()) {
 
                     message.setRead(true);
                     message.saveInBackground();
@@ -263,7 +291,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
                 connectionListModelParseQuery.getFirstInBackground(new GetCallback<ConnectionListModel>() {
                     @Override
                     public void done(ConnectionListModel object, ParseException e) {
-                        if (object != null && !object.isRead()){
+                        if (object != null && !object.isRead()) {
 
                             object.setRead(true);
                             object.resetCount();
@@ -286,9 +314,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
             MessageModel message = mMessages.get(i);
             if (message != null && message.getObjectId() != null && newMessage != null && newMessage.getObjectId() != null) {
 
-                if (message.getObjectId().equals(newMessage.getObjectId())){
+                if (message.getObjectId().equals(newMessage.getObjectId())) {
 
-                    if (message.isMessageFile() && !message.isFileUploaded()){
+                    if (message.isMessageFile() && !message.isFileUploaded()) {
                         message.setFileUploaded(true);
                         message.saveInBackground();
                     }
@@ -334,6 +362,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         ProgressBar mProgressBar;
         RelativeLayout mImageLayout;
         RoundedImage mImageMsg;
+        LottieAnimationView mGiftImg;
 
 
         public ViewHolder(View itemView) {
@@ -345,6 +374,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
             mProgressBar = itemView.findViewById(R.id.chatMessage_photo_loading);
             mImageLayout = itemView.findViewById(R.id.image_lyt);
             mImageMsg = itemView.findViewById(R.id.chatMessage_photo_image);
+            mGiftImg = itemView.findViewById(R.id.giftImageViewChat);
         }
     }
 }

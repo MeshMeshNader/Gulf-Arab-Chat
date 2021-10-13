@@ -1,6 +1,7 @@
 package com.gulf.arabchat0.home.connections;
 
 import android.Manifest;
+import android.animation.Animator;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewStub;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -28,10 +30,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.gulf.arabchat0.adapters.arabchat.GiftLiveAdapter;
+import com.gulf.arabchat0.adapters.arabchat.GiftLiveFooterAdapter;
+import com.gulf.arabchat0.home.live.LiveStreamingActivity;
 import com.gulf.arabchat0.home.payments.PaymentsActivity;
 import com.gulf.arabchat0.models.arabchat.AutoMessagesModel;
 import com.greysonparrelli.permiso.Permiso;
@@ -45,6 +53,8 @@ import com.gulf.arabchat0.helpers.QuickActions;
 import com.gulf.arabchat0.helpers.QuickHelp;
 import com.gulf.arabchat0.helpers.SendNotifications;
 import com.gulf.arabchat0.models.arabchat.ConnectionListModel;
+import com.gulf.arabchat0.models.arabchat.GiftModel;
+import com.gulf.arabchat0.models.arabchat.LiveMessageModel;
 import com.gulf.arabchat0.models.arabchat.MessageModel;
 import com.gulf.arabchat0.models.arabchat.User;
 import com.gulf.arabchat0.models.others.UploadModel;
@@ -53,6 +63,8 @@ import com.gulf.arabchat0.modules.circularimageview.CircleImageView;
 import com.gulf.arabchat0.utils.DateUtils;
 import com.gulf.arabchat0.utils.ItemOffsetDecoration;
 import com.gulf.arabchat0.utils.Tools;
+import com.parse.FunctionCallback;
+import com.parse.ParseCloud;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseQuery;
@@ -70,8 +82,11 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
+import static com.gulf.arabchat0.models.arabchat.GiftModel.SEND_GIFT_PARAM;
 import static com.gulf.arabchat0.modules.camera.ImagePro.CAMERA_CODE;
 
 
@@ -117,6 +132,13 @@ public class ChatActivity extends AppCompatActivity {
     ConnectionListModel messageList;
 
     boolean isFakeMessage = false;
+
+    /////////// Gifts /////////////////
+
+
+    ImageView mGiftBtn;
+    BottomSheetDialog  mGiftBottomShet;
+    LottieAnimationView mFullScreenGift;
 
 
     //////////// Gallery /////////////////////
@@ -171,6 +193,9 @@ public class ChatActivity extends AppCompatActivity {
         mNoMessages = findViewById(R.id.no_message_layout);
 
         mTextError = findViewById(R.id.textView8);
+
+        mFullScreenGift = findViewById(R.id.liveStreaming_fullscreenGiftChat);
+        mFullScreenGift.setVisibility(View.GONE);
 
         setNoMessage(true, false);
 
@@ -229,6 +254,13 @@ public class ChatActivity extends AppCompatActivity {
         mProgressbar = findViewById(R.id.progress_instagram);
         mRecyclerViewGallery = findViewById(R.id.recyclerView);
 
+        //////////////// Gifts  ////////////////
+
+
+        mGiftBtn = findViewById(R.id.sendGiftButtonChat);
+        mGiftBtn.setOnClickListener(v -> initGiftBottomSheet());
+
+
         //////////////// Gallery //////////////
 
         mPickFile.setOnClickListener(v -> {
@@ -270,6 +302,139 @@ public class ChatActivity extends AppCompatActivity {
         loadMessages(false);
 
     }
+
+
+    public void initGiftBottomSheet() {
+
+        ArrayList<GiftModel> mGiftFooterList = new ArrayList<>();
+        GiftLiveAdapter mGiftLiveAdapter = new GiftLiveAdapter(this, mGiftFooterList, true);
+
+        mGiftBottomShet = new BottomSheetDialog(this, R.style.AppBottomSheetDialogTheme);
+        mGiftBottomShet.setContentView(R.layout.view_stream_viewer_bottom_sheet);
+        mGiftBottomShet.setCancelable(true);
+        mGiftBottomShet.setCanceledOnTouchOutside(true);
+
+        RecyclerView recyclerView = mGiftBottomShet.findViewById(R.id.liveStreaming_bottom_rv);
+
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
+
+        assert recyclerView != null;
+        recyclerView.setAdapter(mGiftLiveAdapter);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setBackgroundResource(R.color.transparent);
+        recyclerView.setLayoutManager(layoutManager);
+
+        ParseQuery<GiftModel> giftModelParseQuery = GiftModel.getGiftQuery();
+        giftModelParseQuery.findInBackground((giftList, e) -> {
+
+            if (e == null){
+
+                mGiftFooterList.clear();
+                mGiftFooterList.addAll(giftList);
+                mGiftLiveAdapter.notifyDataSetChanged();
+            }
+        });
+
+        if (mGiftBottomShet != null && !mGiftBottomShet.isShowing()){
+            mGiftBottomShet.show();
+        }
+    }
+
+
+    public void sendLiveGift(GiftModel giftModel){
+
+        if (mGiftBottomShet != null && mGiftBottomShet.isShowing()){
+            mGiftBottomShet.cancel();
+        }
+
+        if (mCurrentUser.getCredits() >= giftModel.getCredits()){
+
+            showFullScreenGift(giftModel);
+
+            mCurrentUser.removeCredit(giftModel.getCredits());
+            mCurrentUser.saveInBackground();
+
+
+            Map<String, Object> params = new HashMap<>();
+            params.put(GiftModel.CREDITS_PARAM, giftModel.getCredits());
+            params.put(GiftModel.KEY_OBJECT_ID, mUser.getObjectId());
+            ParseCloud.callFunctionInBackground(SEND_GIFT_PARAM, params, (FunctionCallback<String>) (result, e) -> {
+
+                if (e == null){
+
+                    sendMsg("gift sent");
+
+                    sendGift(giftModel);
+
+                } else {
+                    QuickHelp.showNotification(ChatActivity.this, getString(R.string.error_ocurred), true);
+                    sendMsg("sendLiveGift " + e.getLocalizedMessage());
+                }
+            });
+
+        } else {
+
+            QuickHelp.showNotification(this, getString(R.string.no_credits), true);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    private void sendMsg(final String msg) {
+        runOnUiThread(() -> Log.v("LIVE STREAM", msg));
+    }
+
+    public void showFullScreenGift(GiftModel giftModel){
+
+        mFullScreenGift.setVisibility(View.VISIBLE);
+        mFullScreenGift.setAnimationFromUrl(giftModel.getGiftFile().getUrl());
+        mFullScreenGift.playAnimation();
+        mFullScreenGift.addAnimatorListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+
+                mFullScreenGift.cancelAnimation();
+                mFullScreenGift.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void checkCallPermission(boolean isVideoCall) {
 
@@ -527,7 +692,7 @@ public class ChatActivity extends AppCompatActivity {
 
 
                 // Add new message in your list
-                //Log.v("Parse", "I received the message");
+                Log.v("Parse", "I received the message");
             }
 
         }).handleEvent(SubscriptionHandling.Event.UPDATE, (query, message) -> {
@@ -607,6 +772,7 @@ public class ChatActivity extends AppCompatActivity {
         messageQuery.include(MessageModel.SENDER_AUTHOR);
         messageQuery.include(MessageModel.RECEIVER_AUTHOR);
         messageQuery.include(MessageModel.COL_CONNECTION);
+        messageQuery.include(MessageModel.GIFT_LIVE);
         messageQuery.include(MessageModel.COL_CALLS);
         messageQuery.orderByDescending(MessageModel.KEY_CREATED_AT);
 
@@ -756,6 +922,7 @@ public class ChatActivity extends AppCompatActivity {
 
         message.setMessageFile(true);
         message.setFileUploaded(false);
+        message.setIsGift(false);
 
         message.setImagePath(imagePath);
 
@@ -826,26 +993,29 @@ public class ChatActivity extends AppCompatActivity {
     public void prepareMessage(boolean isMessageFile, String imagePath){
 
         if (Config.isPaidMessagesActivated && mCurrentUser.getColGender().equals(User.GENDER_MALE) && !mCurrentUser.isPremium()) {
-
+            Log.e("MEssage", "prepareMessage: " + "Message if 1" );
             if (mCurrentUser.getMessageLimitCounterToday() != null && QuickHelp.isToday(mCurrentUser.getMessageLimitCounterToday())){
+                Log.e("MEssage", "prepareMessage: " + "Message if 2   ====  " +  mCurrentUser.getMessageLimitCounterToday());
 
                 if (mCurrentUser.getMessageLimitCounterTotal() >= Config.freeMessagesInTotal){
-
+                    Log.e("MEssage", "prepareMessage: " + "Message if 3     =========  " + mCurrentUser.getMessageLimitCounterTotal() );
                     QuickHelp.showNotification(ChatActivity.this, getString(R.string.your_total_message_quote), true);
 
                     QuickHelp.goToActivityWithNoClean(ChatActivity.this, PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_ARABCHAT_PREMIUM, PaymentsActivity.ARABCHAT_PREMIUM_TYPE, PaymentsActivity.TYPE_ARABCHAT_PREMIUM_MESSAGES);
 
                 } else if (mCurrentUser.getMessageLimitCounterDaily() >= Config.freeMessagesPerDay){
-
+                    Log.e("MEssage", "prepareMessage: " + "Message if else if 3   ====== " + mCurrentUser.getMessageLimitCounterDaily()  );
                     QuickHelp.showNotification(ChatActivity.this, getString(R.string.your_dailly_message_quote), true);
 
                     QuickHelp.goToActivityWithNoClean(ChatActivity.this, PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_ARABCHAT_PREMIUM, PaymentsActivity.ARABCHAT_PREMIUM_TYPE, PaymentsActivity.TYPE_ARABCHAT_PREMIUM_MESSAGES);
 
                 } else {
-
+                    Log.e("MEssage", "prepareMessage: " + "Message if else 3" );
                     mCurrentUser.setMessageLimitCounterDaily();
                     mCurrentUser.setMessageLimitCounterTotal();
                     mCurrentUser.saveInBackground();
+                    Log.e("MEssage", "prepareMessage: " + " afteeeeeeeeeeeeer Message if else 3 ==== daily  = " + mCurrentUser.getMessageLimitCounterDaily()
+                    + " >>>>>>>>>> total = " + mCurrentUser.getMessageLimitCounterTotal());
 
                     if (isMessageFile){
                         sendMessageFile(imagePath);
@@ -856,11 +1026,14 @@ public class ChatActivity extends AppCompatActivity {
                 }
 
             } else {
-
+                Log.e("MEssage", "prepareMessage: " + "Message if else 2" );
                 mCurrentUser.setMessageLimitCounterTotal();
                 mCurrentUser.setMessageLimitCounterDailyOne();
                 mCurrentUser.setMessageLimitCounterToday(new Date());
                 mCurrentUser.saveInBackground();
+
+                Log.e("MEssage", "prepareMessage: " + " afteeeeeeeeeeeeer Message if else 2 ==== daily  = " + mCurrentUser.getMessageLimitCounterDaily()
+                        + " >>>>>>>>>> total = " + mCurrentUser.getMessageLimitCounterTotal() + " >>>>> today  = " + mCurrentUser.getMessageLimitCounterToday());
 
                 if (isMessageFile){
                     sendMessageFile(imagePath);
@@ -870,7 +1043,7 @@ public class ChatActivity extends AppCompatActivity {
             }
 
         } else {
-
+            Log.e("MEssage", "prepareMessage: " + "Message if else 1" );
             if (isMessageFile){
                 sendMessageFile(imagePath);
             } else {
@@ -878,6 +1051,44 @@ public class ChatActivity extends AppCompatActivity {
             }
         }
     }
+
+
+    public void sendGift(GiftModel giftModel) {
+
+
+        MessageModel message = new MessageModel();
+
+
+        message.setMessageFile(false);
+
+        // Sender
+        message.setSenderAuthor(mCurrentUser);
+        message.setSenderAuthorId(mCurrentUser.getObjectId());
+        // Receiver
+        message.setReceiverAuthor(mUser);
+        message.setReceiverAuthorId(mUser.getObjectId());
+
+        message.setLiveGift(giftModel);
+        message.setIsGift(true);
+
+        message.setRead(false);
+
+        message.saveInBackground(e -> {
+            if (e == null){
+
+                mChatAdapter.updateMessage(message);
+                setChatList(message, ConnectionListModel.MESSAGE_TYPE_GIFT);
+            }
+        });
+
+        mChatAdapter.addNewMessage(message, mRecyclerView);
+        setNoMessage(false, true);
+        mEditText.setText(null);
+    }
+
+
+
+
 
     public void sendMessage(){
 
@@ -888,11 +1099,11 @@ public class ChatActivity extends AppCompatActivity {
             // Message
             message.setMessage(mEditText.getText().toString());
             message.setMessageFile(false);
+            message.setIsGift(false);
 
             // Sender
             message.setSenderAuthor(mCurrentUser);
             message.setSenderAuthorId(mCurrentUser.getObjectId());
-
             // Receiver
             message.setReceiverAuthor(mUser);
             message.setReceiverAuthorId(mUser.getObjectId());
@@ -927,7 +1138,8 @@ public class ChatActivity extends AppCompatActivity {
 
         ParseQuery<ConnectionListModel> connectionListModelParseQuery = ParseQuery.or(Arrays.asList(messageToQuery, messageFromQuery));
         connectionListModelParseQuery.whereEqualTo(ConnectionListModel.COL_CONNECTION_TYPE, ConnectionListModel.CONNECTION_TYPE_MESSAGE);
-        connectionListModelParseQuery.whereEqualTo(ConnectionListModel.COL_MESSAGE_TYPE, ConnectionListModel.MESSAGE_TYPE_CHAT);
+        //Solving Redundunt problem in connections list
+        //connectionListModelParseQuery.whereEqualTo(ConnectionListModel.COL_MESSAGE_TYPE, ConnectionListModel.MESSAGE_TYPE_CHAT);
 
         connectionListModelParseQuery.getFirstInBackground((lastMessage, e) -> {
 

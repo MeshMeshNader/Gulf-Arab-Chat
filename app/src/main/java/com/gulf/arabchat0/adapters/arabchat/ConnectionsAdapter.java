@@ -53,13 +53,13 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         ConnectionListModel connection = mConnectionsModels.get(position);
 
-        if (connection != null){
+        if (connection != null) {
 
-            if (connection.getConnectionType() != null && connection.getConnectionType().equals(ConnectionListModel.CONNECTION_TYPE_MESSAGE)){
+            if (connection.getConnectionType() != null && connection.getConnectionType().equals(ConnectionListModel.CONNECTION_TYPE_MESSAGE)) {
 
                 viewHolder.favorite.setVisibility(View.GONE);
 
-                if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())){
+                if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
 
                     QuickHelp.getAvatars(connection.getUserTo(), viewHolder.userPhoto);
                     viewHolder.fullName.setText(connection.getUserTo().getColFullName());
@@ -70,7 +70,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
                     viewHolder.fullName.setText(connection.getUserFrom().getColFullName());
                 }
 
-                if (connection.getColMessageType().equals(ConnectionListModel.MESSAGE_TYPE_MATCHED)){
+                if (connection.getColMessageType().equals(ConnectionListModel.MESSAGE_TYPE_MATCHED)) {
 
                     viewHolder.countContainer.setVisibility(View.GONE);
                     viewHolder.iconBadge.setVisibility(View.VISIBLE);
@@ -87,7 +87,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
                         case ConnectionListModel.MESSAGE_TYPE_CHAT:
                             viewHolder.description.setText(connection.getText());
 
-                            if (!connection.isRead() && !connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())){
+                            if (!connection.isRead() && !connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
                                 viewHolder.description.setTextColor(mActivity.getResources().getColor(R.color.black));
 
                             } else {
@@ -108,7 +108,27 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
                                 viewHolder.description.setText(mActivity.getString(R.string.image_message_received));
                             }
 
-                            if (!connection.isRead() && !connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())){
+                            if (!connection.isRead() && !connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
+                                viewHolder.description.setTextColor(mActivity.getResources().getColor(R.color.black));
+
+                            } else {
+                                viewHolder.description.setTextColor(mActivity.getResources().getColor(R.color.gray_dark));
+                            }
+
+                            viewHolder.description.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                            break;
+                        case ConnectionListModel.MESSAGE_TYPE_GIFT:
+
+                            if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
+                                viewHolder.description.setText(mActivity.getString(R.string.gift_message));
+
+                            } else {
+
+                                viewHolder.description.setText(mActivity.getString(R.string.gift_message_received));
+                            }
+
+                            if (!connection.isRead() && !connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
                                 viewHolder.description.setTextColor(mActivity.getResources().getColor(R.color.black));
 
                             } else {
@@ -129,7 +149,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
                                 if (connection.getCall().isAccepted()) {
 
-                                    if (connection.getCall().isVoiceCall()){
+                                    if (connection.getCall().isVoiceCall()) {
                                         viewHolder.description.setText(String.format(mActivity.getString(R.string.calls_caller_user_voice), connection.getUserTo().getColFirstName(), connection.getCall().getDuration()));
                                     } else {
                                         viewHolder.description.setText(String.format(mActivity.getString(R.string.calls_caller_user), connection.getUserTo().getColFirstName(), connection.getCall().getDuration()));
@@ -147,7 +167,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
                                 if (connection.getCall() != null && connection.getCall().isAccepted()) {
 
-                                    if (connection.getCall().isVoiceCall()){
+                                    if (connection.getCall().isVoiceCall()) {
                                         viewHolder.description.setText(String.format(mActivity.getString(R.string.calls_callee_user_voice), connection.getUserTo().getColFirstName(), connection.getCall().getDuration()));
                                     } else {
                                         viewHolder.description.setText(String.format(mActivity.getString(R.string.calls_callee_user), connection.getUserFrom().getColFirstName(), connection.getCall().getDuration()));
@@ -170,7 +190,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
                             break;
                     }
 
-                    if (!connection.isRead() && !connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())){
+                    if (!connection.isRead() && !connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
                         viewHolder.countContainer.setVisibility(View.VISIBLE);
                         viewHolder.counter.setVisibility(View.VISIBLE);
                         viewHolder.counter.setText(String.valueOf(connection.getCount()));
@@ -182,7 +202,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
                 }
 
 
-            } else if (connection.getConnectionType() != null && connection.getConnectionType().equals(ConnectionListModel.CONNECTION_TYPE_VISITOR)){
+            } else if (connection.getConnectionType() != null && connection.getConnectionType().equals(ConnectionListModel.CONNECTION_TYPE_VISITOR)) {
 
                 viewHolder.favorite.setVisibility(View.GONE);
 
@@ -195,7 +215,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
                 viewHolder.description.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
-            } else if (connection.getConnectionType() != null && connection.getConnectionType().equals(ConnectionListModel.CONNECTION_TYPE_FAVORITE)){
+            } else if (connection.getConnectionType() != null && connection.getConnectionType().equals(ConnectionListModel.CONNECTION_TYPE_FAVORITE)) {
 
                 viewHolder.description.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 
@@ -206,7 +226,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
                 viewHolder.description.setText(String.format("%s %s", mActivity.getString(R.string.your_favorite), DateUtils.getTimeAgo(connection.getUpdatedAt().getTime())));
 
-                if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())){
+                if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
 
                     QuickHelp.getAvatars(connection.getUserTo(), viewHolder.userPhoto);
                     viewHolder.fullName.setText(connection.getUserTo().getColFullName());
@@ -214,7 +234,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
                 } else {
 
-                    QuickHelp.getAvatars(connection.getUserFrom()  , viewHolder.userPhoto);
+                    QuickHelp.getAvatars(connection.getUserFrom(), viewHolder.userPhoto);
                     viewHolder.fullName.setText(connection.getUserFrom().getColFullName());
                     viewHolder.favorite.setImageResource(R.drawable.ic_profile_favorite);
                 }
@@ -227,7 +247,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
                         if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
 
-                            if (connection.getUserTo().isUserBlocked()){
+                            if (connection.getUserTo().isUserBlocked()) {
                                 mActivity.getString(R.string.user_blocked_by_admin_alert);
                             } else {
                                 QuickHelp.goToActivityChat(mActivity, connection.getUserTo());
@@ -235,7 +255,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
                         } else {
 
-                            if (connection.getUserFrom().isUserBlocked()){
+                            if (connection.getUserFrom().isUserBlocked()) {
                                 mActivity.getString(R.string.user_blocked_by_admin_alert);
                             } else {
                                 QuickHelp.goToActivityChat(mActivity, connection.getUserFrom());
@@ -245,7 +265,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
                         break;
                     case ConnectionListModel.CONNECTION_TYPE_VISITOR:
 
-                        if (connection.getUserFrom().isUserBlocked()){
+                        if (connection.getUserFrom().isUserBlocked()) {
                             mActivity.getString(R.string.user_blocked_by_admin_alert);
                         } else {
                             QuickActions.showProfile(mActivity, connection.getUserFrom(), false);
@@ -256,7 +276,7 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
                         if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
 
-                            if (connection.getUserTo().isUserBlocked()){
+                            if (connection.getUserTo().isUserBlocked()) {
                                 mActivity.getString(R.string.user_blocked_by_admin_alert);
                             } else {
                                 QuickActions.showProfile(mActivity, connection.getUserTo(), false);
@@ -270,16 +290,16 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
                 }
             });
 
-            if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())){
+            if (connection.getUserFrom().getObjectId().equals(User.getUser().getObjectId())) {
 
-                if (connection.getUserTo().getLastOnline() != null){
+                if (connection.getUserTo().getLastOnline() != null) {
 
 
-                    if (!User.getUser().getPrivacyOnlineStatusEnabled()){
+                    if (!User.getUser().getPrivacyOnlineStatusEnabled()) {
 
                         viewHolder.userStatus.setVisibility(View.GONE);
 
-                    } else if (!connection.getUserTo().getPrivacyOnlineStatusEnabled()){
+                    } else if (!connection.getUserTo().getPrivacyOnlineStatusEnabled()) {
 
                         viewHolder.userStatus.setVisibility(View.GONE);
 
@@ -308,14 +328,14 @@ public class ConnectionsAdapter extends RecyclerView.Adapter<ConnectionsAdapter.
 
             } else {
 
-                if (connection.getUserFrom().getLastOnline() != null){
+                if (connection.getUserFrom().getLastOnline() != null) {
 
 
-                    if (!User.getUser().getPrivacyOnlineStatusEnabled()){
+                    if (!User.getUser().getPrivacyOnlineStatusEnabled()) {
 
                         viewHolder.userStatus.setVisibility(View.GONE);
 
-                    } else if (!connection.getUserFrom().getPrivacyOnlineStatusEnabled()){
+                    } else if (!connection.getUserFrom().getPrivacyOnlineStatusEnabled()) {
 
                         viewHolder.userStatus.setVisibility(View.GONE);
 

@@ -1492,7 +1492,7 @@ public class QuickHelp {
 
         Calendar limitDate = Calendar.getInstance();
         limitDate.add(Calendar.DAY_OF_MONTH,2); //
-        //limitDate.setTime(untilDate);
+        limitDate.setTime(untilDate);
         Date limit = limitDate.getTime();
 
         // today is a present date and purchase is tomorrow date

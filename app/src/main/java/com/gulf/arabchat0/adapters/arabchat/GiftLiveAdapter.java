@@ -2,6 +2,7 @@ package com.gulf.arabchat0.adapters.arabchat;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.gulf.arabchat0.R;
+import com.gulf.arabchat0.home.connections.ChatActivity;
 import com.gulf.arabchat0.home.live.LiveStreamingActivity;
 import com.gulf.arabchat0.models.arabchat.GiftModel;
 
@@ -21,11 +23,12 @@ import java.util.List;
 public class GiftLiveAdapter extends RecyclerView.Adapter<GiftLiveAdapter.ViewHolder> {
     private List<GiftModel> mGifts;
     private Activity mActivity;
+    private boolean isChat;
 
-
-    public GiftLiveAdapter(Activity activity, List<GiftModel> giftModelList) {
+    public GiftLiveAdapter(Activity activity, List<GiftModel> giftModelList, boolean isChat) {
         mGifts = giftModelList;
         mActivity = activity;
+        this.isChat = isChat;
     }
 
     @NonNull
@@ -44,13 +47,17 @@ public class GiftLiveAdapter extends RecyclerView.Adapter<GiftLiveAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         GiftModel gift = mGifts.get(position);
+        Log.e("GiftAdapter", "onBindViewHolder: "  + gift.getGiftFile().getName());
 
         viewHolder.mGiftImage.setAnimationFromUrl(gift.getGiftFile().getUrl());
         viewHolder.mGiftImage.setSpeed(0.8f);
 
         viewHolder.mGiftCredits.setText(String.valueOf(gift.getCredits()));
 
-        viewHolder.mLayout.setOnClickListener(v -> ((LiveStreamingActivity) mActivity).sendLiveGift(gift));
+        if (isChat)
+            viewHolder.mLayout.setOnClickListener(v -> ((ChatActivity) mActivity).sendLiveGift(gift));
+        else
+            viewHolder.mLayout.setOnClickListener(v -> ((LiveStreamingActivity) mActivity).sendLiveGift(gift));
     }
 
     @Override

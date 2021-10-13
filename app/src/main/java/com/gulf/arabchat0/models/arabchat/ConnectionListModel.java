@@ -25,6 +25,7 @@ public class ConnectionListModel extends ParseObject {
     public static final String MESSAGE_TYPE_MATCHED = "MATCHED";
     public static final String MESSAGE_TYPE_IMAGE = "IMAGE";
     public static final String MESSAGE_TYPE_CALL = "CALL";
+    public static final String MESSAGE_TYPE_GIFT = "GIFT";
 
     public static final String COL_CONNECTION_TYPE = "type";
     public static final String COL_MESSAGE_TYPE = "messageType";

@@ -661,6 +661,8 @@
     <string name="no_credits">Insufficient credits!</string>
     <string name="image_message">You sent a photo</string>
     <string name="image_message_received">Sent you a photo</string>
+    <string name="gift_message">You sent a Gift</string>
+    <string name="gift_message_received">Sent you a Gift</string>
     <string name="email_verification_sent">Check your email Inbox</string>
     <string name="email_not_exist">First add your email in \'Settings\'</string>
     <string name="email_newpass_sent">Check your email Inbox for password</string>
