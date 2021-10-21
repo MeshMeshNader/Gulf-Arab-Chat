@@ -766,4 +766,5 @@
     <string name="user_info_ID">"ID: "</string>
     <string name="gift_message">Vous avez envoyé une gift</string>
     <string name="gift_message_received">Vous a envoyé une gift</string>
+    <string name="search_users">Trouver un ami</string>
 </resources>

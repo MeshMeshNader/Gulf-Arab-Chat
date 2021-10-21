@@ -28,6 +28,7 @@ import com.gulf.arabchat0.home.HomeActivity;
 import com.gulf.arabchat0.home.live.WalletActivity;
 import com.gulf.arabchat0.home.payments.PaymentsActivity;
 import com.gulf.arabchat0.home.popularity.PopularityActivity;
+import com.gulf.arabchat0.home.search.UsersSearch;
 import com.gulf.arabchat0.home.settings.SettingsActivity;
 import com.gulf.arabchat0.home.settings.accountPreferences.AccountPreferencesActivity;
 import com.gulf.arabchat0.home.uploads.UploadsActivity;
@@ -56,8 +57,8 @@ public class MyProfileFragment extends Fragment {
 
     private ImageView mMyInfoAvatarImage;
 
-    private ImageView mSecondBigImage, mProfileBannerImage, mAddPhotos;
-    private TextView mSecondBigText, mSecondSmallText;
+    private ImageView mSecondBigImage, mProfileBannerImage, mAddPhotos, mCreditImage, mTokenImage;
+    private TextView mSecondBigText, mSecondSmallText, mCreditText, mTokenText;
 
     private TextView mCredits, mTokens, mProfileBannerText, mUserID;
 
@@ -99,6 +100,10 @@ public class MyProfileFragment extends Fragment {
 
         mCredits = v.findViewById(R.id.ownProfileElementOneSubtitle);
         mTokens = v.findViewById(R.id.ownProfileElementFourSubtitle);
+        mCreditImage = v.findViewById(R.id.ownProfileElementOneImage);
+        mTokenImage = v.findViewById(R.id.ownProfileElementFourImage);
+        mCreditText = v.findViewById(R.id.ownProfileElementOneTitle);
+        mTokenText = v.findViewById(R.id.ownProfileElementFourTitle);
 
         mAddPhotos = v.findViewById(R.id.popularity_promoBadgeRight);
 
@@ -134,14 +139,35 @@ public class MyProfileFragment extends Fragment {
         }
 
 
-        if(mCurrentUser.getColGender().equals(User.GENDER_MALE))
+        if (mCurrentUser.getColGender().equals(User.GENDER_MALE)) {
             mMyInfoAvatarImage.setImageResource(R.drawable.ic_boy);
-        else if(mCurrentUser.getColGender().equals(User.GENDER_FEMALE))
+
+            mCredits.setText(String.valueOf(mCurrentUser.getCredits()));
+            mTokens.setText("");
+            mTokenText.setText(getResources().getString(R.string.search_users));
+            mTokenImage.setImageResource(R.drawable.search_users);
+
+
+            mCreditsView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_3X_POPULAR));
+            mTokensView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), UsersSearch.class));
+
+
+        } else if (mCurrentUser.getColGender().equals(User.GENDER_FEMALE)) {
             mMyInfoAvatarImage.setImageResource(R.drawable.ic_girl);
 
-        mCredits.setText(String.valueOf(mCurrentUser.getCredits()));
-        mTokens.setText(String.valueOf(mCurrentUser.getTokens()));
-        String userID = getResources().getString(R.string.user_info_ID )+ mCurrentUser.getUid();
+            mTokens.setText(String.valueOf(mCurrentUser.getTokens()));
+            mCredits.setText("");
+            mCreditText.setText(getResources().getString(R.string.search_users));
+            mCreditImage.setImageResource(R.drawable.search_users);
+
+
+            mTokensView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), WalletActivity.class));
+            mCreditsView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), UsersSearch.class));
+
+        }
+
+
+        String userID = getResources().getString(R.string.user_info_ID) + mCurrentUser.getUid();
         mUserID.setText(userID);
 
 
@@ -157,7 +183,6 @@ public class MyProfileFragment extends Fragment {
         layoutManager.setReverseLayout(false);
 
 
-
         mRecyclerView.setAdapter(ownProfilePhotosAdapter);
         mRecyclerView.setItemViewCacheSize(12);
         mRecyclerView.setHasFixedSize(true);
@@ -165,9 +190,6 @@ public class MyProfileFragment extends Fragment {
         mRecyclerView.setBackgroundResource(R.color.white);
         mRecyclerView.setBackgroundColor(Color.WHITE);
         mRecyclerView.setLayoutManager(layoutManager);
-
-
-
 
 
         mPopularityImage.setImageResource(QuickHelp.getPopularityLevelIndicator(mCurrentUser));
@@ -198,12 +220,9 @@ public class MyProfileFragment extends Fragment {
             mSecondView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), UploadsActivity.class));
         }
 
-        mCreditsView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_3X_POPULAR));
         mPopularityView.setOnClickListener(v2 -> QuickHelp.goToActivityWithNoClean(getActivity(), PopularityActivity.class));
         mAddPhotos.setOnClickListener(v3 -> QuickHelp.goToActivityWithNoClean(getActivity(), UploadsActivity.class));
-        mTokensView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), WalletActivity.class));
         mInformationView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), EditProfileActivity.class));
-
 
 
         if (mCurrentUser.isVerified()) {
@@ -307,14 +326,18 @@ public class MyProfileFragment extends Fragment {
 
             QuickHelp.getAvatars(mCurrentUser, circleImageView);
 
-            mCredits.setText(String.valueOf(mCurrentUser.getCredits()));
-            mTokens.setText(String.valueOf(mCurrentUser.getTokens()));
+            if (mCurrentUser.getColGender().equals(User.GENDER_MALE)) {
+                mCredits.setText(String.valueOf(mCurrentUser.getCredits()));
+            } else if (mCurrentUser.getColGender().equals(User.GENDER_FEMALE)) {
+                mTokens.setText(String.valueOf(mCurrentUser.getTokens()));
+            }
+
+
 
             if (mCurrentUser.getBirthDate() != null) {
 
                 mNameAndAge.setText(String.format(" %s, %s", mCurrentUser.getColFullName(), QuickHelp.getAgeFromDate(mCurrentUser.getBirthDate())));
             } else mNameAndAge.setText(mCurrentUser.getColFullName());
-
 
 
             parseFiles.clear();

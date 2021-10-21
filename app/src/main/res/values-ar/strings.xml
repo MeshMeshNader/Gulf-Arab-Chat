@@ -762,8 +762,9 @@
     <string name="crush_free_ads">احصل عليه مجانا</string>
     <string name="crush_or" translatable="false">"أو "</string>
     <string name="my_information">معلوماتي</string>
-    <string name="user_info_ID">الرقم التعريفي:\n </string>
+    <string name="user_info_ID">ID:\n </string>
     <string name="gift_message">لقد أرسلت هدية</string>
     <string name="gift_message_received">أرسل لك هديةة</string>
+    <string name="search_users">البحث عن صديق</string>
 
 </resources>

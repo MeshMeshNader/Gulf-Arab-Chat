@@ -5,7 +5,7 @@ public class Config {
 
     // Parse Server
     public static final String SERVER_URL = "https://parseapi.back4app.com/";
-    public static final String LIVE_QUERY_URL = "wss://arabchatii.b4a.io/";
+    public static final String LIVE_QUERY_URL = "wss://arabchatiii.b4a.io/";
     static final String SERVER_APP_ID = "jfcuyRjqV4yyd7mRwTDaBD6uTCU800x5xn8gC7rP";
     static final String SERVER_CLIENT_KEY = "ol6GcDb2zq6F4sEhMqY3DkBWGrEfuf4ADO74EYRC";
 

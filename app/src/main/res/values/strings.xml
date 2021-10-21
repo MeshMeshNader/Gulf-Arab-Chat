@@ -643,9 +643,9 @@
     <string name="follow_user">Follow %s</string>
     <string name="follow_user_following">Following %s</string>
     <string name="live_you_followed_user">You followed %s</string>
-    <string name="live_user_followed_user" >%s followed %s</string>
+    <string name="live_user_followed_user">%s followed %s</string>
     <string name="live_you_sent_gift_user">You sent gift to %s</string>
-    <string name="live_user_sent_gift_user" >%s sent gift to %s</string>
+    <string name="live_user_sent_gift_user">%s sent gift to %s</string>
     <string name="live_unfollow_user">Unfollow %s</string>
     <string name="live_follow_user">Follow %s</string>
     <string name="live_view_report">Report</string>
@@ -666,12 +666,12 @@
     <string name="email_verification_sent">Check your email Inbox</string>
     <string name="email_not_exist">First add your email in \'Settings\'</string>
     <string name="email_newpass_sent">Check your email Inbox for password</string>
-    <string name="calls_callee_user" >You received a video call from %s, %s min.</string>
-    <string name="calls_callee_user_voice" >You received a voice call from %s, %s min.</string>
+    <string name="calls_callee_user">You received a video call from %s, %s min.</string>
+    <string name="calls_callee_user_voice">You received a voice call from %s, %s min.</string>
     <string name="calls_callee_missed_user">You missed Call from %s</string>
     <string name="calls_caller_missed_user">You tried to call %s</string>
-    <string name="calls_caller_user" >You video called %s, %s min.</string>
-    <string name="calls_caller_user_voice" >You voice called %s, %s min.</string>
+    <string name="calls_caller_user">You video called %s, %s min.</string>
+    <string name="calls_caller_user_voice">You voice called %s, %s min.</string>
     <string name="call_no_object">Video call</string>
     <string name="at_last_2_name">First and last name ?</string>
     <string name="live_stream_share_sucess_">Thanks, we hope to see you again</string>
@@ -764,6 +764,7 @@
     <string name="invalid_session_token" translatable="false">Invalid session, login again!</string>
     <string name="account_lang">Language</string>
     <string name="my_information">My Information</string>
-    <string name="user_info_ID">"ID: \n"</string>
+    <string name="user_info_ID">"ID: "</string>
+    <string name="search_users">"Find a friend "</string>
 
 </resources>
