@@ -21,6 +21,7 @@ import com.gulf.arabchat0.helpers.QuickActions;
 import com.gulf.arabchat0.helpers.QuickHelp;
 import com.gulf.arabchat0.models.arabchat.User;
 import com.gulf.arabchat0.modules.circularimageview.CircleImageView;
+import com.gulf.arabchat0.modules.circularimageview.RoundedImage;
 import com.gulf.arabchat0.utils.ParseRecyclerQueryAdapter;
 import com.parse.ui.widget.ParseQueryAdapter;
 
@@ -177,7 +178,8 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
     static class ViewHolder extends RecyclerView.ViewHolder {
 
         LinearLayout userItemLayout;
-        CircleImageView userPhoto, userStatus;
+        CircleImageView userStatus;
+        RoundedImage userPhoto;
         ImageView userNearBadge;
         TextView firstName, mUserDistance, mUserCoins, mUserStatusText;
 

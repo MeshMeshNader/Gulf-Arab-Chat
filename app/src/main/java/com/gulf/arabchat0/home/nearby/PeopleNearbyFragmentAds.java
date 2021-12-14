@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.IntentSender;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
 import android.net.ConnectivityManager;
@@ -19,7 +20,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -30,29 +30,13 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.gulf.arabchat0.R;
-import com.gulf.arabchat0.adapters.arabchat.UsersNearSpotLightAdapter;
-import com.gulf.arabchat0.adapters.arabchat.UserNearAdapterAds;
-import com.gulf.arabchat0.app.Config;
-import com.gulf.arabchat0.app.Constants;
-import com.gulf.arabchat0.auth.WelcomeActivity;
-import com.gulf.arabchat0.helpers.QuickHelp;
-import com.gulf.arabchat0.home.HomeActivity;
-import com.gulf.arabchat0.home.popularity.PopularityActivity;
-import com.gulf.arabchat0.models.arabchat.User;
-import com.gulf.arabchat0.modules.rangeBarView.OnRangeChangedListener;
-import com.gulf.arabchat0.modules.rangeBarView.RangeSeekBar;
-import com.gulf.arabchat0.modules.topsheet.TopSheetBehavior;
-import com.gulf.arabchat0.modules.topsheet.TopSheetDialog;
-import com.gulf.arabchat0.utils.CustomStaggeredLayoutManager;
-import com.gulf.arabchat0.utils.SharedPrefUtil;
-import com.gulf.arabchat0.utils.SpacesItemDecoration;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
@@ -68,6 +52,23 @@ import com.google.android.gms.location.LocationSettingsResponse;
 import com.google.android.gms.location.SettingsClient;
 import com.google.android.gms.tasks.Task;
 import com.greysonparrelli.permiso.Permiso;
+import com.gulf.arabchat0.R;
+import com.gulf.arabchat0.adapters.arabchat.UserNearAdapterAds;
+import com.gulf.arabchat0.adapters.arabchat.UsersNearSpotLightAdapter;
+import com.gulf.arabchat0.app.Config;
+import com.gulf.arabchat0.app.Constants;
+import com.gulf.arabchat0.auth.WelcomeActivity;
+import com.gulf.arabchat0.helpers.QuickHelp;
+import com.gulf.arabchat0.home.HomeActivity;
+import com.gulf.arabchat0.home.popularity.PopularityActivity;
+import com.gulf.arabchat0.models.arabchat.User;
+import com.gulf.arabchat0.modules.rangeBarView.OnRangeChangedListener;
+import com.gulf.arabchat0.modules.rangeBarView.RangeSeekBar;
+import com.gulf.arabchat0.modules.topsheet.TopSheetBehavior;
+import com.gulf.arabchat0.modules.topsheet.TopSheetDialog;
+import com.gulf.arabchat0.utils.CustomStaggeredLayoutManager;
+import com.gulf.arabchat0.utils.SharedPrefUtil;
+import com.gulf.arabchat0.utils.SpacesItemDecoration;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
@@ -145,12 +146,12 @@ public class PeopleNearbyFragmentAds extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_users_near, container, false);
 
-        swipeRefreshLayout =v.findViewById(R.id.swiperefreshlayout);
+        swipeRefreshLayout = v.findViewById(R.id.swiperefreshlayout);
         mRecyclerView = v.findViewById(R.id.rvChat);
 
         mEmptyView = v.findViewById(R.id.empty_view);
-        mEmptyLayout= v.findViewById(R.id.empty_layout);
-        mLoadingLayout= v.findViewById(R.id.loading);
+        mEmptyLayout = v.findViewById(R.id.empty_layout);
+        mLoadingLayout = v.findViewById(R.id.loading);
 
 
         mErrorImage = v.findViewById(R.id.image);
@@ -173,7 +174,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
         if (getActivity() != null) {
 
-            ((HomeActivity)getActivity()).initializeToolBar(QuickHelp.getPopularityLevelIndicator(mCurrentUser), R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_NEAR_BY);
+            ((HomeActivity) getActivity()).initializeToolBar(QuickHelp.getPopularityLevelIndicator(mCurrentUser), R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_NEAR_BY);
         }
 
         setHasOptionsMenu(true);
@@ -190,7 +191,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
                     return;
                 }
 
-                if (!mCurrentUser.isLocationTypeNearby()){
+                if (!mCurrentUser.isLocationTypeNearby()) {
                     return;
                 }
 
@@ -219,7 +220,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         mRecyclerViewSpotLight.setLayoutManager(layoutManagerSpotlight);
 
         mRecyclerView.setAdapter(mUsersNearAdapter);
-        CustomStaggeredLayoutManager layoutManager = new CustomStaggeredLayoutManager(3 , StaggeredGridLayoutManager.VERTICAL);
+        CustomStaggeredLayoutManager layoutManager = new CustomStaggeredLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.addItemDecoration(new SpacesItemDecoration(getResources().getDimensionPixelSize(R.dimen.rv_spance_4), getResources().getDimensionPixelOffset(R.dimen.rv_spance_60)));
 
         mRecyclerView.setItemViewCacheSize(16);
@@ -258,13 +259,13 @@ public class PeopleNearbyFragmentAds extends Fragment {
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
-    public void getIconLeft(Activity activity){
+    public void getIconLeft(Activity activity) {
 
         QuickHelp.goToActivityWithNoClean(activity, PopularityActivity.class);
 
     }
 
-    public void getIconRight(User user, Activity activity){
+    public void getIconRight(User user, Activity activity) {
 
         sheetDialog = new TopSheetDialog(activity);
         sheetDialog.setContentView(R.layout.layout_nearby_filter);
@@ -278,7 +279,11 @@ public class PeopleNearbyFragmentAds extends Fragment {
 //        FrameLayout location = sheetDialog.findViewById(R.id.locationInput);
 //        TextView cityLabel = sheetDialog.findViewById(R.id.cityLabel);
         TextView ageRange = sheetDialog.findViewById(R.id.rangeBarLabel);
-        RadioGroup gender = sheetDialog.findViewById(R.id.gender_radio_group);
+
+        /////////// Gender Filter ////////////
+//        RadioGroup gender = sheetDialog.findViewById(R.id.gender_radio_group);
+
+
         RadioGroup status = sheetDialog.findViewById(R.id.filter_radio_group);
         ImageView closeBtn = sheetDialog.findViewById(R.id.filter_decline);
         ImageView doneBtn = sheetDialog.findViewById(R.id.filter_confirm);
@@ -286,9 +291,11 @@ public class PeopleNearbyFragmentAds extends Fragment {
 //        TextView distanceRange = sheetDialog.findViewById(R.id.rangeBarDistanceLabel);
 //        RangeSeekBar rangeSeekBarDistance = sheetDialog.findViewById(R.id.rangeBar_distance);
 
-        RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
-        RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
-        RadioButton genderBoth = sheetDialog.findViewById(R.id.radio_both);
+        /////////// Gender Filter ////////////
+//        RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
+//        RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
+//        RadioButton genderBoth = sheetDialog.findViewById(R.id.radio_both);
+
 
         RadioButton statusAll = sheetDialog.findViewById(R.id.radio_filter_all);
         RadioButton statusOnline = sheetDialog.findViewById(R.id.radio_filter_online);
@@ -339,27 +346,30 @@ public class PeopleNearbyFragmentAds extends Fragment {
 //            distanceRange.setText(String.format(Locale.US, getString(R.string.distance_range_filter), user.getPrefDistance()));
 //        }
 
-        assert genderMale != null;
-        assert genderFemale != null;
-        assert genderBoth != null;
-        user.fetchInBackground();
 
-        switch (user.getPrefGender()) {
-            case User.GENDER_MALE:
+        /////////// Gender Filter ////////////
 
-                genderMale.setChecked(true);
-
-                break;
-            case User.GENDER_FEMALE:
-
-                genderFemale.setChecked(true);
-
-                break;
-            case User.GENDER_BOTH:
-
-                genderBoth.setChecked(true);
-                break;
-        }
+//        assert genderMale != null;
+//        assert genderFemale != null;
+//        assert genderBoth != null;
+//        user.fetchInBackground();
+//
+//        switch (user.getPrefGender()) {
+//            case User.GENDER_MALE:
+//
+//                genderMale.setChecked(true);
+//
+//                break;
+//            case User.GENDER_FEMALE:
+//
+//                genderFemale.setChecked(true);
+//
+//                break;
+//            case User.GENDER_BOTH:
+//
+//                genderBoth.setChecked(true);
+//                break;
+//        }
 
         switch (user.getPrefStatus()) {
             case User.STATUS_ALL:
@@ -384,38 +394,39 @@ public class PeopleNearbyFragmentAds extends Fragment {
         content.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.GONE);
 
-
-        if (gender != null) {
-            gender.setOnCheckedChangeListener((group, checkedId) -> {
-
-                if (checkedId == R.id.radio_male){
-
-                    user.setPrefGender(User.GENDER_MALE);
-
-                } else if (checkedId == R.id.radio_female){
-
-                    user.setPrefGender(User.GENDER_FEMALE);
-
-                } else if (checkedId == R.id.radio_both){
-
-                    user.setPrefGender(User.GENDER_BOTH);
-
-                }
-            });
-        }
+        /////////// Gender Filter ////////////
+//
+//        if (gender != null) {
+//            gender.setOnCheckedChangeListener((group, checkedId) -> {
+//
+//                if (checkedId == R.id.radio_male){
+//
+//                    user.setPrefGender(User.GENDER_MALE);
+//
+//                } else if (checkedId == R.id.radio_female){
+//
+//                    user.setPrefGender(User.GENDER_FEMALE);
+//
+//                } else if (checkedId == R.id.radio_both){
+//
+//                    user.setPrefGender(User.GENDER_BOTH);
+//
+//                }
+//            });
+//        }
 
         if (status != null) {
             status.setOnCheckedChangeListener((group, checkedId) -> {
 
-                if (checkedId == R.id.radio_filter_all){
+                if (checkedId == R.id.radio_filter_all) {
 
                     user.setPrefStatus(User.STATUS_ALL);
 
-                } else if (checkedId == R.id.radio_filter_online){
+                } else if (checkedId == R.id.radio_filter_online) {
 
                     user.setPrefStatus(User.STATUS_ONLINE);
 
-                } else if (checkedId == R.id.radio_filter_new){
+                } else if (checkedId == R.id.radio_filter_new) {
 
                     user.setPrefStatus(User.STATUS_NEW);
 
@@ -475,7 +486,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         if (closeBtn != null) {
             closeBtn.setOnClickListener(v -> {
 
-                if (sheetDialog.isShowing()){
+                if (sheetDialog.isShowing()) {
                     sheetDialog.cancel();
                 }
             });
@@ -483,7 +494,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
         if (doneBtn != null) {
             doneBtn.setOnClickListener(v -> {
-                if (sheetDialog.isShowing()){
+                if (sheetDialog.isShowing()) {
                     sheetDialog.cancel();
                 }
 
@@ -505,10 +516,10 @@ public class PeopleNearbyFragmentAds extends Fragment {
 //        }
     }
 
-    private void refreshAll(User mCurrentUser){
+    private void refreshAll(User mCurrentUser) {
 
 
-        if (mCurrentUser.getGeoPoint() != null){
+        if (mCurrentUser.getGeoPoint() != null) {
 
             ReloadFirst();
             updateLocation();
@@ -532,7 +543,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         }
     }
 
-    private void setLoading(){
+    private void setLoading() {
 
         mEmptyLayout.setVisibility(View.VISIBLE);
         mEmptyView.setVisibility(View.GONE);
@@ -541,9 +552,9 @@ public class PeopleNearbyFragmentAds extends Fragment {
         mRecyclerView.setVisibility(View.GONE);
     }
 
-    private void hideLoading(boolean isLoaded){
+    private void hideLoading(boolean isLoaded) {
 
-        if (isLoaded){
+        if (isLoaded) {
             mEmptyLayout.setVisibility(View.GONE);
             mRecyclerView.setVisibility(View.VISIBLE);
 
@@ -554,7 +565,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         mLoadingLayout.setVisibility(View.GONE);
     }
 
-    private void ReloadFirst(){
+    private void ReloadFirst() {
 
         setLoading();
         mUsersNear.clear();
@@ -577,7 +588,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         UsersNearQuery.whereNotContainedIn(User.BLOCKED_USERS, userArrayList);
         UsersNearQuery.whereNotEqualTo(User.USER_BLOCKED_STATUS, true);
 
-        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0){
+        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0) {
 
             List<String> blockedUserId = new ArrayList<>();
 
@@ -592,7 +603,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
 //        UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
-        if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)){ // Gender
+        if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)) { // Gender
             UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());
         }
 
@@ -620,14 +631,14 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
         UsersNearQuery.findInBackground((usersNear, e) -> {
 
-            if (usersNear != null){
+            if (usersNear != null) {
 
-                if (usersNear.size() > 0){
+                if (usersNear.size() > 0) {
 
                     mUsersNear.clear();
                     mNativeAds.clear();
 
-                    if (sharedPrefUtil.getBoolean(Constants.IS_NEARBY_NEW, true)){ //
+                    if (sharedPrefUtil.getBoolean(Constants.IS_NEARBY_NEW, true)) { //
 
                         mGetStaredLayout.setVisibility(View.VISIBLE);
                         sharedPrefUtil.saveBoolean(Constants.IS_NEARBY_NEW, false);
@@ -637,7 +648,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
                     mRecyclerView.getRecycledViewPool().clear();
                     mRecyclerView.post(() -> mUsersNearAdapter.notifyDataSetChanged());
 
-                    if (Config.isNearByNativeAdsActivated && !mCurrentUser.isPremium()){
+                    if (Config.isNearByNativeAdsActivated && !mCurrentUser.isPremium()) {
 
                         if (isAdded()) loadNativeAds();
 
@@ -663,7 +674,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
                     mErrorDesc.setText(R.string.no_one_found_update);
                 }
 
-                if (swipeRefreshLayout.isRefreshing()){
+                if (swipeRefreshLayout.isRefreshing()) {
                     swipeRefreshLayout.setRefreshing(false);
 
                 }
@@ -675,13 +686,13 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
                 hideLoading(false);
 
-                if (e.getCode() == ParseException.CONNECTION_FAILED){
+                if (e.getCode() == ParseException.CONNECTION_FAILED) {
 
                     mErrorImage.setImageResource(R.drawable.ic_blocker_large_connection_grey1);
                     mErrorTitle.setText(R.string.not_internet_connection);
                     mErrorDesc.setText(R.string.settings_no_inte);
 
-                } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN){
+                } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN) {
 
                     User.logOut();
                     QuickHelp.goToActivityAndFinish(getActivity(), WelcomeActivity.class);
@@ -694,7 +705,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
                 }
 
-                if (swipeRefreshLayout.isRefreshing()){
+                if (swipeRefreshLayout.isRefreshing()) {
                     swipeRefreshLayout.setRefreshing(false);
                 }
             }
@@ -721,7 +732,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
-    private void checkLastLocation(){
+    private void checkLastLocation() {
 
         Permiso.getInstance().requestPermissions(new Permiso.IOnPermissionResult() {
             @Override
@@ -732,7 +743,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
                 } else {
 
-                    if (isAdded()){
+                    if (isAdded()) {
 
                         Objects.requireNonNull(getActivity()).runOnUiThread(() -> {
 
@@ -761,9 +772,9 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
     }
 
-    private void updateLocation(){
+    private void updateLocation() {
 
-        if (!mCurrentUser.isLocationTypeNearby()){
+        if (!mCurrentUser.isLocationTypeNearby()) {
             return;
         }
 
@@ -799,7 +810,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
     }
 
-    private void checkLocationSettings(){
+    private void checkLocationSettings() {
 
         if (getActivity() == null) return;
 
@@ -813,7 +824,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
             // location requests here.
             // ...
 
-            if (mCurrentUser.isLocationTypeNearby()){
+            if (mCurrentUser.isLocationTypeNearby()) {
                 startLocationUpdates();
             } else {
                 stopLocationUpdates();
@@ -838,6 +849,9 @@ public class PeopleNearbyFragmentAds extends Fragment {
     }
 
     private void startLocationUpdates() {
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
         mFusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper());
     }
 
@@ -845,7 +859,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         mFusedLocationClient.removeLocationUpdates(locationCallback);
     }
 
-    private void initializeSpotlight(){
+    private void initializeSpotlight() {
 
         mUsersNearSpotLight.clear();
         mUsersNearSpotLight.add(mCurrentUser);
@@ -869,7 +883,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         UsersNearQuery.orderByAscending(User.VIP_MORE_VISITS);
         UsersNearQuery.whereNotEqualTo(User.USER_BLOCKED_STATUS, true);
 
-        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0){
+        if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0) {
 
             List<String> blockedUserId = new ArrayList<>();
 
@@ -884,7 +898,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
         UsersNearQuery.findInBackground((objects, e) -> {
 
-            if (objects != null && objects.size() > 0){
+            if (objects != null && objects.size() > 0) {
 
                 mUsersNearSpotLight.clear();
                 mUsersNearSpotLight.add(mCurrentUser);
@@ -895,12 +909,13 @@ public class PeopleNearbyFragmentAds extends Fragment {
         });
     }
 
+    @SuppressLint("MissingPermission")
+    private void getLastLocation() {
 
-    private void getLastLocation(){
-
-        if (!mCurrentUser.isLocationTypeNearby()){
+        if (!mCurrentUser.isLocationTypeNearby()) {
             return;
         }
+
 
         mFusedLocationClient.getLastLocation().addOnSuccessListener(Objects.requireNonNull(getActivity()), location -> {
             // Got last known location. In some rare situations this can be null.
@@ -913,7 +928,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
                 mCurrentUser.saveInBackground(e -> {
 
-                    if (e == null){
+                    if (e == null) {
 
                         refreshAll(mCurrentUser);
 
@@ -971,7 +986,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
             for (UnifiedNativeAd ad : mNativeAds) {
                 mUsersNear.add(index, ad);
-                index = index + Config.ShowNearbyNativeAdsAfter+1;
+                index = index + Config.ShowNearbyNativeAdsAfter + 1;
                 if (index > mUsersNear.size()) {
                     mRecyclerView.post(() -> mUsersNearAdapter.notifyDataSetChanged());
                     return;
@@ -996,7 +1011,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
 
         initializeSpotlight();
 
-        if (mCurrentUser.isLocationTypeNearby()){
+        if (mCurrentUser.isLocationTypeNearby()) {
             startLocationUpdates();
         } else {
             stopLocationUpdates();
@@ -1009,7 +1024,7 @@ public class PeopleNearbyFragmentAds extends Fragment {
         stopLocationUpdates();
     }
 
-    public boolean isInternetAvailable(){
+    public boolean isInternetAvailable() {
         ConnectivityManager cm =
                 (ConnectivityManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = null;

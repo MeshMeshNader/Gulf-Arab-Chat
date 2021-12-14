@@ -681,15 +681,15 @@
     <string name="distance_range_filter">Up to %d kilometers away</string>
     <string name="wait_previous_image">Already sending image, wait…</string>
     <string name="basic_info_needed">Complete  profile basic info!</string>
-    <string name="email_login">Login with email</string>
-    <string name="login_google">SignIn with Google</string>
+    <string name="email_login">Continue with Email</string>
+    <string name="login_google">Continue with Google</string>
     <string name="mimiun_age_to_register">You need at least %d years old</string>
     <string name="unlimited_messages">Get unlimited chat with popular girls</string>
     <string name="your_dailly_message_quote">You used all your daily messages, please upgrade</string>
     <string name="your_total_message_quote">You used free messages, please upgrade</string>
 
     <!--SMS Verification-->
-    <string name="login_phone">Login With Phone Number</string>
+    <string name="login_phone">Continue with Number</string>
     <string name="search_country">Search country …</string>
     <string name="resend">You didn\'t receive any code? Resend</string>
     <string name="enter_the_code_below_to_verify">Enter the code below to verify</string>

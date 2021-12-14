@@ -26,13 +26,10 @@
 
         <ImageView
             android:id="@+id/registration_app_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="400dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:layout_above="@id/register_gender"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_centerHorizontal="true"
             android:background="@color/white"
             android:contentDescription="@null"
@@ -131,8 +128,9 @@
                     android:visibility="gone" />
             </FrameLayout>
 
+
             <FrameLayout
-                android:id="@+id/layout_sign_in"
+                android:id="@+id/layout_sign_in_facebook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/size_2"
@@ -143,9 +141,10 @@
                     style="?buttonStylePrimary"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/com_parse_ui_facebook_login_logo"
-                    android:drawableLeft="@drawable/com_parse_ui_facebook_login_logo"
+                    android:drawableStart="@drawable/ic_facebook_login"
+                    android:drawableLeft="@drawable/ic_facebook_login"
                     android:visibility="visible" />
+
 
                 <TextView
                     android:id="@+id/text_login_facebook"
@@ -169,6 +168,113 @@
                     android:visibility="visible" />
             </FrameLayout>
 
+
+            <FrameLayout
+                android:id="@+id/layout_sign_in_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_2"
+                android:layout_marginTop="@dimen/size_1_25"
+                android:layout_marginEnd="@dimen/size_2">
+
+                <Button
+                    android:id="@+id/button_login_email"
+                    style="?buttonStylePrimary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_email_login"
+                    android:drawableLeft="@drawable/ic_email_login"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/text_login_email"
+                    style="?textStyleActionMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/size_1_25"
+                    android:gravity="center_vertical"
+                    android:minWidth="0.0dip"
+                    android:padding="0.0dip"
+                    android:singleLine="true"
+                    android:text="@string/email_login"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/layout_sign_in_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_2"
+                android:layout_marginTop="@dimen/size_1_25"
+                android:layout_marginEnd="@dimen/size_2">
+
+                <Button
+                    android:id="@+id/button_login_google"
+                    style="?buttonStylePrimary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_google_login"
+                    android:drawableLeft="@drawable/ic_google_login"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/text_login_google"
+                    style="?textStyleActionMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/size_1_25"
+                    android:gravity="center_vertical"
+                    android:minWidth="0.0dip"
+                    android:padding="0.0dip"
+                    android:singleLine="true"
+                    android:text="@string/login_google"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/layout_sign_in_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_2"
+                android:layout_marginTop="@dimen/size_1_25"
+                android:layout_marginBottom="@dimen/size_1_25"
+
+                android:layout_marginEnd="@dimen/size_2">
+
+                <Button
+                    android:id="@+id/button_login_phone"
+                    style="?buttonStylePrimary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_mobile_login"
+                    android:drawableLeft="@drawable/ic_mobile_login"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/text_login_phone"
+                    style="?textStyleActionMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/size_1_25"
+                    android:gravity="center_vertical"
+                    android:minWidth="0.0dip"
+                    android:padding="0.0dip"
+                    android:singleLine="true"
+                    android:text="@string/login_phone"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+
             <TextView
                 android:id="@+id/landingScreen_otherOptions"
                 style="?buttonStyleButtonSmall"
@@ -178,7 +284,8 @@
                 android:maxWidth="360.0dip"
                 android:paddingLeft="@dimen/size_2"
                 android:paddingRight="@dimen/size_2"
-                android:text="@string/signin_existing_signin" />
+                android:text="@string/signin_existing_signin"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/facebook_alert"

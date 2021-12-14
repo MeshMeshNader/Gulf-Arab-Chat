@@ -19,7 +19,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -51,7 +50,6 @@ import com.greysonparrelli.permiso.Permiso;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.adapters.arabchat.UsersNearAdapter;
 import com.gulf.arabchat0.adapters.arabchat.UsersNearSpotLightAdapter;
-import com.gulf.arabchat0.app.Application;
 import com.gulf.arabchat0.app.Config;
 import com.gulf.arabchat0.app.Constants;
 import com.gulf.arabchat0.auth.WelcomeActivity;
@@ -399,7 +397,11 @@ public class PeopleNearbyFragment extends Fragment {
         //FrameLayout location = sheetDialog.findViewById(R.id.locationInput);
         //TextView cityLabel = sheetDialog.findViewById(R.id.cityLabel);
         TextView ageRange = sheetDialog.findViewById(R.id.rangeBarLabel);
-        RadioGroup gender = sheetDialog.findViewById(R.id.gender_radio_group);
+
+        /////////// Gender Filter ////////////
+        //RadioGroup gender = sheetDialog.findViewById(R.id.gender_radio_group);
+
+
         RadioGroup status = sheetDialog.findViewById(R.id.filter_radio_group);
         ImageView closeBtn = sheetDialog.findViewById(R.id.filter_decline);
         ImageView doneBtn = sheetDialog.findViewById(R.id.filter_confirm);
@@ -407,9 +409,11 @@ public class PeopleNearbyFragment extends Fragment {
         //TextView distanceRange = sheetDialog.findViewById(R.id.rangeBarDistanceLabel);
         //RangeSeekBar rangeSeekBarDistance = sheetDialog.findViewById(R.id.rangeBar_distance);
 
-        RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
-        RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
-        RadioButton genderBoth = sheetDialog.findViewById(R.id.radio_both);
+        /////////// Gender Filter ////////////
+
+//        RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
+//        RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
+//        RadioButton genderBoth = sheetDialog.findViewById(R.id.radio_both);
 
         RadioButton statusAll = sheetDialog.findViewById(R.id.radio_filter_all);
         RadioButton statusOnline = sheetDialog.findViewById(R.id.radio_filter_online);
@@ -460,27 +464,29 @@ public class PeopleNearbyFragment extends Fragment {
 //            distanceRange.setText(String.format(Locale.US, Application.getInstance().getBaseContext().getString(R.string.distance_range_filter), user.getPrefDistance()));
 //        }
 
-        assert genderMale != null;
-        assert genderFemale != null;
-        assert genderBoth != null;
-        user.fetchInBackground();
 
-        switch (user.getPrefGender()) {
-            case User.GENDER_MALE:
-
-                genderMale.setChecked(true);
-
-                break;
-            case User.GENDER_FEMALE:
-
-                genderFemale.setChecked(true);
-
-                break;
-            case User.GENDER_BOTH:
-
-                genderBoth.setChecked(true);
-                break;
-        }
+        /////////// Gender Filter ////////////
+//        assert genderMale != null;
+//        assert genderFemale != null;
+//        assert genderBoth != null;
+//        user.fetchInBackground();
+//
+//        switch (user.getPrefGender()) {
+//            case User.GENDER_MALE:
+//
+//                genderMale.setChecked(true);
+//
+//                break;
+//            case User.GENDER_FEMALE:
+//
+//                genderFemale.setChecked(true);
+//
+//                break;
+//            case User.GENDER_BOTH:
+//
+//                genderBoth.setChecked(true);
+//                break;
+//        }
 
         switch (user.getPrefStatus()) {
             case User.STATUS_ALL:
@@ -505,25 +511,25 @@ public class PeopleNearbyFragment extends Fragment {
         content.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.GONE);
 
-
-        if (gender != null) {
-            gender.setOnCheckedChangeListener((group, checkedId) -> {
-
-                if (checkedId == R.id.radio_male) {
-
-                    user.setPrefGender(User.GENDER_MALE);
-
-                } else if (checkedId == R.id.radio_female) {
-
-                    user.setPrefGender(User.GENDER_FEMALE);
-
-                } else if (checkedId == R.id.radio_both) {
-
-                    user.setPrefGender(User.GENDER_BOTH);
-
-                }
-            });
-        }
+/////////// Gender Filter ////////////
+//        if (gender != null) {
+//            gender.setOnCheckedChangeListener((group, checkedId) -> {
+//
+//                if (checkedId == R.id.radio_male) {
+//
+//                    user.setPrefGender(User.GENDER_MALE);
+//
+//                } else if (checkedId == R.id.radio_female) {
+//
+//                    user.setPrefGender(User.GENDER_FEMALE);
+//
+//                } else if (checkedId == R.id.radio_both) {
+//
+//                    user.setPrefGender(User.GENDER_BOTH);
+//
+//                }
+//            });
+//        }
 
         if (status != null) {
             status.setOnCheckedChangeListener((group, checkedId) -> {

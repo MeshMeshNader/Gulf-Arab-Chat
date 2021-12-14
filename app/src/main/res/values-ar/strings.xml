@@ -147,7 +147,7 @@
     <string name="registration_email_preferences_no">لا شكرا</string>
     <string name="registration_email_preferences_yes">أكيد!</string>
     <string name="registration_gender_female">انثى</string>
-    <string name="registration_gender_header">مهلا! أنت …؟</string>
+    <string name="registration_gender_header">مهلا! أنت ..؟</string>
     <string name="registration_gender_male">ذكر</string>
     <string name="registration_info_header">يكاد ينتهي…</string>
     <string name="registration_tiw_header">وأنت هنا ل …</string>
@@ -663,13 +663,13 @@
     <string name="distance_range_filter">يصل إلى %d كيلومتر</string>
     <string name="wait_previous_image">جارٍ إرسال الصورة بالفعل ، انتظر …</string>
     <string name="basic_info_needed">معلومات أساسية كاملة الملف الشخصي!</string>
-    <string name="email_login">تسجيل الدخول باستخدام البريد الإلكتروني</string>
-    <string name="login_google">الدخول مع جوجل</string>
+    <string name="email_login">متابعة باستخدام البريد</string>
+    <string name="login_google">متابعة باستخدام جوجل</string>
     <string name="mimiun_age_to_register">تحتاج إلى%d سنة على الأقل</string>
     <string name="unlimited_messages">احصل على دردشة غير محدودة مع الفتيات المشهورات</string>
     <string name="your_dailly_message_quote">لقد استخدمت جميع رسائلك اليومية ، يرجى الترقية</string>
     <string name="your_total_message_quote">لقد استخدمت رسائل مجانية ، يرجى الترقية</string>
-    <string name="login_phone">تسجيل الدخول عبر الهاتف</string>
+    <string name="login_phone">متابعة باستخدام الهاتف</string>
     <string name="search_country">البحث عن بلد ...</string>
     <string name="account_lang">اللغة</string>
     <string name="com_parse_ui_confirm_password_input_hint">اعد كتابة كلمة السر</string>

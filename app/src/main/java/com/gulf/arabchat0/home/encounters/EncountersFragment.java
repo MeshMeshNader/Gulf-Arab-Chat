@@ -21,8 +21,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +28,24 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.rewarded.RewardItem;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdCallback;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+import com.google.android.gms.common.api.ResolvableApiException;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResponse;
+import com.google.android.gms.location.SettingsClient;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.greysonparrelli.permiso.Permiso;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.adapters.arabchat.EncountersAdapter;
 import com.gulf.arabchat0.app.Application;
@@ -55,24 +71,6 @@ import com.gulf.arabchat0.modules.rangeBarView.RangeSeekBar;
 import com.gulf.arabchat0.modules.shimmer.ShimmerFrameLayout;
 import com.gulf.arabchat0.modules.topsheet.TopSheetBehavior;
 import com.gulf.arabchat0.modules.topsheet.TopSheetDialog;
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.rewarded.RewardItem;
-import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.ads.rewarded.RewardedAdCallback;
-import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
-import com.google.android.gms.common.api.ResolvableApiException;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.LocationSettingsRequest;
-import com.google.android.gms.location.LocationSettingsResponse;
-import com.google.android.gms.location.SettingsClient;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.greysonparrelli.permiso.Permiso;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
@@ -237,7 +235,7 @@ public class EncountersFragment extends Fragment implements CardStackListener {
 
     public void crushUser(User user){
 
-        if (Config.isCrushCreditNeeded){
+        if (Config.isCrushCreditNeeded && mCurrentUser.getColGender().equals(User.GENDER_MALE)){
 
             bottomSheetDialog = new BottomSheetDialog(getActivity());
             bottomSheetDialog.setContentView(R.layout.include_crush);
@@ -527,7 +525,9 @@ public class EncountersFragment extends Fragment implements CardStackListener {
         LinearLayout content = sheetDialog.findViewById(R.id.content);
 
         TextView ageRange = sheetDialog.findViewById(R.id.rangeBarLabel);
-        RadioGroup gender = sheetDialog.findViewById(R.id.gender_radio_group);
+
+        /////////// Gender Filter ////////////
+        //        RadioGroup gender = sheetDialog.findViewById(R.id.gender_radio_group);
 
         ImageView closeBtn = sheetDialog.findViewById(R.id.filter_decline);
         ImageView doneBtn = sheetDialog.findViewById(R.id.filter_confirm);
@@ -536,9 +536,10 @@ public class EncountersFragment extends Fragment implements CardStackListener {
 //        TextView distanceRange = sheetDialog.findViewById(R.id.rangeBarDistanceLabel);
 //        RangeSeekBar rangeSeekBarDistance = sheetDialog.findViewById(R.id.rangeBar_distance);
 
-        RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
-        RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
-        RadioButton genderBoth = sheetDialog.findViewById(R.id.radio_both);
+        /////////// Gender Filter ////////////
+//        RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
+//        RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
+//        RadioButton genderBoth = sheetDialog.findViewById(R.id.radio_both);
 
 
         assert content != null;
@@ -574,52 +575,54 @@ public class EncountersFragment extends Fragment implements CardStackListener {
 //            distanceRange.setText(String.format(Locale.US, Application.getInstance().getBaseContext().getString(R.string.distance_range_filter), user.getPrefDistance()));
 //        }
 
-
-        assert genderMale != null;
-        assert genderFemale != null;
-        assert genderBoth != null;
-        user.fetchInBackground();
-
-        switch (user.getPrefGender()) {
-            case User.GENDER_MALE:
-
-
-                genderMale.setChecked(true);
-
-                break;
-            case User.GENDER_FEMALE:
-
-                genderFemale.setChecked(true);
-
-                break;
-            case User.GENDER_BOTH:
-
-                genderBoth.setChecked(true);
-                break;
-        }
+/////////// Gender Filter ////////////
+//
+//        assert genderMale != null;
+//        assert genderFemale != null;
+//        assert genderBoth != null;
+//        user.fetchInBackground();
+//
+//        switch (user.getPrefGender()) {
+//            case User.GENDER_MALE:
+//
+//
+//                genderMale.setChecked(true);
+//
+//                break;
+//            case User.GENDER_FEMALE:
+//
+//                genderFemale.setChecked(true);
+//
+//                break;
+//            case User.GENDER_BOTH:
+//
+//                genderBoth.setChecked(true);
+//                break;
+//        }
 
         content.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.GONE);
 
 
-        if (gender != null) {
-            gender.setOnCheckedChangeListener((group, checkedId) -> {
-
-                if (checkedId == R.id.radio_male){
-
-                    user.setPrefGender(User.GENDER_MALE);
-
-                } else if (checkedId == R.id.radio_female){
-
-                    user.setPrefGender(User.GENDER_FEMALE);
-
-                } else if (checkedId == R.id.radio_both){
-
-                    user.setPrefGender(User.GENDER_BOTH);
-
-                }
-            });
-        }
+        /////////// Gender Filter ////////////
+//        if (gender != null) {
+//            gender.setOnCheckedChangeListener((group, checkedId) -> {
+//
+//                if (checkedId == R.id.radio_male){
+//
+//                    user.setPrefGender(User.GENDER_MALE);
+//
+//                } else if (checkedId == R.id.radio_female){
+//
+//                    user.setPrefGender(User.GENDER_FEMALE);
+//
+//                } else if (checkedId == R.id.radio_both){
+//
+//                    user.setPrefGender(User.GENDER_BOTH);
+//
+//                }
+//            });
+//        }
 
         assert rangeSeekBar != null;
         rangeSeekBar.setOnRangeChangedListener(new OnRangeChangedListener() {

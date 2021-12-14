@@ -297,6 +297,15 @@ public class ChatActivity extends AppCompatActivity {
         });
 
 
+        if(mCurrentUser.getColGender().equals(User.GENDER_FEMALE)){
+            mTooBarVideoCall.setVisibility(View.GONE);
+            mTooBarVoiceCall.setVisibility(View.GONE);
+        }else{
+            mTooBarVideoCall.setVisibility(View.VISIBLE);
+            mTooBarVoiceCall.setVisibility(View.VISIBLE);
+        }
+
+
         loadUser();
 
         loadMessages(false);

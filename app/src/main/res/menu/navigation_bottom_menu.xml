@@ -3,27 +3,27 @@
 
     <item
         android:id="@+id/navigation_public"
-        android:icon="@drawable/ic_tabbar_people_nearby"
+        android:icon="@drawable/ic_new_nearby"
         android:title="" />
 
     <item
         android:id="@+id/navigation_encounters"
-        android:icon="@drawable/ic_tabbar_encounters_new"
+        android:icon="@drawable/ic_new_encounters_new"
         android:title="" />
 
     <item
         android:id="@+id/navigation_live"
-        android:icon="@drawable/ic_tabbar_live"
+        android:icon="@drawable/ic_new_live"
         android:title="" />
 
     <item
         android:id="@+id/navigation_mess"
-        android:icon="@drawable/ic_tabbar_connections"
+        android:icon="@drawable/ic_new_chats"
         android:title="" />
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_tabbar_my_profile"
+        android:icon="@drawable/ic_new_my_profile"
         android:title="" />
 
 </menu>

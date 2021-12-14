@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.greysonparrelli.permiso.Permiso;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.adapters.arabchat.OwnProfilePhotosAdapter;
+import com.gulf.arabchat0.adapters.arabchat.OwnProfileSmallPhotosAdapter;
 import com.gulf.arabchat0.app.Application;
 import com.gulf.arabchat0.helpers.QuickActions;
 import com.gulf.arabchat0.helpers.QuickHelp;
@@ -45,28 +47,27 @@ public class MyProfileFragment extends Fragment {
     public User mCurrentUser;
 
     private CircleImageView circleImageView;
-    private TextView mNameAndAge, mTapToSee;
+    private TextView mNameAndAge;
 
     ArrayList<ParseFile> parseFiles;
-    OwnProfilePhotosAdapter ownProfilePhotosAdapter;
+    OwnProfileSmallPhotosAdapter ownProfilePhotosAdapter;
 
     RecyclerView mRecyclerView;
 
     private ImageView mPopularityImage;
     private TextView mPopularityText;
 
-    private ImageView mMyInfoAvatarImage;
-
-    private ImageView mSecondBigImage, mProfileBannerImage, mAddPhotos, mCreditImage, mTokenImage;
-    private TextView mSecondBigText, mSecondSmallText, mCreditText, mTokenText;
+    private ImageView mProfileBannerImage, mAddPhotos, mCreditImage, mTokenImage;
+    private TextView mCreditText, mTokenText;
 
     private TextView mCredits, mTokens, mProfileBannerText, mUserID;
 
     private CircleImageView mInvisibleMode;
 
-    private View mCreditsView, mPopularityView, mSecondView, mProfileBannerView, mTokensView, mInformationView;
+    private View mCreditsView, mPopularityView, mProfileBannerView, mTokensView;
 
     FrameLayout myProfileBannerCardContainer;
+    ConstraintLayout findFriendsCard, creditCardCard, photosCardCard, infoCardCard;
 
 
     public MyProfileFragment() {
@@ -90,11 +91,11 @@ public class MyProfileFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_my_profile, container, false);
+        View v = inflater.inflate(R.layout.profile, container, false);
 
         circleImageView = v.findViewById(R.id.avatar);
         mNameAndAge = v.findViewById(R.id.myProfileNameAndAge);
-        mTapToSee = v.findViewById(R.id.myProfileSubtitle);
+
 
         mInvisibleMode = v.findViewById(R.id.invisibleModeIcon);
 
@@ -110,24 +111,29 @@ public class MyProfileFragment extends Fragment {
         mPopularityImage = v.findViewById(R.id.ownProfileElementThreeImage);
         mPopularityText = v.findViewById(R.id.ownProfileElementThreeSubtitle);
 
-        mSecondBigImage = v.findViewById(R.id.ownProfileElementTwoImage);
-        mSecondBigText = v.findViewById(R.id.ownProfileElementTwoTitle);
-        mSecondSmallText = v.findViewById(R.id.ownProfileElementTwoSubtitle);
+        findFriendsCard = v.findViewById(R.id.myProfileFriendsCard);
+        creditCardCard = v.findViewById(R.id.myProfileCreditCard);
+        photosCardCard = v.findViewById(R.id.myProfilePhotosCard);
+        infoCardCard = v.findViewById(R.id.myProfileInfoCard);
+
+//        mSecondBigImage = v.findViewById(R.id.ownProfileElementTwoImage);
+//        mSecondBigText = v.findViewById(R.id.ownProfileElementTwoTitle);
+//        mSecondSmallText = v.findViewById(R.id.ownProfileElementTwoSubtitle);
 
         mProfileBannerImage = v.findViewById(R.id.myProfileBannerImage);
         mProfileBannerText = v.findViewById(R.id.myProfileBannerText);
 
         mCreditsView = v.findViewById(R.id.ownProfileElementOneClickableArea);
         mTokensView = v.findViewById(R.id.ownProfileElementFourClickableArea);
-        mInformationView = v.findViewById(R.id.ownProfileElementFiveClickableArea);
+        //mInformationView = v.findViewById(R.id.ownProfileElementFiveClickableArea);
         mPopularityView = v.findViewById(R.id.ownProfileElementThreeClickableArea);
-        mSecondView = v.findViewById(R.id.ownProfileElementTwoClickableArea);
+        //mSecondView = v.findViewById(R.id.ownProfileElementTwoClickableArea);
         mProfileBannerView = v.findViewById(R.id.myProfileBannerBackground);
 
-        mUserID = v.findViewById(R.id.ownProfileElementFiveSubtitle);
+        mUserID = v.findViewById(R.id.myProfileID);
 
         myProfileBannerCardContainer = v.findViewById(R.id.myProfileBannerCardContainer);
-        mMyInfoAvatarImage = v.findViewById(R.id.ownProfileElementFiveImage);
+        //mMyInfoAvatarImage = v.findViewById(R.id.ownProfileElementFiveImage);
 
         mCurrentUser = User.getUser();
 
@@ -140,43 +146,57 @@ public class MyProfileFragment extends Fragment {
 
 
         if (mCurrentUser.getColGender().equals(User.GENDER_MALE)) {
-            mMyInfoAvatarImage.setImageResource(R.drawable.ic_boy);
+            //mMyInfoAvatarImage.setImageResource(R.drawable.ic_boy);
 
+            mCredits.setVisibility(View.VISIBLE);
+            mCreditText.setVisibility(View.VISIBLE);
+            mCreditImage.setVisibility(View.VISIBLE);
+            mCreditsView.setVisibility(View.VISIBLE);
             mCredits.setText(String.valueOf(mCurrentUser.getCredits()));
-            mTokens.setText("");
-            mTokenText.setText(getResources().getString(R.string.search_users));
-            mTokenImage.setImageResource(R.drawable.search_users);
-
+            mTokens.setVisibility(View.GONE);
+            mTokenText.setVisibility(View.GONE);
+            mTokenImage.setVisibility(View.GONE);
+            mTokensView.setVisibility(View.GONE);
 
             mCreditsView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_3X_POPULAR));
-            mTokensView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), UsersSearch.class));
+            creditCardCard.setOnClickListener(v2 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_3X_POPULAR));
 
 
         } else if (mCurrentUser.getColGender().equals(User.GENDER_FEMALE)) {
-            mMyInfoAvatarImage.setImageResource(R.drawable.ic_girl);
+            //mMyInfoAvatarImage.setImageResource(R.drawable.ic_girl);
 
+
+            mTokens.setVisibility(View.VISIBLE);
+            mTokenText.setVisibility(View.VISIBLE);
+            mTokenImage.setVisibility(View.VISIBLE);
+            mTokensView.setVisibility(View.VISIBLE);
             mTokens.setText(String.valueOf(mCurrentUser.getTokens()));
-            mCredits.setText("");
-            mCreditText.setText(getResources().getString(R.string.search_users));
-            mCreditImage.setImageResource(R.drawable.search_users);
+            mCredits.setVisibility(View.GONE);
+            mCreditText.setVisibility(View.GONE);
+            mCreditImage.setVisibility(View.GONE);
+            mCreditsView.setVisibility(View.GONE);
 
 
             mTokensView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), WalletActivity.class));
-            mCreditsView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), UsersSearch.class));
-
+            creditCardCard.setOnClickListener(v3 -> QuickHelp.goToActivityWithNoClean(getActivity(), WalletActivity.class));
         }
+
+        findFriendsCard.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), UsersSearch.class));
+        photosCardCard.setOnClickListener(v5 -> QuickHelp.goToActivityWithNoClean(getActivity(), UploadsActivity.class));
+        infoCardCard.setOnClickListener(v6 -> QuickHelp.goToActivityWithNoClean(getActivity(), EditProfileActivity.class));
 
 
         String userID = getResources().getString(R.string.user_info_ID) + mCurrentUser.getUid();
         mUserID.setText(userID);
+        mUserID.setOnClickListener(v7 -> QuickHelp.goToActivityWithNoClean(getActivity(), EditProfileActivity.class));
 
 
-        mRecyclerView = v.findViewById(R.id.myProfile_photos);
+        mRecyclerView = v.findViewById(R.id.myProfile_photos_recycler);
 
         //Profile Images
 
         parseFiles = new ArrayList<>();
-        ownProfilePhotosAdapter = new OwnProfilePhotosAdapter(getActivity(), parseFiles, mCurrentUser);
+        ownProfilePhotosAdapter = new OwnProfileSmallPhotosAdapter(getActivity(), parseFiles, mCurrentUser);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -195,34 +215,34 @@ public class MyProfileFragment extends Fragment {
         mPopularityImage.setImageResource(QuickHelp.getPopularityLevelIndicator(mCurrentUser));
         mPopularityText.setText(QuickHelp.getPopularityLevel(mCurrentUser));
 
-        if (mCurrentUser.getProfilePhotos().size() < 2) {
-
-            mSecondBigImage.setImageResource(R.drawable.ic_badge_add_photos);
-            mSecondBigText.setText(getString(R.string.photos_needed));
-            mSecondSmallText.setText(getString(R.string.add_photos));
-
-            mSecondView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), UploadsActivity.class));
-
-        } else if (mCurrentUser.isPremium()) {
-
-            mSecondBigImage.setImageResource(R.drawable.ic_badge_feature_premium);
-            mSecondBigText.setText(getString(R.string.arabchat_premium));
-            mSecondSmallText.setText(getString(R.string.activate));
-
-            mSecondView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_ARABCHAT_PREMIUM));
-
-        } else {
-
-            mSecondBigImage.setImageResource(R.drawable.ic_badge_add_photos);
-            mSecondBigText.setText(getString(R.string.get_more_visits));
-            mSecondSmallText.setText(getString(R.string.add_photos));
-
-            mSecondView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), UploadsActivity.class));
-        }
+//        if (mCurrentUser.getProfilePhotos().size() < 2) {
+//
+//            mSecondBigImage.setImageResource(R.drawable.ic_badge_add_photos);
+//            mSecondBigText.setText(getString(R.string.photos_needed));
+//            mSecondSmallText.setText(getString(R.string.add_photos));
+//
+//            mSecondView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), UploadsActivity.class));
+//
+//        } else if (mCurrentUser.isPremium()) {
+//
+//            mSecondBigImage.setImageResource(R.drawable.ic_badge_feature_premium);
+//            mSecondBigText.setText(getString(R.string.arabchat_premium));
+//            mSecondSmallText.setText(getString(R.string.activate));
+//
+//            mSecondView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_ARABCHAT_PREMIUM));
+//
+//        } else {
+//
+//            mSecondBigImage.setImageResource(R.drawable.ic_badge_add_photos);
+//            mSecondBigText.setText(getString(R.string.get_more_visits));
+//            mSecondSmallText.setText(getString(R.string.add_photos));
+//
+//            mSecondView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), UploadsActivity.class));
+//        }
 
         mPopularityView.setOnClickListener(v2 -> QuickHelp.goToActivityWithNoClean(getActivity(), PopularityActivity.class));
         mAddPhotos.setOnClickListener(v3 -> QuickHelp.goToActivityWithNoClean(getActivity(), UploadsActivity.class));
-        mInformationView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), EditProfileActivity.class));
+        //mInformationView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), EditProfileActivity.class));
 
 
         if (mCurrentUser.isVerified()) {
@@ -271,10 +291,9 @@ public class MyProfileFragment extends Fragment {
 
         if (getActivity() != null) {
 
-            ((HomeActivity) getActivity()).initializeToolBar(R.drawable.ic_navigation_bar_settings, R.drawable.ic_navigation_bar_edit_profile, HomeActivity.VIEW_TYPE_MY_PROFILE);
+            ((HomeActivity) getActivity()).initializeToolBar(R.drawable.ic_new_settings, R.drawable.ic_new_edit_profile, HomeActivity.VIEW_TYPE_MY_PROFILE);
 
             mNameAndAge.setOnClickListener(v1 -> QuickActions.showProfile(getActivity(), mCurrentUser, true));
-            mTapToSee.setOnClickListener(v1 -> QuickActions.showProfile(getActivity(), mCurrentUser, true));
             circleImageView.setOnClickListener(v1 -> QuickActions.showProfile(getActivity(), mCurrentUser, true));
         }
 
@@ -331,7 +350,6 @@ public class MyProfileFragment extends Fragment {
             } else if (mCurrentUser.getColGender().equals(User.GENDER_FEMALE)) {
                 mTokens.setText(String.valueOf(mCurrentUser.getTokens()));
             }
-
 
 
             if (mCurrentUser.getBirthDate() != null) {

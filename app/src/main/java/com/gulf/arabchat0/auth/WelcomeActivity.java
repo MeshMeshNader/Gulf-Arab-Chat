@@ -19,6 +19,12 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.snackbar.Snackbar;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.app.BaseActivity;
 import com.gulf.arabchat0.app.Config;
@@ -32,12 +38,6 @@ import com.gulf.arabchat0.models.arabchat.User;
 import com.gulf.arabchat0.modules.parsegooglesignin.ParseGoogleSignIn;
 import com.gulf.arabchat0.utils.SharedPrefUtil;
 import com.gulf.arabchat0.utils.Tools;
-import com.facebook.AccessToken;
-import com.facebook.GraphRequest;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.android.material.snackbar.Snackbar;
 import com.parse.ParseFile;
 import com.parse.ParseInstallation;
 import com.parse.ParsePush;
@@ -64,7 +64,7 @@ import java.util.Locale;
 public class WelcomeActivity extends BaseActivity {
 
     private View parseLogin;
-    Button mFacebook;
+    Button mFacebook, mGoogle, mPhoneNumber, mEmail;
     ProgressBar mProgress;
     TextView mFacebookText, mLogin;
     Bitmap bitmap;
@@ -88,7 +88,7 @@ public class WelcomeActivity extends BaseActivity {
             bis.close();
             is.close();
         } catch (IOException e) {
-            Log.e("IMAGE","Error getting bitmap",e);
+            Log.e("IMAGE", "Error getting bitmap", e);
         }
         return bm;
     }
@@ -110,13 +110,19 @@ public class WelcomeActivity extends BaseActivity {
 
         mLogin = findViewById(R.id.landingScreen_otherOptions);
         mFacebook = findViewById(R.id.button_login_facebook);
+        mGoogle = findViewById(R.id.button_login_google);
+        mPhoneNumber = findViewById(R.id.button_login_phone);
+        mEmail = findViewById(R.id.button_login_email);
         mProgress = findViewById(R.id.progress_bar);
         mFacebookText = findViewById(R.id.text_login_facebook);
         parseLogin = findViewById(R.id.Landing_scroll);
         mButtonMale = findViewById(R.id.Registration_buttonMale);
         mButtonFemale = findViewById(R.id.Registration_buttonFemale);
         mGenderLayout = findViewById(R.id.register_gender);
-        FrameLayout facebookLyt = findViewById(R.id.layout_sign_in);
+        FrameLayout facebookLyt = findViewById(R.id.layout_sign_in_facebook);
+        FrameLayout googleLyt = findViewById(R.id.layout_sign_in_google);
+        FrameLayout phoneLyt = findViewById(R.id.layout_sign_in_phone);
+        FrameLayout emailLyt = findViewById(R.id.layout_sign_in_email);
         FrameLayout genderSignupLyt = findViewById(R.id.gender_signup_lyt);
         LinearLayout orLyt = findViewById(R.id.or_layout);
         TextView fbAlert = findViewById(R.id.facebook_alert);
@@ -130,7 +136,20 @@ public class WelcomeActivity extends BaseActivity {
             fbAlert.setVisibility(View.INVISIBLE);
         }
 
-        if (!Config.EMAIL_LOGIN && !Config.GOOGLE_LOGIN && !Config.PHONE_LOGIN) mLogin.setVisibility(View.GONE);
+        if (!Config.GOOGLE_LOGIN)
+            googleLyt.setVisibility(View.GONE);
+
+
+        if (!Config.PHONE_LOGIN)
+            phoneLyt.setVisibility(View.GONE);
+
+
+        if (!Config.EMAIL_LOGIN)
+            emailLyt.setVisibility(View.GONE);
+
+
+        if (!Config.EMAIL_LOGIN && !Config.GOOGLE_LOGIN && !Config.PHONE_LOGIN)
+            mLogin.setVisibility(View.GONE);
 
         if (!Config.EMAIL_LOGIN) {
 
@@ -214,15 +233,15 @@ public class WelcomeActivity extends BaseActivity {
 
             List<String> permissions = Arrays.asList("public_profile", "email", "user_birthday", "user_gender", "user_photos", "user_location");
 
-            if (QuickHelp.isInternetAvailable(this)){
+            if (QuickHelp.isInternetAvailable(this)) {
 
                 startFbLogin();
 
-                ParseFacebookUtils.logInWithReadPermissionsInBackground(WelcomeActivity.this, permissions,(user, err) -> {
+                ParseFacebookUtils.logInWithReadPermissionsInBackground(WelcomeActivity.this, permissions, (user, err) -> {
 
                     if (user == null) {
 
-                        Snackbar.make(parseLogin, R.string.fb_error,Snackbar.LENGTH_INDEFINITE).setAction(R.string.ok, v1 -> {
+                        Snackbar.make(parseLogin, R.string.fb_error, Snackbar.LENGTH_INDEFINITE).setAction(R.string.ok, v1 -> {
 
                         }).setActionTextColor(Color.WHITE).show();
 
@@ -241,9 +260,15 @@ public class WelcomeActivity extends BaseActivity {
 
             } else QuickHelp.noInternetConnect(this);
         });
+
+        mGoogle.setOnClickListener(view -> loginWithGoogle());
+        mPhoneNumber.setOnClickListener(view -> QuickHelp.goToActivityWithNoClean(this, PhoneLoginActivity.class));
+        mEmail.setOnClickListener(view -> goToLogin());
+
+
     }
 
-    public void OpenLogin(){
+    public void OpenLogin() {
 
         sheetDialog = new BottomSheetDialog(this, R.style.AppBottomSheetDialogTheme);
         sheetDialog.setContentView(R.layout.include_login_sheet);
@@ -261,8 +286,8 @@ public class WelcomeActivity extends BaseActivity {
         if (!Config.GOOGLE_LOGIN) google.setVisibility(View.GONE);
         if (!Config.EMAIL_LOGIN) email.setVisibility(View.GONE);
 
-            phone.setOnClickListener(v -> {
-            if (sheetDialog.isShowing()){
+        phone.setOnClickListener(v -> {
+            if (sheetDialog.isShowing()) {
                 sheetDialog.dismiss();
 
                 QuickHelp.goToActivityWithNoClean(this, PhoneLoginActivity.class);
@@ -271,7 +296,7 @@ public class WelcomeActivity extends BaseActivity {
         });
 
         google.setOnClickListener(v -> {
-            if (sheetDialog.isShowing()){
+            if (sheetDialog.isShowing()) {
                 sheetDialog.dismiss();
 
                 loginWithGoogle();
@@ -281,7 +306,7 @@ public class WelcomeActivity extends BaseActivity {
 
         email.setOnClickListener(view -> {
 
-            if (sheetDialog.isShowing()){
+            if (sheetDialog.isShowing()) {
                 sheetDialog.dismiss();
 
                 goToLogin();
@@ -289,12 +314,12 @@ public class WelcomeActivity extends BaseActivity {
 
         });
 
-        if (sheetDialog != null && !sheetDialog.isShowing()){
+        if (sheetDialog != null && !sheetDialog.isShowing()) {
             sheetDialog.show();
         }
     }
 
-    public void goToLogin(){
+    public void goToLogin() {
 
         ArabChatLoginBuilder builder = new ArabChatLoginBuilder(WelcomeActivity.this);
         builder.setAppLogo(R.mipmap.ic_launcher);
@@ -303,17 +328,17 @@ public class WelcomeActivity extends BaseActivity {
         startActivityForResult(builder.build(), 0);
     }
 
-    public void loginWithGoogle(){
+    public void loginWithGoogle() {
 
-        if (QuickHelp.isInternetAvailable(this)){
+        if (QuickHelp.isInternetAvailable(this)) {
 
             QuickHelp.showLoading(WelcomeActivity.this, false);
 
             ParseGoogleSignIn.LoginInBackGround(this, (parseUser, e) -> {
 
-                if (parseUser != null){
+                if (parseUser != null) {
 
-                    if (parseUser.isNew()){
+                    if (parseUser.isNew()) {
 
                         Log.d("GOOGLE_LOGIN", "User signed up and logged in through Google!");
 
@@ -340,7 +365,7 @@ public class WelcomeActivity extends BaseActivity {
 
                     Log.d("GOOGLE_LOGIN", "Google Login error: " + e.getMessage());
 
-                    Snackbar.make(parseLogin, R.string.gg_error,Snackbar.LENGTH_INDEFINITE).setAction(R.string.ok, v1 -> {
+                    Snackbar.make(parseLogin, R.string.gg_error, Snackbar.LENGTH_INDEFINITE).setAction(R.string.ok, v1 -> {
 
                     }).setActionTextColor(Color.WHITE).show();
 
@@ -351,7 +376,7 @@ public class WelcomeActivity extends BaseActivity {
         } else QuickHelp.noInternetConnect(this);
     }
 
-    public void retrieveFromGg(ParseUser user){
+    public void retrieveFromGg(ParseUser user) {
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
@@ -364,11 +389,10 @@ public class WelcomeActivity extends BaseActivity {
             if (parseUser != null) {
 
 
-
                 parseUser.setColFullName(account.getDisplayName());
                 parseUser.setGoogleId(account.getId());
                 parseUser.setColFirstName(account.getGivenName());
-                String username = (account.getDisplayName()+account.getGivenName()).toLowerCase().trim().replaceAll(" ", "");
+                String username = (account.getDisplayName() + account.getGivenName()).toLowerCase().trim().replaceAll(" ", "");
                 parseUser.setUsername(username);
 
                 parseUser.setEmail(account.getEmail());
@@ -387,14 +411,14 @@ public class WelcomeActivity extends BaseActivity {
                 parseUser.saveEventually(e -> {
                     if (e != null) {
 
-                        Log.d("GOOGLE_LOGIN","Failed to save Google data to Server" +e.getMessage());
+                        Log.d("GOOGLE_LOGIN", "Failed to save Google data to Server" + e.getMessage());
                     }
 
-                    Log.d("GOOGLE_LOGIN","Saved Google to Server");
+                    Log.d("GOOGLE_LOGIN", "Saved Google to Server");
 
                     saveFbPtofilePic();
 
-                    Log.d("GOOGLE_LOGIN","url: " + profilePic);
+                    Log.d("GOOGLE_LOGIN", "url: " + profilePic);
 
                 });
             }
@@ -417,56 +441,56 @@ public class WelcomeActivity extends BaseActivity {
                 parseUser.saveInBackground(e -> {
                     if (e != null) {
 
-                        Log.d("GOOGLE_LOGIN","Parse User failed to update");
+                        Log.d("GOOGLE_LOGIN", "Parse User failed to update");
                     }
 
-                    Log.d("GOOGLE_LOGIN","Parse User updated to to login");
+                    Log.d("GOOGLE_LOGIN", "Parse User updated to to login");
 
                     loginSuccess();
 
                 });
             } else {
-                Log.d("GOOGLE_LOGIN","Parse User null");
+                Log.d("GOOGLE_LOGIN", "Parse User null");
             }
         }
     }
 
-    public void retrieveFromFb(){
+    public void retrieveFromFb() {
 
         GraphRequest.GraphJSONObjectCallback callback = (fbUser, response) -> {
 
             User parseUser = (User) ParseUser.getCurrentUser();
             if (fbUser != null && parseUser != null) {
 
-                if (fbUser.optString("name").length() > 0){
+                if (fbUser.optString("name").length() > 0) {
                     parseUser.setColFullName(fbUser.optString("name"));
                 }
 
-                if (fbUser.optString("id").length() > 0){
+                if (fbUser.optString("id").length() > 0) {
 
                     parseUser.setFacebookId(fbUser.optString("id"));
                 }
 
-                if (fbUser.optString("first_name").length() > 0){
+                if (fbUser.optString("first_name").length() > 0) {
 
                     parseUser.setColFirstName(fbUser.optString("first_name"));
 
                     parseUser.setUsername(fbUser.optString("last_name").trim().toLowerCase(Locale.US) + fbUser.optString("first_name").trim().toLowerCase(Locale.US));
                 }
 
-                if (fbUser.optString("email").length() > 0){
+                if (fbUser.optString("email").length() > 0) {
 
                     parseUser.setEmail(fbUser.optString("email"));
                 }
 
 
-                if (fbUser.optString("gender").length() > 0){
+                if (fbUser.optString("gender").length() > 0) {
                     parseUser.setColGender(fbUser.optString("gender"));
                     genderSelected = fbUser.optString("gender");
                 }
 
 
-                if (fbUser.optString("birthday").length() > 0){
+                if (fbUser.optString("birthday").length() > 0) {
 
                     String dateString = fbUser.optString("birthday");
 
@@ -481,7 +505,7 @@ public class WelcomeActivity extends BaseActivity {
                 }
 
                 try {
-                    if (fbUser.getJSONObject("location").getString("name").length() > 0){
+                    if (fbUser.getJSONObject("location").getString("name").length() > 0) {
 
                         parseUser.setLocation(fbUser.getJSONObject("location").optString("name"));
                     }
@@ -502,12 +526,12 @@ public class WelcomeActivity extends BaseActivity {
                 parseUser.saveInBackground(e -> {
                     if (e != null) {
 
-                        Log.d("Dateyou","Failed to save Facebook data to Server");
+                        Log.d("Dateyou", "Failed to save Facebook data to Server");
                     }
 
-                    Log.d("Dateyou","Saved Facebook InstagramData to Server");
+                    Log.d("Dateyou", "Saved Facebook InstagramData to Server");
 
-                    if (Config.isFakeMessagesActivated){
+                    if (Config.isFakeMessagesActivated) {
                         QuickActions.sendFakeMessage(parseUser);
                     }
 
@@ -519,7 +543,7 @@ public class WelcomeActivity extends BaseActivity {
 
                     new ProfilePhotoAsync(profilePic).execute();
 
-                    Log.d("Dateyou","url: " + profilePic);
+                    Log.d("Dateyou", "url: " + profilePic);
 
                 });
 
@@ -528,7 +552,7 @@ public class WelcomeActivity extends BaseActivity {
 
         GraphRequest request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(), callback);
         Bundle parameters = new Bundle();
-        parameters.putString("fields",  "id,email,name,first_name,last_name,gender,birthday,picture.width(720).height(720),location");
+        parameters.putString("fields", "id,email,name,first_name,last_name,gender,birthday,picture.width(720).height(720),location");
         request.setParameters(parameters);
         request.executeAsync();
     }
@@ -568,7 +592,7 @@ public class WelcomeActivity extends BaseActivity {
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
             byte[] image = stream.toByteArray();
 
-            ParseFile file  = new ParseFile("picture.jpeg", image);
+            ParseFile file = new ParseFile("picture.jpeg", image);
             pFileList.add(file);
 
             file.saveInBackground((SaveCallback) e -> {
@@ -590,7 +614,7 @@ public class WelcomeActivity extends BaseActivity {
 
     }
 
-    public void addPhotoToProfile(ArrayList<ParseFile> photoFiles){
+    public void addPhotoToProfile(ArrayList<ParseFile> photoFiles) {
 
         User user = (User) ParseUser.getCurrentUser();
         user.setProfilePhotos(photoFiles);
@@ -623,20 +647,20 @@ public class WelcomeActivity extends BaseActivity {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
 
         QuickHelp.onBackPressed(this);
     }
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
 
         mGenderLayout.setVisibility(View.VISIBLE);
     }
 
 
-    public void startFbLogin(){
+    public void startFbLogin() {
         mLogin.setEnabled(false);
         mLogin.setVisibility(View.INVISIBLE);
 
@@ -646,13 +670,13 @@ public class WelcomeActivity extends BaseActivity {
         mFacebookText.setVisibility(View.INVISIBLE);
 
         mProgress.setVisibility(View.VISIBLE);
-        
+
         mButtonMale.setEnabled(false);
         mButtonFemale.setEnabled(false);
 
     }
 
-    public void stopFbLogin(){
+    public void stopFbLogin() {
         mLogin.setEnabled(true);
         mLogin.setVisibility(View.VISIBLE);
 

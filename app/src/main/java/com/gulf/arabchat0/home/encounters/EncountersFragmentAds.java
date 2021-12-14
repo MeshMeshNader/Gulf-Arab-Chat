@@ -21,8 +21,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +28,19 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.common.api.ResolvableApiException;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResponse;
+import com.google.android.gms.location.SettingsClient;
+import com.google.android.gms.tasks.Task;
+import com.greysonparrelli.permiso.Permiso;
 import com.gulf.arabchat0.R;
 import com.gulf.arabchat0.adapters.arabchat.EncountersAdapterAds;
 import com.gulf.arabchat0.app.Application;
@@ -54,19 +65,6 @@ import com.gulf.arabchat0.modules.rangeBarView.RangeSeekBar;
 import com.gulf.arabchat0.modules.shimmer.ShimmerFrameLayout;
 import com.gulf.arabchat0.modules.topsheet.TopSheetBehavior;
 import com.gulf.arabchat0.modules.topsheet.TopSheetDialog;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdLoader;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.formats.UnifiedNativeAd;
-import com.google.android.gms.common.api.ResolvableApiException;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.LocationSettingsRequest;
-import com.google.android.gms.location.LocationSettingsResponse;
-import com.google.android.gms.location.SettingsClient;
-import com.google.android.gms.tasks.Task;
-import com.greysonparrelli.permiso.Permiso;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
@@ -144,8 +142,8 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         mCardView = v.findViewById(R.id.parent_layout);
 
         mEmptyView = v.findViewById(R.id.empty_view);
-        mEmptyLayout= v.findViewById(R.id.empty_layout);
-        mLoadingLayout= v.findViewById(R.id.shimmer_view_container);
+        mEmptyLayout = v.findViewById(R.id.empty_layout);
+        mLoadingLayout = v.findViewById(R.id.shimmer_view_container);
 
 
         mErrorImage = v.findViewById(R.id.image);
@@ -160,7 +158,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
         if (getActivity() != null) {
 
-            ((HomeActivity)getActivity()).initializeToolBar(R.drawable.ic_navigation_bar_liked_you_indicator, R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_ENCOUNTERS);
+            ((HomeActivity) getActivity()).initializeToolBar(R.drawable.ic_navigation_bar_liked_you_indicator, R.drawable.ic_navigation_bar_filter, HomeActivity.VIEW_TYPE_ENCOUNTERS);
         }
 
         setHasOptionsMenu(true);
@@ -185,7 +183,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
     }
 
 
-    public void likeUser(){
+    public void likeUser() {
 
         SwipeAnimationSetting setting = new SwipeAnimationSetting.Builder()
                 .setDirection(Direction.Right)
@@ -205,7 +203,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
-    public void skipUser(){
+    public void skipUser() {
 
         SwipeAnimationSetting setting = new SwipeAnimationSetting.Builder()
                 .setDirection(Direction.Left)
@@ -238,14 +236,16 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
     public void onCardSwiped(Direction direction) {
         Log.v("CardStackView", "onCardSwiped: p = " + manager.getTopPosition() + ", d = " + direction);
 
-        if (adapter.getItemViewType(manager.getTopPosition()-1) == 1){
+        if (adapter.getItemViewType(manager.getTopPosition() - 1) == 1) {
             return;
         }
 
-        User user = (User) mUsersNear.get(manager.getTopPosition()-1);
+        User user = (User) mUsersNear.get(manager.getTopPosition() - 1);
 
-        if (direction == Direction.Left){
-            if (getActivity() != null) { ((HomeActivity)getActivity()).isUndoShow(true, manager, cardStackView);}
+        if (direction == Direction.Left) {
+            if (getActivity() != null) {
+                ((HomeActivity) getActivity()).isUndoShow(true, manager, cardStackView);
+            }
 
             EncountersModel.newMatch(mCurrentUser, user, false, true, e -> {
                 if (e == null) {
@@ -259,8 +259,10 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
             });
 
 
-        } else if (direction == Direction.Right){
-            if (getActivity() != null) { ((HomeActivity)getActivity()).isUndoShow(false); }
+        } else if (direction == Direction.Right) {
+            if (getActivity() != null) {
+                ((HomeActivity) getActivity()).isUndoShow(false);
+            }
 
             EncountersModel.newMatch(mCurrentUser, user, true, false, e -> {
                 if (e == null) {
@@ -278,14 +280,14 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         }
     }
 
-    private void queryForUnMatch(User user){
+    private void queryForUnMatch(User user) {
 
         ParseQuery<EncountersModel> modelParseQuery = EncountersModel.getQuery();
         modelParseQuery.whereEqualTo(EncountersModel.COL_FROM_USER, user);
         modelParseQuery.whereEqualTo(EncountersModel.COL_TO_USER, mCurrentUser);
         modelParseQuery.getFirstInBackground((encountersModel, e) -> {
 
-            if (e == null){
+            if (e == null) {
 
                 encountersModel.setSeen(true);
                 encountersModel.saveInBackground();
@@ -300,7 +302,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
         if (getActivity() != null) {
 
-            ((HomeActivity)getActivity()).isUndoShow(false);
+            ((HomeActivity) getActivity()).isUndoShow(false);
         }
 
         User user = (User) mUsersNear.get(manager.getTopPosition());
@@ -310,7 +312,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         modelParseQuery.whereEqualTo(EncountersModel.COL_TO_USER, user);
         modelParseQuery.getFirstInBackground((encountersModel, e) -> {
 
-            if (e == null){
+            if (e == null) {
 
                 encountersModel.deleteInBackground();
             }
@@ -322,11 +324,11 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         Log.v("CardStackView", "onCardCanceled:" + manager.getTopPosition());
     }
 
-    public void getIconLeft(Activity activity, User user){
+    public void getIconLeft(Activity activity, User user) {
 
-        if (Config.isPremiumEnabled){
+        if (Config.isPremiumEnabled) {
 
-            if (user.isPremium()){
+            if (user.isPremium()) {
 
                 QuickHelp.goToActivityWithNoClean(activity, LikedYouActivity.class);
 
@@ -342,7 +344,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
     }
 
-    public void getIconRight(User user, Activity activity){
+    public void getIconRight(User user, Activity activity) {
 
         sheetDialog = new TopSheetDialog(activity);
         sheetDialog.setContentView(R.layout.layout_encounters_filter);
@@ -355,7 +357,9 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         LinearLayout content = sheetDialog.findViewById(R.id.content);
 
         TextView ageRange = sheetDialog.findViewById(R.id.rangeBarLabel);
-        RadioGroup gender = sheetDialog.findViewById(R.id.gender_radio_group);
+
+        /////////// Gender Filter ////////////
+//        RadioGroup gender = sheetDialog.findViewById(R.id.gender_radio_group);
 
         ImageView closeBtn = sheetDialog.findViewById(R.id.filter_decline);
         ImageView doneBtn = sheetDialog.findViewById(R.id.filter_confirm);
@@ -364,9 +368,10 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 //        TextView distanceRange = sheetDialog.findViewById(R.id.rangeBarDistanceLabel);
 //        RangeSeekBar rangeSeekBarDistance = sheetDialog.findViewById(R.id.rangeBar_distance);
 
-        RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
-        RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
-        RadioButton genderBoth = sheetDialog.findViewById(R.id.radio_both);
+        /////////// Gender Filter ////////////
+//        RadioButton genderMale = sheetDialog.findViewById(R.id.radio_male);
+//        RadioButton genderFemale = sheetDialog.findViewById(R.id.radio_female);
+//        RadioButton genderBoth = sheetDialog.findViewById(R.id.radio_both);
 
 
         assert content != null;
@@ -403,51 +408,53 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 //        }
 
 
-        assert genderMale != null;
-        assert genderFemale != null;
-        assert genderBoth != null;
-        user.fetchInBackground();
-
-        switch (user.getPrefGender()) {
-            case User.GENDER_MALE:
-
-
-                genderMale.setChecked(true);
-
-                break;
-            case User.GENDER_FEMALE:
-
-                genderFemale.setChecked(true);
-
-                break;
-            case User.GENDER_BOTH:
-
-                genderBoth.setChecked(true);
-                break;
-        }
+        /////////// Gender Filter ////////////
+//        assert genderMale != null;
+//        assert genderFemale != null;
+//        assert genderBoth != null;
+//        user.fetchInBackground();
+//
+//        switch (user.getPrefGender()) {
+//            case User.GENDER_MALE:
+//
+//
+//                genderMale.setChecked(true);
+//
+//                break;
+//            case User.GENDER_FEMALE:
+//
+//                genderFemale.setChecked(true);
+//
+//                break;
+//            case User.GENDER_BOTH:
+//
+//                genderBoth.setChecked(true);
+//                break;
+//        }
 
         content.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.GONE);
 
 
-        if (gender != null) {
-            gender.setOnCheckedChangeListener((group, checkedId) -> {
-
-                if (checkedId == R.id.radio_male){
-
-                    user.setPrefGender(User.GENDER_MALE);
-
-                } else if (checkedId == R.id.radio_female){
-
-                    user.setPrefGender(User.GENDER_FEMALE);
-
-                } else if (checkedId == R.id.radio_both){
-
-                    user.setPrefGender(User.GENDER_BOTH);
-
-                }
-            });
-        }
+        /////////// Gender Filter ////////////
+//        if (gender != null) {
+//            gender.setOnCheckedChangeListener((group, checkedId) -> {
+//
+//                if (checkedId == R.id.radio_male){
+//
+//                    user.setPrefGender(User.GENDER_MALE);
+//
+//                } else if (checkedId == R.id.radio_female){
+//
+//                    user.setPrefGender(User.GENDER_FEMALE);
+//
+//                } else if (checkedId == R.id.radio_both){
+//
+//                    user.setPrefGender(User.GENDER_BOTH);
+//
+//                }
+//            });
+//        }
 
         assert rangeSeekBar != null;
         rangeSeekBar.setOnRangeChangedListener(new OnRangeChangedListener() {
@@ -498,7 +505,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         if (closeBtn != null) {
             closeBtn.setOnClickListener(v -> {
 
-                if (sheetDialog.isShowing()){
+                if (sheetDialog.isShowing()) {
                     sheetDialog.cancel();
                 }
             });
@@ -506,7 +513,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
         if (doneBtn != null) {
             doneBtn.setOnClickListener(v -> {
-                if (sheetDialog.isShowing()){
+                if (sheetDialog.isShowing()) {
                     sheetDialog.cancel();
                 }
 
@@ -518,10 +525,10 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         }
     }
 
-    private void loadAll(User mCurrentUser){
+    private void loadAll(User mCurrentUser) {
 
 
-        if (mCurrentUser.getGeoPoint() != null){
+        if (mCurrentUser.getGeoPoint() != null) {
 
             LoadFirst();
             updateLocation();
@@ -545,7 +552,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         }
     }
 
-    private void refreshAll(){
+    private void refreshAll() {
 
 
         EncountersModel.userMatches(mCurrentUser, (matches, error) -> {
@@ -567,7 +574,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
                 List<String> matchedUserIdList = new ArrayList<>();
 
-                if (!Config.ShowBlockedUsersOnQuery &&  mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0){
+                if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0) {
 
                     for (User user : mCurrentUser.getBlockedUsers()) {
                         if (!matchedUserIdList.contains(user.getObjectId())) {
@@ -578,7 +585,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
 //                UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
-                if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)){ // Gender
+                if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)) { // Gender
                     UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());
                 }
 
@@ -595,9 +602,9 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
                 UsersNearQuery.findInBackground((usersNear, e) -> {
 
-                    if (usersNear != null){
+                    if (usersNear != null) {
 
-                        if (usersNear.size() > 0){
+                        if (usersNear.size() > 0) {
 
                             mUsersNear.clear();
                             mNativeAds.clear();
@@ -606,7 +613,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
                             adapter.notifyDataSetChanged();
 
-                            if (Config.isEncountersNativeAdsActivated && !mCurrentUser.isPremium()){
+                            if (Config.isEncountersNativeAdsActivated && !mCurrentUser.isPremium()) {
 
                                 if (isAdded()) loadNativeAds();
 
@@ -619,7 +626,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         });
     }
 
-    private void setLoading(){
+    private void setLoading() {
 
         mEmptyLayout.setVisibility(View.VISIBLE);
         mEmptyView.setVisibility(View.GONE);
@@ -629,9 +636,9 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         mLoadingLayout.startShimmer();
     }
 
-    private void hideLoading(boolean isLoaded){
+    private void hideLoading(boolean isLoaded) {
 
-        if (isLoaded){
+        if (isLoaded) {
             mEmptyLayout.setVisibility(View.GONE);
             mEncountersCards.setVisibility(View.VISIBLE);
         } else {
@@ -644,7 +651,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         mCardView.setVisibility(View.GONE);
     }
 
-    private void LoadFirst(){
+    private void LoadFirst() {
 
         setLoading();
         mUsersNear.clear();
@@ -668,7 +675,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
                 UsersNearQuery.whereNotEqualTo(User.USER_BLOCKED_STATUS, true);
 
                 List<String> matchedUserIdList = new ArrayList<>();
-                if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0){
+                if (!Config.ShowBlockedUsersOnQuery && mCurrentUser.getBlockedUsers() != null && mCurrentUser.getBlockedUsers().size() > 0) {
 
                     for (User user : mCurrentUser.getBlockedUsers()) {
                         if (!matchedUserIdList.contains(user.getObjectId())) {
@@ -679,7 +686,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
 //                UsersNearQuery.whereWithinKilometers(User.COL_GEO_POINT, mCurrentUser.getGeoPoint(), mCurrentUser.getPrefDistance());
 
-                if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)){ // Gender
+                if (!mCurrentUser.getPrefGender().equals(User.GENDER_BOTH)) { // Gender
                     UsersNearQuery.whereEqualTo(User.COL_GENDER, mCurrentUser.getPrefGender());
                 }
 
@@ -696,9 +703,9 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
                 UsersNearQuery.findInBackground((usersNear, e) -> {
 
-                    if (usersNear != null){
+                    if (usersNear != null) {
 
-                        if (usersNear.size() > 0){
+                        if (usersNear.size() > 0) {
 
                             mUsersNear.clear();
                             mNativeAds.clear();
@@ -707,7 +714,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
                             adapter.notifyDataSetChanged();
 
-                            if (Config.isEncountersNativeAdsActivated && !mCurrentUser.isPremium()){
+                            if (Config.isEncountersNativeAdsActivated && !mCurrentUser.isPremium()) {
 
                                 if (isAdded()) loadNativeAds();
 
@@ -736,13 +743,13 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
                         hideLoading(false);
 
-                        if (e.getCode() == ParseException.CONNECTION_FAILED){
+                        if (e.getCode() == ParseException.CONNECTION_FAILED) {
 
                             mErrorImage.setImageResource(R.drawable.ic_blocker_large_connection_grey1);
                             mErrorTitle.setText(R.string.not_internet_connection);
                             mErrorDesc.setText(R.string.settings_no_inte);
 
-                        } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN){
+                        } else if (e.getCode() == ParseException.INVALID_SESSION_TOKEN) {
 
                             User.logOut();
                             QuickHelp.goToActivityAndFinish(getActivity(), WelcomeActivity.class);
@@ -801,7 +808,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
             for (UnifiedNativeAd ad : mNativeAds) {
                 mUsersNear.add(index, ad);
-                index = index + Config.ShowEncountersNativeAdsAfter+1;
+                index = index + Config.ShowEncountersNativeAdsAfter + 1;
                 if (index > mUsersNear.size()) {
                     adapter.notifyDataSetChanged();
                     return;
@@ -830,7 +837,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         return super.onOptionsItemSelected(item);
     }
 
-    private void checkLastLocation(){
+    private void checkLastLocation() {
 
         Permiso.getInstance().requestPermissions(new Permiso.IOnPermissionResult() {
             @Override
@@ -863,7 +870,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
     }
 
-    private void checkLocationSettings(){
+    private void checkLocationSettings() {
 
         if (getActivity() == null) return;
 
@@ -897,9 +904,9 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         });
     }
 
-    private void updateLocation(){
+    private void updateLocation() {
 
-        if (!mCurrentUser.isLocationTypeNearby()){
+        if (!mCurrentUser.isLocationTypeNearby()) {
             return;
         }
 
@@ -920,7 +927,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
                             mCurrentUser.saveInBackground(e -> {
 
-                                if (e == null){
+                                if (e == null) {
 
                                     mCurrentUser.fetchIfNeededInBackground((GetCallback<User>) (user, e1) -> {
 
@@ -951,9 +958,9 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
 
     @SuppressLint("MissingPermission")
-    private void getLastLocation(){
+    private void getLastLocation() {
 
-        if (!mCurrentUser.isLocationTypeNearby()){
+        if (!mCurrentUser.isLocationTypeNearby()) {
             return;
         }
 
@@ -968,17 +975,17 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
 
                 mCurrentUser.saveInBackground(e -> {
 
-                    if (e == null){
+                    if (e == null) {
 
                         mCurrentUser.fetchIfNeededInBackground((GetCallback<User>) (user, e1) -> LoadFirst());
 
                     } else {
 
-                       hideLoading(false);
+                        hideLoading(false);
 
-                       mErrorImage.setImageResource(R.drawable.ic_location);
-                       mErrorTitle.setText(R.string.permission_alert);
-                       mErrorDesc.setText(R.string.faailed_try_again);
+                        mErrorImage.setImageResource(R.drawable.ic_location);
+                        mErrorTitle.setText(R.string.permission_alert);
+                        mErrorDesc.setText(R.string.faailed_try_again);
 
                     }
                 });
@@ -1012,7 +1019,7 @@ public class EncountersFragmentAds extends Fragment implements CardStackListener
         super.onPause();
     }
 
-    public boolean isInternetAvailable(){
+    public boolean isInternetAvailable() {
         ConnectivityManager cm =
                 (ConnectivityManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = null;
