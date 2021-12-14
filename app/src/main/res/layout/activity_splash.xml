@@ -12,6 +12,6 @@
         android:scaleType="centerCrop"
         android:layout_centerVertical="true"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/bg_logo_splash" />
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

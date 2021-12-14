@@ -13,8 +13,8 @@ android {
             keyPassword '01002452480'
         }
     }
-    def versionMajor = 1
-    def versionMinor = 7
+    def versionMajor = 2
+    def versionMinor = 0
     def versionPatch = 0
 
     compileSdkVersion 30
