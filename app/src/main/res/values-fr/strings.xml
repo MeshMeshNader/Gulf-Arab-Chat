@@ -414,7 +414,7 @@
     <string name="gallery_access_request_title">Demande d\'accès</string>
     <string name="name">Nom</string>
     <string name="cancel">Annuler</string>
-    <string name="upload_new_photo">Télécharger une nouvelle photo</string>
+    <string name="upload_new_photo">Télécharger une nouvelle</string>
     <string name="delete_photo">Supprimer</string>
     <string name="make_photo_default">Faire défaut</string>
     <string name="can_not_delete_unique_photo">Vous n\'avez que cette photo</string>
@@ -767,4 +767,5 @@
     <string name="gift_message">Vous avez envoyé une gift</string>
     <string name="gift_message_received">Vous a envoyé une gift</string>
     <string name="search_users">Trouver un ami</string>
+    <string name="my_credit">My Credit</string>
 </resources>

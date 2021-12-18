@@ -413,7 +413,7 @@
     <string name="gallery_access_request_title">طلب الدخول</string>
     <string name="name">اسم</string>
     <string name="cancel">إلغاء</string>
-    <string name="upload_new_photo">تحميل صورة جديدة</string>
+    <string name="upload_new_photo">رفع صورة</string>
     <string name="delete_photo">حذف</string>
     <string name="make_photo_default">جعل الافتراضي</string>
     <string name="can_not_delete_unique_photo">لديك هذه الصورة فقط</string>
@@ -766,5 +766,6 @@
     <string name="gift_message">لقد أرسلت هدية</string>
     <string name="gift_message_received">أرسل لك هديةة</string>
     <string name="search_users">البحث عن صديق</string>
+    <string name="my_credit">رصيدي</string>
 
 </resources>

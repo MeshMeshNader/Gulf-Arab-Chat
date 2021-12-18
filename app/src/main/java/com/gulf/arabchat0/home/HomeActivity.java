@@ -178,7 +178,7 @@ public class HomeActivity extends AppCompatActivity implements Connectable, Disc
 
         sharedPrefUtil = new SharedPrefUtil(this);
 
-        QuickHelp.setAds(this, mAdView, mCurrentUser);
+        //QuickHelp.setAds(this, mAdView, mCurrentUser);
 
         navigation.setSelectedItemId(R.id.navigation_encounters);
 

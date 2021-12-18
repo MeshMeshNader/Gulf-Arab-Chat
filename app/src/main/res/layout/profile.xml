@@ -36,33 +36,33 @@
         app:layout_constraintStart_toStartOf="@+id/ownProfileElementOneSubtitle"
         app:layout_constraintTop_toTopOf="@+id/ownProfileElementOneSubtitle" />
 
-<!--    <View-->
-<!--        android:id="@+id/myProfileElementTwoImagePlaceholder"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:background="@drawable/my_profile_loading_placeholder"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoImage"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementTwoImage"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoImage"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoImage" />-->
+    <!--    <View-->
+    <!--        android:id="@+id/myProfileElementTwoImagePlaceholder"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:background="@drawable/my_profile_loading_placeholder"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoImage"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementTwoImage"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoImage"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoImage" />-->
 
-<!--    <View-->
-<!--        android:id="@+id/myProfileElementTwoTitlePlaceholder"-->
-<!--        android:layout_width="80dp"-->
-<!--        android:layout_height="8dp"-->
-<!--        android:background="@color/gray_light"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoTitle"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoTitle"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoTitle" />-->
+    <!--    <View-->
+    <!--        android:id="@+id/myProfileElementTwoTitlePlaceholder"-->
+    <!--        android:layout_width="80dp"-->
+    <!--        android:layout_height="8dp"-->
+    <!--        android:background="@color/gray_light"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoTitle"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoTitle"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoTitle" />-->
 
-<!--    <View-->
-<!--        android:id="@+id/myProfileElementTwoSubtitlePlaceholder"-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="10dp"-->
-<!--        android:background="@color/gray_light"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoSubtitle"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoSubtitle"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoSubtitle" />-->
+    <!--    <View-->
+    <!--        android:id="@+id/myProfileElementTwoSubtitlePlaceholder"-->
+    <!--        android:layout_width="40dp"-->
+    <!--        android:layout_height="10dp"-->
+    <!--        android:background="@color/gray_light"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoSubtitle"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoSubtitle"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoSubtitle" />-->
 
     <View
         android:id="@+id/myProfileElementThreeImagePlaceholder"
@@ -113,8 +113,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFourTitle"
         app:layout_constraintEnd_toEndOf="@+id/ownProfileElementFourTitle"
         app:layout_constraintStart_toStartOf="@+id/ownProfileElementFourTitle"
-        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFourTitle"
-     />
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFourTitle" />
 
     <View
         android:id="@+id/myProfileElementFourSubtitlePlaceholder"
@@ -124,37 +123,36 @@
         app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFourSubtitle"
         app:layout_constraintEnd_toEndOf="@+id/ownProfileElementFourSubtitle"
         app:layout_constraintStart_toStartOf="@+id/ownProfileElementFourSubtitle"
-        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFourSubtitle"
-        />
+        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFourSubtitle" />
 
 
-<!--    <View-->
-<!--        android:id="@+id/myProfileElementFiveImagePlaceholder"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:background="@drawable/my_profile_loading_placeholder"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFiveImage"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementFiveImage"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementFiveImage"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFiveImage" />-->
+    <!--    <View-->
+    <!--        android:id="@+id/myProfileElementFiveImagePlaceholder"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:background="@drawable/my_profile_loading_placeholder"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFiveImage"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementFiveImage"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementFiveImage"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFiveImage" />-->
 
-<!--    <View-->
-<!--        android:id="@+id/myProfileElementFiveTitlePlaceholder"-->
-<!--        android:layout_width="80dp"-->
-<!--        android:layout_height="8dp"-->
-<!--        android:background="@color/gray_light"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFiveTitle"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementFiveTitle"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFiveTitle" />-->
+    <!--    <View-->
+    <!--        android:id="@+id/myProfileElementFiveTitlePlaceholder"-->
+    <!--        android:layout_width="80dp"-->
+    <!--        android:layout_height="8dp"-->
+    <!--        android:background="@color/gray_light"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFiveTitle"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementFiveTitle"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFiveTitle" />-->
 
-<!--    <View-->
-<!--        android:id="@+id/myProfileElementFiveSubtitlePlaceholder"-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="10dp"-->
-<!--        android:background="@color/gray_light"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFiveSubtitle"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementFiveSubtitle"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFiveSubtitle" />-->
+    <!--    <View-->
+    <!--        android:id="@+id/myProfileElementFiveSubtitlePlaceholder"-->
+    <!--        android:layout_width="40dp"-->
+    <!--        android:layout_height="10dp"-->
+    <!--        android:background="@color/gray_light"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFiveSubtitle"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementFiveSubtitle"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementFiveSubtitle" />-->
 
 
     <androidx.constraintlayout.widget.Group
@@ -162,30 +160,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        app:constraint_referenced_ids="myProfileElementThreeSubtitlePlaceholder,myProfileElementOneTitlePlaceholder,myProfileElementThreeTitlePlaceholder,myProfileElementOneImagePlaceholder,myProfileElementOneSubtitlePlaceholder,myProfileElementThreeImagePlaceholder,myProfileElementFourImagePlaceholder,myProfileElementFourSubtitlePlaceholder,myProfileElementFourTitlePlaceholder"
-        />
-<!--
-    This with the TOW PlaceHolder Elements
-            app:constraint_referenced_ids="myProfileElementThreeSubtitlePlaceholder,myProfileElementTwoSubtitlePlaceholder,myProfileElementTwoImagePlaceholder,myProfileElementOneTitlePlaceholder,myProfileElementThreeTitlePlaceholder,myProfileElementTwoTitlePlaceholder,myProfileElementOneImagePlaceholder,myProfileElementOneSubtitlePlaceholder,myProfileElementThreeImagePlaceholder,myProfileElementFourImagePlaceholder,myProfileElementFourSubtitlePlaceholder,myProfileElementFourTitlePlaceholder,myProfileElementFiveImagePlaceholder,myProfileElementFiveTitlePlaceholder,myProfileElementFiveSubtitlePlaceholder"
-    and With The Fifth , without the TWO
-            app:constraint_referenced_ids="myProfileElementThreeSubtitlePlaceholder,myProfileElementOneTitlePlaceholder,myProfileElementThreeTitlePlaceholder,myProfileElementOneImagePlaceholder,myProfileElementOneSubtitlePlaceholder,myProfileElementThreeImagePlaceholder,myProfileElementFourImagePlaceholder,myProfileElementFourSubtitlePlaceholder,myProfileElementFourTitlePlaceholder,myProfileElementFiveImagePlaceholder,myProfileElementFiveTitlePlaceholder,myProfileElementFiveSubtitlePlaceholder"
+        app:constraint_referenced_ids="myProfileElementThreeSubtitlePlaceholder,myProfileElementOneTitlePlaceholder,myProfileElementThreeTitlePlaceholder,myProfileElementOneImagePlaceholder,myProfileElementOneSubtitlePlaceholder,myProfileElementThreeImagePlaceholder,myProfileElementFourImagePlaceholder,myProfileElementFourSubtitlePlaceholder,myProfileElementFourTitlePlaceholder" />
+    <!--
+        This with the TOW PlaceHolder Elements
+                app:constraint_referenced_ids="myProfileElementThreeSubtitlePlaceholder,myProfileElementTwoSubtitlePlaceholder,myProfileElementTwoImagePlaceholder,myProfileElementOneTitlePlaceholder,myProfileElementThreeTitlePlaceholder,myProfileElementTwoTitlePlaceholder,myProfileElementOneImagePlaceholder,myProfileElementOneSubtitlePlaceholder,myProfileElementThreeImagePlaceholder,myProfileElementFourImagePlaceholder,myProfileElementFourSubtitlePlaceholder,myProfileElementFourTitlePlaceholder,myProfileElementFiveImagePlaceholder,myProfileElementFiveTitlePlaceholder,myProfileElementFiveSubtitlePlaceholder"
+        and With The Fifth , without the TWO
+                app:constraint_referenced_ids="myProfileElementThreeSubtitlePlaceholder,myProfileElementOneTitlePlaceholder,myProfileElementThreeTitlePlaceholder,myProfileElementOneImagePlaceholder,myProfileElementOneSubtitlePlaceholder,myProfileElementThreeImagePlaceholder,myProfileElementFourImagePlaceholder,myProfileElementFourSubtitlePlaceholder,myProfileElementFourTitlePlaceholder,myProfileElementFiveImagePlaceholder,myProfileElementFiveTitlePlaceholder,myProfileElementFiveSubtitlePlaceholder"
 
--->
-
+    -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-     <ImageView
+    <ImageView
         android:id="@+id/myProfileSettings"
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -217,11 +202,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/myProfileSimulateToolbarSpace" />
 
-<!--    <androidx.constraintlayout.widget.Group-->
-<!--        android:id="@+id/myProfileAppLogoGroup"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:constraint_referenced_ids="myProfileSimulateToolbarSpace" />-->
+    <!--    <androidx.constraintlayout.widget.Group-->
+    <!--        android:id="@+id/myProfileAppLogoGroup"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:constraint_referenced_ids="myProfileSimulateToolbarSpace" />-->
 
     <ImageView
         android:id="@+id/myProfileEdit"
@@ -248,147 +233,139 @@
         tools:ignore="MissingConstraints" />
 
 
+    <!--    <View-->
+    <!--        android:id="@+id/ownProfileElementTwoClickableArea"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/ownProfileElementTwoImage"-->
+    <!--        android:layout_width="@dimen/icon_xlg"-->
+    <!--        android:layout_height="@dimen/icon_xlg"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/ownProfileElementTwoTitle"-->
+    <!--        style="?attr/textStyleP3Gray40"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="12dp"-->
+    <!--        android:layout_marginLeft="12dp"-->
+    <!--        android:layout_marginEnd="4dp"-->
+    <!--        android:layout_marginRight="4dp"-->
+    <!--        android:ellipsize="end"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementTwoSubtitle"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/ownProfileElementTwoImage"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider"-->
+    <!--        app:layout_constraintVertical_chainStyle="packed" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/ownProfileElementTwoSubtitle"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="4dp"-->
+    <!--        android:layout_marginRight="4dp"-->
+    <!--        android:ellipsize="end"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:textSize="@dimen/my_profile_cta_text_size"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoTitle"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementTwoTitle" />-->
 
 
+    <!--    <View-->
+    <!--        android:id="@+id/ownProfileElementFiveClickableArea"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/ownProfileElementTwoClickableArea"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider" />-->
 
 
+    <!--    <ImageView-->
+    <!--        android:id="@+id/ownProfileElementFiveImage"-->
+    <!--        android:layout_width="@dimen/icon_xlg"-->
+    <!--        android:layout_height="@dimen/icon_xlg"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider"-->
+    <!--        app:srcCompat="@drawable/ic_boy" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/ownProfileElementFiveTitle"-->
+    <!--        style="?attr/textStyleP3Gray40"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="12dp"-->
+    <!--        android:layout_marginLeft="12dp"-->
+    <!--        android:layout_marginEnd="4dp"-->
+    <!--        android:layout_marginRight="4dp"-->
+    <!--        android:ellipsize="end"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:text="@string/my_information"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementFiveSubtitle"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/ownProfileElementFiveImage"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider"-->
+    <!--        app:layout_constraintVertical_chainStyle="packed" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/ownProfileElementFiveSubtitle"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="4dp"-->
+    <!--        android:layout_marginRight="4dp"-->
+    <!--        android:ellipsize="end"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:maxLines="2"-->
+    <!--        android:text="@string/user_info_ID"-->
+    <!--        android:textSize="@dimen/my_profile_cta_text_size"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementFiveTitle"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementFiveTitle" />-->
 
 
+    <!--    <Space-->
+    <!--        android:id="@+id/ownProfileElementTwoPlusSpace"-->
+    <!--        android:layout_width="22dp"-->
+    <!--        android:layout_height="22dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoImage"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementTwoImage" />-->
 
-<!--    <View-->
-<!--        android:id="@+id/ownProfileElementTwoClickableArea"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:visibility="gone"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider" />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/ownProfileElementTwoImage"-->
-<!--        android:layout_width="@dimen/icon_xlg"-->
-<!--        android:layout_height="@dimen/icon_xlg"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:visibility="gone"-->
-<!--        android:layout_marginLeft="20dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/ownProfileElementTwoTitle"-->
-<!--        style="?attr/textStyleP3Gray40"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="12dp"-->
-<!--        android:layout_marginLeft="12dp"-->
-<!--        android:layout_marginEnd="4dp"-->
-<!--        android:layout_marginRight="4dp"-->
-<!--        android:ellipsize="end"-->
-<!--        android:maxLines="1"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementTwoSubtitle"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/ownProfileElementTwoImage"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider"-->
-<!--        app:layout_constraintVertical_chainStyle="packed" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/ownProfileElementTwoSubtitle"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="4dp"-->
-<!--        android:layout_marginRight="4dp"-->
-<!--        android:ellipsize="end"-->
-<!--        android:fontFamily="sans-serif"-->
-<!--        android:maxLines="1"-->
-<!--        android:visibility="gone"-->
-<!--        android:textSize="@dimen/my_profile_cta_text_size"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/ownProfileElementVerticalDivider"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoTitle"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementTwoTitle" />-->
-
-
-
-<!--    <View-->
-<!--        android:id="@+id/ownProfileElementFiveClickableArea"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/ownProfileElementTwoClickableArea"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider" />-->
-
-
-<!--    <ImageView-->
-<!--        android:id="@+id/ownProfileElementFiveImage"-->
-<!--        android:layout_width="@dimen/icon_xlg"-->
-<!--        android:layout_height="@dimen/icon_xlg"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginLeft="20dp"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider"-->
-<!--        app:srcCompat="@drawable/ic_boy" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/ownProfileElementFiveTitle"-->
-<!--        style="?attr/textStyleP3Gray40"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="12dp"-->
-<!--        android:layout_marginLeft="12dp"-->
-<!--        android:layout_marginEnd="4dp"-->
-<!--        android:layout_marginRight="4dp"-->
-<!--        android:ellipsize="end"-->
-<!--        android:maxLines="1"-->
-<!--        android:visibility="gone"-->
-<!--        android:text="@string/my_information"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileElementFiveSubtitle"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/ownProfileElementFiveImage"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementHorizontalDivider"-->
-<!--        app:layout_constraintVertical_chainStyle="packed" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/ownProfileElementFiveSubtitle"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="4dp"-->
-<!--        android:layout_marginRight="4dp"-->
-<!--        android:ellipsize="end"-->
-<!--        android:fontFamily="sans-serif"-->
-<!--        android:maxLines="2"-->
-<!--        android:text="@string/user_info_ID"-->
-<!--        android:textSize="@dimen/my_profile_cta_text_size"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementFiveTitle"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementFiveTitle" />-->
-
-
-<!--    <Space-->
-<!--        android:id="@+id/ownProfileElementTwoPlusSpace"-->
-<!--        android:layout_width="22dp"-->
-<!--        android:layout_height="22dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementTwoImage"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementTwoImage" />-->
-
-<!--    <androidx.appcompat.widget.AppCompatImageButton-->
-<!--        android:id="@+id/ownProfileElementTwoPlus"-->
-<!--        android:layout_width="32dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--        android:scaleType="centerInside"-->
-<!--        android:visibility="visible"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoPlusSpace"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoPlusSpace"-->
-<!--        app:srcCompat="@drawable/ic_plus_own_profile" />-->
+    <!--    <androidx.appcompat.widget.AppCompatImageButton-->
+    <!--        android:id="@+id/ownProfileElementTwoPlus"-->
+    <!--        android:layout_width="32dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--        android:scaleType="centerInside"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ownProfileElementTwoPlusSpace"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/ownProfileElementTwoPlusSpace"-->
+    <!--        app:srcCompat="@drawable/ic_plus_own_profile" />-->
 
     <androidx.legacy.widget.Space
         android:id="@+id/ownProfileElementThreePlusSpace"
@@ -415,139 +392,128 @@
         android:visibility="visible"
         app:constraint_referenced_ids="ownProfileElementOnePlusSpace,ownProfileElementThreeImage,ownProfileElementOneTitle,ownProfileElementOneSubtitle,ownProfileElementThreePlusSpace,ownProfileElementThreeSubtitle,ownProfileElementThreeTitle" />
 
-<!--
-    Again with the TWO Elements Spaces
-            app:constraint_referenced_ids="ownProfileElementOnePlusSpace,ownProfileElementThreeImage,ownProfileElementOneImage,ownProfileElementTwoSubtitle,ownProfileElementOneTitle,ownProfileElementOneSubtitle,ownProfileElementTwoTitle,ownProfileElementThreePlusSpace,ownProfileElementTwoImage,ownProfileElementThreeSubtitle,ownProfileElementThreeTitle,ownProfileElementTwoPlusSpace" />
+    <!--
+        Again with the TWO Elements Spaces
+                app:constraint_referenced_ids="ownProfileElementOnePlusSpace,ownProfileElementThreeImage,ownProfileElementOneImage,ownProfileElementTwoSubtitle,ownProfileElementOneTitle,ownProfileElementOneSubtitle,ownProfileElementTwoTitle,ownProfileElementThreePlusSpace,ownProfileElementTwoImage,ownProfileElementThreeSubtitle,ownProfileElementThreeTitle,ownProfileElementTwoPlusSpace" />
 
--->
+    -->
 
-
-
-
-
-    <include
-        android:id="@+id/ownProfileNavBar"
-        layout="@layout/nearby_explanation_header"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/profile_banner"
-        app:layout_constraintBottom_toTopOf="@+id/ownProfileNavBar"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myProfileID"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/ownProfileElementThreeClickableArea">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@drawable/notification_background_rounded_with_border"
-            >
-
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/myProfileInfoCard"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            >
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/notification_background_rounded_with_border"
+            android:orientation="vertical">
 
-            <View
-                android:id="@+id/myProfileMyInformationBackground"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/myProfileMyInformationImage"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                app:srcCompat="@drawable/ic_new_my_profile"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/myProfileMyInformationText"
-                style="?attr/textStyleP1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
-                android:ellipsize="end"
-                android:gravity="center_vertical"
-                android:lines="1"
-                android:textStyle="bold"
-                android:text="Information about me"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/myProfileMyInformationArrow"
-                app:layout_constraintStart_toEndOf="@+id/myProfileMyInformationImage"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/myProfileMyInformationArrow"
-                android:layout_width="@dimen/icon_md"
-                android:layout_height="@dimen/icon_md"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_arrow_right_gray_40"
-                />
-
-            <androidx.constraintlayout.widget.Group
-                android:id="@+id/myProfileMyInformationContentGroup"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/myProfileInfoCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:constraint_referenced_ids="myProfileMyInformationText,myProfileMyInformationImage,myProfileMyInformationBackground" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp">
 
-            <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/myProfileMyInformationPlaceholderBarrier"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:barrierDirection="start"
-                app:constraint_referenced_ids="myProfileMyInformationArrow"
-                app:layout_constraintStart_toStartOf="@+id/myProfileMyInformationArrow" />
+                <View
+                    android:id="@+id/myProfileMyInformationBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/myProfileMyInformationImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_new_my_profile" />
+
+                <TextView
+                    android:id="@+id/myProfileMyInformationText"
+                    style="?attr/textStyleP1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="@string/my_information"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/myProfileMyInformationArrow"
+                    app:layout_constraintStart_toEndOf="@+id/myProfileMyInformationImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/myProfileMyInformationArrow"
+                    android:layout_width="@dimen/icon_md"
+                    android:layout_height="@dimen/icon_md"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_arrow_right_gray_40" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/myProfileMyInformationContentGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="myProfileMyInformationText,myProfileMyInformationImage,myProfileMyInformationBackground" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/myProfileMyInformationPlaceholderBarrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="start"
+                    app:constraint_referenced_ids="myProfileMyInformationArrow"
+                    app:layout_constraintStart_toStartOf="@+id/myProfileMyInformationArrow" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="200dp"
                 android:layout_height="1dp"
-                android:background="#B91E5EAF"
                 android:layout_gravity="center"
-                />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#B91E5EAF" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/myProfilePhotosCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                >
+                android:layout_gravity="center_horizontal">
 
                 <View
                     android:id="@+id/myProfileMyPhotosBackground"
@@ -565,10 +531,10 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    app:srcCompat="@drawable/ic_new_my_photos"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_new_my_photos" />
 
                 <TextView
                     android:id="@+id/myProfileMyPhotosText"
@@ -584,9 +550,9 @@
                     android:ellipsize="end"
                     android:gravity="center_vertical"
                     android:lines="1"
-                    android:textStyle="bold"
-                    android:text="Upload Photo"
+                    android:text="@string/upload_new_photo"
                     android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/myProfileMyPhotosImage"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -599,12 +565,10 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
-
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/myProfileMyPhotosText"
                     app:layout_constraintEnd_toStartOf="@id/myProfileMyPhotosArrow"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
+                    app:layout_constraintStart_toEndOf="@+id/myProfileMyPhotosText"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/myProfileMyPhotosArrow"
@@ -615,8 +579,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_arrow_right_gray_40"
-                    />
+                    app:srcCompat="@drawable/ic_arrow_right_gray_40" />
 
                 <androidx.constraintlayout.widget.Group
                     android:id="@+id/myProfileMyPhotosContentGroup"
@@ -637,16 +600,16 @@
             <View
                 android:layout_width="200dp"
                 android:layout_height="1dp"
-                android:background="#B91E5EAF"
                 android:layout_gravity="center"
-                />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#B91E5EAF" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/myProfileCreditCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                >
+                android:layout_gravity="center_horizontal">
 
                 <View
                     android:id="@+id/myProfileMyCreditBackground"
@@ -664,10 +627,10 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    app:srcCompat="@drawable/ic_new_recharge"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_new_recharge" />
 
                 <TextView
                     android:id="@+id/myProfileMyCreditText"
@@ -679,13 +642,13 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
-                    android:textStyle="bold"
                     android:layout_marginBottom="16dp"
                     android:ellipsize="end"
                     android:gravity="center_vertical"
                     android:lines="1"
-                    android:text="My Credit"
+                    android:text="@string/my_credit"
                     android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/myProfileMyCreditArrow"
                     app:layout_constraintStart_toEndOf="@+id/myProfileMyCreditImage"
@@ -700,8 +663,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_arrow_right_gray_40"
-                    />
+                    app:srcCompat="@drawable/ic_arrow_right_gray_40" />
 
                 <androidx.constraintlayout.widget.Group
                     android:id="@+id/myProfileMyCreditContentGroup"
@@ -722,16 +684,17 @@
             <View
                 android:layout_width="200dp"
                 android:layout_height="1dp"
-                android:background="#B91E5EAF"
                 android:layout_gravity="center"
-                />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#B91E5EAF" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/myProfileFriendsCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                >
+                android:layout_marginBottom="10dp">
 
                 <View
                     android:id="@+id/myProfileMyFindFriendsBackground"
@@ -749,10 +712,10 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    app:srcCompat="@drawable/ic_new_find_friends"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_new_find_friends" />
 
                 <TextView
                     android:id="@+id/myProfileMyFindFriendsText"
@@ -768,9 +731,9 @@
                     android:ellipsize="end"
                     android:gravity="center_vertical"
                     android:lines="1"
-                    android:textStyle="bold"
-                    android:text="Find Friends"
+                    android:text="@string/search_users"
                     android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/myProfileMyFindFriendsArrow"
                     app:layout_constraintStart_toEndOf="@+id/myProfileMyFindFriendsImage"
@@ -785,8 +748,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_arrow_right_gray_40"
-                    />
+                    app:srcCompat="@drawable/ic_arrow_right_gray_40" />
 
                 <androidx.constraintlayout.widget.Group
                     android:id="@+id/myProfileMyFindFriendsContentGroup"
@@ -805,61 +767,24 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
         </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myProfile_photos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:visibility="gone"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
 
     </FrameLayout>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <FrameLayout
         android:id="@+id/myProfileAvatar"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/myProfileNameAndAge"
         app:layout_constraintDimensionRatio="1:1"
@@ -870,8 +795,8 @@
 
         <com.gulf.arabchat0.modules.circularimageview.CircleImageView
             android:id="@+id/avatar"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginBottom="@dimen/size_1"
             android:scaleType="centerCrop" />
 
@@ -932,13 +857,12 @@
         app:layout_constraintVertical_chainStyle="packed"
         tools:text="123456" />
 
-<!--    Vervify Container-->
+    <!--    Vervify Container-->
 
     <FrameLayout
         android:id="@+id/myProfileBannerCardContainer"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:background="@drawable/profile_banner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -946,7 +870,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/myProfileBannerCard"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/notification_background_rounded_with_border"
@@ -964,7 +888,7 @@
 
             <View
                 android:id="@+id/myProfileBannerTextPlaceholder"
-                android:layout_width="115dp"
+                android:layout_width="50dp"
                 android:layout_height="8dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
@@ -1063,7 +987,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 
-<!--    Popularity View-->
+    <!--    Popularity View-->
 
     <View
         android:id="@+id/ownProfileElementThreeClickableArea"
@@ -1115,7 +1039,7 @@
         app:layout_constraintStart_toStartOf="@+id/ownProfileElementThreeTitle"
         app:layout_constraintTop_toBottomOf="@+id/ownProfileElementThreeTitle" />
 
-<!-- Tokens View -->
+    <!-- Tokens View -->
     <View
         android:id="@+id/ownProfileElementFourClickableArea"
         android:layout_width="80dp"
@@ -1130,9 +1054,9 @@
         android:layout_height="30dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/ownProfileElementFourTitle"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementFourClickableArea"
         app:layout_constraintStart_toStartOf="@id/ownProfileElementFourClickableArea"
         app:layout_constraintTop_toTopOf="@+id/ownProfileElementFourClickableArea"
-        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementFourClickableArea"
         app:layout_constraintVertical_chainStyle="packed"
         app:srcCompat="@drawable/ic_new_tokens" />
 
@@ -1163,8 +1087,8 @@
         android:layout_marginEnd="4dp"
         android:ellipsize="end"
         android:fontFamily="sans-serif"
-        android:maxLines="1"
         android:gravity="center"
+        android:maxLines="1"
         android:textColor="@color/black"
         android:textSize="@dimen/my_profile_cta_text_size"
         app:layout_constraintBottom_toBottomOf="@+id/ownProfileElementFourClickableArea"
@@ -1173,7 +1097,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ownProfileElementFourTitle"
         tools:text="10" />
 
-<!-- Coins View -->
+    <!-- Coins View -->
     <View
         android:id="@+id/ownProfileElementOneClickableArea"
         android:layout_width="80dp"
@@ -1189,9 +1113,9 @@
         android:layout_height="35dp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/ownProfileElementOneTitle"
+        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementOneClickableArea"
         app:layout_constraintStart_toStartOf="@id/ownProfileElementOneClickableArea"
         app:layout_constraintTop_toTopOf="@+id/ownProfileElementOneClickableArea"
-        app:layout_constraintEnd_toEndOf="@+id/ownProfileElementOneClickableArea"
         app:layout_constraintVertical_chainStyle="packed"
         app:srcCompat="@drawable/ic_new_coin" />
 
@@ -1205,8 +1129,8 @@
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:ellipsize="end"
-        android:maxLines="1"
         android:gravity="center"
+        android:maxLines="1"
         android:text="@string/credits"
         app:layout_constraintBottom_toTopOf="@+id/ownProfileElementOneSubtitle"
         app:layout_constraintEnd_toEndOf="@+id/ownProfileElementOneClickableArea"
@@ -1221,8 +1145,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:ellipsize="end"
-        android:gravity="center"
         android:fontFamily="sans-serif"
+        android:gravity="center"
         android:maxLines="1"
         android:textColor="@color/black"
         android:textSize="@dimen/my_profile_cta_text_size"
@@ -1249,9 +1173,6 @@
         app:layout_constraintStart_toStartOf="@+id/ownProfileElementOnePlusSpace"
         app:layout_constraintTop_toTopOf="@+id/ownProfileElementOnePlusSpace"
         app:srcCompat="@drawable/ic_plus_own_profile" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

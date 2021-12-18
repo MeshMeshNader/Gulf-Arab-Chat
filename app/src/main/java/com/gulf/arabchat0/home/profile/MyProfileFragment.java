@@ -158,7 +158,7 @@ public class MyProfileFragment extends Fragment {
             mTokenImage.setVisibility(View.GONE);
             mTokensView.setVisibility(View.GONE);
 
-            mCreditsView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_3X_POPULAR));
+            //mCreditsView.setOnClickListener(v1 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_3X_POPULAR));
             creditCardCard.setOnClickListener(v2 -> QuickHelp.goToActivityWithNoClean(getActivity(), PaymentsActivity.class, PaymentsActivity.ARABCHAT_PAYMENT_TYPE, PaymentsActivity.TYPE_3X_POPULAR));
 
 
@@ -177,7 +177,7 @@ public class MyProfileFragment extends Fragment {
             mCreditsView.setVisibility(View.GONE);
 
 
-            mTokensView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), WalletActivity.class));
+            //mTokensView.setOnClickListener(v4 -> QuickHelp.goToActivityWithNoClean(getActivity(), WalletActivity.class));
             creditCardCard.setOnClickListener(v3 -> QuickHelp.goToActivityWithNoClean(getActivity(), WalletActivity.class));
         }
 

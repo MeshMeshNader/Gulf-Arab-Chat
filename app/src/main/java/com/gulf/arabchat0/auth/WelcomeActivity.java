@@ -5,8 +5,13 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -18,6 +23,9 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatCheckBox;
 
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
@@ -34,6 +42,7 @@ import com.gulf.arabchat0.authUtils.ArabChatSignupBuilder;
 import com.gulf.arabchat0.helpers.QuickActions;
 import com.gulf.arabchat0.helpers.QuickHelp;
 import com.gulf.arabchat0.home.HomeActivity;
+import com.gulf.arabchat0.home.settings.WebUrlsActivity;
 import com.gulf.arabchat0.models.arabchat.User;
 import com.gulf.arabchat0.modules.parsegooglesignin.ParseGoogleSignIn;
 import com.gulf.arabchat0.utils.SharedPrefUtil;
@@ -71,6 +80,8 @@ public class WelcomeActivity extends BaseActivity {
     Button mButtonMale;
     Button mButtonFemale;
     LinearLayout mGenderLayout;
+    TextView mTermsText;
+    AppCompatCheckBox mCheckTerms;
 
     User mCurrentUser;
 
@@ -125,7 +136,32 @@ public class WelcomeActivity extends BaseActivity {
         FrameLayout emailLyt = findViewById(R.id.layout_sign_in_email);
         FrameLayout genderSignupLyt = findViewById(R.id.gender_signup_lyt);
         LinearLayout orLyt = findViewById(R.id.or_layout);
-        TextView fbAlert = findViewById(R.id.facebook_alert);
+
+        mTermsText = findViewById(R.id.Registration_termsAndConditions);
+        mCheckTerms = findViewById(R.id.check_terms);
+
+        mFacebook.setEnabled(false);
+        mGoogle.setEnabled(false);
+        mPhoneNumber.setEnabled(false);
+        mEmail.setEnabled(false);
+
+        mCheckTerms.setOnCheckedChangeListener((buttonView, isChecked) -> {
+
+            if (isChecked){
+                mFacebook.setEnabled(true);
+                mGoogle.setEnabled(true);
+                mPhoneNumber.setEnabled(true);
+                mEmail.setEnabled(true);
+            } else {
+                mFacebook.setEnabled(false);
+                mGoogle.setEnabled(false);
+                mPhoneNumber.setEnabled(false);
+                mEmail.setEnabled(false);
+            }
+        });
+
+        setmTermsText(mTermsText);
+
 
         mProgress.setVisibility(View.GONE);
 
@@ -133,7 +169,7 @@ public class WelcomeActivity extends BaseActivity {
 
             facebookLyt.setVisibility(View.GONE);
             orLyt.setVisibility(View.INVISIBLE);
-            fbAlert.setVisibility(View.INVISIBLE);
+
         }
 
         if (!Config.GOOGLE_LOGIN)
@@ -266,6 +302,25 @@ public class WelcomeActivity extends BaseActivity {
         mEmail.setOnClickListener(view -> goToLogin());
 
 
+    }
+
+
+    private void setmTermsText(TextView view) {
+        SpannableStringBuilder spanTxt = new SpannableStringBuilder(getString(R.string.signup_by_clinging) + " ");spanTxt.append(getString(R.string.privacy_policy)).append(" ");spanTxt.setSpan(new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+
+                QuickHelp.goToActivityWithNoClean(WelcomeActivity.this, WebUrlsActivity.class, WebUrlsActivity.WEB_URL_TYPE, Config.PRIVACY_POLICY);
+
+            }
+        }, spanTxt.length()-1 - getString(R.string.signup_terms).length(), spanTxt.length(), 0);
+
+        spanTxt.setSpan(new StyleSpan(Typeface.BOLD),spanTxt.length()-1 - getString(R.string.privacy_policy).length(), spanTxt.length(),0);
+
+        //spanTxt.append(getString(R.string.signup_we_will));
+
+        view.setMovementMethod(LinkMovementMethod.getInstance());
+        view.setText(spanTxt, TextView.BufferType.SPANNABLE);
     }
 
     public void OpenLogin() {

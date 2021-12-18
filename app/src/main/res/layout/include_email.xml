@@ -116,7 +116,7 @@
                 android:focusable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="I accept loveroom terms and conditions"
+                tools:text="I accept Gulf Arab Chat terms and conditions"
                 style="?textStyleP2Gray40" />
 
         </LinearLayout>

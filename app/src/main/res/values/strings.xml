@@ -430,7 +430,7 @@
     <string name="gallery_access_request_title">Request access</string>
     <string name="name">Name</string>
     <string name="cancel">Cancel</string>
-    <string name="upload_new_photo">Upload new Photo</string>
+    <string name="upload_new_photo">Upload Photo</string>
     <string name="delete_photo">Delete</string>
     <string name="make_photo_default">Make default</string>
     <string name="can_not_delete_unique_photo">You only have this photo</string>
@@ -765,6 +765,7 @@
     <string name="account_lang">Language</string>
     <string name="my_information">My Information</string>
     <string name="user_info_ID">"ID: "</string>
-    <string name="search_users">"Find a friend "</string>
+    <string name="search_users">Find Friends</string>
+    <string name="my_credit">My Credit</string>
 
 </resources>
