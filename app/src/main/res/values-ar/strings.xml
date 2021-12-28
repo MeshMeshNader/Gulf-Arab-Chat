@@ -309,8 +309,8 @@
     <string name="credits">عملة ذهبية</string>
     <string name="credits_">عملة ذهبية</string>
     <string name="photos_needed">الصور الشخصية</string>
-    <string name="verified">أنت - تم التحقق</string>
-    <string name="verify_account">أكد حسابك - احصل على التحقق</string>
+    <string name="verified">أنت موثق - تم التحقق</string>
+    <string name="verify_account">وثق حسابك - تحقق الان</string>
     <string name="no_subs_found">لم يتم العثور على منتج!</string>
     <string name="no_subs_found_explain">تحتاج إلى إضافة عمليات شراء داخل التطبيق في حساب مطور برامج Google ، وتحقق من المستندات</string>
     <string name="Settings">الإعدادات</string>

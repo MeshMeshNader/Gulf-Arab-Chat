@@ -97,13 +97,13 @@ public class ManualLocationActivity extends AppCompatActivity {
 
         mCurrentUser = (User) ParseUser.getCurrentUser();
 
-        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-        createLocationRequest();
-
-        // Setup Places Client
-        if (!Places.isInitialized()) {
-            Places.initialize(this, getString(R.string.google_api_key_geo));
-        }
+//        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+//        createLocationRequest();
+//
+//        // Setup Places Client
+//        if (!Places.isInitialized()) {
+//            Places.initialize(this, getString(R.string.google_api_key_geo));
+//        }
 
         mPlacesClient = Places.createClient(this);
 

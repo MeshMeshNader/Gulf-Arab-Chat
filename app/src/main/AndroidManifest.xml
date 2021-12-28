@@ -150,6 +150,7 @@
             </intent-filter>
         </service>
 
+
         <receiver
             android:name=".pushNotifications.CustomPushReceiver"
             android:exported="false">

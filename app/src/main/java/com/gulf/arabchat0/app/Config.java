@@ -5,9 +5,9 @@ public class Config {
 
     // Parse Server
     public static final String SERVER_URL = "https://parseapi.back4app.com/";
-    public static final String LIVE_QUERY_URL = "wss://gulfarabchat.b4a.io/";
-    static final String SERVER_APP_ID = "mTjrvBCd3gMwdbMqlM1lTx6aYvRm6LMPNJCM14PN";
-    static final String SERVER_CLIENT_KEY = "bfJaCIiEoJNXWXDL0Povkp7lzV4KY1jfSup6OD9w";
+    public static final String LIVE_QUERY_URL = "wss://arabchat0.b4a.io";
+    static final String SERVER_APP_ID = "AfNYqNNzeNF4gftR2peAnJbGC7apBG9sc77ULhph";
+    static final String SERVER_CLIENT_KEY = "BI5vVNYOeYP8vYXK6KxZSJ1Mfo7o23533RD8sVxj";
 
     // Push notifications
     public static final String CHANNEL = "global";

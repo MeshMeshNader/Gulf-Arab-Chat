@@ -861,20 +861,20 @@
 
     <FrameLayout
         android:id="@+id/myProfileBannerCardContainer"
-        android:layout_width="250dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:background="@drawable/profile_banner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/myProfileID">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/myProfileBannerCard"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/notification_background_rounded_with_border"
-            android:minHeight="76dp">
+            android:minHeight="65dp">
 
             <View
                 android:id="@+id/myProfileBannerImagePlaceholder"
@@ -931,8 +931,8 @@
 
             <ImageView
                 android:id="@+id/myProfileBannerImage"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="26dp"
+                android:layout_height="32dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
@@ -952,6 +952,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:ellipsize="end"
+                android:textSize="16sp"
                 android:gravity="center_vertical"
                 android:lines="2"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -2,7 +2,6 @@ package com.gulf.arabchat0.adapters.arabchat;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -115,7 +114,11 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
 
         String userCoins = String.valueOf(user.getCredits()) + " " + Application.getInstance().getApplicationContext().getResources().getString(R.string.credits);
         viewHolder.mUserCoins.setText(userCoins);
-
+        if (user.getColGender().equals(User.GENDER_MALE)) {
+            viewHolder.mUserCoins.setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.mUserCoins.setVisibility(View.GONE);
+        }
         if (user.getLastOnline() != null) {
 
 
@@ -134,7 +137,7 @@ public class UsersNearAdapter extends ParseRecyclerQueryAdapter<User, UsersNearA
                     viewHolder.userStatus.setVisibility(View.VISIBLE);
                     viewHolder.userStatus.setImageResource(R.color.red_500);
                     viewHolder.mUserStatusText.setText(Application.getInstance().getApplicationContext()
-                    .getResources().getString(R.string.user_status_offline));
+                            .getResources().getString(R.string.user_status_offline));
 
                 } else if (System.currentTimeMillis() - user.getUpdatedAt().getTime() > Constants.TIME_TO_SOON) {
 

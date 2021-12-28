@@ -43,7 +43,7 @@ public class ParseGoogleSignIn {
 
      public static void initialize(Application context) {
 
-         mClientId = context.getString(R.string.default_web_client_id);;
+         mClientId = context.getString(R.string.default_web_client_id);
          synchronized (lock) {
              isInitialized = true;
          }
